@@ -31,10 +31,6 @@ SoundFile::SoundFile(const QString &fname) {
 									 &SoundFile::vio_write, &SoundFile::vio_tell };
 
 		sfFile = sf_open_virtual(&svi, SFM_READ, &siInfo, this);
-
-		if (!sfFile) {
-			qWarning("AudioOutputSample: Failed to open sound-file: %s", qUtf8Printable(strError()));
-		}
 	}
 }
 
@@ -69,6 +65,11 @@ sf_count_t SoundFile::seek(sf_count_t frames, int whence) {
 
 sf_count_t SoundFile::read(float *ptr, sf_count_t items) {
 	return sf_read_float(sfFile, ptr, items);
+}
+
+// kb
+sf_count_t SoundFile::tell() {
+	return SoundFile::vio_tell(sfFile);
 }
 
 sf_count_t SoundFile::vio_get_filelen(void *user_data) {
@@ -123,8 +124,9 @@ sf_count_t SoundFile::vio_tell(void *user_data) {
 	return sf->qfFile.pos();
 }
 
+// kb
 AudioOutputSample::AudioOutputSample(const QString &name, SoundFile *psndfile, bool loop, unsigned int freq,
-									 unsigned int systemMaxBufferSize)
+									 unsigned int systemMaxBufferSize, bool isSynchronous)
 	: AudioOutputUser(name) {
 	int err;
 
@@ -165,6 +167,11 @@ AudioOutputSample::AudioOutputSample(const QString &name, SoundFile *psndfile, b
 	iLastConsume = iBufferFilled = 0;
 	bLoop                        = loop;
 	bEof                         = false;
+
+	// kb
+	bIsSynchronous = isSynchronous;
+	uiServerStartPerformanceTime = 0;
+	uiPerformancePauseTime       = 0;
 }
 
 AudioOutputSample::~AudioOutputSample() {
@@ -218,7 +225,58 @@ QString AudioOutputSample::browseForSndfile(QString defaultpath) {
 	return file;
 }
 
-bool AudioOutputSample::prepareSampleBuffer(unsigned int frameCount) {
+// kb
+bool AudioOutputSample::seekServerTime(quint64 serverTimeInMicroseconds, quint64 startTime) {
+	if (bIsSynchronous && sfHandle != nullptr && startTime > 0) {
+		// what microseconds is that, expressed from our notion of the start of playback time?
+		qint64 microsecondOffset = serverTimeInMicroseconds - startTime;
+		if (microsecondOffset > 0) {
+			// turn that into a frame offset and seek that
+			sf_count_t offset = (sf_count_t)(microsecondOffset / 10000L); // convert from us to frames (each 10 ms long)
+			sfHandle->seek(offset, SEEK_SET);
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool AudioOutputSample::isSynchronous() {
+	return bIsSynchronous;
+}
+
+quint64 AudioOutputSample::getServerStartPerformanceTime() {
+	return uiServerStartPerformanceTime;
+}
+
+quint64 AudioOutputSample::getPerformancePauseTime() {
+	return uiPerformancePauseTime;
+}
+
+void AudioOutputSample::setServerStartPerformanceTime(quint64 val) {
+	uiServerStartPerformanceTime = val;
+}
+
+void AudioOutputSample::setPerformancePauseTime(quint64 val) {
+	uiPerformancePauseTime = val;
+}
+
+bool AudioOutputSample::prepareSampleBuffer(unsigned int frameCount, quint64 serverTime, bool *doMix) {
+	*doMix = false;
+	// kb
+	if (bIsSynchronous) {
+		// if we are stopped or paused...nothing to do
+		if (uiServerStartPerformanceTime == 0 || uiPerformancePauseTime != 0) {
+			return true;
+		}
+		// if we have not reached start time...nothing to do
+		if (serverTime < uiServerStartPerformanceTime) {
+			return true;
+		}
+	}
+
+	*doMix = true;
+
 	unsigned int channels    = bStereo ? 2 : 1;
 	unsigned int sampleCount = frameCount * channels;
 	// Forward the buffer

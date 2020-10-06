@@ -39,6 +39,9 @@ public:
 
 	sf_count_t seek(sf_count_t frames, int whence);
 	sf_count_t read(float *ptr, sf_count_t items);
+
+	// kb
+	sf_count_t tell();
 };
 
 class AudioOutputSample : public AudioOutputUser {
@@ -55,15 +58,28 @@ protected:
 
 	bool bLoop;
 	bool bEof;
+
+	// kb
+	bool bIsSynchronous; // if true this is Kissy style synchronous
+	quint64 uiServerStartPerformanceTime; // if non zero we are playing (or pausing if pause time non zero)
+	quint64 uiPerformancePauseTime;       // if non zero we are pausing (in which case the above start time must be set)
 signals:
 	void playbackFinished();
 
 public:
 	static SoundFile *loadSndfile(const QString &filename);
 	static QString browseForSndfile(QString defaultpath = QString());
-	virtual bool prepareSampleBuffer(unsigned int frameCount) Q_DECL_OVERRIDE;
+	// kb
+	bool seekServerTime(quint64 serverTimeInMicroseconds, quint64 startTime);
+	bool isSynchronous();
+	quint64 getServerStartPerformanceTime();
+	void setServerStartPerformanceTime(quint64 val);
+	quint64 getPerformancePauseTime();
+	void setPerformancePauseTime(quint64 val);
+
+	virtual bool prepareSampleBuffer(unsigned int frameCount, quint64 serverTime, bool *doMix) Q_DECL_OVERRIDE;
 	AudioOutputSample(const QString &name, SoundFile *psndfile, bool repeat, unsigned int freq,
-					  unsigned int bufferSize);
+					  unsigned int bufferSize, bool isSynchronous);
 	~AudioOutputSample() Q_DECL_OVERRIDE;
 };
 

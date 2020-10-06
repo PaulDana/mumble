@@ -15,6 +15,7 @@
 
   Warning: Only append to the end.
  */
+// kb
 #define MUMBLE_MH_ALL                  \
 	MUMBLE_MH_MSG(Version)             \
 	MUMBLE_MH_MSG(UDPTunnel)           \
@@ -41,7 +42,11 @@
 	MUMBLE_MH_MSG(UserStats)           \
 	MUMBLE_MH_MSG(RequestBlob)         \
 	MUMBLE_MH_MSG(ServerConfig)        \
-	MUMBLE_MH_MSG(SuggestConfig)
+	MUMBLE_MH_MSG(SuggestConfig)	   \
+	MUMBLE_MH_MSG(KissyChannelStateChange) \
+	MUMBLE_MH_MSG(KissyChannelMediaCommand) \
+	MUMBLE_MH_MSG(KissyChannelPlaybackCommand) \
+	MUMBLE_MH_MSG(KissyChannelMiscCommand)
 
 class MessageHandler {
 public:

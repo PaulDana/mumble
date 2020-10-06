@@ -1267,11 +1267,31 @@ void AudioInput::flushCheck(const QByteArray &frame, bool terminator, int voiceT
 		}
 	}
 
+	bool xmittedPos = false;
 	if (g.s.bTransmitPosition && g.p && !g.bCenterPosition && g.p->fetch()) {
 		pds << g.p->fPosition[0];
 		pds << g.p->fPosition[1];
 		pds << g.p->fPosition[2];
+		xmittedPos = true;
 	}
+
+	// for now hard code to always do this...
+	// transmitting time?
+	//	if (g.s.bTransmitTime) {
+	if (!xmittedPos) {
+		pds << 0.0f; // 0.1f;
+		pds << 0.0f; // 0.2f;
+		pds << 0.0f; // 0.3f;
+	}
+	quint64 now = 0;
+	if (g.sh) {
+		// we lag BEHIND server time by our given offset...so send out
+		// the performance time we "think" we are playing at - that is why we SUBTRACT our own offset here...
+		now = g.sh->getServerTimeElapsed() - (g.sh->getRiverOffset() * 1000); // add our river offset (convert to microseconds
+	}
+	
+	pds << now;
+	//	}
 
 	sendAudioFrame(data, pds);
 

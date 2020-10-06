@@ -68,7 +68,7 @@ public:
 	/// Fetch and decode frames from the jitter buffer. Called in mix().
 	///
 	/// @param frameCount Number of frames to decode. frame means a bundle of one sample from each channel.
-	virtual bool prepareSampleBuffer(unsigned int frameCount) Q_DECL_OVERRIDE;
+	virtual bool prepareSampleBuffer(unsigned int frameCount, quint64 serverTime, bool *doMix) Q_DECL_OVERRIDE;
 
 	void addFrameToBuffer(const QByteArray &, unsigned int iBaseSeq);
 

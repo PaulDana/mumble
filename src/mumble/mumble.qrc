@@ -17,5 +17,7 @@
         <file alias="UserLeftChannel.ogg">../../samples/UserLeftChannel.ogg</file>
         <file alias="UserMutedYouOrByYou.ogg">../../samples/UserMutedYouOrByYou.ogg</file>
         <file alias="RecordingStateChanged.ogg">../../samples/RecordingStateChanged.ogg</file>
+        <file alias="0_tick_tock_no_voices.wav">../../samples/0_tick_tock_no_voices.wav</file>
+        <file alias="1_counting_no_voices.wav">../../samples/1_counting_no_voices.wav</file>
     </qresource>
 </RCC>

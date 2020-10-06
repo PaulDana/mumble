@@ -618,6 +618,9 @@ int main(int argc, char **argv) {
 	qWarning("Murmur %d.%d.%d (%s) running on %s: %s: Booting servers", major, minor, patch, qPrintable(strver),
 			 qPrintable(meta->qsOS), qPrintable(meta->qsOSVersion));
 
+    // kb	
+	qWarning(KISSY_VERSION_POSTFIX);
+
 	meta->bootAll();
 
 	res = a.exec();

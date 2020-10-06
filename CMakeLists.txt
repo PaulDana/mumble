@@ -151,6 +151,10 @@ if(plugins AND client)
 	add_subdirectory(plugins)
 endif()
 
+# copy whole media file & contents as-is
+# can't get our own media folder to work - copy files to the plugin folder
+file(COPY media DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 if(packaging)
 	if(WIN32)
 		file(COPY "${CMAKE_SOURCE_DIR}/scripts/Create-Win32InstallerMUI.ps1" DESTINATION ${CMAKE_BINARY_DIR})

@@ -22,8 +22,9 @@
 #include "User.h"
 #include "Version.h"
 
-#ifdef USE_ZEROCONF
-#	include "Zeroconf.h"
+#ifdef USE_BONJOUR
+#	include "BonjourServer.h"
+#	include "BonjourServiceRegister.h"
 #endif
 
 #include "Utils.h"
@@ -115,8 +116,8 @@ QSslSocket *SslServer::nextPendingSSLConnection() {
 Server::Server(int snum, QObject *p) : QThread(p) {
 	bValid     = true;
 	iServerNum = snum;
-#ifdef USE_ZEROCONF
-	zeroconf = nullptr;
+#ifdef USE_BONJOUR
+	bsRegistration = nullptr;
 #endif
 	bUsingMetaCert = false;
 
@@ -272,12 +273,387 @@ Server::Server(int snum, QObject *p) : QThread(p) {
 	uiVersionBlob = qToBigEndian(static_cast< quint32 >((major << 16) | (minor << 8) | patch));
 
 	if (bValid) {
-#ifdef USE_ZEROCONF
+#ifdef USE_BONJOUR
 		if (bBonjour)
-			initZeroconf();
+			initBonjour();
 #endif
 		initRegister();
+
+		// kb
+		calcKissyForAllChannels();
 	}
+}
+
+// kb
+void Server::userChooseNewMedia(ServerUser *u, quint32 mediaIndex) {
+	// user must be in a kissy room
+	const KissyChannelState &kcs = qmKissyChannelStates.value(u->cChannel->iId);
+	if (kcs.isKissyTopLevel || kcs.riverIndex > 0) {
+		chooseNewMedia(u->cChannel, mediaIndex);
+	}
+}
+
+void Server::chooseNewMedia(Channel * c, quint32 mediaIndex) {
+
+	// top level room and all river rooms must stop any playback and change to this media
+	Channel *topLevel                   = getTopLevel(c);
+	KissyChannelState kcs               = qmKissyChannelStates.value(topLevel->iId);
+	kcs.uiMediaIndex                    = mediaIndex;
+	kcs.iServerStartPerformanceTime = kcs.iPerformancePauseTime = 0;
+	qmKissyChannelStates[topLevel->iId]	= kcs;
+	sendUsersInChannelKissyStateChange(topLevel, kcs);
+	sendUsersInChannelKissyMediaCommand(topLevel, kcs);
+
+	foreach (quint32 iId, kcs.qlRiverChannels) { 
+		kcs           = qmKissyChannelStates.value(iId);
+		kcs.uiMediaIndex                = mediaIndex;
+		kcs.iServerStartPerformanceTime = kcs.iPerformancePauseTime = 0;	
+		qmKissyChannelStates[iId]       = kcs;
+		sendUsersInChannelKissyStateChange(qhChannels.value(iId), kcs);
+		sendUsersInChannelKissyMediaCommand(qhChannels.value(iId), kcs);
+	}
+}
+
+void Server::setPlaybackOnKissyChannelState(KissyChannelState &kcs, QString action, quint64 serverTime) {
+	if (action.compare("play") == 0) {
+		kcs.iServerStartPerformanceTime = serverTime;
+		kcs.iPerformancePauseTime = 0;
+	} else if (action.compare("stop")) {
+		kcs.iServerStartPerformanceTime = kcs.iPerformancePauseTime = 0;
+	} else if (action.compare("pause")) {
+		// whatever time is now, relative to start...
+		kcs.iPerformancePauseTime = serverTime - kcs.iServerStartPerformanceTime;
+		if (kcs.iPerformancePauseTime < 0)
+			kcs.iPerformancePauseTime = 0;
+	}
+}
+
+void Server::userSetPlayback(ServerUser *u, QString action, quint64 serverTime) {
+	// user must be in a kissy room
+	const KissyChannelState &kcs = qmKissyChannelStates.value(u->cChannel->iId);
+	if (kcs.isKissyTopLevel || kcs.riverIndex > 0) {
+		// do this thing...
+		setPlayback(u->cChannel, action, serverTime);
+	}
+}
+
+void Server::setPlayback(Channel *c, QString action, quint64 serverTime) {
+	// top level room and all river rooms must have this happen
+	Channel *topLevel				= getTopLevel(c);
+	KissyChannelState kcs           = qmKissyChannelStates.value(topLevel->iId);
+	setPlaybackOnKissyChannelState(kcs, action, serverTime);
+	qmKissyChannelStates[topLevel->iId] = kcs;
+	sendUsersInChannelKissyStateChange(topLevel, kcs);
+	sendUsersInChannelKissyPlaybackCommand(topLevel, action, kcs);
+
+	foreach (quint32 iId, kcs.qlRiverChannels) {
+		kcs = qmKissyChannelStates.value(iId);
+		setPlaybackOnKissyChannelState(kcs, action, serverTime);
+		qmKissyChannelStates[iId] = kcs;
+		sendUsersInChannelKissyStateChange(qhChannels.value(iId), kcs);
+		sendUsersInChannelKissyPlaybackCommand(qhChannels.value(iId), action, kcs);
+	}
+}
+
+void Server::userSetMisc(ServerUser *u, QString action) {
+	// user must be in a kissy room
+	const KissyChannelState &kcs = qmKissyChannelStates.value(u->cChannel->iId);
+	if (kcs.isKissyTopLevel || kcs.riverIndex > 0) {
+		// do this thing...
+		setMisc(u->cChannel, action);
+	}
+}
+
+void Server::setMisc(Channel *c, QString action) {
+	// top level room and all river rooms must have this happen
+	Channel *topLevel     = getTopLevel(c);
+	const KissyChannelState &kcs = qmKissyChannelStates.value(topLevel->iId);
+	sendUsersInChannelKissyMiscCommand(topLevel, action);
+
+	foreach (quint32 iId, kcs.qlRiverChannels) {
+		sendUsersInChannelKissyMiscCommand(qhChannels.value(iId), action);
+	}
+}
+
+void Server::calcKissyForAllChannels() {
+	// clear all previous data
+	qmKissyChannelStates.clear();
+
+	foreach (Channel *c, qhChannels) { 
+		calcKissyForChannel(c);
+	}
+
+	// lets take a look!
+	foreach(Channel* c, qhChannels) { 
+		const KissyChannelState &ksm = qmKissyChannelStates.value(c->iId);
+		log(QString::fromUtf8("Kissy State for channel: %1").arg(c->qsName));
+		log(QString::fromUtf8("is Top Level: %1").arg(ksm.isKissyTopLevel));
+		log(QString::fromUtf8("is Main River: %1").arg(ksm.isKissyMain));
+		log(QString::fromUtf8("River Index: %1").arg(ksm.riverIndex));
+		log(QString::fromUtf8("River Offset: %1 ms").arg(ksm.riverOffset));
+		log(QString::fromUtf8("Role Index: %1").arg(ksm.uiRoleIndex));
+		log(QString::fromUtf8("River Channels:"));
+		foreach (unsigned int iId, ksm.qlRiverChannels) { 
+			Channel *rc = qhChannels.value(iId);
+			log(QString::fromUtf8(" * %1").arg(rc->qsName));
+		}
+		log(QString::fromUtf8("-------------------------------------------"));
+	}
+
+	// tell all the clients about a possible new time offset
+	sendAllUsersKissyChannelStateChange();
+}
+
+void Server::sendAllUsersKissyChannelStateChange() {
+	foreach (Channel *c, qhChannels) {
+		sendUsersInChannelKissyStateChange(c, qmKissyChannelStates.value(c->iId));
+	}
+}
+
+void Server::sendUsersInChannelKissyStateChange(Channel *c, const KissyChannelState &kcs) {
+	foreach (User *u, c->qlUsers) {
+		ServerUser *su = static_cast< ServerUser * >(u);
+		sendUserKissyChannelStateChange(su, kcs);
+	}
+}
+
+void Server::sendUserKissyChannelStateChange(ServerUser *su, const KissyChannelState &kcs) {
+	MumbleProto::KissyChannelStateChange mpkcsc;
+	mpkcsc.set_river_offset(kcs.riverOffset);
+	mpkcsc.set_server_start_performance_time(kcs.iServerStartPerformanceTime);
+	mpkcsc.set_performance_pause_time(kcs.iPerformancePauseTime);
+	sendMessage(su, mpkcsc);
+}
+
+void Server::sendUsersInChannelKissyMediaCommand(Channel *c, const KissyChannelState &kcs) {
+	foreach (User *u, c->qlUsers) {
+		ServerUser *su = static_cast< ServerUser * >(u);
+		sendUserKissyMediaCommand(su, kcs);
+	}
+}
+
+void Server::sendUserKissyMediaCommand(ServerUser *su, const KissyChannelState &kcs) {
+	MumbleProto::KissyChannelMediaCommand mpkcmc;
+	mpkcmc.set_media_index(kcs.uiMediaIndex);
+	mpkcmc.set_role_index(kcs.uiRoleIndex);
+	sendMessage(su, mpkcmc);
+}
+
+void Server::sendUsersInChannelKissyPlaybackCommand(Channel *c, const QString &action, const KissyChannelState &kcs) {
+	foreach (User *u, c->qlUsers) {
+		ServerUser *su = static_cast< ServerUser * >(u);
+		sendUserKissyPlaybackCommand(su, action, kcs);
+	}
+}
+
+void Server::sendUserKissyPlaybackCommand(ServerUser *su, const QString &action, const KissyChannelState &kcs) {
+	MumbleProto::KissyChannelPlaybackCommand mpkcpc;
+	mpkcpc.set_action(action.toStdString());
+	mpkcpc.set_server_time(kcs.iServerStartPerformanceTime);
+	sendMessage(su, mpkcpc);
+}
+
+void Server::sendUsersInChannelKissyMiscCommand(Channel *c, const QString &action) {
+	foreach (User *u, c->qlUsers) {
+		ServerUser *su = static_cast< ServerUser * >(u);
+		sendUserKissyMiscCommand(su, action);
+	}
+}
+
+void Server::sendUserKissyMiscCommand(ServerUser *su, const QString &action) {
+	MumbleProto::KissyChannelMiscCommand mpkcmc;
+	mpkcmc.set_action(action.toStdString());
+	sendMessage(su, mpkcmc);
+}
+
+static bool isKissyTopLevel(Channel *c) {
+
+	// if this channel has the word kissy in it...
+	if (c && c->qsName.indexOf("Kissy") >= 0) {
+		return true;
+	}
+
+	return false;
+}
+
+// Kissy sub channel if name starts with number and dash like this "N -"
+static int getSubIndexFromName(Channel *c) {
+	QStringList list = c->qsName.split(" ");
+	if (list.size() >= 2) {
+		QString first  = list.value(0);
+		QString second = list.value(1);
+		if (second == "-") {
+			bool ok;
+			int index = first.toInt(&ok);
+			if (ok) {
+				if (index < 0 || index > 9) {
+					index = 0;
+				}
+				return index;
+			}
+		}
+	}
+	return 0;
+}
+
+static int getKissySubIndex(Channel *c) {
+
+	// first parent has to be a top level...
+	if (c->parent() && isKissyTopLevel(c->cParent)) {
+		// second we have to have a kissy sub index style name
+		return getSubIndexFromName(c);
+	}
+
+	return 0;
+}
+
+static Channel *findChildChannelBeginsWith(Channel *parent, QString beginsWith) {
+	foreach (Channel *c, parent->qlChannels) {
+		if (c->qsName.startsWith(beginsWith)) {
+			return c;
+		}
+	}
+
+	return nullptr;
+}
+
+static quint32 calcRoleIndex(QString name) {
+	quint32 roleIndex = 0;
+
+	if (name.compare("Hear A Only") == 0) {
+		roleIndex = 1;
+	} else if (name.compare("Hear B Only") == 0) {
+		roleIndex = 2;
+	} else if (name.compare("Hear Both Parts") == 0) {
+		roleIndex = 3;
+	}
+
+	return roleIndex;
+}
+
+Channel *Server::getTopLevel(Channel *c) {
+	const KissyChannelState &kcs = qmKissyChannelStates.value(c->iId);
+	Channel *top  = nullptr;
+
+	if (kcs.isKissyTopLevel) {
+		top = c;
+	} else if (kcs.isKissyMain) {
+		top = c->cParent;
+	} else if (kcs.riverIndex > 0) {
+		top = c->cParent->cParent;
+	}
+
+	return top;
+}
+
+void Server::calcKissyForChannel(Channel *c) {
+	if (!c)
+		return;
+	
+	// if we already have info for this channel, don't recompute
+	if (qmKissyChannelStates.contains(c->iId))
+		return;
+
+	// default is not any kind of kissy channel...
+	KissyChannelState kcs;
+
+	if (isKissyTopLevel(c)) {
+		kcs.isKissyTopLevel = true;
+
+		// we have river channels...find them...
+		for (int i = 1; i <= 9; i++) {
+			QString beginsWith = QString::fromUtf8("%1 -").arg(i);
+			Channel *kid       = findChildChannelBeginsWith(c, beginsWith);
+			if (kid) {
+				// add this and it's children
+				kcs.qlRiverChannels.append(kid->iId);
+				foreach (Channel *kc, kid->qlChannels) { 
+					kcs.qlRiverChannels.append(kc->iId);
+				}
+			} else {
+				break;
+			}
+		}
+
+	} else {
+		int index = getKissySubIndex(c);
+		if (index > 0) {
+			// this is a river channel...
+			kcs.isKissyMain = true;
+			kcs.riverIndex = index;
+			kcs.riverOffset = index * 200; // milliseconds offset
+			// we don't need this logic anymore...
+			// ensure our parent is done first
+			//calcKissyForChannel(c->cParent); // will not recurse forever as we KNOW this parent is a top level...
+			// ok get the state for our parent...
+			//const KissyChannelState &parentKCS = qmKissyChannelStates.value(c->cParent->iId);
+		} else {
+			// if our PARENT is a main channel, ensure that is calculated first...
+			if (c->cParent != nullptr && getKissySubIndex(c->cParent) > 0) {
+				calcKissyForChannel(c->cParent); // will not recurse forever as we KNOW this parent is main river channel
+				const KissyChannelState &parentKCS = qmKissyChannelStates.value(c->cParent->iId);
+
+				// and WE are a sub channel!
+				kcs.riverIndex = parentKCS.riverIndex;
+				kcs.riverOffset = parentKCS.riverOffset;
+
+				// what is our special role, if any?
+				kcs.uiRoleIndex = calcRoleIndex(c->qsName);
+			}
+		}
+	}
+
+	// state for every channel is inserted
+	qmKissyChannelStates.insert(c->iId, kcs);	
+}
+
+bool Server::executeKissyCommandIfPresent(ServerUser *u, QString text) {
+	bool isPlaybackCmd = false;
+	bool isMediaCmd    = false;
+	bool isMiscCmd = false;
+	quint32 mediaIndex = 0;
+	QString mediaCmd   = "";
+
+	if (text.compare("!play") == 0) {
+		isPlaybackCmd = true;
+	} else if (text.compare("!stop") == 0) {
+		isPlaybackCmd = true;
+	} else if (text.compare("!pause") == 0) {
+		isPlaybackCmd = true;
+	} else if (text.startsWith("!choose")) {
+		QList< QString > words = text.split(" ");
+		if (words.size() >= 2) {
+			bool ok;
+			mediaIndex = words.value(1).toInt(&ok);
+			if (ok) {
+				mediaCmd   = words.value(0);
+				isMediaCmd = true;
+			}
+		}
+	}
+
+	if (isPlaybackCmd) {
+		log(QString::fromUtf8("Issuing Kissy PLAYBACK Command: %1").arg(text));
+		QString cmd = text.mid(1);
+		userSetPlayback(u, cmd, tUptime.elapsed());
+		return true;
+	}
+
+	if (isMediaCmd) {
+		log(QString::fromUtf8("Issuing Kissy MEDIA Command: %1 %2").arg(mediaCmd).arg(mediaIndex));
+		//QString cmd = text.mid(1); // only one media command now - choose index
+		userChooseNewMedia(u, mediaIndex);
+		return true;
+	}
+
+	if (isMiscCmd) {
+		log(QString::fromUtf8("Issuing Kissy MISC Command: %1").arg(text));
+		QString cmd = text.mid(1);
+		userSetMisc(u, cmd);
+		return true;
+	}
+
+	return false;
 }
 
 void Server::startThread() {
@@ -326,8 +702,8 @@ void Server::stopThread() {
 }
 
 Server::~Server() {
-#ifdef USE_ZEROCONF
-	removeZeroconf();
+#ifdef USE_BONJOUR
+	removeBonjour();
 #endif
 
 	stopThread();
@@ -625,12 +1001,11 @@ void Server::setLiveConf(const QString &key, const QString &value) {
 		bForceExternalAuth = !v.isNull() ? QVariant(v).toBool() : Meta::mp.bForceExternalAuth;
 	else if (key == "bonjour") {
 		bBonjour = !v.isNull() ? QVariant(v).toBool() : Meta::mp.bBonjour;
-#ifdef USE_ZEROCONF
-		if (bBonjour && !zeroconf) {
-			initZeroconf();
-		} else if (!bBonjour && zeroconf) {
-			removeZeroconf();
-		}
+#ifdef USE_BONJOUR
+		if (bBonjour && !bsRegistration)
+			initBonjour();
+		else if (!bBonjour && bsRegistration)
+			removeBonjour();
 #endif
 	} else if (key == "allowping")
 		bAllowPing = !v.isNull() ? QVariant(v).toBool() : Meta::mp.bAllowPing;
@@ -664,30 +1039,19 @@ void Server::setLiveConf(const QString &key, const QString &value) {
 	}
 }
 
-#ifdef USE_ZEROCONF
-void Server::initZeroconf() {
-	zeroconf = new Zeroconf();
-	if (zeroconf->isOk()) {
-		log("Registering zeroconf service...");
-		zeroconf->registerService(BonjourRecord(qsRegName, "_mumble._tcp", ""), usPort);
-		return;
+#ifdef USE_BONJOUR
+void Server::initBonjour() {
+	bsRegistration = new BonjourServer();
+	if (bsRegistration->bsrRegister) {
+		log("Announcing server via bonjour");
+		bsRegistration->bsrRegister->registerService(BonjourRecord(qsRegName, "_mumble._tcp", ""), usPort);
 	}
-
-	delete zeroconf;
-	zeroconf = nullptr;
 }
 
-void Server::removeZeroconf() {
-	if (!zeroconf) {
-		return;
-	}
-
-	if (zeroconf->isOk()) {
-		log("Unregistering zeroconf service...");
-	}
-
-	delete zeroconf;
-	zeroconf = nullptr;
+void Server::removeBonjour() {
+	delete bsRegistration;
+	bsRegistration = nullptr;
+	log("Stopped announcing server via bonjour");
 }
 #endif
 
@@ -1158,6 +1522,9 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 		return;
 	} else if (target == 0) { // Normal speech
 		Channel *c = u->cChannel;
+		// kb
+		const KissyChannelState &kcs = qmKissyChannelStates.value(c->iId);
+		bool bPerformanceLive     = kcs.iServerStartPerformanceTime > 0;
 
 		buffer[0] = static_cast< char >(type | SpeechFlags::Normal);
 
@@ -1170,14 +1537,58 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 		}
 
 		// Send audio to all users in the same channel
-		foreach (User *p, c->qlUsers) {
-			ServerUser *pDst = static_cast< ServerUser * >(p);
+		// kb - unless that channel is a river channel during performance!
+		if (kcs.riverIndex <= 0 || !bPerformanceLive) {
+			foreach (User *p, c->qlUsers) {
+				ServerUser *pDst = static_cast< ServerUser * >(p);
 
-			// As we send the audio to this particular user here, we want to make sure to not send it again due to a
-			// listener proxy
-			listeningUsers -= pDst;
+				// As we send the audio to this particular user here, we want to make sure to not send it again due to a
+				// listener proxy
+				listeningUsers -= pDst;
 
-			SENDTO;
+				SENDTO;
+			}		
+		}
+
+		// users in a river channel listen to other river channels as appropriate
+		if (kcs.riverIndex > 0) {
+
+			Channel *topLevel = getTopLevel(c);
+			const KissyChannelState &topKCS = qmKissyChannelStates.value(topLevel->iId);
+
+			// gather list of channels
+			QList< Channel * > riverChannels;
+
+			// if performing send audio to only downstream users, otherwise send to all in river
+			foreach (unsigned int iId, topKCS.qlRiverChannels) {
+				Channel *rc = qhChannels.value(iId);
+				if (rc) {
+					if (bPerformanceLive) {
+						// only those downstream
+						const KissyChannelState &rkcs = qmKissyChannelStates.value(rc->iId);
+						if (rkcs.riverIndex > kcs.riverIndex) {
+							riverChannels.append(rc);
+						}
+					} else {
+						// all channels that are not our own channel..
+						if (rc->iId != c->iId) { // but not our own channel - that is already handled...
+							riverChannels.append(rc);
+						}
+					}
+				}
+			}
+
+			// add all these to the listeners...
+			foreach (Channel *rc, riverChannels) {
+				foreach (User *p, rc->qlUsers) {
+					ServerUser *pDst = static_cast< ServerUser * >(p);
+					//listeningUsers << pDst;					
+
+					// for now just really send
+					listeningUsers -= pDst;
+					SENDTO;
+				}
+			}
 		}
 
 		// Send audio to all linked channels the user has speak-permission
@@ -1963,6 +2374,10 @@ void Server::userEnterChannel(User *p, Channel *c, MumbleProto::UserState &mpus)
 	sendClientPermission(static_cast< ServerUser * >(p), c);
 	if (c->cParent)
 		sendClientPermission(static_cast< ServerUser * >(p), c->cParent);
+
+	// kb
+	const KissyChannelState &kcs = qmKissyChannelStates.value(c->iId);
+	sendUserKissyChannelStateChange(static_cast< ServerUser * >(p), kcs);
 }
 
 bool Server::hasPermission(ServerUser *p, Channel *c, QFlags< ChanACL::Perm > perm) {

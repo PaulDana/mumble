@@ -45,7 +45,7 @@
 #	include <winsock2.h>
 #endif
 
-class Zeroconf;
+class BonjourServer;
 class Channel;
 class PacketDataStream;
 class ServerUser;
@@ -88,6 +88,37 @@ public:
 	void execute();
 };
 
+// kb
+
+// server side channel state
+struct KissyChannelState {
+	// channel structure
+	bool isKissyTopLevel; // are we a top level kissy channel?
+	bool isKissyMain; // are we a main river channel
+	int riverIndex; // if we are a river channel, what is our 1 based index? (which determines our riverOffset)
+	quint32 riverOffset;  // millisecond time offset of this channel in the river
+	quint32 uiRoleIndex;  // 0 = no parts, 1 = hear A only, 2 = hear B only, 3 = hear both
+
+	// top level has these filled out...
+	QList< unsigned int > qlRiverChannels;    // all river channels, both main and sub channels
+
+	// performance state
+	quint32 uiMediaIndex; // aka which song - first song, second song
+	quint64 iServerStartPerformanceTime; // server time in us of start of performance time, 0 means not performing
+	quint64 iPerformancePauseTime; // performance time in us at which we are paused, 0 means not paused
+
+	KissyChannelState() { 
+		isKissyTopLevel = false;
+		isKissyMain		= false;
+		riverIndex      = 0;
+		riverOffset		= 0;
+		uiRoleIndex                 = 0;
+		uiMediaIndex                = 0;
+		iServerStartPerformanceTime = 0;
+		iPerformancePauseTime = 0;
+	}
+};
+
 class Server : public QThread {
 private:
 	Q_OBJECT;
@@ -98,8 +129,8 @@ protected:
 
 	QNetworkAccessManager *qnamNetwork;
 
-#ifdef USE_ZEROCONF
-	Zeroconf *zeroconf;
+#ifdef USE_BONJOUR
+	BonjourServer *bsRegistration;
 #endif
 	void startThread();
 	void stopThread();
@@ -173,15 +204,39 @@ public:
 	bool bOpus;
 	void recheckCodecVersions(ServerUser *connectingUser = 0);
 
-#ifdef USE_ZEROCONF
-	void initZeroconf();
-	void removeZeroconf();
+#ifdef USE_BONJOUR
+	void initBonjour();
+	void removeBonjour();
 #endif
 	// Registration, implementation in Register.cpp
 	QTimer qtTick;
 	void initRegister();
 
+	// kb
+	QHash< unsigned int, KissyChannelState > qmKissyChannelStates;
+	Channel *getTopLevel(Channel *c);
+	void calcKissyForAllChannels();
+	void calcKissyForChannel(Channel *c);
+	void sendAllUsersKissyChannelStateChange();
+	void sendUsersInChannelKissyStateChange(Channel *c, const KissyChannelState &kcs);
+	void sendUserKissyChannelStateChange(ServerUser *su, const KissyChannelState &kcs);
+	void sendUsersInChannelKissyMediaCommand(Channel *c, const KissyChannelState &kcs);
+	void sendUserKissyMediaCommand(ServerUser *su, const KissyChannelState &kcs);
+	void sendUsersInChannelKissyPlaybackCommand(Channel *c, const QString &action, const KissyChannelState &kcs);
+	void sendUserKissyPlaybackCommand(ServerUser *su, const QString &action, const KissyChannelState &kcs);
+	bool executeKissyCommandIfPresent(ServerUser *su, QString text);
+	void sendUsersInChannelKissyMiscCommand(Channel *c, const QString &action);
+	void sendUserKissyMiscCommand(ServerUser *su, const QString &action);
+
 private:
+	void chooseNewMedia(Channel *c, quint32 mediaIndex);
+	void userChooseNewMedia(ServerUser *u, quint32 mediaIndex);
+	void setPlayback(Channel *c, QString action, quint64 serverTime);
+	void userSetPlayback(ServerUser *u, QString action, quint64 serverTime);
+	void setPlaybackOnKissyChannelState(KissyChannelState &kcs, QString action, quint64 serverTime);
+	void setMisc(Channel *c, QString action);
+	void userSetMisc(ServerUser *u, QString action);
+
 	int iChannelNestingLimit;
 	int iChannelCountLimit;
 

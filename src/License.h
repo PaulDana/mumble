@@ -6,6 +6,10 @@
 #ifndef MUMBLE_LICENSE_H_
 #define MUMBLE_LICENSE_H_
 
+// kb
+// just an arbitrary place shared between client & server...
+#define KISSY_VERSION_POSTFIX "Kissy v 0.25"
+
 #include <QList>
 #include <QString>
 

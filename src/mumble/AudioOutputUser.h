@@ -30,7 +30,9 @@ public:
 	float *pfVolume = nullptr;
 	float fPos[3]   = { 0.0, 0.0, 0.0 };
 	bool bStereo;
-	virtual bool prepareSampleBuffer(unsigned int snum) = 0;
+	// kb
+	quint64 performanceTime                             = 0;
+	virtual bool prepareSampleBuffer(unsigned int snum, quint64 serverTime, bool *doMix) = 0;
 };
 
 #endif // AUDIOOUTPUTUSER_H_

@@ -120,13 +120,17 @@ public:
 
 	void addFrameToBuffer(ClientUser *, const QByteArray &, unsigned int iSeq, MessageHandler::UDPMessageType type);
 	void removeBuffer(const ClientUser *);
-	AudioOutputSample *playSample(const QString &filename, bool loop = false);
+	AudioOutputSample *playSample(const QString &filename, bool loop = false, bool isSynchronouse = false);
 	void run() Q_DECL_OVERRIDE = 0;
 	virtual bool isAlive() const;
 	const float *getSpeakerPos(unsigned int &nspeakers);
 	static float calcGain(float dotproduct, float distance);
 	unsigned int getMixerFreq() const;
 	void setBufferSize(unsigned int bufferSize);
+
+	// kb
+	void removeSynchronousSampleBuffers();
+	AudioOutputSample *findFirstSynchronousSampleBuffer();
 };
 
 #endif

@@ -1321,6 +1321,9 @@ void Server::msgChannelState(ServerUser *uSource, MumbleProto::ChannelState &msg
 		}
 		sendAll(msg, 0x010202);
 	}
+
+	// kb
+	calcKissyForAllChannels();
 }
 
 void Server::msgChannelRemove(ServerUser *uSource, MumbleProto::ChannelRemove &msg) {
@@ -1338,6 +1341,9 @@ void Server::msgChannelRemove(ServerUser *uSource, MumbleProto::ChannelRemove &m
 	log(uSource, QString("Removed channel %1").arg(*c));
 
 	removeChannel(c);
+
+	// kb
+	calcKissyForAllChannels();
 }
 
 void Server::msgTextMessage(ServerUser *uSource, MumbleProto::TextMessage &msg) {
@@ -1388,6 +1394,11 @@ void Server::msgTextMessage(ServerUser *uSource, MumbleProto::TextMessage &msg) 
 			PERM_DENIED_TYPE(H9K);
 			return;
 		}
+	}
+
+	// kb - if command do not print command itself!
+	if (executeKissyCommandIfPresent(uSource, text)) {
+		return;
 	}
 
 	msg.set_actor(uSource->uiSession);
@@ -1782,6 +1793,21 @@ void Server::msgPing(ServerUser *uSource, MumbleProto::Ping &msg) {
 	msg.set_lost(uSource->csCrypt->uiLost);
 	msg.set_resync(uSource->csCrypt->uiResync);
 
+	// kb
+	// estimate the microsecond time difference between client and server and send to client as new time delta field in msg...
+	float ping               = uSource->dUDPPingAvg > 0 ? uSource->dUDPPingAvg : uSource->dTCPPingAvg;
+	quint64 serverTime       = tUptime.elapsed();
+	quint64 pingMicroseconds    = (quint64) (ping * 1000);
+	float serverClientTimeDelta = (float) serverTime - ts - ((float)pingMicroseconds / 2.0f);
+	msg.set_server_client_time_delta(serverClientTimeDelta);
+
+	//log(QString::fromUtf8("server %1us %2 %3us, delta: %4us avg ping: %5us")
+	//		.arg(serverTime)
+	//		.arg(uSource->qsName)
+	//		.arg(ts)
+	//		.arg((qint64)serverClientTimeDelta)
+	//		.arg(pingMicroseconds));
+
 	sendMessage(uSource, msg);
 }
 
@@ -2120,4 +2146,25 @@ void Server::msgServerConfig(ServerUser *, MumbleProto::ServerConfig &) {
 }
 
 void Server::msgSuggestConfig(ServerUser *, MumbleProto::SuggestConfig &) {
+}
+
+void Server::msgKissyChannelStateChange(ServerUser *, MumbleProto::KissyChannelStateChange &msg) {
+}
+
+void Server::msgKissyChannelMediaCommand(ServerUser *u, MumbleProto::KissyChannelMediaCommand &msg) {
+	if (msg.has_media_index()) {
+		userChooseNewMedia(u, msg.media_index());
+	}
+}
+
+void Server::msgKissyChannelPlaybackCommand(ServerUser *u, MumbleProto::KissyChannelPlaybackCommand &msg) {
+	if (msg.has_action()) {
+		userSetPlayback(u, QString::fromUtf8(msg.action().c_str()), tUptime.elapsed());
+	}
+}
+
+void Server::msgKissyChannelMiscCommand(ServerUser* u, MumbleProto::KissyChannelMiscCommand& msg) {
+	if (msg.has_action()) {
+		userSetMisc(u, QString::fromUtf8(msg.action().c_str()));
+	}
 }

@@ -65,6 +65,9 @@ message Ping {
 	optional float tcp_ping_avg = 10;
 	// TCP ping variance.
 	optional float tcp_ping_var = 11;
+	// kb - kissy *does* decode the client timestamp and sends back the clientServerTimeDelta
+	// Server Client Time Delta in Microseconds
+	optional float server_client_time_delta = 12;
 }
 
 // Sent by the server when it rejects the user connection.
@@ -584,3 +587,37 @@ message SuggestConfig {
 	// True if the administrator suggests push to talk to be used on this server.
 	optional bool push_to_talk = 3;
 }
+
+// Sent by the server to inform the clients of their client kissy channel state change including riverOffset
+message KissyChannelStateChange {
+	// River Offset in milliseconds
+	optional uint32 river_offset = 1;
+
+	// server time of start of performance in microseconds, or zero for not performing
+	optional uint64 server_start_performance_time = 2;
+
+	// performance time of pause, or zero for no pause
+	optional uint64 performance_pause_time = 3;
+}
+
+// Sent by clients to tell the server to change the media (music) for performance
+message KissyChannelMediaCommand {
+    // this POC version is very simple...just a flat list of premades is all that is supported...
+	optional uint32 media_index = 1; // future versions will have this more fleshed out...
+	optional uint32 role_index = 2;
+}
+
+// Sent by clients to tell the server to change the performance playback
+message KissyChannelPlaybackCommand {
+	optional string action = 1; // fuck enums :-)  values of "play" "pause" and "stop"
+
+	// at what server time did this change take place?
+	optional uint64 server_time = 2;
+}
+
+// Sent by clients to tell the server to list available songs
+message KissyChannelMiscCommand {
+	optional string action = 1; // fuck enums :-)  values of "list"
+}
+
+

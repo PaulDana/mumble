@@ -112,6 +112,15 @@ ServerHandler::ServerHandler() : database(new Database(QLatin1String("ServerHand
 	uiVersion               = 0;
 	iInFlightTCPPings       = 0;
 
+	// kb
+	iServerClientTimeDelta	= 0;
+	uiServerTimeElapsed		= 0;
+	iRiverOffset            = 0;
+	uiMediaIndex                 = 0;
+	uiRoleIndex                  = 0;
+	uiServerStartPerformanceTime = 0;
+	uiPerformancePauseTime       = 0;
+
 	// Historically, the qWarning line below initialized OpenSSL for us.
 	// It used to have this comment:
 	//
@@ -248,20 +257,171 @@ void ServerHandler::udpReady() {
 	}
 }
 
+// kb
+quint32 ServerHandler::getMediaIndex() {
+	return uiMediaIndex;
+}
+
+void ServerHandler::setMediaIndex(quint32 index) {
+	uiMediaIndex = index;
+}
+
+quint32 ServerHandler::getRoleIndex() {
+	return uiRoleIndex;
+}
+
+void ServerHandler::setRoleIndex(quint32 index) {
+	uiRoleIndex = index;
+}
+
+// update and return current idea of elapsed time...
+quint64 ServerHandler::getServerTimeElapsed() {
+	// update our prediction of server time...
+	quint64 clientTime = tTimestamp.elapsed();
+	quint64 serverTime = clientTime + iServerClientTimeDelta;
+	// never predict BACKWARDS
+	if (serverTime > uiServerTimeElapsed) {
+		uiServerTimeElapsed = serverTime;
+	}
+
+	return uiServerTimeElapsed;
+}
+
+void ServerHandler::addPerformanceFrame(float time, const QByteArray &packet) {
+	// QMutexLocker l(&qmPerformanceLock);
+	qmPerformancePackets.insert(time, packet);
+}
+
+void ServerHandler::fetchPerformanceFrames() {
+	AudioOutputPtr ao(g.ao);
+	if (!ao || qmPerformancePackets.isEmpty()) {
+		return;
+	}
+
+	QMutexLocker l(&qmPerformanceLock);
+
+	quint64 serverTime = getServerTimeElapsed();
+	float cmp          = (float) serverTime;
+
+	QMultiMap< float, QByteArray >::iterator i = qmPerformancePackets.begin();
+
+	while (i != qmPerformancePackets.end()) {
+		if (i.key() > cmp)
+			break;
+
+		int iSeq;
+		const QByteArray &data = i.value();
+		PacketDataStream pds(data.constData(), data.size());
+		unsigned int msgFlags = static_cast< unsigned int >(pds.next());
+
+		unsigned int uiSession;
+		pds >> uiSession;
+		ClientUser *p = ClientUser::get(uiSession);
+		if (p) {
+
+			pds >> iSeq;
+
+			QByteArray qba;
+			qba.reserve(pds.left() + 1);
+			qba.append(static_cast< char >(msgFlags));
+			qba.append(pds.dataBlock(pds.left()));
+
+			MessageHandler::UDPMessageType msgType =
+				static_cast< MessageHandler::UDPMessageType >((msgFlags >> 5) & 0x7);
+
+			ao->addFrameToBuffer(p, qba, iSeq, msgType);
+		}
+
+		i = qmPerformancePackets.erase(i);
+	}
+}
+
+quint32 ServerHandler::getRiverOffset() {
+	return iRiverOffset;
+}
+
+
+static quint64 getPerformanceTime(PacketDataStream &pds, MessageHandler::UDPMessageType type) {
+	quint64 performanceTime = 0;
+	float x=0, y=0, z=0;
+	if (type == MessageHandler::UDPMessageType::UDPVoiceOpus) {
+		// pds structure at this point is: session + flags + size + audioData + pos*3 + time
+		// we assume this PDS has not been forwarded at all at this point so we can
+		// rewind at end to restore it...
+		unsigned int uiSession;
+		pds >> uiSession;
+
+		unsigned int iSeq;
+		pds >> iSeq;
+
+		// reach forward and grab the time...
+		int size;
+		pds >> size;
+		size &= 0x1fff;
+		if (size) {
+			pds.skip(size); // skip audio buffer
+			if (pds.left()) {
+				//pds.skip(sizeof(float) * 3); // skip position
+				pds >> x;
+				pds >> y;
+				pds >> z;
+			}
+			if (pds.left()) {
+				pds >> performanceTime; // ahah! grab time!
+			}
+		}
+		// restore PDS to start state (assumes it was not forwarded at all before entering this method)
+		pds.rewind();
+	}
+	return performanceTime;
+}
+
+void ServerHandler::setKissyClientChannelState(quint32 riverOffset, quint64 serverStartPerformanceTime, quint64 performancePauseTime) {
+	iRiverOffset = riverOffset;
+	uiServerStartPerformanceTime = serverStartPerformanceTime;
+	uiPerformancePauseTime       = performancePauseTime;
+}
+
 void ServerHandler::handleVoicePacket(unsigned int msgFlags, PacketDataStream &pds,
-									  MessageHandler::UDPMessageType type) {
+									   MessageHandler::UDPMessageType type) {
+	// kb
+	quint64 performanceTime = getPerformanceTime(pds, type) + (iRiverOffset * 1000); // add our river offset (convert to microseconds)
+
 	unsigned int uiSession;
 	pds >> uiSession;
 	ClientUser *p     = ClientUser::get(uiSession);
 	AudioOutputPtr ao = g.ao;
 	if (ao && p && !(((msgFlags & 0x1f) == 2) && g.s.bWhisperFriends && p->qsFriendName.isEmpty())) {
-		unsigned int iSeq;
-		pds >> iSeq;
-		QByteArray qba;
-		qba.reserve(pds.left() + 1);
-		qba.append(static_cast< char >(msgFlags));
-		qba.append(pds.dataBlock(pds.left()));
-		ao->addFrameToBuffer(p, qba, iSeq, type);
+
+	    quint64 serverTime = getServerTimeElapsed();
+		qint64 usDelta     = (qint64) performanceTime - serverTime;
+
+		if (usDelta > 10000) { // if more than 10000 us in future (10 ms) then queue it up...
+			// buffer this for later playback
+
+			// for now (beause we copied code from LoopUser) time is a float
+			float time = (float) performanceTime;
+			unsigned int msgByte = (static_cast<unsigned int>(type) << 5) | msgFlags;
+
+			// save the whole enchilada:
+			unsigned char buffer[1024];
+			PacketDataStream helper(buffer, 1023);
+			helper.append(msgByte);
+			helper << uiSession;
+			helper.append(reinterpret_cast< const char * >(pds.dataPtr()), pds.left());
+			helper.rewind();
+			addPerformanceFrame(time, helper.dataBlock(helper.left()));
+
+		} else {
+			unsigned int iSeq;
+			pds >> iSeq;
+
+			QByteArray qba;
+			qba.reserve(pds.left() + 1);
+			qba.append(static_cast< char >(msgFlags));
+			qba.append(pds.dataBlock(pds.left()));
+			ao->addFrameToBuffer(p, qba, iSeq, type);
+		}
 	}
 }
 
@@ -451,7 +611,7 @@ void ServerHandler::run() {
 			if (hQoS) {
 				if (!QOSRemoveSocketFromFlow(hQoS, 0, dwFlowUDP, 0)) {
 					qWarning(
-						"ServerHandler: Failed to remove UDP from QoS. QOSRemoveSocketFromFlow() failed with error %lu!",
+						"ServerHandler: Failed to remove UDP from QoS. QOSRemoveSocketFromFlow() failed with error %u!",
 						GetLastError());
 				}
 
@@ -646,6 +806,13 @@ void ServerHandler::message(unsigned int msgType, const QByteArray &qbaMsg) {
 
 					database->setUdp(qbaDigest, true);
 				}
+			}
+
+			// kb
+			if (msg.has_server_client_time_delta()) {
+			
+				// update the server client time delta with our current best estimate...
+				iServerClientTimeDelta = msg.server_client_time_delta();
 			}
 		}
 	} else {

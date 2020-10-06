@@ -190,6 +190,37 @@ void AudioOutput::removeBuffer(const ClientUser *user) {
 	removeBuffer(qmOutputs.value(user));
 }
 
+void AudioOutput::removeSynchronousSampleBuffers() {
+	QWriteLocker locker(&qrwlOutputs);
+	QMultiHash< const ClientUser *, AudioOutputUser * >::iterator i;
+	for (i = qmOutputs.begin(); i != qmOutputs.end(); ++i) {
+		AudioOutputUser *aop = i.value();
+		AudioOutputSample *aos = qobject_cast< AudioOutputSample * >(aop);
+		if (aos && aos->isSynchronous()) {
+			qmOutputs.erase(i);
+			delete aop;
+			// there shoudl be only one
+			break;
+			// keep going? there should not be more...
+		}
+	}
+}
+
+AudioOutputSample *AudioOutput::findFirstSynchronousSampleBuffer() {
+	AudioOutputSample *retVal = nullptr;
+	qrwlOutputs.lockForRead();
+	QMultiHash< const ClientUser *, AudioOutputUser * >::iterator i;
+	for (i = qmOutputs.begin(); i != qmOutputs.end(); ++i) {
+		AudioOutputUser *aop   = i.value();
+		AudioOutputSample *aos = qobject_cast< AudioOutputSample * >(aop);
+		if (aos && aos->isSynchronous()) {
+			retVal = aos;
+		}
+	}
+	qrwlOutputs.unlock();
+	return retVal;
+}
+
 void AudioOutput::removeBuffer(AudioOutputUser *aop) {
 	QWriteLocker locker(&qrwlOutputs);
 	QMultiHash< const ClientUser *, AudioOutputUser * >::iterator i;
@@ -202,7 +233,7 @@ void AudioOutput::removeBuffer(AudioOutputUser *aop) {
 	}
 }
 
-AudioOutputSample *AudioOutput::playSample(const QString &filename, bool loop) {
+AudioOutputSample *AudioOutput::playSample(const QString &filename, bool loop, bool isSynchronous) {
 	SoundFile *handle = AudioOutputSample::loadSndfile(filename);
 	if (!handle)
 		return nullptr;
@@ -224,7 +255,7 @@ AudioOutputSample *AudioOutput::playSample(const QString &filename, bool loop) {
 		return nullptr;
 
 	QWriteLocker locker(&qrwlOutputs);
-	AudioOutputSample *aos = new AudioOutputSample(filename, handle, loop, iMixerFreq, iBufferSize);
+	AudioOutputSample *aos = new AudioOutputSample(filename, handle, loop, iMixerFreq, iBufferSize, isSynchronous);
 	qmOutputs.insert(nullptr, aos);
 
 	return aos;
@@ -361,6 +392,12 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 	positions.clear();
 #endif
 
+	// kb
+	// play any buffered frames...
+	if (g.sh) {
+		g.sh->fetchPerformanceFrames();	
+	}
+
 	// A list of users that have audio to contribute
 	QList< AudioOutputUser * > qlMix;
 	// A list of users that no longer have any audio to play and can thus be deleted
@@ -387,10 +424,15 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 	QMultiHash< const ClientUser *, AudioOutputUser * >::const_iterator it = qmOutputs.constBegin();
 	while (it != qmOutputs.constEnd()) {
 		AudioOutputUser *aop = it.value();
-		if (!aop->prepareSampleBuffer(frameCount)) {
+		// kb
+		quint64 serverTime = g.sh->getServerTimeElapsed();
+		bool doMix;
+		if (!aop->prepareSampleBuffer(frameCount, serverTime, &doMix)) {
 			qlDel.append(aop);
 		} else {
-			qlMix.append(aop);
+			if (doMix) {
+				qlMix.append(aop);
+			}
 
 			const ClientUser *user = it.key();
 			if (user && user->bPrioritySpeaker) {

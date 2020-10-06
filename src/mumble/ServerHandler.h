@@ -87,7 +87,31 @@ protected:
 
 	void handleVoicePacket(unsigned int msgFlags, PacketDataStream &pds, MessageHandler::UDPMessageType type);
 
+	// kb
+	qint64 iServerClientTimeDelta;
+	quint64 uiServerTimeElapsed; // current guess as to server time...
+
+	quint32 iRiverOffset; // river offset of current room
+	quint32 uiMediaIndex; // which song is playing
+	quint32 uiRoleIndex; // which role of which song is playing
+	quint64
+		uiServerStartPerformanceTime; // server time in microseconds of start of performance, or zero for not performing
+	quint64 uiPerformancePauseTime;   // performance time in microseconds of pause frame, or zero for not paused
+
+	QMutex qmPerformanceLock;
+	QMultiMap< float, QByteArray > qmPerformancePackets; // stores buffered packets for performances of all clients
+	void addPerformanceFrame(float time, const QByteArray &packet);
+
 public:
+	quint32 getRiverOffset();
+	void setMediaIndex(quint32 index);
+	void setRoleIndex(quint32 index);
+	quint32 getMediaIndex();        // get value 0..(numSongs-1) giving selected song
+	quint32 getRoleIndex();        // 0=no voices, 1=A only, 2=B only, 3=Both
+	quint64 getServerTimeElapsed(); // update and return current idea of elapsed time...
+	void setKissyClientChannelState(quint32 riverOffset, quint64 serverStartPerformanceTime, quint64 performancePauseTime);
+	void fetchPerformanceFrames();
+
 	Timer tTimestamp;
 	int iInFlightTCPPings;
 	QTimer *tConnectionTimeoutTimer;

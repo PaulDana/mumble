@@ -37,6 +37,9 @@
 #include "crypto/CryptState.h"
 #include <QTextDocumentFragment>
 
+// kb
+#include "AudioOutputSample.h"
+
 // We define a global macro called 'g'. This can lead to issues when included code uses 'g' as a type or parameter name
 // (like protobuf 3.7 does). As such, for now, we have to make this our last include.
 #include "Global.h"
@@ -197,20 +200,12 @@ void MainWindow::msgServerSync(const MumbleProto::ServerSync &msg) {
 		ChannelListener::setInitialServerSyncDone(true);
 	}
 
-	{
-		// Since we are only loading the adjustments from the database, we don't really want to consider the adjustments
-		// to have "changed" by this action. Furthermore we are setting the volume adjustments before the listeners
-		// officially exist. Therefore some code that would receive the change-event would try to get the respective listener
-		// and fail due to it not existing yet.
-		// Therefore we block all signals while setting the volume adjustments.
-		const QSignalBlocker blocker(ChannelListener::get());
+	QHash< int, float > volumeMap = g.db->getChannelListenerLocalVolumeAdjustments(g.sh->qbaDigest);
 
-		QHash< int, float > volumeMap = g.db->getChannelListenerLocalVolumeAdjustments(g.sh->qbaDigest);
-		QHashIterator< int, float > it(volumeMap);
-		while (it.hasNext()) {
-			it.next();
-			ChannelListener::setListenerLocalVolumeAdjustment(it.key(), it.value());
-		}
+	QHashIterator< int, float > it(volumeMap);
+	while (it.hasNext()) {
+		it.next();
+		ChannelListener::setListenerLocalVolumeAdjustment(it.key(), it.value());
 	}
 
 
@@ -1301,5 +1296,170 @@ void MainWindow::msgSuggestConfig(const MumbleProto::SuggestConfig &msg) {
 			g.l->log(Log::Warning, tr("The server requests Push-to-Talk be enabled."));
 		else
 			g.l->log(Log::Warning, tr("The server requests Push-to-Talk be disabled."));
+	}
+}
+
+/// This message is received when the server wants to inform the client about kissy state for the channel they are in
+///
+/// @param msg The message object containing the kissy channel state
+void MainWindow::msgKissyChannelStateChange(const MumbleProto::KissyChannelStateChange &msg) {
+	g.sh->setKissyClientChannelState(msg.river_offset(), msg.server_start_performance_time(), msg.performance_pause_time());
+	g.l->log(Log::TextMessage, QString::fromUtf8("kissy channel state changed. river offset %1 start time %2").arg(msg.river_offset())
+			 .arg(msg.server_start_performance_time()));
+
+	//// if we are playing - adjust the time offset
+	//AudioOutputPtr ao = g.ao;
+	//if (!ao) {
+	//	return;
+	//}	//AudioOutputSample *aos = ao->findFirstSynchronousSampleBuffer();
+	//if (!aos) {
+	//	return;
+	//}
+
+	//// if we are playing - change time offset - we must pass in the start time as that is not updated yet until play command...
+	//quint64 startTime = msg.server_start_performance_time();
+	//aos->seekServerTime(g.sh->getServerTimeElapsed() + (g.sh->getRiverOffset() * 1000L), startTime);
+
+}
+
+void MainWindow::msgKissyChannelMediaCommand(const MumbleProto::KissyChannelMediaCommand &msg) {
+	if (msg.has_media_index() && msg.has_role_index()) {
+		unsigned int index = msg.media_index();
+		unsigned int role = msg.role_index();
+		g.sh->setMediaIndex(index);
+		g.sh->setRoleIndex(role);
+
+		g.l->log(Log::TextMessage, QString::fromUtf8("kissy media index changed to %1 ").arg(index));
+		AudioOutputPtr ao = g.ao;
+		if (ao) {
+			// stop playback if any...
+			ao->removeSynchronousSampleBuffers();
+
+			// start a new playback of given media...
+			// for now just this
+			QString fileName;
+			if (index == 0) {
+				if (role == 1) {
+					fileName = QString::fromLatin1("./media/A_Whole_New_World_HearAOnly.wav");
+				} else if (role == 2) {
+					fileName = QString::fromLatin1("./media/A_Whole_New_World_HearBOnly.wav");
+				} else if (role == 3) {
+					fileName = QString::fromLatin1("./media/A_Whole_New_World_HearBoth.wav");
+				} else {
+					fileName = QString::fromLatin1("./media/A_Whole_New_World_NoVoices.wav");
+				}
+			} else if (index == 1) {
+				if (role == 1) {
+					fileName = QString::fromLatin1("./media/Don_t_Go_Breaking_My_Heart_HearAOnly.wav");
+				} else if (role == 2) {
+					fileName = QString::fromLatin1("./media/Don_t_Go_Breaking_My_Heart_HearBOnly.wav");
+				} else if (role == 3) {
+					fileName = QString::fromLatin1("./media/Don_t_Go_Breaking_My_Heart_HearBoth.wav");
+				} else {
+					fileName = QString::fromLatin1("./media/Don_t_Go_Breaking_My_Heart_NoVoices.wav");
+				}
+			} else if (index == 2) {
+				if (role == 1 || role == 2 || role == 2) {
+					fileName = QString::fromLatin1("./media/Don_t_Stop_Believing_WithVoice.wav");
+				} else {
+					fileName = QString::fromLatin1("./media/Don_t_Stop_Believing_NoVoice.wav");
+				}
+			//} else if (index == 3) {
+			//	if (role == 1) {
+			//		fileName = QString::fromLatin1("./media/Ebony_and_Ivory_HearAOnly.wav");
+			//	} else if (role == 2) {
+			//		fileName = QString::fromLatin1("./media/Ebony_and_Ivory_HearBOnly.wav");
+			//	} else if (role == 3) {
+			//		fileName = QString::fromLatin1("./media/Ebony_and_Ivory_HearBoth.wav");
+			//	} else {
+			//		fileName = QString::fromLatin1("./media/Ebony_and_Ivory_NoVoices.wav");
+			//	}
+			//} else if (index == 4) {
+			//	if (role == 1) {
+			//		fileName = QString::fromLatin1("./media/Summer_Nights_HearAOnly.wav");
+			//	} else if (role == 2) {
+			//		fileName = QString::fromLatin1("./media/Summer_Nights_HearBOnly.wav");
+			//	} else if (role == 3) {
+			//		fileName = QString::fromLatin1("./media/Summer_Nights_HearBoth.wav");
+			//	} else {
+			//		fileName = QString::fromLatin1("./media/Summer_Nights_NoVoices.wav");
+			//	}
+			//} else if (index == 5) {
+			//	if (role == 1) {
+			//		fileName = QString::fromLatin1("./media/The_Time_Of_My_Life_HearAOnly.wav");
+			//	} else if (role == 2) {
+			//		fileName = QString::fromLatin1("./media/The_Time_Of_My_Life_HearBOnly.wav");
+			//	} else if (role == 3) {
+			//		fileName = QString::fromLatin1("./media/The_Time_Of_My_Life_HearBoth.wav");
+			//	} else {
+			//		fileName = QString::fromLatin1("./media/The_Time_Of_My_Life_NoVoices.wav");
+			//	}
+			//} else if (index == 6) {
+			//	if (role == 1 || role == 2 || role == 2) {
+			//		fileName = QString::fromLatin1("./media/UnderPressure_WithVoice.wav");
+			//	} else {
+			//		fileName = QString::fromLatin1("./media/UnderPressure_NoVoice.wav");
+			//	}
+			} else if (index == 10) {
+				fileName = QString::fromLatin1(":/0_tick_tock_no_voices.wav");
+			} else if (index == 11) {
+				fileName = QString::fromLatin1(":/1_counting_no_voices.wav");
+			}
+
+			if (!fileName.isEmpty()) {
+				AudioOutputSample *aos = ao->playSample(fileName, false, true);
+				if (aos) {
+					g.l->log(Log::TextMessage, QString::fromUtf8("kissy media playing file %1 ").arg(fileName));
+				}
+			}
+		}
+	}
+}
+
+void MainWindow::msgKissyChannelPlaybackCommand(const MumbleProto::KissyChannelPlaybackCommand &msg) {
+	quint32 index     = g.sh->getMediaIndex();
+	AudioOutputPtr ao = g.ao;
+	if (!ao) {
+		return;
+	}
+	AudioOutputSample *aos = ao->findFirstSynchronousSampleBuffer();
+	if (!aos) {
+		return;
+	}
+
+	QString action;
+	if (msg.has_action()) {
+		action = QString::fromUtf8(msg.action().c_str());
+	}
+
+	if (action.compare("play") == 0) {
+		// ok start playing at the provided time...
+		quint64 serverTime = msg.has_server_time() ? msg.server_time() : 0L;
+		aos->setServerStartPerformanceTime(serverTime + (g.sh->getRiverOffset() * 1000L)); // correct for our river salmon
+		aos->setPerformancePauseTime(0);
+	} else if (action.compare("stop") == 0) {
+		// stop playing...
+		aos->setServerStartPerformanceTime(0);
+		aos->setPerformancePauseTime(0);
+	}
+}
+
+void MainWindow::msgKissyChannelMiscCommand(const MumbleProto::KissyChannelMiscCommand &msg) {
+
+	QString action;
+	if (msg.has_action()) {
+		action = QString::fromUtf8(msg.action().c_str());
+	}
+
+	if (action.compare("list") == 0) {
+		// list the songs!
+		g.l->log(Log::TextMessage, QString::fromUtf8("SONG LIST"));
+		g.l->log(Log::TextMessage, QString::fromUtf8("0 = A Whole New World (Duet)"));
+		g.l->log(Log::TextMessage, QString::fromUtf8("1 = Don't Go Breaking My Heart (Duet)"));
+		g.l->log(Log::TextMessage, QString::fromUtf8("2 = Don't Stop Believing"));
+		//g.l->log(Log::TextMessage, QString::fromUtf8("3 = Ebony and Ivory (Duet)"));
+		//g.l->log(Log::TextMessage, QString::fromUtf8("4 = Summer Nights (Duet)"));
+		//g.l->log(Log::TextMessage, QString::fromUtf8("5 = The Time of My Life (Duet)"));
+		//g.l->log(Log::TextMessage, QString::fromUtf8("6 = Under Pressure"));
 	}
 }

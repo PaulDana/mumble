@@ -24,6 +24,8 @@
 #include "PacketDataStream.h"
 #include "SpeechFlags.h"
 #include "Utils.h"
+// kb
+#include "ServerHandler.h"
 #include "Global.h"
 
 AudioOutputSpeech::AudioOutputSpeech(ClientUser *user, unsigned int freq, MessageHandler::UDPMessageType type,
@@ -167,7 +169,7 @@ void AudioOutputSpeech::addFrameToBuffer(const QByteArray &qbaPacket, unsigned i
 		return;
 
 	// Voice data is transmitted through UDP packets and is not formatted by protobuf.
-	// Structure is: flags + size + audio data + pos*3
+	// Structure is: flags + size + audio data + pos*3 + time
 	PacketDataStream pds(qbaPacket);
 
 	// skip flags
@@ -223,9 +225,12 @@ void AudioOutputSpeech::addFrameToBuffer(const QByteArray &qbaPacket, unsigned i
 	}
 }
 
-bool AudioOutputSpeech::prepareSampleBuffer(unsigned int frameCount) {
+bool AudioOutputSpeech::prepareSampleBuffer(unsigned int frameCount, quint64 serverTime, bool *doMix) {
 	unsigned int channels = bStereo ? 2 : 1;
 	// Note: all stereo supports are crafted for opus, since other codecs are deprecated and will soon be removed.
+
+	// we ALWAYS play speech by this point
+	*doMix = true;
 
 	unsigned int sampleCount = frameCount * channels;
 
@@ -288,7 +293,7 @@ bool AudioOutputSpeech::prepareSampleBuffer(unsigned int frameCount) {
 
 				if (jitter_buffer_get(jbJitter, &jbp, iFrameSize, &startofs) == JITTER_BUFFER_OK) {
 					PacketDataStream pds(jbp.data, jbp.len);
-					// pds structure is: flags + size (14-16 terminator + 1-15 size) + audio data + pos*3
+					// pds structure is: flags + size (14-16 terminator + 1-15 size) + audio data + pos*3 + time
 
 					iMissCount = 0;
 					ucFlags    = static_cast< unsigned char >(pds.next());
@@ -319,6 +324,14 @@ bool AudioOutputSpeech::prepareSampleBuffer(unsigned int frameCount) {
 						pds >> fPos[2];
 					} else {
 						fPos[0] = fPos[1] = fPos[2] = 0.0f;
+					}
+
+					// kb
+					if (pds.left()) {
+						pds >> performanceTime;
+						//	g.l->log(Log::Warning, tr("(client) performance time: %1").arg(performanceTime));
+					} else {
+						performanceTime = 0;
 					}
 
 					if (p) {
