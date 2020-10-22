@@ -8,7 +8,7 @@
 
 // kb
 // just an arbitrary place shared between client & server...
-#define KISSY_VERSION_POSTFIX "Kissy v 0.25"
+#define KISSY_VERSION_POSTFIX "Kissy v 0.26"
 
 #include <QList>
 #include <QString>

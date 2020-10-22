@@ -95,8 +95,8 @@ struct KissyChannelState {
 	// channel structure
 	bool isKissyTopLevel; // are we a top level kissy channel?
 	bool isKissyMain; // are we a main river channel
-	int riverIndex; // if we are a river channel, what is our 1 based index? (which determines our riverOffset)
-	quint32 riverOffset;  // millisecond time offset of this channel in the river
+	int iRiverIndex; // if we are a river channel, what is our 1 based index? (which determines our riverOffset)
+	quint32 uiRiverOffset;  // millisecond time offset of this channel in the river
 	quint32 uiRoleIndex;  // 0 = no parts, 1 = hear A only, 2 = hear B only, 3 = hear both
 
 	// top level has these filled out...
@@ -104,18 +104,18 @@ struct KissyChannelState {
 
 	// performance state
 	quint32 uiMediaIndex; // aka which song - first song, second song
-	quint64 iServerStartPerformanceTime; // server time in us of start of performance time, 0 means not performing
-	quint64 iPerformancePauseTime; // performance time in us at which we are paused, 0 means not paused
+	quint64 uiServerStartPerformanceTime; // server time in us of start of performance time, 0 means not performing
+	quint64 uiPerformancePauseTime; // performance time in us at which we are paused, 0 means not paused
 
 	KissyChannelState() { 
 		isKissyTopLevel = false;
 		isKissyMain		= false;
-		riverIndex      = 0;
-		riverOffset		= 0;
-		uiRoleIndex                 = 0;
-		uiMediaIndex                = 0;
-		iServerStartPerformanceTime = 0;
-		iPerformancePauseTime = 0;
+		iRiverIndex     = 0;
+		uiRiverOffset	= 0;
+		uiRoleIndex     = 0;
+		uiMediaIndex    = 0;
+		uiServerStartPerformanceTime = 0;
+		uiPerformancePauseTime = 0;
 	}
 };
 
@@ -223,9 +223,9 @@ public:
 	void sendUsersInChannelKissyMediaCommand(Channel *c, const KissyChannelState &kcs);
 	void sendUserKissyMediaCommand(ServerUser *su, const KissyChannelState &kcs);
 	void sendUsersInChannelKissyPlaybackCommand(Channel *c, const QString &action, const KissyChannelState &kcs);
-	void sendUserKissyPlaybackCommand(ServerUser *su, const QString &action, const KissyChannelState &kcs);
-	bool executeKissyCommandIfPresent(ServerUser *su, QString text);
 	void sendUsersInChannelKissyMiscCommand(Channel *c, const QString &action);
+	void sendUserKissyPlaybackCommand(ServerUser * su, const QString &action, const KissyChannelState &kcs);
+	bool executeKissyCommandIfPresent(ServerUser *su, QString text);
 	void sendUserKissyMiscCommand(ServerUser *su, const QString &action);
 
 private:
@@ -236,6 +236,7 @@ private:
 	void setPlaybackOnKissyChannelState(KissyChannelState &kcs, QString action, quint64 serverTime);
 	void setMisc(Channel *c, QString action);
 	void userSetMisc(ServerUser *u, QString action);
+	void userSetUserMisc(ServerUser *u, QString action, QString userName, quint64 value);
 
 	int iChannelNestingLimit;
 	int iChannelCountLimit;

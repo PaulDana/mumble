@@ -620,4 +620,14 @@ message KissyChannelMiscCommand {
 	optional string action = 1; // fuck enums :-)  values of "list"
 }
 
+// Sent by server to tell a single client to set a param (such as audio lag)
+message KissyUserMiscCommand {
+	optional string action = 1; // fuck enums :-)  values of "audioLag"
+
+	// name of user for which to set param
+	optional string user_name = 2;
+
+	// value that goes with command, e.g. for "audioLag" the value is the lag to set...
+	optional uint64 value = 3;
+}
 

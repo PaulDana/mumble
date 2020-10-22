@@ -88,10 +88,11 @@ protected:
 	void handleVoicePacket(unsigned int msgFlags, PacketDataStream &pds, MessageHandler::UDPMessageType type);
 
 	// kb
-	qint64 iServerClientTimeDelta;
+	qint64 iServerClientTimeDelta; // current best guess of microsecond difference between server clock & client clock (uses half estimated ping to correct for msg transmission time)
 	quint64 uiServerTimeElapsed; // current guess as to server time...
+	quint32 uiClientAudioLag; // estimated microseconds of lag introduced by client audio hardware (currently must be user-entered, later will be calculated)
 
-	quint32 iRiverOffset; // river offset of current room
+	quint32 uiRiverOffset; // river offset of current room
 	quint32 uiMediaIndex; // which song is playing
 	quint32 uiRoleIndex; // which role of which song is playing
 	quint64
@@ -111,6 +112,8 @@ public:
 	quint64 getServerTimeElapsed(); // update and return current idea of elapsed time...
 	void setKissyClientChannelState(quint32 riverOffset, quint64 serverStartPerformanceTime, quint64 performancePauseTime);
 	void fetchPerformanceFrames();
+	quint32 getAudioLag();
+	void setAudioLag(quint32 audioLag);
 
 	Timer tTimestamp;
 	int iInFlightTCPPings;

@@ -288,7 +288,7 @@ Server::Server(int snum, QObject *p) : QThread(p) {
 void Server::userChooseNewMedia(ServerUser *u, quint32 mediaIndex) {
 	// user must be in a kissy room
 	const KissyChannelState &kcs = qmKissyChannelStates.value(u->cChannel->iId);
-	if (kcs.isKissyTopLevel || kcs.riverIndex > 0) {
+	if (kcs.isKissyTopLevel || kcs.iRiverIndex > 0) {
 		chooseNewMedia(u->cChannel, mediaIndex);
 	}
 }
@@ -299,7 +299,7 @@ void Server::chooseNewMedia(Channel * c, quint32 mediaIndex) {
 	Channel *topLevel                   = getTopLevel(c);
 	KissyChannelState kcs               = qmKissyChannelStates.value(topLevel->iId);
 	kcs.uiMediaIndex                    = mediaIndex;
-	kcs.iServerStartPerformanceTime = kcs.iPerformancePauseTime = 0;
+	kcs.uiServerStartPerformanceTime = kcs.uiPerformancePauseTime = 0;
 	qmKissyChannelStates[topLevel->iId]	= kcs;
 	sendUsersInChannelKissyStateChange(topLevel, kcs);
 	sendUsersInChannelKissyMediaCommand(topLevel, kcs);
@@ -307,7 +307,7 @@ void Server::chooseNewMedia(Channel * c, quint32 mediaIndex) {
 	foreach (quint32 iId, kcs.qlRiverChannels) { 
 		kcs           = qmKissyChannelStates.value(iId);
 		kcs.uiMediaIndex                = mediaIndex;
-		kcs.iServerStartPerformanceTime = kcs.iPerformancePauseTime = 0;	
+		kcs.uiServerStartPerformanceTime = kcs.uiPerformancePauseTime = 0;	
 		qmKissyChannelStates[iId]       = kcs;
 		sendUsersInChannelKissyStateChange(qhChannels.value(iId), kcs);
 		sendUsersInChannelKissyMediaCommand(qhChannels.value(iId), kcs);
@@ -316,22 +316,22 @@ void Server::chooseNewMedia(Channel * c, quint32 mediaIndex) {
 
 void Server::setPlaybackOnKissyChannelState(KissyChannelState &kcs, QString action, quint64 serverTime) {
 	if (action.compare("play") == 0) {
-		kcs.iServerStartPerformanceTime = serverTime;
-		kcs.iPerformancePauseTime = 0;
+		kcs.uiServerStartPerformanceTime = serverTime;
+		kcs.uiPerformancePauseTime = 0;
 	} else if (action.compare("stop")) {
-		kcs.iServerStartPerformanceTime = kcs.iPerformancePauseTime = 0;
+		kcs.uiServerStartPerformanceTime = kcs.uiPerformancePauseTime = 0;
 	} else if (action.compare("pause")) {
 		// whatever time is now, relative to start...
-		kcs.iPerformancePauseTime = serverTime - kcs.iServerStartPerformanceTime;
-		if (kcs.iPerformancePauseTime < 0)
-			kcs.iPerformancePauseTime = 0;
+		kcs.uiPerformancePauseTime = serverTime - kcs.uiServerStartPerformanceTime;
+		if (kcs.uiPerformancePauseTime < 0)
+			kcs.uiPerformancePauseTime = 0;
 	}
 }
 
 void Server::userSetPlayback(ServerUser *u, QString action, quint64 serverTime) {
 	// user must be in a kissy room
 	const KissyChannelState &kcs = qmKissyChannelStates.value(u->cChannel->iId);
-	if (kcs.isKissyTopLevel || kcs.riverIndex > 0) {
+	if (kcs.isKissyTopLevel || kcs.iRiverIndex > 0) {
 		// do this thing...
 		setPlayback(u->cChannel, action, serverTime);
 	}
@@ -355,10 +355,31 @@ void Server::setPlayback(Channel *c, QString action, quint64 serverTime) {
 	}
 }
 
+void Server::userSetUserMisc(ServerUser *u, QString action, QString userName, quint64 value) {
+	// does the target user exist?
+	ServerUser *targetUser = nullptr;
+	foreach (ServerUser *su, qhUsers) {
+		if (su->qsName.compare(userName)==0) {
+			targetUser = su;
+			break;
+		}
+	}
+
+	if (targetUser) {
+		// if so, send them da msg!
+		MumbleProto::KissyUserMiscCommand msg;
+		msg.set_action(action.toStdString());
+		msg.set_user_name(u->qsName.toStdString()); // set name to the person doing the setting!
+		msg.set_value(value);
+
+		sendMessage(targetUser, msg);
+	}
+}
+
 void Server::userSetMisc(ServerUser *u, QString action) {
 	// user must be in a kissy room
 	const KissyChannelState &kcs = qmKissyChannelStates.value(u->cChannel->iId);
-	if (kcs.isKissyTopLevel || kcs.riverIndex > 0) {
+	if (kcs.isKissyTopLevel || kcs.iRiverIndex > 0) {
 		// do this thing...
 		setMisc(u->cChannel, action);
 	}
@@ -389,8 +410,8 @@ void Server::calcKissyForAllChannels() {
 		log(QString::fromUtf8("Kissy State for channel: %1").arg(c->qsName));
 		log(QString::fromUtf8("is Top Level: %1").arg(ksm.isKissyTopLevel));
 		log(QString::fromUtf8("is Main River: %1").arg(ksm.isKissyMain));
-		log(QString::fromUtf8("River Index: %1").arg(ksm.riverIndex));
-		log(QString::fromUtf8("River Offset: %1 ms").arg(ksm.riverOffset));
+		log(QString::fromUtf8("River Index: %1").arg(ksm.iRiverIndex));
+		log(QString::fromUtf8("River Offset: %1 ms").arg(ksm.uiRiverOffset));
 		log(QString::fromUtf8("Role Index: %1").arg(ksm.uiRoleIndex));
 		log(QString::fromUtf8("River Channels:"));
 		foreach (unsigned int iId, ksm.qlRiverChannels) { 
@@ -419,9 +440,9 @@ void Server::sendUsersInChannelKissyStateChange(Channel *c, const KissyChannelSt
 
 void Server::sendUserKissyChannelStateChange(ServerUser *su, const KissyChannelState &kcs) {
 	MumbleProto::KissyChannelStateChange mpkcsc;
-	mpkcsc.set_river_offset(kcs.riverOffset);
-	mpkcsc.set_server_start_performance_time(kcs.iServerStartPerformanceTime);
-	mpkcsc.set_performance_pause_time(kcs.iPerformancePauseTime);
+	mpkcsc.set_river_offset(kcs.uiRiverOffset);
+	mpkcsc.set_server_start_performance_time(kcs.uiServerStartPerformanceTime);
+	mpkcsc.set_performance_pause_time(kcs.uiPerformancePauseTime);
 	sendMessage(su, mpkcsc);
 }
 
@@ -449,7 +470,7 @@ void Server::sendUsersInChannelKissyPlaybackCommand(Channel *c, const QString &a
 void Server::sendUserKissyPlaybackCommand(ServerUser *su, const QString &action, const KissyChannelState &kcs) {
 	MumbleProto::KissyChannelPlaybackCommand mpkcpc;
 	mpkcpc.set_action(action.toStdString());
-	mpkcpc.set_server_time(kcs.iServerStartPerformanceTime);
+	mpkcpc.set_server_time(kcs.uiServerStartPerformanceTime);
 	sendMessage(su, mpkcpc);
 }
 
@@ -539,7 +560,7 @@ Channel *Server::getTopLevel(Channel *c) {
 		top = c;
 	} else if (kcs.isKissyMain) {
 		top = c->cParent;
-	} else if (kcs.riverIndex > 0) {
+	} else if (kcs.iRiverIndex > 0) {
 		top = c->cParent->cParent;
 	}
 
@@ -580,8 +601,8 @@ void Server::calcKissyForChannel(Channel *c) {
 		if (index > 0) {
 			// this is a river channel...
 			kcs.isKissyMain = true;
-			kcs.riverIndex = index;
-			kcs.riverOffset = index * 200; // milliseconds offset
+			kcs.iRiverIndex = index;
+			kcs.uiRiverOffset = index * 200; // milliseconds offset
 			// we don't need this logic anymore...
 			// ensure our parent is done first
 			//calcKissyForChannel(c->cParent); // will not recurse forever as we KNOW this parent is a top level...
@@ -594,8 +615,8 @@ void Server::calcKissyForChannel(Channel *c) {
 				const KissyChannelState &parentKCS = qmKissyChannelStates.value(c->cParent->iId);
 
 				// and WE are a sub channel!
-				kcs.riverIndex = parentKCS.riverIndex;
-				kcs.riverOffset = parentKCS.riverOffset;
+				kcs.iRiverIndex = parentKCS.iRiverIndex;
+				kcs.uiRiverOffset = parentKCS.uiRiverOffset;
 
 				// what is our special role, if any?
 				kcs.uiRoleIndex = calcRoleIndex(c->qsName);
@@ -611,6 +632,8 @@ bool Server::executeKissyCommandIfPresent(ServerUser *u, QString text) {
 	bool isPlaybackCmd = false;
 	bool isMediaCmd    = false;
 	bool isMiscCmd = false;
+	bool isUserMiscCmd = false;
+
 	quint32 mediaIndex = 0;
 	QString mediaCmd   = "";
 
@@ -630,6 +653,10 @@ bool Server::executeKissyCommandIfPresent(ServerUser *u, QString text) {
 				isMediaCmd = true;
 			}
 		}
+	} else if (text.compare("!list") == 0) {
+		isMiscCmd = true;
+	} else if (text.startsWith("!audioLag")) {
+		isUserMiscCmd = true;
 	}
 
 	if (isPlaybackCmd) {
@@ -650,6 +677,20 @@ bool Server::executeKissyCommandIfPresent(ServerUser *u, QString text) {
 		log(QString::fromUtf8("Issuing Kissy MISC Command: %1").arg(text));
 		QString cmd = text.mid(1);
 		userSetMisc(u, cmd);
+		return true;
+	}
+
+	if (isUserMiscCmd) {
+		log(QString::fromUtf8("Issuing Kissy USER MISC Command: %1").arg(text));
+		// split
+		QStringList list = text.split(" ");
+		if (list.size() > 2) {
+			QString action   = list[0].mid(1);
+			QString userName = list[1];			
+			QString valStr   = list[2];
+			quint64 value    = (quint64)valStr.toInt() * 1000L; // convert from millisec to microsec
+			userSetUserMisc(u, action,userName,value);
+		}
 		return true;
 	}
 
@@ -1524,7 +1565,7 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 		Channel *c = u->cChannel;
 		// kb
 		const KissyChannelState &kcs = qmKissyChannelStates.value(c->iId);
-		bool bPerformanceLive     = kcs.iServerStartPerformanceTime > 0;
+		bool bPerformanceLive     = kcs.uiServerStartPerformanceTime > 0;
 
 		buffer[0] = static_cast< char >(type | SpeechFlags::Normal);
 
@@ -1538,7 +1579,7 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 
 		// Send audio to all users in the same channel
 		// kb - unless that channel is a river channel during performance!
-		if (kcs.riverIndex <= 0 || !bPerformanceLive) {
+		if (kcs.iRiverIndex <= 0 || !bPerformanceLive) {
 			foreach (User *p, c->qlUsers) {
 				ServerUser *pDst = static_cast< ServerUser * >(p);
 
@@ -1551,7 +1592,7 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 		}
 
 		// users in a river channel listen to other river channels as appropriate
-		if (kcs.riverIndex > 0) {
+		if (kcs.iRiverIndex > 0) {
 
 			Channel *topLevel = getTopLevel(c);
 			const KissyChannelState &topKCS = qmKissyChannelStates.value(topLevel->iId);
@@ -1566,7 +1607,7 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 					if (bPerformanceLive) {
 						// only those downstream
 						const KissyChannelState &rkcs = qmKissyChannelStates.value(rc->iId);
-						if (rkcs.riverIndex > kcs.riverIndex) {
+						if (rkcs.iRiverIndex > kcs.iRiverIndex) {
 							riverChannels.append(rc);
 						}
 					} else {

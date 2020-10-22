@@ -2168,3 +2168,9 @@ void Server::msgKissyChannelMiscCommand(ServerUser* u, MumbleProto::KissyChannel
 		userSetMisc(u, QString::fromUtf8(msg.action().c_str()));
 	}
 }
+
+void Server::msgKissyUserMiscCommand(ServerUser *u, MumbleProto::KissyUserMiscCommand &msg) {
+	if (msg.has_action() && msg.has_user_name() && msg.has_value()) {
+		userSetUserMisc(u, QString::fromUtf8(msg.action().c_str()), QString::fromUtf8(msg.user_name().c_str()), msg.value());
+	}
+}

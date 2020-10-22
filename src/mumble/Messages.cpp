@@ -1463,3 +1463,21 @@ void MainWindow::msgKissyChannelMiscCommand(const MumbleProto::KissyChannelMiscC
 		//g.l->log(Log::TextMessage, QString::fromUtf8("6 = Under Pressure"));
 	}
 }
+
+void MainWindow::msgKissyUserMiscCommand(const MumbleProto::KissyUserMiscCommand &msg) {
+	QString action;
+	if (msg.has_action()) {
+		action = QString::fromUtf8(msg.action().c_str());
+	}
+
+	if (action.compare("audioLag") == 0) {
+		if (msg.has_user_name() && msg.has_value()) {
+			QString userName = QString::fromUtf8(msg.user_name().c_str());
+			quint64 value = msg.value();
+			g.l->log(Log::TextMessage, QString::fromUtf8("%1 set your Audio Lag: %2us (%3ms)").arg(userName).arg(value).arg(value / 1000));
+
+			// tell server handler about our lag...
+			g.sh->setAudioLag(value);
+		}
+	}
+}

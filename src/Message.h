@@ -46,7 +46,8 @@
 	MUMBLE_MH_MSG(KissyChannelStateChange) \
 	MUMBLE_MH_MSG(KissyChannelMediaCommand) \
 	MUMBLE_MH_MSG(KissyChannelPlaybackCommand) \
-	MUMBLE_MH_MSG(KissyChannelMiscCommand)
+	MUMBLE_MH_MSG(KissyChannelMiscCommand) \
+	MUMBLE_MH_MSG(KissyUserMiscCommand)
 
 class MessageHandler {
 public:

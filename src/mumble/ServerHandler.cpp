@@ -115,7 +115,8 @@ ServerHandler::ServerHandler() : database(new Database(QLatin1String("ServerHand
 	// kb
 	iServerClientTimeDelta	= 0;
 	uiServerTimeElapsed		= 0;
-	iRiverOffset            = 0;
+	uiClientAudioLag        = 0;
+	uiRiverOffset           = 0;
 	uiMediaIndex                 = 0;
 	uiRoleIndex                  = 0;
 	uiServerStartPerformanceTime = 0;
@@ -278,7 +279,7 @@ void ServerHandler::setRoleIndex(quint32 index) {
 quint64 ServerHandler::getServerTimeElapsed() {
 	// update our prediction of server time...
 	quint64 clientTime = tTimestamp.elapsed();
-	quint64 serverTime = clientTime + iServerClientTimeDelta;
+	quint64 serverTime = clientTime + iServerClientTimeDelta + uiClientAudioLag;
 	// never predict BACKWARDS
 	if (serverTime > uiServerTimeElapsed) {
 		uiServerTimeElapsed = serverTime;
@@ -336,10 +337,17 @@ void ServerHandler::fetchPerformanceFrames() {
 	}
 }
 
-quint32 ServerHandler::getRiverOffset() {
-	return iRiverOffset;
+void ServerHandler::setAudioLag(quint32 audioLag) {
+	uiClientAudioLag = audioLag;
 }
 
+quint32 ServerHandler::getAudioLag() {
+	return uiClientAudioLag;
+}
+
+quint32 ServerHandler::getRiverOffset() {
+	return uiRiverOffset;
+}
 
 static quint64 getPerformanceTime(PacketDataStream &pds, MessageHandler::UDPMessageType type) {
 	quint64 performanceTime = 0;
@@ -377,7 +385,7 @@ static quint64 getPerformanceTime(PacketDataStream &pds, MessageHandler::UDPMess
 }
 
 void ServerHandler::setKissyClientChannelState(quint32 riverOffset, quint64 serverStartPerformanceTime, quint64 performancePauseTime) {
-	iRiverOffset = riverOffset;
+	uiRiverOffset = riverOffset;
 	uiServerStartPerformanceTime = serverStartPerformanceTime;
 	uiPerformancePauseTime       = performancePauseTime;
 }
@@ -385,7 +393,7 @@ void ServerHandler::setKissyClientChannelState(quint32 riverOffset, quint64 serv
 void ServerHandler::handleVoicePacket(unsigned int msgFlags, PacketDataStream &pds,
 									   MessageHandler::UDPMessageType type) {
 	// kb
-	quint64 performanceTime = getPerformanceTime(pds, type) + (iRiverOffset * 1000); // add our river offset (convert to microseconds)
+	quint64 performanceTime = getPerformanceTime(pds, type) + (uiRiverOffset * 1000); // add our river offset (convert to microseconds)
 
 	unsigned int uiSession;
 	pds >> uiSession;

@@ -1,6041 +1,6130 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="lt" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="lt_LT">
 <context>
     <name>ACLEditor</name>
     <message>
-        <source>Deny</source>
-        <translation>Drausti</translation>
-    </message>
-    <message>
-        <source>Allow</source>
-        <translation>Leisti</translation>
-    </message>
-    <message>
-        <source>Allow %1</source>
-        <translation>Leisti %1</translation>
-    </message>
-    <message>
-        <source>Deny %1</source>
-        <translation>Drausti %1</translation>
-    </message>
-    <message>
-        <source>Mumble - Add channel</source>
-        <translation>Mumble - Pridėti kanalą</translation>
-    </message>
-    <message>
-        <source>Default server value</source>
-        <translation>Numatytoji serverio reikšmė</translation>
-    </message>
-    <message>
-        <source>Failed: Invalid channel</source>
-        <translation>Nepavyko: Neteisingas kanalas</translation>
-    </message>
-    <message>
-        <source>Mumble - Edit %1</source>
-        <translation>Mumble - Keisti %1</translation>
-    </message>
-    <message>
-        <source>ID: %1</source>
-        <translation>ID: %1</translation>
-    </message>
-    <message>
-        <source>This grants the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel must have a name</source>
-        <translation>Kanalas privalo turėti pavadinimą</translation>
-    </message>
-    <message>
-        <source>This revokes the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="ACLEditor.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialogas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Name</source>
-        <translation>Pavadinimas</translation>
+        <location filename="ACLEditor.ui" line="24"/>
+        <source>&amp;Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enter the channel name here.</source>
-        <translation>Čia įrašykite kanalo pavadinimą.</translation>
-    </message>
-    <message>
-        <source>Description</source>
-        <translation>Aprašas</translation>
-    </message>
-    <message>
+        <location filename="ACLEditor.ui" line="33"/>
         <source>Password</source>
-        <translation>Slaptažodis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.ui" line="40"/>
         <source>Enter the channel password here.</source>
-        <translation>Čia įrašykite kanalo slaptažodį.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check to create a temporary channel.</source>
-        <translation>Pažymėkite, kad sukurtumėte laikiną kanalą.</translation>
+        <location filename="ACLEditor.ui" line="43"/>
+        <source>&lt;b&gt;Password&lt;/b&gt;&lt;br /&gt;This field allows you to easily set and change the password of a channel. It uses Mumble&apos;s access tokens feature in the background. Use ACLs and groups if you need more fine grained and powerful access control.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Temporary</source>
-        <translation>Laikinas</translation>
+        <location filename="ACLEditor.ui" line="50"/>
+        <location filename="ACLEditor.cpp" line="40"/>
+        <location filename="ACLEditor.cpp" line="100"/>
+        <source>Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.ui" line="63"/>
+        <source>This is the sort order for the channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="66"/>
         <source>&lt;b&gt;Position&lt;/b&gt;&lt;br/&gt;
 This value enables you to change the way Mumble arranges the channels in the tree. A channel with a higher &lt;i&gt;Position&lt;/i&gt; value will always be placed below one with a lower value and the other way around. If the &lt;i&gt;Position&lt;/i&gt; value of two channels is equal they will get sorted alphabetically by their name.</source>
-        <oldsource>&lt;b&gt;Position&lt;/b&gt;&lt;br/&gt;
-This value enables you to change the way mumble arranges the channels in the tree. A channel with a higher &lt;i&gt;Position&lt;/i&gt; value will always be placed below one with a lower value and the other way around. If the &lt;i&gt;Position&lt;/i&gt; value of two channels is equal they will get sorted alphabetically by their name.</oldsource>
-        <translation>&lt;b&gt;Pozicija&lt;/b&gt;&lt;br/&gt;
-Ši reikšmė leidžia jums keisti būdą, kuriuo Mumble išdėsto kanalus medyje. Kanalas su aukštesne &lt;i&gt;pozicijos&lt;/i&gt; reikšme bus visada išdėstytas žemiau to, kurio reikšmė yra žemesnė, ir atvirkščiai. Jeigu dviejų kanalų &lt;i&gt;pozicijų&lt;/i&gt; reikšmės vienodos, tuomet jie bus išdėstyti abėcėlės tvarka pagal savo pavadinimą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Position</source>
-        <translation>Pozicija</translation>
-    </message>
-    <message>
-        <source>&amp;Groups</source>
-        <translation>&amp;Grupės</translation>
-    </message>
-    <message>
-        <source>Group</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>List of groups</source>
-        <translation>Grupių sąrašas</translation>
-    </message>
-    <message>
-        <source>Remove selected group</source>
-        <translation>Šalinti pasirinktą grupę</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Šalinti</translation>
-    </message>
-    <message>
-        <source>Inherit group members from parent</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Inherit</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Make group inheritable to sub-channels</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Inheritable</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Group was inherited from parent channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Inherited</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Members</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Pridėti</translation>
-    </message>
-    <message>
-        <source>Add member to group</source>
-        <translation>Pridėti narį į grupę</translation>
-    </message>
-    <message>
-        <source>Remove member from group</source>
-        <translation>Šalinti narį iš grupės</translation>
-    </message>
-    <message>
-        <source>&amp;ACL</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Active ACLs</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>List of entries</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Inherit ACL of parent?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This sets whether or not the ACL up the chain of parent channels are applied to this object. Only those entries that are marked in the parent as &quot;Apply to sub-channels&quot; will be inherited.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Inherit ACLs</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Move entry up</source>
-        <translation>Perkelti įrašą aukštyn</translation>
-    </message>
-    <message>
-        <source>This moves the entry up in the list. As entries are evaluated in order, this may change the effective permissions of users. You cannot move an entry above an inherited entry, if you really need that you&apos;ll have to duplicate the inherited entry.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Up</source>
-        <translation>A&amp;ukštyn</translation>
-    </message>
-    <message>
-        <source>Move entry down</source>
-        <translation>Nuleisti įrašą žemyn</translation>
-    </message>
-    <message>
-        <source>This moves the entry down in the list. As entries are evaluated in order, this may change the effective permissions of users.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Down</source>
-        <translation>Ž&amp;emyn</translation>
-    </message>
-    <message>
-        <source>Add new entry</source>
-        <translation>Pridėti naują įrašą</translation>
-    </message>
-    <message>
-        <source>This adds a new entry, initially set with no permissions and applying to all.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Add</source>
-        <translation>&amp;Pridėti</translation>
-    </message>
-    <message>
-        <source>Remove entry</source>
-        <translation>Šalinti įrašą</translation>
-    </message>
-    <message>
-        <source>This removes the currently selected entry.</source>
-        <translation>Tai pašalina šiuo metu pasirinktą įrašą.</translation>
-    </message>
-    <message>
-        <source>&amp;Remove</source>
-        <translation>Ša&amp;linti</translation>
-    </message>
-    <message>
-        <source>Context</source>
-        <translation>Kontekstas</translation>
-    </message>
-    <message>
-        <source>Entry should apply to this channel.</source>
-        <oldsource>Entry should apply to this channel</oldsource>
-        <translation>Įrašas turėtų būti taikomas šiam kanalui.</translation>
-    </message>
-    <message>
-        <source>This makes the entry apply to this channel.</source>
-        <translation>Tai padaro, kad įrašas būtų pritaikytas šiam kanalui.</translation>
-    </message>
-    <message>
-        <source>Applies to this channel</source>
-        <translation>Taikoma šiam kanalui</translation>
-    </message>
-    <message>
-        <source>Entry should apply to sub-channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Add new group</source>
-        <translation>Pridėti naują grupę</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Add&lt;/b&gt;&lt;br/&gt;
-Add a new group.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Inherited members</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Contains the list of members added to the group by this channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Contains a list of members whose group membership will not be inherited from the parent channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Contains the list of members inherited by other channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Type in the name of a user you wish to add to the group and click Add.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Type in the name of a user you wish to remove from the group and click Add.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Exclude</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Excluded members</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This makes the entry apply to sub-channels of this channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Applies to sub-channels</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Permissions</source>
-        <translation>Leidimai</translation>
-    </message>
-    <message>
-        <source>User/Group</source>
-        <translation>Naudotojas/Grupė</translation>
-    </message>
-    <message>
-        <source>Group this entry applies to</source>
-        <translation>Grupė, kuriai taikomas šis įrašas</translation>
-    </message>
-    <message>
-        <source>User ID</source>
-        <translation>Naudotojo ID</translation>
-    </message>
-    <message>
-        <source>User this entry applies to</source>
-        <translation>Naudotojas, kuriam taikomas šis įrašas</translation>
-    </message>
-    <message>
-        <source>This controls which user this entry applies to. Just type in the user name and hit enter to query the server for a match.</source>
-        <translation>Tai valdo, kuriam naudotojui šis įrašas bus taikomas. Tiesiog, įrašykite naudotojo vardą ir paspauskite enter, norėdami užklausti serverio atitikmens.</translation>
-    </message>
-    <message>
-        <source>&amp;Properties</source>
-        <translation>Savy&amp;bės</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Name&lt;/b&gt;&lt;br /&gt;Enter the channel name in this field. The name has to comply with the restriction imposed by the server you are connected to.</source>
-        <translation>&lt;b&gt;Pavadinimas&lt;/b&gt;&lt;br /&gt;Šiame lauke įrašykite kanalo pavadinimą. Pavadinime turi būti laikomasi serverio, prie kurio esate prisijungę, priskirtų apribojimų.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Temporary&lt;/b&gt;&lt;br /&gt;
-When checked the channel created will be marked as temporary. This means when the last player leaves it the channel will be automatically deleted by the server.</source>
-        <translation>&lt;b&gt;Laikinas&lt;/b&gt;&lt;br /&gt;
-Jei pažymėta, sukurtas kanalas bus pažymėtas kaip laikinas. Tai reiškia, kad kai paskutinis žaidėjas išeis iš kanalo, serveris automatiškai kanalą ištrins.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Group&lt;/b&gt;&lt;br /&gt;
-These are all the groups currently defined for the channel. To create a new group, just type in the name and press enter.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Remove&lt;/b&gt;&lt;br /&gt;This removes the currently selected group. If the group was inherited, it will not be removed from the list, but all local information about the group will be cleared.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Inherit&lt;/b&gt;&lt;br /&gt;This inherits all the members in the group from the parent, if the group is marked as &lt;i&gt;Inheritable&lt;/i&gt; in the parent channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Inheritable&lt;/b&gt;&lt;br /&gt;This makes this group inheritable to sub-channels. If the group is non-inheritable, sub-channels are still free to create a new group with the same name.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Inherited&lt;/b&gt;&lt;br /&gt;This indicates that the group was inherited from the parent channel. You cannot edit this flag, it&apos;s just for information.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Members&lt;/b&gt;&lt;br /&gt;
-This list contains all members that were added to the group by the current channel. Be aware that this does not include members inherited by higher levels of the channel tree. These can be found in the &lt;i&gt;Inherited members&lt;/i&gt; list. To prevent this list to be inherited by lower level channels uncheck &lt;i&gt;Inheritable&lt;/i&gt; or manually add the members to the &lt;i&gt;Excluded members&lt;/i&gt; list.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Excluded members&lt;/b&gt;&lt;br /&gt;
-Contains a list of members whose group membership will not be inherited from the parent channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Inherited members&lt;/b&gt;&lt;br /&gt;
-Contains the list of members inherited by the current channel. Uncheck &lt;i&gt;Inherit&lt;/i&gt; to prevent inheritance from higher level channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This controls which group of users this entry applies to.&lt;br /&gt;Note that the group is evaluated in the context of the channel the entry is used in. For example, the default ACL on the Root channel gives &lt;i&gt;Write&lt;/i&gt; permission to the &lt;i&gt;admin&lt;/i&gt; group. This entry, if inherited by a channel, will give a user write privileges if he belongs to the &lt;i&gt;admin&lt;/i&gt; group in that channel, even if he doesn&apos;t belong to the &lt;i&gt;admin&lt;/i&gt; group in the channel where the ACL originated.&lt;br /&gt;If a group name starts with &apos;!&apos;, its membership is negated, and if it starts with &apos;~&apos;, it is evaluated in the channel the ACL was defined in, rather than the channel the ACL is active in.&lt;br /&gt;If a group name starts with &apos;#&apos;, it is interpreted as an access token. Users must have entered whatever follows the &apos;#&apos; in their list of access tokens to match. This can be used for very simple password access to channels for non-authenticated users.&lt;br /&gt;If a group name starts with &apos;$&apos;, it will only match users whose certificate hash matches what follows the &apos;$&apos;.&lt;br /&gt;A few special predefined groups are:&lt;br /&gt;&lt;b&gt;all&lt;/b&gt; - Everyone will match.&lt;br /&gt;&lt;b&gt;auth&lt;/b&gt; - All authenticated users will match.&lt;br /&gt;&lt;b&gt;sub,a,b,c&lt;/b&gt; - User currently in a sub-channel minimum &lt;i&gt;a&lt;/i&gt; common parents, and between &lt;i&gt;b&lt;/i&gt; and &lt;i&gt;c&lt;/i&gt; channels down the chain. See the website for more extensive documentation on this one.&lt;br /&gt;&lt;b&gt;in&lt;/b&gt; - Users currently in the channel will match (convenience for &apos;&lt;i&gt;sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;&lt;b&gt;out&lt;/b&gt; - Users outside the channel will match (convenience for &apos;&lt;i&gt;!sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;Note that an entry applies to either a user or a group, not both.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Password&lt;/b&gt;&lt;br /&gt;This field allows you to easily set and change the password of a channel. It uses Mumble&apos;s access tokens feature in the background. Use ACLs and groups if you need more fine grained and powerful access control.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This shows all the entries active on this channel. Entries inherited from parent channels will be shown in italics.&lt;br /&gt;ACLs are evaluated top to bottom, meaning priority increases as you move down the list.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>ID of the channel.</source>
-        <translation>Kanalo ID.</translation>
-    </message>
-    <message>
+        <location filename="ACLEditor.ui" line="77"/>
         <source>Maximum Users</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.ui" line="90"/>
         <source>Maximum number of users allowed in the channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.ui" line="93"/>
         <source>&lt;b&gt;Maximum Users&lt;/b&gt;&lt;br /&gt;
 This value allows you to set the maximum number of users allowed in the channel. If the value is above zero, only that number of users will be allowed to enter the channel. If the value is zero, the maximum number of users in the channel is given by the server&apos;s default limit.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This is the sort order for the channel.</source>
-        <translation type="unfinished"/>
+        <location filename="ACLEditor.ui" line="101"/>
+        <source>Check to create a temporary channel.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.ui" line="104"/>
+        <source>&lt;b&gt;Temporary&lt;/b&gt;&lt;br /&gt;
+When checked the channel created will be marked as temporary. This means when the last player leaves it the channel will be automatically deleted by the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="108"/>
+        <source>Temporary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="117"/>
+        <source>Enter the channel name here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="120"/>
+        <source>&lt;b&gt;Name&lt;/b&gt;&lt;br /&gt;Enter the channel name in this field. The name has to comply with the restriction imposed by the server you are connected to.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="127"/>
+        <source>ID of the channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="139"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="156"/>
+        <location filename="ACLEditor.cpp" line="38"/>
+        <location filename="ACLEditor.cpp" line="98"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="164"/>
+        <source>&amp;Groups</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="170"/>
+        <location filename="ACLEditor.ui" line="665"/>
+        <source>Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="194"/>
+        <location filename="ACLEditor.cpp" line="43"/>
+        <location filename="ACLEditor.cpp" line="103"/>
+        <source>List of groups</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="197"/>
+        <source>&lt;b&gt;Group&lt;/b&gt;&lt;br /&gt;
+These are all the groups currently defined for the channel. To create a new group, just type in the name and press enter.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="208"/>
+        <source>Add new group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="211"/>
+        <source>&lt;b&gt;Add&lt;/b&gt;&lt;br/&gt;
+Add a new group.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="215"/>
+        <location filename="ACLEditor.ui" line="353"/>
+        <location filename="ACLEditor.ui" line="431"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="222"/>
+        <source>Remove selected group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="225"/>
+        <source>&lt;b&gt;Remove&lt;/b&gt;&lt;br /&gt;This removes the currently selected group. If the group was inherited, it will not be removed from the list, but all local information about the group will be cleared.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="228"/>
+        <location filename="ACLEditor.ui" line="370"/>
+        <location filename="ACLEditor.ui" line="438"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="238"/>
+        <source>Inherit group members from parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="241"/>
+        <source>&lt;b&gt;Inherit&lt;/b&gt;&lt;br /&gt;This inherits all the members in the group from the parent, if the group is marked as &lt;i&gt;Inheritable&lt;/i&gt; in the parent channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="244"/>
+        <source>Inherit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="251"/>
+        <source>Make group inheritable to sub-channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="254"/>
+        <source>&lt;b&gt;Inheritable&lt;/b&gt;&lt;br /&gt;This makes this group inheritable to sub-channels. If the group is non-inheritable, sub-channels are still free to create a new group with the same name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="257"/>
+        <source>Inheritable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="267"/>
+        <source>Group was inherited from parent channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="270"/>
+        <source>&lt;b&gt;Inherited&lt;/b&gt;&lt;br /&gt;This indicates that the group was inherited from the parent channel. You cannot edit this flag, it&apos;s just for information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="273"/>
+        <source>Inherited</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="296"/>
+        <location filename="ACLEditor.ui" line="360"/>
+        <source>Members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="317"/>
+        <source>Contains the list of members added to the group by this channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="320"/>
+        <source>&lt;b&gt;Members&lt;/b&gt;&lt;br /&gt;
+This list contains all members that were added to the group by the current channel. Be aware that this does not include members inherited by higher levels of the channel tree. These can be found in the &lt;i&gt;Inherited members&lt;/i&gt; list. To prevent this list to be inherited by lower level channels uncheck &lt;i&gt;Inheritable&lt;/i&gt; or manually add the members to the &lt;i&gt;Excluded members&lt;/i&gt; list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="334"/>
+        <source>Add member to group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="337"/>
+        <source>Type in the name of a user you wish to add to the group and click Add.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="395"/>
+        <source>Contains a list of members whose group membership will not be inherited from the parent channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="398"/>
+        <source>&lt;b&gt;Excluded members&lt;/b&gt;&lt;br /&gt;
+Contains a list of members whose group membership will not be inherited from the parent channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="412"/>
+        <location filename="ACLEditor.cpp" line="48"/>
+        <location filename="ACLEditor.cpp" line="108"/>
+        <source>Remove member from group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="415"/>
+        <source>Type in the name of a user you wish to remove from the group and click Add.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="445"/>
+        <source>Excluded members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="473"/>
+        <source>Inherited members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="483"/>
+        <source>Contains the list of members inherited by other channels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="486"/>
+        <source>&lt;b&gt;Inherited members&lt;/b&gt;&lt;br /&gt;
+Contains the list of members inherited by the current channel. Uncheck &lt;i&gt;Inherit&lt;/i&gt; to prevent inheritance from higher level channels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="494"/>
+        <source>Exclude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="508"/>
+        <source>&amp;ACL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="516"/>
+        <source>Active ACLs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="522"/>
+        <source>List of entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="525"/>
+        <source>This shows all the entries active on this channel. Entries inherited from parent channels will be shown in italics.&lt;br /&gt;ACLs are evaluated top to bottom, meaning priority increases as you move down the list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="532"/>
+        <source>Inherit ACL of parent?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="535"/>
+        <source>This sets whether or not the ACL up the chain of parent channels are applied to this object. Only those entries that are marked in the parent as &quot;Apply to sub-channels&quot; will be inherited.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="538"/>
+        <source>Inherit ACLs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="545"/>
+        <source>Move entry up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="548"/>
+        <source>This moves the entry up in the list. As entries are evaluated in order, this may change the effective permissions of users. You cannot move an entry above an inherited entry, if you really need that you&apos;ll have to duplicate the inherited entry.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="551"/>
+        <source>&amp;Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="561"/>
+        <source>Move entry down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="564"/>
+        <source>This moves the entry down in the list. As entries are evaluated in order, this may change the effective permissions of users.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="567"/>
+        <source>&amp;Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="577"/>
+        <source>Add new entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="580"/>
+        <source>This adds a new entry, initially set with no permissions and applying to all.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="583"/>
+        <source>&amp;Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="593"/>
+        <source>Remove entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="596"/>
+        <source>This removes the currently selected entry.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="599"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="618"/>
+        <source>Context</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="624"/>
+        <source>Entry should apply to sub-channels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="627"/>
+        <source>This makes the entry apply to sub-channels of this channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="630"/>
+        <source>Applies to sub-channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="637"/>
+        <source>Entry should apply to this channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="640"/>
+        <source>This makes the entry apply to this channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="643"/>
+        <source>Applies to this channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="659"/>
+        <source>User/Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="681"/>
+        <location filename="ACLEditor.cpp" line="50"/>
+        <location filename="ACLEditor.cpp" line="110"/>
+        <source>Group this entry applies to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="684"/>
+        <source>This controls which group of users this entry applies to.&lt;br /&gt;Note that the group is evaluated in the context of the channel the entry is used in. For example, the default ACL on the Root channel gives &lt;i&gt;Write&lt;/i&gt; permission to the &lt;i&gt;admin&lt;/i&gt; group. This entry, if inherited by a channel, will give a user write privileges if he belongs to the &lt;i&gt;admin&lt;/i&gt; group in that channel, even if he doesn&apos;t belong to the &lt;i&gt;admin&lt;/i&gt; group in the channel where the ACL originated.&lt;br /&gt;If a group name starts with &apos;!&apos;, its membership is negated, and if it starts with &apos;~&apos;, it is evaluated in the channel the ACL was defined in, rather than the channel the ACL is active in.&lt;br /&gt;If a group name starts with &apos;#&apos;, it is interpreted as an access token. Users must have entered whatever follows the &apos;#&apos; in their list of access tokens to match. This can be used for very simple password access to channels for non-authenticated users.&lt;br /&gt;If a group name starts with &apos;$&apos;, it will only match users whose certificate hash matches what follows the &apos;$&apos;.&lt;br /&gt;A few special predefined groups are:&lt;br /&gt;&lt;b&gt;all&lt;/b&gt; - Everyone will match.&lt;br /&gt;&lt;b&gt;auth&lt;/b&gt; - All authenticated users will match.&lt;br /&gt;&lt;b&gt;sub,a,b,c&lt;/b&gt; - User currently in a sub-channel minimum &lt;i&gt;a&lt;/i&gt; common parents, and between &lt;i&gt;b&lt;/i&gt; and &lt;i&gt;c&lt;/i&gt; channels down the chain. See the website for more extensive documentation on this one.&lt;br /&gt;&lt;b&gt;in&lt;/b&gt; - Users currently in the channel will match (convenience for &apos;&lt;i&gt;sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;&lt;b&gt;out&lt;/b&gt; - Users outside the channel will match (convenience for &apos;&lt;i&gt;!sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;Note that an entry applies to either a user or a group, not both.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="694"/>
+        <source>User ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="710"/>
+        <location filename="ACLEditor.cpp" line="51"/>
+        <location filename="ACLEditor.cpp" line="111"/>
+        <source>User this entry applies to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="713"/>
+        <source>This controls which user this entry applies to. Just type in the user name and hit enter to query the server for a match.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.ui" line="731"/>
+        <source>Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="37"/>
+        <location filename="ACLEditor.cpp" line="97"/>
         <source>Properties</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="39"/>
+        <location filename="ACLEditor.cpp" line="99"/>
         <source>Channel password</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="41"/>
+        <location filename="ACLEditor.cpp" line="101"/>
         <source>Maximum users</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="42"/>
+        <location filename="ACLEditor.cpp" line="102"/>
         <source>Channel name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="44"/>
+        <location filename="ACLEditor.cpp" line="104"/>
         <source>Inherited group members</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="45"/>
+        <location filename="ACLEditor.cpp" line="105"/>
         <source>Foreign group members</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="46"/>
+        <location filename="ACLEditor.cpp" line="106"/>
         <source>Inherited channel members</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="47"/>
+        <location filename="ACLEditor.cpp" line="107"/>
         <source>Add members to group</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ACLEditor.cpp" line="49"/>
+        <location filename="ACLEditor.cpp" line="109"/>
         <source>List of ACL entries</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="55"/>
+        <source>Mumble - Add channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="66"/>
+        <location filename="ACLEditor.cpp" line="132"/>
+        <source>Default server value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="88"/>
+        <location filename="ACLEditor.cpp" line="288"/>
+        <source>Failed: Invalid channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="116"/>
+        <source>Mumble - Edit %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="118"/>
+        <source>ID: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="140"/>
+        <source>Deny</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="142"/>
+        <source>Allow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="160"/>
+        <source>Deny %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="162"/>
+        <source>This revokes the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="171"/>
+        <source>Allow %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="173"/>
+        <source>This grants the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ACLEditor.cpp" line="295"/>
+        <source>Channel must have a name</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ALSAAudioInput</name>
     <message>
+        <location filename="ALSAAudio.cpp" line="152"/>
         <source>Default ALSA Card</source>
-        <translation>Numatytoji ALSA plokštė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ALSAAudio.cpp" line="354"/>
         <source>Opening chosen ALSA Input failed: %1</source>
-        <translation>Nepavyko atverti pasirinktos ALSA įvesties: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ALSAAudioOutput</name>
     <message>
+        <location filename="ALSAAudio.cpp" line="153"/>
         <source>Default ALSA Card</source>
-        <translation>Numatytoji ALSA plokštė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ALSAAudio.cpp" line="490"/>
         <source>Opening chosen ALSA Output failed: %1</source>
-        <translation>Nepavyko atverti pasirinktos ALSA išvesties: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ASIOConfig</name>
     <message>
-        <source>%1 (version %2)</source>
-        <translation>%1 (versija %2)</translation>
-    </message>
-    <message>
-        <source>%1 -&gt; %2 samples buffer, with %3 sample resolution (%4 preferred) at %5 Hz</source>
-        <oldsource>%1 -&gt; %2 samples buffer, with %3 sample resolution (%4 preferred) at %5Hz</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>ASIO Initialization failed: %1</source>
-        <translation>ASIO inicijavimas nepavyko: %1</translation>
-    </message>
-    <message>
-        <source>Failed to instantiate ASIO driver</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="ASIOInput.ui" line="14"/>
+        <location filename="ASIOInput.cpp" line="344"/>
         <source>ASIO</source>
-        <translation>ASIO</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="20"/>
         <source>Device selection</source>
-        <translation>Įrenginio pasirinkimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="26"/>
         <source>Device</source>
-        <translation>Įrenginys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="42"/>
+        <location filename="ASIOInput.cpp" line="135"/>
         <source>Device to use for microphone</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="45"/>
         <source>This chooses what device to query. You still need to actually query the device and select which channels to use.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="52"/>
         <source>Query selected device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="55"/>
         <source>This queries the selected device for channels. Be aware that many ASIO drivers are buggy to the extreme, and querying them might cause a crash of either the application or the system.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="58"/>
         <source>&amp;Query</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="65"/>
         <source>Configure selected device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="68"/>
         <source>This configures the selected device. Be aware that many ASIO drivers are buggy to the extreme, and querying them might cause a crash of either the application or the system.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="71"/>
         <source>&amp;Configure</source>
-        <translation>&amp;Konfigūruoti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="81"/>
         <source>Capabilities</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="87"/>
         <source>Driver name</source>
-        <translation>Tvarkyklės pavadinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="110"/>
         <source>Buffer size</source>
-        <translation>Buferio dydis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This will configure the input channels for ASIO. Make sure you select at least one channel as microphone and speaker. &lt;i&gt;Microphone&lt;/i&gt; should be where your microphone is attached, and &lt;i&gt;Speaker&lt;/i&gt; should be a channel that samples &apos;&lt;i&gt;What you hear&lt;/i&gt;&apos;.&lt;br /&gt;For example, on the Audigy 2 ZS, a good selection for Microphone would be &apos;&lt;i&gt;Mic L&lt;/i&gt;&apos; while Speaker should be &apos;&lt;i&gt;Mix L&lt;/i&gt;&apos; and &apos;&lt;i&gt;Mix R&lt;/i&gt;&apos;.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="ASIOInput.ui" line="136"/>
         <source>Configure input channels</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="139"/>
+        <source>This will configure the input channels for ASIO. Make sure you select at least one channel as microphone and speaker. &lt;i&gt;Microphone&lt;/i&gt; should be where your microphone is attached, and &lt;i&gt;Speaker&lt;/i&gt; should be a channel that samples &apos;&lt;i&gt;What you hear&lt;/i&gt;&apos;.&lt;br /&gt;For example, on the Audigy 2 ZS, a good selection for Microphone would be &apos;&lt;i&gt;Mic L&lt;/i&gt;&apos; while Speaker should be &apos;&lt;i&gt;Mix L&lt;/i&gt;&apos; and &apos;&lt;i&gt;Mix R&lt;/i&gt;&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ASIOInput.ui" line="142"/>
         <source>Channels</source>
-        <translation>Kanalai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="163"/>
         <source>Microphone</source>
-        <translation>Mikrofonas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="212"/>
+        <location filename="ASIOInput.ui" line="311"/>
         <source>&lt;-</source>
-        <translation>&lt;-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="225"/>
+        <location filename="ASIOInput.ui" line="298"/>
         <source>-&gt;</source>
-        <translation>-&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="249"/>
         <source>Unused</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.ui" line="335"/>
         <source>Speakers</source>
-        <translation>Garsiakalbiai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.cpp" line="136"/>
         <source>List of microphones</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.cpp" line="137"/>
         <source>List of speakers</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ASIOInput.cpp" line="222"/>
+        <source>%1 (version %2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ASIOInput.cpp" line="225"/>
+        <source>%1 -&gt; %2 samples buffer, with %3 sample resolution (%4 preferred) at %5 Hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ASIOInput.cpp" line="273"/>
+        <location filename="ASIOInput.cpp" line="301"/>
+        <source>ASIO Initialization failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ASIOInput.cpp" line="278"/>
+        <location filename="ASIOInput.cpp" line="306"/>
+        <source>Failed to instantiate ASIO driver</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ASIOInput</name>
     <message>
+        <location filename="ASIOInput.cpp" line="423"/>
         <source>You need to select at least one microphone and one speaker source to use ASIO.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ASIOInput.cpp" line="528"/>
         <source>Opening selected ASIO device failed. No input will be done.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AboutDialog</name>
     <message>
+        <location filename="About.cpp" line="20"/>
         <source>About Mumble</source>
-        <translation>Apie Mumble</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;A voice-chat utility for gamers&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;Balso pokalbių paslaugų programa, skirta žaidėjams&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&amp;About Mumble</source>
-        <translation>&amp;Apie Mumble</translation>
-    </message>
-    <message>
-        <source>&amp;License</source>
-        <translation>&amp;Licencija</translation>
-    </message>
-    <message>
-        <source>A&amp;uthors</source>
-        <translation>A&amp;utoriai</translation>
-    </message>
-    <message>
-        <source>&amp;Third-Party Licenses</source>
-        <translation>&amp;Trečiųjų šalių licencijos</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>Gerai</translation>
-    </message>
-    <message>
+        <location filename="About.cpp" line="28"/>
         <source>License agreement</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="About.cpp" line="33"/>
         <source>Authors</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="About.cpp" line="38"/>
         <source>Third-party license agreements</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="About.cpp" line="58"/>
+        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;A voice-chat utility for gamers&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="About.cpp" line="69"/>
+        <source>&amp;About Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="About.cpp" line="70"/>
+        <source>&amp;License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="About.cpp" line="71"/>
+        <source>A&amp;uthors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="About.cpp" line="72"/>
+        <source>&amp;Third-Party Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="About.cpp" line="74"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioInput</name>
     <message>
-        <source>Interface</source>
-        <translation>Sąsaja</translation>
-    </message>
-    <message>
-        <source>System</source>
-        <translation>Sistema</translation>
-    </message>
-    <message>
-        <source>Input method for audio</source>
-        <translation>Garso įvesties metodas</translation>
-    </message>
-    <message>
-        <source>Device</source>
-        <translation>Įrenginys</translation>
-    </message>
-    <message>
-        <source>Input device for audio</source>
-        <translation>Garso įvesties įrenginys</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This is the input device to use for audio.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Tai yra garsui naudojamas įvesties įrenginys.&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Transmission</source>
-        <translation>Perdavimas</translation>
-    </message>
-    <message>
-        <source>&amp;Transmit</source>
-        <translation>Perduo&amp;ti</translation>
-    </message>
-    <message>
-        <source>When to transmit your speech</source>
-        <translation>Kada perdavinėti jūsų kalbą</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets when speech should be transmitted.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Continuous&lt;/i&gt; - All the time&lt;br /&gt;&lt;i&gt;Voice Activity&lt;/i&gt; - When you are speaking clearly.&lt;br /&gt;&lt;i&gt;Push To Talk&lt;/i&gt; - When you hold down the hotkey set under &lt;i&gt;Shortcuts&lt;/i&gt;.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>DoublePush Time</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>If you press the PTT key twice in this time it will get locked.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;DoublePush Time&lt;/b&gt;&lt;br /&gt;If you press the push-to-talk key twice during the configured interval of time it will be locked. Mumble will keep transmitting until you hit the key once more to unlock PTT again.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Reset audio cue to default</source>
-        <translation>Atstatyti garsinį orientyrą į numatytąjį</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Reset&lt;/b&gt;&lt;br/&gt;Reset the paths for the files to their default.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Browse for on audio file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Browse for off audio file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Off</source>
-        <translation>Išjungta</translation>
-    </message>
-    <message>
-        <source>On</source>
-        <translation>Įjungta</translation>
-    </message>
-    <message>
-        <source>Preview the audio cues</source>
-        <translation>Garsinių orientyrų peržiūra</translation>
-    </message>
-    <message>
-        <source>Use SNR based speech detection</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Signal to Noise</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets speech detection to use Amplitude.&lt;/b&gt;&lt;br /&gt;In this mode, the raw strength of the input signal is used to detect speech.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Amplitude</source>
-        <translation>Amplitudė</translation>
-    </message>
-    <message>
-        <source>Voice &amp;Hold</source>
-        <translation>Balso &amp;užlaikymas</translation>
-    </message>
-    <message>
-        <source>How long to keep transmitting after silence</source>
-        <translation>Kaip ilgai tęsti perdavimą po tylos</translation>
-    </message>
-    <message>
-        <source>Silence Below</source>
-        <translation>Tyla žemiau</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets the trigger values for voice detection.&lt;/b&gt;&lt;br /&gt;Use this together with the Audio Statistics window to manually tune the trigger values for detecting speech. Input values below &quot;Silence Below&quot; always count as silence. Values above &quot;Speech Above&quot; always count as voice. Values in between will count as voice if you&apos;re already talking, but will not trigger a new detection.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Speech Above</source>
-        <translation>Kalba aukščiau</translation>
-    </message>
-    <message>
-        <source>Signal values above this count as voice</source>
-        <translation>Signalo reikšmės aukščiau šios ribos yra traktuojamos kaip balsas</translation>
-    </message>
-    <message>
-        <source>Compression</source>
-        <translation>Glaudinimas</translation>
-    </message>
-    <message>
-        <source>&amp;Quality</source>
-        <translation>&amp;Kokybė</translation>
-    </message>
-    <message>
-        <source>Quality of compression (peak bandwidth)</source>
-        <translation>Glaudinimo kokybė (didžiausioji siuntimo sparta)</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets the quality of compression.&lt;/b&gt;&lt;br /&gt;This determines how much bandwidth Mumble is allowed to use for outgoing audio.</source>
-        <translation>&lt;b&gt;Tai nustato glaudinimo kokybę.&lt;/b&gt;&lt;br /&gt;Tai apibrėžia kokią siuntimo spartą programai Mumble yra leidžiama naudoti išsiunčiamam garsui.</translation>
-    </message>
-    <message>
-        <source>Audio per packet</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>How many audio frames to send per packet</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This selects how many audio frames should be put in one packet.&lt;/b&gt;&lt;br /&gt;Increasing this will increase the latency of your voice, but will also reduce bandwidth requirements.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This shows peak outgoing bandwidth used.&lt;/b&gt;&lt;br /&gt;This shows the peak amount of bandwidth sent out from your machine. Audio bitrate is the maximum bitrate (as we use VBR) for the audio data alone. Position is the bitrate used for positional information. Overhead is our framing and the IP packet headers (IP and UDP is 75% of this overhead).</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Audio Processing</source>
-        <translation>Garso apdorojimas</translation>
-    </message>
-    <message>
-        <source>Noise Suppression</source>
-        <translation>Triukšmo malšinimas</translation>
-    </message>
-    <message>
-        <source>Noise suppression</source>
-        <translation>Triukšmo malšinimas</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets the amount of noise suppression to apply.&lt;/b&gt;&lt;br /&gt;The higher this value, the more aggressively stationary noise will be suppressed.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Maximum amplification of input sound</source>
-        <translation>Didžiausias įvesties garso stiprinimas</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Maximum amplification of input.&lt;/b&gt;&lt;br /&gt;Mumble normalizes the input volume before compressing, and this sets how much it&apos;s allowed to amplify.&lt;br /&gt;The actual level is continually updated based on your current speech pattern, but it will never go above the level specified here.&lt;br /&gt;If the &lt;i&gt;Microphone loudness&lt;/i&gt; level of the audio statistics hover around 100%, you probably want to set this to 2.0 or so, but if, like most people, you are unable to reach 100%, set this to something much higher.&lt;br /&gt;Ideally, set it so &lt;i&gt;Microphone Loudness * Amplification Factor &gt;= 100&lt;/i&gt;, even when you&apos;re speaking really soft.&lt;br /&gt;&lt;br /&gt;Note that there is no harm in setting this to maximum, but Mumble will start picking up other conversations if you leave it to auto-tune to that level.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Current speech detection chance</source>
-        <translation>Esama kalbos atpažinimo tikimybė</translation>
-    </message>
-    <message>
-        <source>Enabling this will cancel the echo from your speakers. Mixed has low CPU impact, but only works well if your speakers are equally loud and equidistant from the microphone. Multichannel echo cancellation provides much better echo cancellation, but at a higher CPU cost.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>Išjungta</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets speech detection to use Signal to Noise ratio.&lt;/b&gt;&lt;br /&gt;In this mode, the input is analyzed for something resembling a clear signal, and the clarity of that signal is used to trigger speech detection.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This shows the current speech detection settings.&lt;/b&gt;&lt;br /&gt;You can change the settings from the Settings dialog or from the Audio Wizard.</source>
-        <translation>&lt;b&gt;Tai rodo esamus kalbos aptikimo nustatymus.&lt;/b&gt;&lt;br /&gt;Jūs galite pakeisti nustatymus, pasinaudoję Nustatymų dialogu arba Garso vedikliu.</translation>
-    </message>
-    <message>
-        <source>Signal values below this count as silence</source>
-        <translation>Signalo reikšmės žemiau šios ribos yra traktuojamos kaip tyla</translation>
-    </message>
-    <message>
-        <source>Maximum bandwidth used for sending audio</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Use Amplitude based speech detection</source>
-        <translation>Naudoti amplitude pagrįstą kalbos aptikimą</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This selects how long after a perceived stop in speech transmission should continue.&lt;/b&gt;&lt;br /&gt;Set this higher if your voice breaks up when you speak (seen by a rapidly blinking voice icon next to your name).</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Exclusive mode</source>
-        <translation>Išskirtinė veiksena</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This opens the device in exclusive mode.&lt;/b&gt;&lt;br /&gt;No other application will be able to use the device.</source>
-        <translation>&lt;b&gt;Tai atveria įrenginį išskirtinėje veiksenoje.&lt;/b&gt;&lt;br /&gt;Jokia kita programa negalės naudoti šio įrenginio.</translation>
-    </message>
-    <message>
-        <source>Exclusive</source>
-        <translation>Išskirtinė</translation>
-    </message>
-    <message>
-        <source>R&amp;eset</source>
-        <translation>At&amp;statyti</translation>
-    </message>
-    <message>
-        <source>&amp;Browse...</source>
-        <translation>&amp;Naršyti...</translation>
-    </message>
-    <message>
-        <source>B&amp;rowse...</source>
-        <translation>Na&amp;ršyti...</translation>
-    </message>
-    <message>
-        <source>&amp;Preview</source>
-        <translation>&amp;Peržiūra</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Preview&lt;/b&gt;&lt;br/&gt;Plays the current &lt;i&gt;on&lt;/i&gt; sound followed by the current &lt;i&gt;off&lt;/i&gt; sound.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Displays an always on top window with a push to talk button in it</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Display push to talk window</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Misc</source>
-        <translation>Įvairūs</translation>
-    </message>
-    <message>
-        <source>Audible audio cue when starting or stopping to transmit</source>
-        <translation>Girdimas garso orientyras, kai perdavimas pradedamas ar sustabdomas</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This enables transmission audio cues.&lt;/b&gt;&lt;br /&gt;Setting this will give you a short audio beep when you start and stop transmitting.</source>
-        <translation>&lt;b&gt;Tai įjungia garsinius perdavimo orientyrus.&lt;/b&gt;&lt;br /&gt;Tai nustačius, pradedant ir sustabdant perdavimą, girdėsite trumpą garsinį pyptelėjimą.</translation>
-    </message>
-    <message>
-        <source>Audio cue</source>
-        <translation>Garsinis orientyras</translation>
-    </message>
-    <message>
-        <source>Gets played when starting to transmit</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Gets played when stopping to transmit</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Hold Time</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Time the microphone stays open after the PTT key is released</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Server maximum network bandwidth is only %1 kbit/s. Audio quality auto-adjusted to %2 kbit/s (%3 ms)</source>
-        <translation>Didžiausia serverio tinklo siuntimo sparta yra tik %1 kbit/s. Garso kokybė automatiškai sureguliuota į %2 kbit/s (%3 ms)</translation>
-    </message>
-    <message>
-        <source>Max. Amplification</source>
-        <translation>Didžiausias stiprinimas</translation>
-    </message>
-    <message>
-        <source>Idle action</source>
-        <translation>Veiksmas, esant neveiklumui</translation>
-    </message>
-    <message>
-        <source>minutes do</source>
-        <translation>minučių</translation>
-    </message>
-    <message>
-        <source>nothing</source>
-        <translation>nieko nedaryti</translation>
-    </message>
-    <message>
-        <source>deafen</source>
-        <translation>apkurtinti</translation>
-    </message>
-    <message>
-        <source>mute</source>
-        <translation>nutildyti</translation>
-    </message>
-    <message>
-        <source>after</source>
-        <translation>po</translation>
-    </message>
-    <message>
-        <source>Echo Cancellation</source>
-        <translation>Aido malšinimas</translation>
-    </message>
-    <message>
-        <source>Mixed echo cancellation</source>
-        <translation>Maišytas aido malšinimas</translation>
-    </message>
-    <message>
-        <source>Multichannel echo cancellation</source>
-        <translation>Daugiakanalis aido malšinimas</translation>
-    </message>
-    <message>
-        <source>The idle action will be reversed upon any key or mouse button input</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Undo Idle action upon activity</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Apply RNNoise&apos;s noise suppression filter.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This applies RNNoise&apos;s noise suppression filter.&lt;/b&gt;&lt;br /&gt;RNNoise is based on machine learning and used in WebRTC.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>RNNoise</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="AudioInput.ui" line="14"/>
         <source>Audio input</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioInput.ui" line="20"/>
+        <source>Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="26"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="42"/>
+        <source>Input method for audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="45"/>
         <source>&lt;b&gt;This is the input method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioInput.ui" line="68"/>
+        <source>Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="84"/>
+        <source>Input device for audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="87"/>
+        <source>&lt;b&gt;This is the input device to use for audio.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="106"/>
+        <source>Exclusive mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="109"/>
+        <source>&lt;b&gt;This opens the device in exclusive mode.&lt;/b&gt;&lt;br /&gt;No other application will be able to use the device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="112"/>
+        <source>Exclusive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="128"/>
+        <source>Transmission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="134"/>
+        <source>&amp;Transmit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="144"/>
+        <source>When to transmit your speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="147"/>
+        <source>&lt;b&gt;This sets when speech should be transmitted.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Continuous&lt;/i&gt; - All the time&lt;br /&gt;&lt;i&gt;Voice Activity&lt;/i&gt; - When you are speaking clearly.&lt;br /&gt;&lt;i&gt;Push To Talk&lt;/i&gt; - When you hold down the hotkey set under &lt;i&gt;Shortcuts&lt;/i&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="167"/>
+        <source>DoublePush Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="190"/>
+        <source>Displays an always on top window with a push to talk button in it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="193"/>
+        <source>Display push to talk window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="213"/>
+        <source>If you press the PTT key twice in this time it will get locked.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="216"/>
+        <source>&lt;b&gt;DoublePush Time&lt;/b&gt;&lt;br /&gt;If you press the push-to-talk key twice during the configured interval of time it will be locked. Mumble will keep transmitting until you hit the key once more to unlock PTT again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="235"/>
+        <source>Hold Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="249"/>
+        <source>Time the microphone stays open after the PTT key is released</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="282"/>
+        <source>Silence Below</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="289"/>
+        <source>How long to keep transmitting after silence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="292"/>
+        <source>&lt;b&gt;This selects how long after a perceived stop in speech transmission should continue.&lt;/b&gt;&lt;br /&gt;Set this higher if your voice breaks up when you speak (seen by a rapidly blinking voice icon next to your name).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="314"/>
+        <source>Current speech detection chance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="317"/>
+        <source>&lt;b&gt;This shows the current speech detection settings.&lt;/b&gt;&lt;br /&gt;You can change the settings from the Settings dialog or from the Audio Wizard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="324"/>
+        <source>Voice &amp;Hold</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="336"/>
+        <source>Use Amplitude based speech detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="339"/>
+        <source>&lt;b&gt;This sets speech detection to use Amplitude.&lt;/b&gt;&lt;br /&gt;In this mode, the raw strength of the input signal is used to detect speech.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="342"/>
+        <source>Amplitude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="349"/>
+        <source>Use SNR based speech detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="352"/>
+        <source>&lt;b&gt;This sets speech detection to use Signal to Noise ratio.&lt;/b&gt;&lt;br /&gt;In this mode, the input is analyzed for something resembling a clear signal, and the clarity of that signal is used to trigger speech detection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="355"/>
+        <source>Signal to Noise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="364"/>
+        <source>Speech Above</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="371"/>
+        <source>Signal values below this count as silence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="374"/>
+        <location filename="AudioInput.ui" line="399"/>
+        <source>&lt;b&gt;This sets the trigger values for voice detection.&lt;/b&gt;&lt;br /&gt;Use this together with the Audio Statistics window to manually tune the trigger values for detecting speech. Input values below &quot;Silence Below&quot; always count as silence. Values above &quot;Speech Above&quot; always count as voice. Values in between will count as voice if you&apos;re already talking, but will not trigger a new detection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="396"/>
+        <source>Signal values above this count as voice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="429"/>
+        <source>Compression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="435"/>
+        <source>Audio per packet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="445"/>
+        <source>How many audio frames to send per packet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="448"/>
+        <source>&lt;b&gt;This selects how many audio frames should be put in one packet.&lt;/b&gt;&lt;br /&gt;Increasing this will increase the latency of your voice, but will also reduce bandwidth requirements.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="493"/>
+        <source>Quality of compression (peak bandwidth)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="496"/>
+        <source>&lt;b&gt;This sets the quality of compression.&lt;/b&gt;&lt;br /&gt;This determines how much bandwidth Mumble is allowed to use for outgoing audio.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="526"/>
+        <source>Maximum bandwidth used for sending audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="529"/>
+        <source>&lt;b&gt;This shows peak outgoing bandwidth used.&lt;/b&gt;&lt;br /&gt;This shows the peak amount of bandwidth sent out from your machine. Audio bitrate is the maximum bitrate (as we use VBR) for the audio data alone. Position is the bitrate used for positional information. Overhead is our framing and the IP packet headers (IP and UDP is 75% of this overhead).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="542"/>
+        <source>&amp;Quality</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="552"/>
         <source>Enable Opus&apos; low-delay mode when the quality is set to &lt;b&gt;64 kb/s&lt;/b&gt; or higher. </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioInput.ui" line="555"/>
         <source>If checked, Mumble will enable Opus&apos; low-delay mode when the quality is set to &lt;b&gt;64 kbit/s&lt;/b&gt; or higher. Low-delay mode decreases latency by &lt;b&gt;~15 milliseconds&lt;/b&gt; in the round trip. This mode may require an higher bitrate to preserve the same quality, in comparison with the music and VOIP modes.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioInput.ui" line="558"/>
         <source>Allow low delay mode</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="568"/>
+        <source>Audio Processing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="574"/>
+        <source>Maximum amplification of input sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="577"/>
+        <source>&lt;b&gt;Maximum amplification of input.&lt;/b&gt;&lt;br /&gt;Mumble normalizes the input volume before compressing, and this sets how much it&apos;s allowed to amplify.&lt;br /&gt;The actual level is continually updated based on your current speech pattern, but it will never go above the level specified here.&lt;br /&gt;If the &lt;i&gt;Microphone loudness&lt;/i&gt; level of the audio statistics hover around 100%, you probably want to set this to 2.0 or so, but if, like most people, you are unable to reach 100%, set this to something much higher.&lt;br /&gt;Ideally, set it so &lt;i&gt;Microphone Loudness * Amplification Factor &gt;= 100&lt;/i&gt;, even when you&apos;re speaking really soft.&lt;br /&gt;&lt;br /&gt;Note that there is no harm in setting this to maximum, but Mumble will start picking up other conversations if you leave it to auto-tune to that level.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="596"/>
+        <source>Max. Amplification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="622"/>
+        <source>Echo Cancellation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="629"/>
+        <source>Noise suppression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="637"/>
+        <source>Don&apos;t use noise suppression.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="640"/>
+        <location filename="AudioInput.ui" line="747"/>
+        <source>Disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="647"/>
+        <source>Use the noise suppression algorithm provided by Speex.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="657"/>
+        <source>Use the noise suppression algorithm provided by RNNoise.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="667"/>
+        <source>Use a combination of Speex and RNNoise to do noise suppression.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="670"/>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="681"/>
+        <location filename="AudioInput.ui" line="691"/>
+        <location filename="AudioInput.ui" line="725"/>
+        <source>This controls the amount by which Speex will suppress noise.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="684"/>
+        <source>Speex suppression strength</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="694"/>
+        <source>&lt;b&gt;This sets the amount of noise suppression to apply.&lt;/b&gt;&lt;br /&gt;The higher this value, the more aggressively stationary noise will be suppressed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="743"/>
+        <source>Enabling this will cancel the echo from your speakers. Mixed has low CPU impact, but only works well if your speakers are equally loud and equidistant from the microphone. Multichannel echo cancellation provides much better echo cancellation, but at a higher CPU cost.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="752"/>
+        <source>Mixed echo cancellation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="757"/>
+        <source>Multichannel echo cancellation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="768"/>
+        <source>Misc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="774"/>
+        <source>Browse for off audio file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="777"/>
+        <source>B&amp;rowse...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="784"/>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="794"/>
+        <source>On</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="804"/>
+        <source>Preview the audio cues</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="807"/>
+        <source>&lt;b&gt;Preview&lt;/b&gt;&lt;br/&gt;Plays the current &lt;i&gt;on&lt;/i&gt; sound followed by the current &lt;i&gt;off&lt;/i&gt; sound.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="810"/>
+        <source>&amp;Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="817"/>
+        <source>Reset audio cue to default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="820"/>
+        <source>&lt;b&gt;Reset&lt;/b&gt;&lt;br/&gt;Reset the paths for the files to their default.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="823"/>
+        <source>R&amp;eset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="830"/>
+        <source>Browse for on audio file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="833"/>
+        <source>&amp;Browse...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="840"/>
+        <source>Gets played when starting to transmit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="847"/>
+        <source>Gets played when stopping to transmit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="854"/>
+        <source>Audible audio cue when starting or stopping to transmit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="857"/>
+        <source>&lt;b&gt;This enables transmission audio cues.&lt;/b&gt;&lt;br /&gt;Setting this will give you a short audio beep when you start and stop transmitting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="860"/>
+        <source>Audio cue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="867"/>
+        <source>Idle action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="874"/>
+        <source>The idle action will be reversed upon any key or mouse button input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="877"/>
+        <source>Undo Idle action upon activity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="905"/>
+        <source>minutes do</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="913"/>
+        <source>nothing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="918"/>
+        <source>deafen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="923"/>
+        <source>mute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.ui" line="946"/>
+        <source>after</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioInput.cpp" line="703"/>
+        <source>Server maximum network bandwidth is only %1 kbit/s. Audio quality auto-adjusted to %2 kbit/s (%3 ms)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Nepertraukiamai</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Esant balso aktyvumui</translation>
-    </message>
-    <message>
-        <source>Push To Talk</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Audio Input</source>
-        <translation>Garso įvestis</translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation>%1 ms</translation>
-    </message>
-    <message>
-        <source>Off</source>
-        <translation>Išjungta</translation>
-    </message>
-    <message>
-        <source>%1 s</source>
-        <translation>%1 s</translation>
-    </message>
-    <message>
-        <source>%1 kb/s</source>
-        <translation>%1 kb/s</translation>
-    </message>
-    <message>
-        <source>-%1 dB</source>
-        <translation>-%1 dB</translation>
-    </message>
-    <message>
-        <source>%1 kbit/s (Audio %2, Position %4, Overhead %3)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="AudioConfigDialog.cpp" line="79"/>
         <source>Audio system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="80"/>
         <source>Input device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="81"/>
         <source>Echo cancellation mode</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="82"/>
         <source>Transmission mode</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="83"/>
         <source>PTT lock threshold</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="84"/>
         <source>PTT hold threshold</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="85"/>
         <source>Silence below</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="86"/>
         <source>Current speech detection chance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="87"/>
         <source>Speech above</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="88"/>
         <source>Speech below</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="89"/>
         <source>Audio per packet</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="90"/>
         <source>Quality of compression (peak bandwidth)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="91"/>
         <source>Noise suppression</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="92"/>
         <source>Maximum amplification</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="93"/>
         <source>Transmission started sound</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="94"/>
         <source>Transmission stopped sound</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="95"/>
         <source>Initiate idle action after (in minutes)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="96"/>
         <source>Idle action</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="104"/>
+        <source>Continuous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="105"/>
+        <source>Voice Activity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="106"/>
+        <source>Push To Talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="129"/>
+        <source>Audio Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="290"/>
+        <location filename="AudioConfigDialog.cpp" line="298"/>
+        <location filename="AudioConfigDialog.cpp" line="305"/>
+        <source>%1 ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="296"/>
+        <location filename="AudioConfigDialog.cpp" line="303"/>
+        <location filename="AudioConfigDialog.cpp" line="323"/>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="311"/>
+        <source>%1 s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="315"/>
+        <source>%1 kb/s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="326"/>
+        <source>-%1 dB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="374"/>
+        <source>%1 kbit/s (Audio %2, Position %4, Overhead %3)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioOutput</name>
     <message>
-        <source>Interface</source>
-        <translation>Sąsaja</translation>
-    </message>
-    <message>
-        <source>System</source>
-        <translation>Sistema</translation>
-    </message>
-    <message>
-        <source>Output method for audio</source>
-        <translation>Garso išvesties metodas</translation>
-    </message>
-    <message>
-        <source>Device</source>
-        <translation>Įrenginys</translation>
-    </message>
-    <message>
-        <source>Output device for audio</source>
-        <translation>Garso išvesties įrenginys</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This is the output device to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Positional Audio</source>
-        <translation>Pozicinis garsas</translation>
-    </message>
-    <message>
-        <source>Audio Output</source>
-        <translation>Garso išvestis</translation>
-    </message>
-    <message>
-        <source>Default &amp;Jitter Buffer</source>
-        <translation>Numatytasis &amp;drebėjimo buferis</translation>
-    </message>
-    <message>
-        <source>Safety margin for jitter buffer</source>
-        <translation>Drebėjimo buferio saugumo riba</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets the minimum safety margin for the jitter buffer.&lt;/b&gt;&lt;br /&gt;All incoming audio is buffered, and the jitter buffer continually tries to push the buffer to the minimum sustainable by your network, so latency can be as low as possible. This sets the minimum buffer size to use. If the start of sentences you hear is very jittery, increase this value.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Minimum distance to user before sound volume decreases</source>
-        <translation>Mažiausias atstumas iki naudotojo prieš tai, kai garso garsis sumažės</translation>
-    </message>
-    <message>
-        <source>This sets the minimum distance for sound calculations. The volume of other users&apos; speech will not decrease until they are at least this far away from you.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This sets the maximum distance for sound calculations. When farther away than this, other users&apos; speech volume will not decrease any further.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This enables one of the loopback test modes.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;None&lt;/i&gt; - Loopback disabled&lt;br /&gt;&lt;i&gt;Local&lt;/i&gt; - Emulate a local server.&lt;br /&gt;&lt;i&gt;Server&lt;/i&gt; - Request loopback from server.&lt;br /&gt;Please note than when loopback is enabled, no other users will hear your voice. This setting is not saved on application exit.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Volume</source>
-        <translation>Garsis</translation>
-    </message>
-    <message>
-        <source>Volume of incoming speech</source>
-        <translation>Gaunamos kalbos garsis</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This adjusts the volume of incoming speech.&lt;/b&gt;&lt;br /&gt;Note that if you increase this beyond 100%, audio will be distorted.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Output Delay</source>
-        <translation>Išvesties delsa</translation>
-    </message>
-    <message>
-        <source>Amount of data to buffer</source>
-        <translation>Buferizuojamų duomenų kiekis</translation>
-    </message>
-    <message>
-        <source>The connected &quot;speakers&quot; are actually headphones</source>
-        <oldsource>The connected &quot;speakers&quot; are actually headphones.</oldsource>
-        <translation>Prijungti &quot;garsiakalbiai&quot;, iš tikrųjų, yra ausinės</translation>
-    </message>
-    <message>
-        <source>Factor for sound volume decrease</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Bloom</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Factor for sound volume increase</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>How much should sound volume increase for sources that are really close?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Checking this indicates that you don&apos;t have speakers connected, just headphones. This is important, as speakers are usually in front of you, while headphones are directly to your left/right.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This sets the amount of data to pre-buffer in the output buffer. Experiment with different values and set it to the lowest which doesn&apos;t cause rapid jitter in the sound.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Headphones</source>
-        <translation>Ausinės</translation>
-    </message>
-    <message>
-        <source>Minimum Distance</source>
-        <translation>Mažiausias atstumas</translation>
-    </message>
-    <message>
-        <source>Maximum Distance</source>
-        <translation>Didžiausias atstumas</translation>
-    </message>
-    <message>
-        <source>Maximum distance, beyond which speech volume won&apos;t decrease</source>
-        <translation>Didžiausias atstumas, kurį viršijus, kalbos garsis nemažės</translation>
-    </message>
-    <message>
-        <source>Minimum Volume</source>
-        <translation>Mažiausias garsis</translation>
-    </message>
-    <message>
-        <source>What should the volume be at the maximum distance?</source>
-        <translation>Koks turėtų būti garsis didžiausiame atstume?</translation>
-    </message>
-    <message>
-        <source>Loopback Test</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Delay Variance</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Variance in packet latency</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets the packet latency variance for loopback testing.&lt;/b&gt;&lt;br /&gt;Most audio paths contain some variable latency. This allows you to set that variance for loopback mode testing. For example, if you set this to 15ms, this will emulate a network with 20-35ms ping latency or one with 80-95ms latency. Most domestic net connections have a variance of about 5ms.</source>
-        <oldsource>&lt;b&gt;This sets the packet latency variance for loopback testing.&lt;/b&gt;&lt;br /&gt;Most audio paths contain some variable latency. This allows you set that variance for loopback mode testing. For example, if you set this to 15ms, this will emulate a network with 20-35ms ping latency or one with 80-95ms latency. Most domestic net connections have a variance of about 5ms.</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Packet Loss</source>
-        <translation>Paketų praradimas</translation>
-    </message>
-    <message>
-        <source>Packet loss for loopback mode</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets the packet loss for loopback mode.&lt;/b&gt;&lt;br /&gt;This will be the ratio of packets lost. Unless your outgoing bandwidth is peaked or there&apos;s something wrong with your network connection, this will be 0%</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Loopback</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Desired loopback mode</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Attenuate applications by...</source>
-        <translation>Slopinti programas...</translation>
-    </message>
-    <message>
-        <source>Attenuation of other applications during speech</source>
-        <translation>Kitų programų slopinimas kalbos metu</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Attenuate volume of other applications during speech&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This sets the attenuation of other applications if the feature is enabled.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>If checked Mumble lowers the volume of other applications while other users talk</source>
-        <translation>Jei pažymėta, Mumble sumažina kitų programų garsį, kol kalba kiti naudotojai</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Attenuate applications while other users talk&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This makes mumble activate the feature while other users talk to you.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>while other users talk</source>
-        <translation>kol kiti naudotojai kalba</translation>
-    </message>
-    <message>
-        <source>If checked Mumble lowers the volume of other applications while you talk</source>
-        <translation>Jei pažymėta, Mumble sumažina kitų programų garsį, kol kalbate jūs</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Attenuate applications while you talk&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This makes mumble activate the feature while you talk.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>while you talk</source>
-        <translation>kol jūs kalbate</translation>
-    </message>
-    <message>
-        <source>Exclusive mode, not recommended.</source>
-        <translation>Išskirtinė veiksena, nerekomenduojama.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This opens the device in exclusive mode.&lt;/b&gt;&lt;br /&gt;No other application will be able to use the device.</source>
-        <translation>&lt;b&gt;Tai atveria įrenginį išskirtinėje veiksenoje.&lt;/b&gt;&lt;br /&gt;Jokia kita programa negalės naudoti šio įrenginio.</translation>
-    </message>
-    <message>
-        <source>Exclusive</source>
-        <translation>Išskirtinė</translation>
-    </message>
-    <message>
-        <source>If checked Mumble lowers the volume of other users while you talk if you have the &quot;Priority Speaker&quot; status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>If checked, Mumble will only attenuate applications that are using the same output source as Mumble</source>
-        <translation>Jei pažymėta, Mumble slopins tik tas programas, kurios naudoja tą patį išvesties šaltinį kaip ir Mumble</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Attenuate only applications using the same output as Mumble&lt;/b&gt;&lt;br /&gt;If checked, applications that use a different output than Mumble will not be attenuated.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Only attenuate applications using the same output device</source>
-        <translation>Slopinti tik programas, naudojančias tą patį išvesties įrenginį</translation>
-    </message>
-    <message>
-        <source>If checked, PulseAudio loopback modules will be attenuated</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Attenuate PulseAudio loopback modules&lt;/b&gt;&lt;br /&gt;If loopback modules are linked to Mumble&apos;s output device/sink, they will also be attenuated.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Attenuate PulseAudio loopback modules</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="AudioOutput.ui" line="14"/>
         <source>Audio output</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioOutput.ui" line="20"/>
+        <source>Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="26"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="42"/>
+        <source>Output method for audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="45"/>
         <source>&lt;b&gt;This is the output method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;Attenuate other users while talking as Priority Speaker&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other users while you talk as the &lt;i&gt;Priority Speaker&lt;/i&gt; to avoid getting disturbed. Checking this checkbox will enable this feature.</source>
-        <translation type="unfinished"/>
+        <location filename="AudioOutput.ui" line="68"/>
+        <source>Device</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attenuate other users while talking as Priority Speaker</source>
-        <translation type="unfinished"/>
+        <location filename="AudioOutput.ui" line="84"/>
+        <source>Output device for audio</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enable</source>
-        <translation type="unfinished"/>
+        <location filename="AudioOutput.ui" line="87"/>
+        <source>&lt;b&gt;This is the output device to use for audio.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioOutput.ui" line="109"/>
+        <source>Exclusive mode, not recommended.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="112"/>
+        <source>&lt;b&gt;This opens the device in exclusive mode.&lt;/b&gt;&lt;br /&gt;No other application will be able to use the device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="115"/>
+        <source>Exclusive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="125"/>
+        <source>Audio Output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="138"/>
+        <source>Amount of data to buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="141"/>
+        <source>This sets the amount of data to pre-buffer in the output buffer. Experiment with different values and set it to the lowest which doesn&apos;t cause rapid jitter in the sound.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="173"/>
+        <source>Output Delay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="183"/>
+        <source>Volume of incoming speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="186"/>
+        <source>&lt;b&gt;This adjusts the volume of incoming speech.&lt;/b&gt;&lt;br /&gt;Note that if you increase this beyond 100%, audio will be distorted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="205"/>
+        <source>Volume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="222"/>
+        <source>Safety margin for jitter buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="225"/>
+        <source>&lt;b&gt;This sets the minimum safety margin for the jitter buffer.&lt;/b&gt;&lt;br /&gt;All incoming audio is buffered, and the jitter buffer continually tries to push the buffer to the minimum sustainable by your network, so latency can be as low as possible. This sets the minimum buffer size to use. If the start of sentences you hear is very jittery, increase this value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="244"/>
+        <source>Default &amp;Jitter Buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="260"/>
         <source>Attenuation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="266"/>
+        <source>If checked, Mumble will only attenuate applications that are using the same output source as Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="269"/>
+        <source>&lt;b&gt;Attenuate only applications using the same output as Mumble&lt;/b&gt;&lt;br /&gt;If checked, applications that use a different output than Mumble will not be attenuated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="272"/>
+        <source>Only attenuate applications using the same output device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="279"/>
+        <source>Attenuate applications by...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="295"/>
+        <source>If checked, PulseAudio loopback modules will be attenuated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="298"/>
+        <source>&lt;b&gt;Attenuate PulseAudio loopback modules&lt;/b&gt;&lt;br /&gt;If loopback modules are linked to Mumble&apos;s output device/sink, they will also be attenuated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="301"/>
+        <source>Attenuate PulseAudio loopback modules</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="326"/>
+        <source>If checked Mumble lowers the volume of other applications while other users talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="329"/>
+        <source>&lt;b&gt;Attenuate applications while other users talk&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This makes mumble activate the feature while other users talk to you.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="332"/>
+        <source>while other users talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="355"/>
+        <source>If checked Mumble lowers the volume of other applications while you talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="358"/>
+        <source>&lt;b&gt;Attenuate applications while you talk&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This makes mumble activate the feature while you talk.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="361"/>
+        <source>while you talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="383"/>
+        <source>Attenuation of other applications during speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="386"/>
+        <source>&lt;b&gt;Attenuate volume of other applications during speech&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This sets the attenuation of other applications if the feature is enabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="412"/>
+        <source>If checked Mumble lowers the volume of other users while you talk if you have the &quot;Priority Speaker&quot; status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="415"/>
+        <source>&lt;b&gt;Attenuate other users while talking as Priority Speaker&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other users while you talk as the &lt;i&gt;Priority Speaker&lt;/i&gt; to avoid getting disturbed. Checking this checkbox will enable this feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="418"/>
+        <source>Attenuate other users while talking as Priority Speaker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="431"/>
+        <source>Positional Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="437"/>
+        <source>Minimum Distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="453"/>
+        <location filename="AudioOutput.ui" line="531"/>
+        <source>Checking this indicates that you don&apos;t have speakers connected, just headphones. This is important, as speakers are usually in front of you, while headphones are directly to your left/right.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="460"/>
+        <source>Minimum Volume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="470"/>
+        <source>Maximum Distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="480"/>
+        <source>Minimum distance to user before sound volume decreases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="486"/>
+        <source>This sets the minimum distance for sound calculations. The volume of other users&apos; speech will not decrease until they are at least this far away from you.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="502"/>
+        <source>Enable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="509"/>
+        <source>Factor for sound volume increase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="512"/>
+        <source>How much should sound volume increase for sources that are really close?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="528"/>
+        <source>The connected &quot;speakers&quot; are actually headphones</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="534"/>
+        <source>Headphones</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="554"/>
+        <source>Factor for sound volume decrease</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="557"/>
+        <source>What should the volume be at the maximum distance?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="596"/>
+        <source>Maximum distance, beyond which speech volume won&apos;t decrease</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="599"/>
+        <source>This sets the maximum distance for sound calculations. When farther away than this, other users&apos; speech volume will not decrease any further.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="615"/>
+        <source>Bloom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="628"/>
+        <source>Loopback Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="634"/>
+        <source>Delay Variance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="644"/>
+        <source>Variance in packet latency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="647"/>
+        <source>&lt;b&gt;This sets the packet latency variance for loopback testing.&lt;/b&gt;&lt;br /&gt;Most audio paths contain some variable latency. This allows you to set that variance for loopback mode testing. For example, if you set this to 15ms, this will emulate a network with 20-35ms ping latency or one with 80-95ms latency. Most domestic net connections have a variance of about 5ms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="673"/>
+        <source>Packet Loss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="683"/>
+        <source>Packet loss for loopback mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="686"/>
+        <source>&lt;b&gt;This sets the packet loss for loopback mode.&lt;/b&gt;&lt;br /&gt;This will be the ratio of packets lost. Unless your outgoing bandwidth is peaked or there&apos;s something wrong with your network connection, this will be 0%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="718"/>
+        <source>&amp;Loopback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="728"/>
+        <source>Desired loopback mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioOutput.ui" line="731"/>
+        <source>&lt;b&gt;This enables one of the loopback test modes.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;None&lt;/i&gt; - Loopback disabled&lt;br /&gt;&lt;i&gt;Local&lt;/i&gt; - Emulate a local server.&lt;br /&gt;&lt;i&gt;Server&lt;/i&gt; - Request loopback from server.&lt;br /&gt;Please note than when loopback is enabled, no other users will hear your voice. This setting is not saved on application exit.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioOutputDialog</name>
     <message>
-        <source>None</source>
-        <translation>Nėra</translation>
-    </message>
-    <message>
-        <source>Local</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Server</source>
-        <translation>Serveris</translation>
-    </message>
-    <message>
-        <source>Audio Output</source>
-        <translation>Garso išvestis</translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation>%1 ms</translation>
-    </message>
-    <message>
-        <source>%1 %</source>
-        <translation>%1 %</translation>
-    </message>
-    <message>
-        <source>%1 m</source>
-        <translation>%1 m</translation>
-    </message>
-    <message>
+        <location filename="AudioConfigDialog.cpp" line="559"/>
         <source>Output system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="560"/>
         <source>Output device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="561"/>
         <source>Default jitter buffer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="562"/>
         <source>Volume of incoming speech</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="563"/>
         <source>Output delay</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="564"/>
         <source>Attenuation of other applications during speech</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="565"/>
         <source>Minimum distance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="566"/>
         <source>Maximum distance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="567"/>
         <source>Minimum volume</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="568"/>
         <source>Bloom</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="569"/>
         <source>Delay variance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="570"/>
         <source>Packet loss</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioConfigDialog.cpp" line="571"/>
         <source>Loopback</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="579"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="580"/>
+        <source>Local</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="581"/>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="587"/>
+        <source>Audio Output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="718"/>
+        <location filename="AudioConfigDialog.cpp" line="737"/>
+        <location filename="AudioConfigDialog.cpp" line="745"/>
+        <source>%1 ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="729"/>
+        <location filename="AudioConfigDialog.cpp" line="733"/>
+        <location filename="AudioConfigDialog.cpp" line="741"/>
+        <location filename="AudioConfigDialog.cpp" line="772"/>
+        <location filename="AudioConfigDialog.cpp" line="776"/>
+        <source>%1 %</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioConfigDialog.cpp" line="760"/>
+        <location filename="AudioConfigDialog.cpp" line="766"/>
+        <source>%1 m</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioOutputSample</name>
     <message>
+        <location filename="AudioOutputSample.cpp" line="212"/>
         <source>Choose sound file</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioOutputSample.cpp" line="217"/>
         <source>Invalid sound file</source>
-        <translation>Neteisingas garso failas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioOutputSample.cpp" line="218"/>
         <source>The file &apos;%1&apos; cannot be used by Mumble. Please select a file with a compatible format and encoding.</source>
-        <translation>Mumble negali naudoti failo &quot;%1&quot;. Prašome pasirinkti suderinamo formato ir kodavimo failą.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioStats</name>
     <message>
-        <source>&gt;1000 ms</source>
-        <oldsource>&gt;1000ms</oldsource>
-        <translation>&gt;1000 ms</translation>
-    </message>
-    <message>
+        <location filename="AudioStats.ui" line="14"/>
         <source>Audio Statistics</source>
-        <translation>Garso statistika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="22"/>
         <source>Input Levels</source>
-        <translation>Įvesties lygiai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="28"/>
         <source>Peak microphone level</source>
-        <translation>Maksimalus mikrofono lygis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="35"/>
+        <location filename="AudioStats.ui" line="55"/>
+        <location filename="AudioStats.ui" line="75"/>
         <source>Peak power in last frame</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="38"/>
         <source>This shows the peak power in the last frame (20 ms), and is the same measurement as you would usually find displayed as &quot;input power&quot;. Please disregard this and look at &lt;b&gt;Microphone power&lt;/b&gt; instead, which is much more steady and disregards outliers.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="48"/>
         <source>Peak speaker level</source>
-        <translation>Maksimalus garsiakalbio lygis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="58"/>
         <source>This shows the peak power of the speakers in the last frame (20 ms). Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you&apos;re playing audio from other programs, your setup is not working.</source>
-        <oldsource>This shows the peak power in the last frame (20 ms) of the speakers. Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you're playing audio from other programs, your setup is not working.</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="68"/>
         <source>Peak clean level</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="78"/>
         <source>This shows the peak power in the last frame (20 ms) after all processing. Ideally, this should be -96 dB when you&apos;re not talking. In reality, a sound studio should see -60 dB, and you should hopefully see somewhere around -20 dB. When you are talking, this should rise to somewhere between -5 and -10 dB.&lt;br /&gt;If you are using echo cancellation, and this rises to more than -15 dB when you&apos;re not talking, your setup is not working, and you&apos;ll annoy other users with echoes.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="91"/>
         <source>Signal Analysis</source>
-        <translation>Signalo analizė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="97"/>
         <source>Microphone power</source>
-        <translation>Mikrofono galia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="104"/>
         <source>How close the current input level is to ideal</source>
-        <translation>Ant kiek esamas įvesties lygis yra artimas tobulam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="107"/>
         <source>This shows how close your current input volume is to the ideal. To adjust your microphone level, open whatever program you use to adjust the recording volume, and look at the value here while talking.&lt;br /&gt;&lt;b&gt;Talk loud, as you would when you&apos;re upset over getting fragged by a noob.&lt;/b&gt;&lt;br /&gt;Adjust the volume until this value is close to 100%, but make sure it doesn&apos;t go above. If it does go above, you are likely to get clipping in parts of your speech, which will degrade sound quality.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="117"/>
         <source>Signal-To-Noise ratio</source>
-        <translation>Signalo ir triukšmo santykis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="124"/>
         <source>Signal-To-Noise ratio from the microphone</source>
-        <translation>Signalo ir triukšmo santykis iš mikrofono</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="127"/>
         <source>This is the Signal-To-Noise Ratio (SNR) of the microphone in the last frame (20 ms). It shows how much clearer the voice is compared to the noise.&lt;br /&gt;If this value is below 1.0, there&apos;s more noise than voice in the signal, and so quality is reduced.&lt;br /&gt;There is no upper limit to this value, but don&apos;t expect to see much above 40-50 without a sound studio.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="137"/>
         <source>Speech Probability</source>
-        <translation>Kalbos tikimybė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="144"/>
         <source>Probability of speech</source>
-        <translation>Kalbos tikimybė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="147"/>
         <source>This is the probability that the last frame (20 ms) was speech and not environment noise.&lt;br /&gt;Voice activity transmission depends on this being right. The trick with this is that the middle of a sentence is always detected as speech; the problem is the pauses between words and the start of speech. It&apos;s hard to distinguish a sigh from a word starting with &apos;h&apos;.&lt;br /&gt;If this is in bold font, it means Mumble is currently transmitting (if you&apos;re connected).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="162"/>
         <source>Configuration feedback</source>
-        <translation>Konfigūracijos grįžtamasis ryšys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="168"/>
         <source>Current audio bitrate</source>
-        <translation>Esamas garso pralaidumas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioStats.ui" line="181"/>
         <source>Bitrate of last frame</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DoublePush interval</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Time between last two Push-To-Talk presses</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Speech Detection</source>
-        <translation>Kalbos aptikimas</translation>
-    </message>
-    <message>
-        <source>Current speech detection chance</source>
-        <translation>Esama kalbos atpažinimo tikimybė</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This shows the current speech detection settings.&lt;/b&gt;&lt;br /&gt;You can change the settings from the Settings dialog or from the Audio Wizard.</source>
-        <translation>&lt;b&gt;Tai rodo esamus kalbos aptikimo nustatymus.&lt;/b&gt;&lt;br /&gt;Jūs galite pakeisti nustatymus, pasinaudoję Nustatymų dialogu arba Garso vedikliu.</translation>
-    </message>
-    <message>
-        <source>Signal and noise power spectrum</source>
-        <translation>Signalo ir triukšmo galios spektras</translation>
-    </message>
-    <message>
-        <source>Power spectrum of input signal and noise estimate</source>
-        <translation>Įvesties signalo ir triukšmo apytikrio apskaičiavimo galios spektras</translation>
-    </message>
-    <message>
-        <source>This shows the power spectrum of the current input signal (red line) and the current noise estimate (filled blue).&lt;br /&gt;All amplitudes are multiplied by 30 to show the interesting parts (how much more signal than noise is present in each waveband).&lt;br /&gt;This is probably only of interest if you&apos;re trying to fine-tune noise conditions on your microphone. Under good conditions, there should be just a tiny flutter of blue at the bottom. If the blue is more than halfway up on the graph, you have a seriously noisy environment.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Echo Analysis</source>
-        <translation>Aido analizė</translation>
-    </message>
-    <message>
-        <source>Weights of the echo canceller</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This shows the weights of the echo canceller, with time increasing downwards and frequency increasing to the right.&lt;br /&gt;Ideally, this should be black, indicating no echo exists at all. More commonly, you&apos;ll have one or more horizontal stripes of bluish color representing time delayed echo. You should be able to see the weights updated in real time.&lt;br /&gt;Please note that as long as you have nothing to echo off, you won&apos;t see much useful data here. Play some music and things should stabilize. &lt;br /&gt;You can choose to view the real or imaginary parts of the frequency-domain weights, or alternately the computed modulus and phase. The most useful of these will likely be modulus, which is the amplitude of the echo, and shows you how much of the outgoing signal is being removed at that time step. The other viewing modes are mostly useful to people who want to tune the echo cancellation algorithms.&lt;br /&gt;Please note: If the entire image fluctuates massively while in modulus mode, the echo canceller fails to find any correlation whatsoever between the two input sources (speakers and microphone). Either you have a very long delay on the echo, or one of the input sources is configured wrong.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="AudioStats.ui" line="184"/>
         <source>This is the audio bitrate of the last compressed frame (20 ms), and as such will jump up and down as the VBR adjusts the quality. The peak bitrate can be adjusted in the Settings dialog.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="194"/>
+        <source>DoublePush interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="207"/>
+        <source>Time between last two Push-To-Talk presses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="217"/>
+        <source>Speech Detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="224"/>
+        <location filename="AudioStats.cpp" line="286"/>
+        <source>Current speech detection chance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="227"/>
+        <source>&lt;b&gt;This shows the current speech detection settings.&lt;/b&gt;&lt;br /&gt;You can change the settings from the Settings dialog or from the Audio Wizard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="256"/>
+        <source>Signal and noise power spectrum</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="262"/>
+        <location filename="AudioStats.cpp" line="287"/>
+        <source>Power spectrum of input signal and noise estimate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="265"/>
+        <source>This shows the power spectrum of the current input signal (red line) and the current noise estimate (filled blue).&lt;br /&gt;All amplitudes are multiplied by 30 to show the interesting parts (how much more signal than noise is present in each waveband).&lt;br /&gt;This is probably only of interest if you&apos;re trying to fine-tune noise conditions on your microphone. Under good conditions, there should be just a tiny flutter of blue at the bottom. If the blue is more than halfway up on the graph, you have a seriously noisy environment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="281"/>
+        <source>Echo Analysis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="293"/>
+        <location filename="AudioStats.cpp" line="288"/>
+        <source>Weights of the echo canceller</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.ui" line="296"/>
+        <source>This shows the weights of the echo canceller, with time increasing downwards and frequency increasing to the right.&lt;br /&gt;Ideally, this should be black, indicating no echo exists at all. More commonly, you&apos;ll have one or more horizontal stripes of bluish color representing time delayed echo. You should be able to see the weights updated in real time.&lt;br /&gt;Please note that as long as you have nothing to echo off, you won&apos;t see much useful data here. Play some music and things should stabilize. &lt;br /&gt;You can choose to view the real or imaginary parts of the frequency-domain weights, or alternately the computed modulus and phase. The most useful of these will likely be modulus, which is the amplitude of the echo, and shows you how much of the outgoing signal is being removed at that time step. The other viewing modes are mostly useful to people who want to tune the echo cancellation algorithms.&lt;br /&gt;Please note: If the entire image fluctuates massively while in modulus mode, the echo canceller fails to find any correlation whatsoever between the two input sources (speakers and microphone). Either you have a very long delay on the echo, or one of the input sources is configured wrong.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioStats.cpp" line="380"/>
+        <source>&gt;1000 ms</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AudioWizard</name>
     <message>
+        <location filename="AudioWizard.ui" line="14"/>
         <source>Audio Tuning Wizard</source>
-        <translation>Garso suderinimo vediklis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="21"/>
         <source>Introduction</source>
-        <translation>Įžanga</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="24"/>
         <source>Welcome to the Mumble Audio Wizard</source>
-        <translation>Sveiki atvykę į Mumble garso vediklį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Finished</source>
-        <translation>Užbaigta</translation>
+        <location filename="AudioWizard.ui" line="30"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the audio tuning wizard for Mumble. This will help you correctly set the input levels of your sound card, and also set the correct parameters for sound processing in Mumble. &lt;/p&gt;&lt;p&gt;Please be aware that as long as this wizard is active, audio will be looped locally to allow you to listen to it, and no audio will be sent to the server. &lt;/p&gt;&lt;p&gt;Note that you can cancel this wizard at any time without it having an effect on your current audio systems. The settings are only once this wizard has been completed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enjoy using Mumble</source>
-        <translation>Mėgaukitės, naudodamiesi Mumble</translation>
-    </message>
-    <message>
+        <location filename="AudioWizard.ui" line="57"/>
         <source>Device selection</source>
-        <translation>Įrenginio pasirinkimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="60"/>
         <source>Selecting the input and output device to use with Mumble.</source>
-        <translation>Įvesties ir išvesties įrenginio, skirto naudoti su Mumble, pasirinkimas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This is the device your microphone is connected to.</source>
-        <translation>Tai įrenginys, prie kurio yra prijungtas jūsų mikrofonas.</translation>
-    </message>
-    <message>
-        <source>System</source>
-        <translation>Sistema</translation>
-    </message>
-    <message>
-        <source>Input method for audio</source>
-        <translation>Garso įvesties metodas</translation>
-    </message>
-    <message>
-        <source>Device</source>
-        <translation>Įrenginys</translation>
-    </message>
-    <message>
-        <source>Input device to use</source>
-        <translation>Įvesties įrenginys, kurį naudoti</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Selects which sound card to use for audio input.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Pasirenka kurią garso plokštę naudoti garso įvesčiai.&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Cancel echo from headset or speakers</source>
-        <translation>Malšinti aidą iš ausinių ar garsiakalbių</translation>
-    </message>
-    <message>
-        <source>Use echo cancellation</source>
-        <translation>Naudoti aido malšinimą</translation>
-    </message>
-    <message>
-        <source>This enables echo cancellation of outgoing audio, which helps both on speakers and on headsets.</source>
-        <translation>Tai įjungia aido malšinimą, kas savo ruožtu padeda naudojant tiek garsiakalbius, tiek ausines.</translation>
-    </message>
-    <message>
-        <source>This is the device your speakers or headphones are connected to.</source>
-        <translation>Tai įrenginys, prie kurio yra prijungti jūsų garsiakalbiai ar ausinės.</translation>
-    </message>
-    <message>
-        <source>Output method for audio</source>
-        <translation>Garso išvesties metodas</translation>
-    </message>
-    <message>
-        <source>Output device to use</source>
-        <translation>Išvesties įrenginys, kurį naudoti</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Selects which sound card to use for audio Output.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Pasirenka kurią garso plokštę naudoti garso išvesčiai.&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Enable positional audio</source>
-        <translation>Įjungti pozicinį garsą</translation>
-    </message>
-    <message>
-        <source>Allows positioning of sound</source>
-        <oldsource>Allows positioning of sound.</oldsource>
-        <translation>Leidžia garso pozicionavimą</translation>
-    </message>
-    <message>
+        <location filename="AudioWizard.ui" line="66"/>
         <source>Input Device</source>
-        <translation>Įvesties įrenginys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="72"/>
+        <source>This is the device your microphone is connected to.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="82"/>
+        <location filename="AudioWizard.ui" line="154"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="92"/>
+        <source>Input method for audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="95"/>
+        <source>&lt;b&gt;This is the input method to use for audio.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="102"/>
+        <location filename="AudioWizard.ui" line="174"/>
+        <source>Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="112"/>
+        <source>Input device to use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="115"/>
+        <source>&lt;b&gt;Selects which sound card to use for audio input.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="122"/>
+        <source>Cancel echo from headset or speakers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="125"/>
+        <source>This enables echo cancellation of outgoing audio, which helps both on speakers and on headsets.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="128"/>
+        <source>Use echo cancellation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="138"/>
         <source>Output Device</source>
-        <translation>Išvesties įrenginys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="144"/>
+        <source>This is the device your speakers or headphones are connected to.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="164"/>
+        <source>Output method for audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="167"/>
+        <source>&lt;b&gt;This is the Output method to use for audio.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="184"/>
+        <source>Output device to use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="187"/>
+        <source>&lt;b&gt;Selects which sound card to use for audio Output.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="194"/>
+        <source>Allows positioning of sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="197"/>
         <source>This allows Mumble to use positional audio to place voices.</source>
-        <translation>Tai leidžia Mumble naudoti pozicinį garsą, kad išdėstytų balsus.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="200"/>
+        <source>Enable positional audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="207"/>
+        <source>Enables attenuation of other applications while users talk to you</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="210"/>
+        <source>Enables attenuation of other applications while users talk to you. This means that as soon someone starts to speak to you in Mumble, the sound of all other applications (like audio players) will get attenuated so you can hear them more clearly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="213"/>
+        <source>Attenuate applications while other users talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="237"/>
+        <source>Device tuning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="240"/>
+        <source>Changing hardware output delays to their minimum value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="246"/>
         <source>&lt;p&gt;
-To keep latency to an absolute minimum, it's important to buffer as little audio as possible on the soundcard. However, many soundcards report that they require a much smaller buffer than what they can actually work with, so the only way to set this value is to try and fail.
+To keep latency to an absolute minimum, it&apos;s important to buffer as little audio as possible on the soundcard. However, many soundcards report that they require a much smaller buffer than what they can actually work with, so the only way to set this value is to try and fail.
 &lt;/p&gt;
 &lt;p&gt;
 You should hear a voice sample. Change the slider below to the lowest value which gives &lt;b&gt;no&lt;/b&gt; interruptions or jitter in the sound. Please note that local echo is disabled during this test.
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;
-Tam, kad būtų išlaikyta pati mažiausia delsa, yra svarbu kuo mažiau garso buferizuoti garso plokštei. Kita vertus, daugelis garso plokščių teigia, jog jos reikalauja žymiai mažesnio buferio, negu tas, su kuriuo jos iš tikrųjų gali veikti, taigi, vienintelis būdas kaip nustatyti šią reikšmę yra bandymų ir klaidų metodas.
-&lt;/p&gt;
-&lt;p&gt;
-Jūs turėtumėte girdėti balso elementą. Keiskite žemiau esantį slinktuką į žemiausią reikšmę, kurią nustačius, garse negirdėsite &lt;b&gt;jokių&lt;/b&gt; pertraukų ar drebėjimo. Turėkite omenyje, kad šio bandymo metu vietinis aidas yra išjungtas.
-&lt;/p&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="271"/>
         <source>Amount of data to buffer</source>
-        <translation>Buferizuojamų duomenų kiekis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="274"/>
         <source>This sets the amount of data to pre-buffer in the output buffer. Experiment with different values and set it to the lowest which doesn&apos;t cause rapid jitter in the sound.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="323"/>
+        <source>Volume tuning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="326"/>
+        <source>Tuning microphone hardware volume to optimal settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="332"/>
         <source>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the blue and green but &lt;b&gt;not&lt;/b&gt; the red zone while you speak.
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;
-Atverkite savo garso valdymo skydelį ir pereikite į įrašymo nustatymus. Įsitikinkite, kad mikrofonas yra pasirinktas kaip aktyvi įvestis su didžiausiu įrašymo garsiu. Jei ten yra parinktis, skirta įjungti &quot;Mikrofono užkėlimą&quot;, įsitikinkite, kad ji pažymėta.
-&lt;/p&gt;
-&lt;p&gt;
-Kalbėkite taip garsiai, lyg būtumėte susierzinę ar susijaudinę. Mažinkite garsį garso skydelyje tol, kol jums kalbant, žemiau esanti juosta neišliks kaip įmanoma aukščiau mėlynoje ir žalioje, bet &lt;b&gt;ne&lt;/b&gt; raudonoje zonoje.
-&lt;/p&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Positional Audio</source>
-        <translation>Pozicinis garsas</translation>
-    </message>
-    <message>
-        <source>Adjusting attenuation of positional audio.</source>
-        <translation>Pozicinio garso slopinimo reguliavimas.</translation>
-    </message>
-    <message>
-        <source>Use headphones instead of speakers</source>
-        <translation>Vietoj garsiakalbių, naudoti ausines</translation>
-    </message>
-    <message>
+        <location filename="AudioWizard.ui" line="351"/>
         <source>&lt;p&gt;
-Congratulations. You should now be ready to enjoy a richer sound experience with Mumble.
-&lt;/p&gt;
-&lt;p&gt;
-Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren't deprecated.
-&lt;/p&gt;
-</source>
-        <translation>&lt;p&gt;
-Sveikiname. Dabar, su Mumble, jūs turėtumėte būti pasiruošę mėgautis turtingesniu garso patyrimu.
-&lt;/p&gt;
-&lt;p&gt;
-Mumble yra pastoviai kuriama, o kūrimo komanda nori susitelkti ties tomis ypatybėmis, kurios pravers didžiajai daliai naudotojų. Dėl to, Mumble palaiko anoniminės statistikos, apie jūsų konfigūraciją, pateikimą kūrėjams. Ši statistika yra svarbi būsimam kūrimui, o taip pat užtikrina, kad ypatybės, kuriomis naudojatės, nebūtų apleistos.
-&lt;/p&gt;
-</translation>
-    </message>
-    <message>
-        <source>Use headphones</source>
-        <translation>Naudoti ausines</translation>
-    </message>
-    <message>
-        <source>This ignores the OS speaker configuration and configures the positioning for headphones instead.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Volume tuning</source>
-        <translation>Garsio suderinimas</translation>
-    </message>
-    <message>
-        <source>Tuning microphone hardware volume to optimal settings.</source>
-        <translation>Mikrofono aparatinės įrangos garsio suderinimas iki optimalių nustatymų.</translation>
-    </message>
-    <message>
-        <source>Now talk softly, as you would when talking late at night and you don&apos;t want to disturb anyone. Adjust the slider below so that the bar moves into green when you talk, but stays blue while you&apos;re silent.</source>
-        <translation>Dabar kalbėkite taip švelniai, lyg kalbėtumėte vėlai naktį ir nenorėtumėte niekam sutrukdyti. Reguliuokite žemiau esantį slinktuką taip, kad jums kalbant, juosta pereitų į žalią zoną, tačiau jums tylint, išliktų mėlynoje zonoje.</translation>
-    </message>
-    <message>
-        <source>Voice Activity Detection</source>
-        <translation>Balso aktyvumo aptikimas</translation>
-    </message>
-    <message>
-        <source>Letting Mumble figure out when you&apos;re talking and when you&apos;re silent.</source>
-        <translation>Leidžiama Mumble išsiaiškinti kada jūs kalbate, o kada tylite.</translation>
-    </message>
-    <message>
-        <source>This will help Mumble figure out when you are talking. The first step is selecting which data value to use.</source>
-        <translation>Tai padės Mumble išsiaiškinti kada jūs kalbate. Pirmas žingsnis yra pasirinkti kokią duomenų reikšmę naudoti.</translation>
-    </message>
-    <message>
-        <source>Raw amplitude from input</source>
-        <translation>Neapdorota amplitudė iš įvesties</translation>
-    </message>
-    <message>
-        <source>Signal-To-Noise ratio</source>
-        <translation>Signalo ir triukšmo santykis</translation>
-    </message>
-    <message>
-        <source>Next you need to adjust the following slider. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</source>
-        <oldsource>Next you need to adjust the following two sliders. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you're not talking, everything should be in the red (definitively not speech).</oldsource>
-        <translation>Toliau jums reikia sureguliuoti šį slinktuką. Pirmi keli jūsų išsireiškimai turėtų atsidurti žalioje zonoje (tikrai kalbama). Kalbėdami, jūs turėtumėte išlikti geltonoje zonoje (galbūt kalbama), o jums nekalbant, viskas turėtų būti raudonoje zonoje (tikrai nekalbama).</translation>
-    </message>
-    <message>
-        <source>Device tuning</source>
-        <translation>Įrenginio suderinimas</translation>
-    </message>
-    <message>
-        <source>Changing hardware output delays to their minimum value.</source>
-        <translation>Aparatinės įrangos išvesties delsų į jų mažiausias reikšmes keitimas.</translation>
-    </message>
-    <message>
-        <source>Submit anonymous statistics to the Mumble project</source>
-        <translation>Pateikti Mumble projektui anoniminę statistiką</translation>
-    </message>
-    <message>
-        <source>Push To Talk:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Quality &amp; Notifications</source>
-        <translation>Kokybė ir pranešimai</translation>
-    </message>
-    <message>
-        <source>Adjust quality and notification settings.</source>
-        <translation>Sureguliuokite kokybės ir pranešimų nustatymus.</translation>
-    </message>
-    <message>
-        <source>Quality settings</source>
-        <translation>Kokybės nustatymai</translation>
-    </message>
-    <message>
-        <source>Low</source>
-        <translation>Žema</translation>
-    </message>
-    <message>
-        <source>Balanced</source>
-        <translation>Subalansuota</translation>
-    </message>
-    <message>
-        <source>Notification settings</source>
-        <translation>Pranešimų nustatymai</translation>
-    </message>
-    <message>
-        <source>Use Text-To-Speech to read notifications and messages to you.</source>
-        <translation>Naudoti garsinį teksto atkūrimą, kad jums būtų skaitomi pranešimai ir žinutės.</translation>
-    </message>
-    <message>
-        <source>Disable Text-To-Speech and use sounds instead.</source>
-        <translation>Išjungti garsinį teksto atkūrimą ir, vietoj to, naudoti garsus.</translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation>%1 ms</translation>
-    </message>
-    <message>
-        <source>Enables attenuation of other applications while users talk to you</source>
-        <translation>Įjungia kitų programų slopinimą tuo metu, kai kiti naudotojai jums kalba</translation>
-    </message>
-    <message>
-        <source>Attenuate applications while other users talk</source>
-        <translation>Slopinti programas, kol kiti naudotojai kalba</translation>
-    </message>
-    <message>
-        <source>High</source>
-        <translation>Aukšta</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You already set a customized quality configuration in Mumble. Select this setting to keep it.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enables attenuation of other applications while users talk to you. This means that as soon someone starts to speak to you in Mumble, the sound of all other applications (like audio players) will get attenuated so you can hear them more clearly.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Apply some high contrast optimizations for visually impaired users</source>
-        <translation>Taikyti kai kuriuos kontrasto optimizavimus, skirtus silpnaregiams naudotojams</translation>
-    </message>
-    <message>
-        <source>Use high contrast graphics</source>
-        <translation>Naudoti aukšto kontrasto grafiką</translation>
-    </message>
-    <message>
-        <source>Keep custom Text-To-Speech settings.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the striped and the empty but &lt;b&gt;not&lt;/b&gt; the crisscrossed zone while you speak.
 &lt;/p&gt;
 </source>
-        <oldsource>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
-&lt;/p&gt;
-&lt;p&gt;
-Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the striped and the empty but &lt;b&gt;not&lt;/b&gt; the criss-crossed zone while you speak.
-&lt;/p&gt;
-</oldsource>
         <comment>For high contrast mode</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="380"/>
+        <source>Now talk softly, as you would when talking late at night and you don&apos;t want to disturb anyone. Adjust the slider below so that the bar moves into green when you talk, but stays blue while you&apos;re silent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="396"/>
         <source>Now talk softly, as you would when talking late at night and you don&apos;t want to disturb anyone. Adjust the slider below so that the bar moves into empty zone when you talk, but stays in the striped one while you&apos;re silent.</source>
         <comment>For high contrast mode</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="453"/>
+        <source>Apply some high contrast optimizations for visually impaired users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="456"/>
+        <source>Use high contrast graphics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="466"/>
+        <source>Voice Activity Detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="469"/>
+        <source>Letting Mumble figure out when you&apos;re talking and when you&apos;re silent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="475"/>
+        <source>This will help Mumble figure out when you are talking. The first step is selecting which data value to use.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="490"/>
+        <source>Push To Talk:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="515"/>
+        <source>Signal-To-Noise ratio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="547"/>
+        <source>Next you need to adjust the following slider. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="560"/>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the empty area (definitive speech). While talking, you should stay inside the striped (might be speech) and when you&apos;re not talking, everything should be in the crisscrossed (definitively not speech).</source>
         <comment>For high contrast mode</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="608"/>
+        <source>Raw amplitude from input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="616"/>
+        <source>Quality &amp; Notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="619"/>
+        <source>Adjust quality and notification settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="631"/>
+        <source>Quality settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="649"/>
+        <source>Low</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="656"/>
         <source>In this configuration Mumble will use a &lt;b&gt;low amount of bandwidth&lt;/b&gt;. This will inevitably result in high latency and poor quality. Choose this only if your connection cannot handle the other settings. (16kbit/s, 60ms per packet)</source>
-        <translation>Šioje konfigūracijoje Mumble naudos &lt;b&gt;mažą siuntimo spartą&lt;/b&gt;. Tai neišvengiamai prives prie didelės delsos ir prastos kokybės. Rinkitės šią parinktį tik tuo atveju, jeigu jūsų ryšys negali apdoroti kitų nustatymų. (16kbit/s, 60ms vienam paketui)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="675"/>
+        <source>Balanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="685"/>
         <source>This is the &lt;b&gt;recommended default&lt;/b&gt; configuration. It provides a good balance between quality, latency, and bandwidth usage. (40kbit/s, 20ms per packet)</source>
-        <translation>Tai yra &lt;b&gt;rekomenduojama numatytoji&lt;/b&gt; konfigūracija. Ji pateikia gerą pusiausvyrą tarp kokybės, delsos ir siuntimo spartos naudojimo. (40kbit/s, 20ms vienam paketui)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="704"/>
+        <source>High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="711"/>
         <source>This configuration is only recommended for use in setups where bandwidth is not an issue, like a LAN. It provides the lowest latency supported by Mumble and &lt;b&gt;high quality&lt;/b&gt;. (72kbit/s, 10ms per packet)</source>
-        <translation>Ši konfigūracija yra rekomenduojama tik toms sąrankoms, kuriose siuntimo sparta nėra problema, kaip pvz., vietiniame tinkle. Ji pateikia mažiausią Mumble palaikomą delsą ir &lt;b&gt;aukštą kokybę&lt;/b&gt;. (72kbit/s, 10ms vienam paketui)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;This is the input method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <location filename="AudioWizard.ui" line="724"/>
+        <source>Custom</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;This is the Output method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <location filename="AudioWizard.ui" line="731"/>
+        <source>You already set a customized quality configuration in Mumble. Select this setting to keep it.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the audio tuning wizard for Mumble. This will help you correctly set the input levels of your sound card, and also set the correct parameters for sound processing in Mumble. &lt;/p&gt;&lt;p&gt;Please be aware that as long as this wizard is active, audio will be looped locally to allow you to listen to it, and no audio will be sent to the server. &lt;/p&gt;&lt;p&gt;Note that you can cancel this wizard at any time without it having an effect on your current audio systems. The settings are only once this wizard has been completed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <location filename="AudioWizard.ui" line="744"/>
+        <source>Notification settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="750"/>
+        <source>Use Text-To-Speech to read notifications and messages to you.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="760"/>
+        <source>Disable Text-To-Speech and use sounds instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="767"/>
+        <source>Keep custom Text-To-Speech settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="791"/>
+        <source>Positional Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="794"/>
+        <source>Adjusting attenuation of positional audio.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble supports positional audio for some games, and will position the voice of other users relative to their position in game. Depending on their position, the volume of the voice will be changed between the speakers to simulate the direction and distance the other user is at. Such positioning depends on your speaker configuration being correct in your operating system, so a test is done here. &lt;/p&gt;&lt;p&gt;The graph below shows the position of &lt;span style=&quot; color:#56b4e9;&quot;&gt;you&lt;/span&gt;, the &lt;span style=&quot; color:#d55e00;&quot;&gt;speakers&lt;/span&gt; and a &lt;span style=&quot; color:#009e73;&quot;&gt;moving sound source&lt;/span&gt; as if seen from above. You should hear the audio move between the channels. &lt;/p&gt;&lt;p&gt;You can also use your mouse to position the &lt;span style=&quot; color:#009e73;&quot;&gt;sound source&lt;/span&gt; manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.ui" line="813"/>
+        <source>Use headphones instead of speakers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="816"/>
+        <source>This ignores the OS speaker configuration and configures the positioning for headphones instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="819"/>
+        <source>Use headphones</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="843"/>
+        <source>Finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="846"/>
+        <source>Enjoy using Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="852"/>
+        <source>&lt;p&gt;
+Congratulations. You should now be ready to enjoy a richer sound experience with Mumble.
+&lt;/p&gt;
+&lt;p&gt;
+Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren&apos;t deprecated.
+&lt;/p&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.ui" line="871"/>
+        <source>Submit anonymous statistics to the Mumble project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.cpp" line="47"/>
         <source>Input system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="48"/>
         <source>Input device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="49"/>
         <source>Output system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="50"/>
         <source>Output device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="51"/>
         <source>Output delay</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="52"/>
         <source>Maximum amplification</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="53"/>
         <source>PTT key</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="AudioWizard.cpp" line="54"/>
         <source>VAD level</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="AudioWizard.cpp" line="304"/>
+        <source>%1 ms</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BanEditor</name>
     <message>
+        <location filename="BanEditor.ui" line="14"/>
         <source>Mumble - Edit Bans</source>
-        <translation>Mumble - Taisyti uždraudimus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Address</source>
-        <translation>&amp;Adresas</translation>
-    </message>
-    <message>
-        <source>&amp;Mask</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Reason</source>
-        <translation>Priežastis</translation>
-    </message>
-    <message>
-        <source>Start</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>End</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User</source>
-        <translation>Naudotojas</translation>
-    </message>
-    <message>
-        <source>Hash</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Add</source>
-        <translation>&amp;Pridėti</translation>
-    </message>
-    <message>
-        <source>&amp;Update</source>
-        <translation>Atna&amp;ujinti</translation>
-    </message>
-    <message>
-        <source>&amp;Remove</source>
-        <translation>Ša&amp;linti</translation>
-    </message>
-    <message>
+        <location filename="BanEditor.ui" line="30"/>
         <source>Ban List</source>
-        <translation>Užraudimų sąrašas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="41"/>
         <source>Search field</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="44"/>
         <source>This is the search field. Use it to find bans that have this username set in the username field.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="50"/>
         <source>Who are you looking for?</source>
-        <translation>Ko ieškote?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="57"/>
+        <location filename="BanEditor.cpp" line="20"/>
+        <source>User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="69"/>
         <source>No nickname</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="82"/>
+        <source>&amp;Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="103"/>
         <source>IP address</source>
-        <translation>IP adresas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="109"/>
         <source>No IP address</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="122"/>
+        <source>&amp;Mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="145"/>
+        <location filename="BanEditor.cpp" line="23"/>
+        <source>Reason</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="152"/>
         <source>Reason for the ban</source>
-        <translation>Uždraudimo priežastis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="155"/>
         <source>No reason</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="162"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="188"/>
+        <source>End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="195"/>
         <source>Ban end date</source>
-        <translation>Uždraudimo pabaigos data</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="198"/>
         <source>Ban end date. If you set the same date for start and end, the ban will be permanent (it will not expire).</source>
-        <translation>Uždraudimo pabaigos data. Jeigu nustatysite tokią pačią pradžios ir pabaigos datą, tuomet uždraudimas bus nuolatinis (jo galiojimas nesibaigs).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="208"/>
+        <source>Hash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="215"/>
+        <location filename="BanEditor.cpp" line="26"/>
         <source>Certificate hash</source>
-        <translation>Liudijimo maiša</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="221"/>
         <source>No certificate hash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="228"/>
+        <location filename="BanEditor.cpp" line="27"/>
         <source>Banned users</source>
-        <translation>Uždrausti naudotojai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="231"/>
         <source>This is a list with banned users.</source>
-        <translation>Tai yra sąrašas su uždraustais naudotojais.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="250"/>
         <source>Use this button if you want to add a new ban.</source>
-        <translation>Naudokite šį mygtuką, jeigu norite pridėti naują uždraudimą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="253"/>
+        <source>&amp;Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="266"/>
         <source>Use this button if you want to update ban information.</source>
-        <translation>Naudokite šį mygtuką, jeigu norite atnaujinti uždraudimo informaciją.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="269"/>
+        <source>&amp;Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="279"/>
         <source>Use this button if you want to remove user from the ban list.</source>
-        <translation>Naudokite šį mygtuką, jeigu norite pašalinti naudotoją iš uždraudimų sąrašo.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="282"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.ui" line="289"/>
         <source>Clear all fields</source>
-        <translation>Išvalyti visus laukus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="292"/>
         <source>This button clears all fields. Use it if you want to add a new ban.</source>
-        <translation>Šis mygtukas išvalo visus laukus. Naudokite jį, jeigu norite pridėti naują uždraudimą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="BanEditor.ui" line="295"/>
         <source>Clear</source>
-        <translation>Išvalyti</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.cpp" line="19"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.cpp" line="21"/>
+        <source>IP Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.cpp" line="22"/>
+        <source>Mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.cpp" line="24"/>
+        <source>Start date/time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="BanEditor.cpp" line="25"/>
+        <source>End date/time</source>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
+        <location filename="BanEditor.cpp" line="187"/>
         <source>Ban List - %n Ban(s)</source>
-        <translation><numerusform>Uždraudimų sąrašas - %n uždraudimas</numerusform><numerusform>Uždraudimų sąrašas - %n uždraudimai</numerusform><numerusform>Uždraudimų sąrašas - %n uždraudimų</numerusform><numerusform>Uždraudimų sąrašas - %n uždraudimų</numerusform></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>IP Address</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Mask</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Start date/time</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>End date/time</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
     <name>CertView</name>
     <message>
+        <location filename="Cert.cpp" line="38"/>
         <source>Name</source>
-        <translation>Vardas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="46"/>
         <source>Email</source>
-        <translation>El. paštas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="54"/>
         <source>Issuer</source>
-        <translation>Išdavėjas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="62"/>
         <source>Expiry Date</source>
-        <translation>Galioja iki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="100"/>
         <source>(none)</source>
-        <translation>(joks)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="117"/>
         <source>Self-signed</source>
-        <translation>Paties pasirašytas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CertWizard</name>
     <message>
-        <source>Unable to validate email.&lt;br /&gt;Enter a valid (or blank) email to continue.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>There was an error generating your certificate.&lt;br /&gt;Please try again.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Your certificate and key could not be exported to PKCS#12 format. There might be an error in your certificate.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The file could not be opened for writing. Please use another file.</source>
-        <translation>Nepavyko atverti failą rašymui. Naudokite kitą failą.</translation>
-    </message>
-    <message>
-        <source>The file&apos;s permissions could not be set. No certificate and key has been written. Please use another file.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The file could not be written successfully. Please use another file.</source>
-        <translation>Nepavyko sėkmingai įrašyti failą. Naudokite kitą failą.</translation>
-    </message>
-    <message>
-        <source>The file could not be opened for reading. Please use another file.</source>
-        <translation>Nepavyko atverti failą skaitymui. Naudokite kitą failą.</translation>
-    </message>
-    <message>
-        <source>The file is empty or could not be read. Please use another file.</source>
-        <translation>Failas tuščias arba jo nepavyko perskaityti. Naudokite kitą failą.</translation>
-    </message>
-    <message>
-        <source>The file did not contain a valid certificate and key. Please use another file.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Select file to export certificate to</source>
-        <translation>Pasirinkite failą į kurį eksportuoti liudijimą</translation>
-    </message>
-    <message>
-        <source>Select file to import certificate from</source>
-        <translation>Pasirinkite failą iš kurio importuoti liudijimą</translation>
-    </message>
-    <message>
-        <source>Unable to import. Missing password or incompatible file type.</source>
-        <translation>Nepavyko importuoti. Trūksta slaptažodžio arba nesuderinamas failo tipas.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Certificate Expiry:&lt;/b&gt; Your certificate is about to expire. You need to renew it, or you will no longer be able to connect to servers you are registered on.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="Cert.cpp" line="124"/>
+        <location filename="Cert.cpp" line="128"/>
+        <location filename="Cert.cpp" line="131"/>
         <source>Current certificate</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="125"/>
         <source>Certificate file to import</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="126"/>
         <source>Certificate password</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="127"/>
         <source>Certificate to import</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="129"/>
         <source>New certificate</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="130"/>
         <source>File to export certificate to</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="132"/>
         <source>Email address</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.cpp" line="133"/>
         <source>Your name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="214"/>
+        <source>Unable to validate email.&lt;br /&gt;Enter a valid (or blank) email to continue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="221"/>
+        <source>There was an error generating your certificate.&lt;br /&gt;Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="230"/>
+        <source>Your certificate and key could not be exported to PKCS#12 format. There might be an error in your certificate.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="238"/>
+        <source>The file could not be opened for writing. Please use another file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="243"/>
+        <source>The file&apos;s permissions could not be set. No certificate and key has been written. Please use another file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="252"/>
+        <source>The file could not be written successfully. Please use another file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="261"/>
+        <source>The file could not be opened for reading. Please use another file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="268"/>
+        <source>The file is empty or could not be read. Please use another file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="274"/>
+        <source>The file did not contain a valid certificate and key. Please use another file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="292"/>
+        <source>Select file to export certificate to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="331"/>
+        <source>Select file to import certificate from</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.cpp" line="366"/>
+        <source>Unable to import. Missing password or incompatible file type.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="627"/>
+        <source>&lt;b&gt;Certificate Expiry:&lt;/b&gt; Your certificate is about to expire. You need to renew it, or you will no longer be able to connect to servers you are registered on.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Certificates</name>
     <message>
+        <location filename="Cert.ui" line="14"/>
         <source>Certificate Management</source>
-        <translation>Liudijimų tvarkymas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="21"/>
         <source>Certificate Authentication</source>
-        <translation>Tapatybės nustatymas liudijimu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="24"/>
         <source>Authenticating to servers without using passwords</source>
-        <translation>Tapatybės nustatymas serveriuose, nenaudojant slaptažodžių</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="33"/>
+        <source>&lt;p&gt;Mumble can use certificates to authenticate with servers. Using certificates avoids passwords, meaning you don&apos;t need to disclose any password to the remote site. It also enables very easy user registration and a client side friends list independent of servers.&lt;/p&gt;&lt;p&gt;While Mumble can work without certificates, the majority of servers will expect you to have one.&lt;/p&gt;&lt;p&gt;Creating a new certificate automatically is sufficient for most use cases. But Mumble also supports certificates representing trust in the users ownership of an email address. These certificates are issued by third parties. For more information see our &lt;a href=&quot;http://mumble.info/certificate.php&quot;&gt;user certificate documentation&lt;/a&gt;. &lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.ui" line="43"/>
+        <location filename="Cert.ui" line="302"/>
+        <location filename="Cert.ui" line="389"/>
         <source>Current certificate</source>
-        <translation>Esamas liudijimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="46"/>
         <source>This is the certificate Mumble currently uses.</source>
-        <translation>Tai yra liudijimas, kurį Mumble šiuo metu naudoja.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="49"/>
+        <location filename="Cert.ui" line="308"/>
         <source>Current Certificate</source>
-        <translation>Esamas liudijimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="56"/>
+        <source>Automatic certificate creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cert.ui" line="73"/>
+        <location filename="Cert.ui" line="79"/>
         <source>Create a new certificate</source>
-        <translation>Sukurti naują liudijimą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="76"/>
         <source>This will create a new certificate.</source>
-        <translation>Tai sukurs naują liudijimą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="99"/>
         <source>Import certificate from file</source>
-        <translation>Importuoti liudijimą iš failo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="102"/>
         <source>This will import a certificate from file.</source>
-        <translation>Tai importuos liudijimą iš failo.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="105"/>
         <source>Import a certificate</source>
-        <translation>Importuoti liudijimą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="125"/>
+        <location filename="Cert.ui" line="335"/>
         <source>Export Certificate</source>
-        <translation>Eksportuoti liudijimą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="128"/>
         <source>This will export a certificate to file.</source>
-        <translation>Tai eksportuos liudijimą į failą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="131"/>
         <source>Export current certificate</source>
-        <translation>Eksportuoti esamą liudijimą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="149"/>
         <source>Import Certificate</source>
-        <translation>Importuoti liudijimą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="152"/>
         <source>PKCS #12 Certificate import</source>
-        <translation>PKCS #12 liudijimo importavimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="161"/>
         <source>&lt;p&gt;Mumble can import certificates stored in PKCS #12 format. This is the format used when exporting a key from Mumble, and also when exporting keys from Firefox, Internet Explorer, Opera etc.&lt;/p&gt;&lt;p&gt;If the file is password protected, you will need the password to import the certificate.&lt;/p&gt;</source>
-        <oldsource>&lt;p&gt;Mumble can import certificates stored in PKCS #12 format. This is the format used when exporting a key from Mumble, and also when exporting keys from FireFox, Internet Explorer, Opera etc.&lt;/p&gt;&lt;p&gt;If the file is password protected, you will need the password to import the certificate.&lt;/p&gt;</oldsource>
-        <translation>&lt;p&gt;Mumble gali importuoti liudijimus, kurie yra saugomi PKCS #12 formatu. Tai yra formatas, kuris naudojamas eksportuojant raktą iš Mumble, o taip pat eksportuojant raktus iš Firefox, Internet Explorer, Opera ir t.t.&lt;/p&gt;&lt;p&gt;Jeigu failas yra apsaugotas slaptažodžiu, norint importuoti liudijimą, jums prireiks slaptažodžio.&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="171"/>
         <source>Import from</source>
-        <translation>Importuoti iš</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="181"/>
         <source>Filename to import from</source>
-        <translation>Failo, iš kurio importuoti, pavadinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="184"/>
         <source>This is the filename you wish to import a certificate from.</source>
-        <translation>Tai yra failo, iš kurio norite importuoti liudijimą, pavadinimas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="191"/>
         <source>Select file to import from</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="194"/>
         <source>This opens a file selection dialog to choose a file to import a certificate from.</source>
-        <translation>Tai atveria failo pasirinkimo dialogą, skirtą pasirinkti failą, iš kurio importuoti liudijimą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="197"/>
         <source>Open...</source>
-        <translation>Atverti...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="208"/>
         <source>Password</source>
-        <translation>Slaptažodis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="218"/>
         <source>Password for PKCS#12 file</source>
-        <translation>Slaptažodis, skirtas PKCS#12 failui</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="221"/>
         <source>This is the password for the PKCS#12 file containing your certificate.</source>
-        <translation>Tai yra PKCS#12 failo, kuriame yra jūsų liudijimas, slaptažodis.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="249"/>
         <source>Certificate to import</source>
-        <translation>Liudijimas, kurį importuoti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="252"/>
         <source>This is the certificate you are importing.</source>
-        <translation>Tai yra liudijimas, kurį importuojate.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="255"/>
+        <location filename="Cert.ui" line="395"/>
         <source>Certificate Details</source>
-        <translation>Išsamesnė liudijimo informacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="263"/>
         <source>Replace Certificate</source>
-        <translation>Pakeisti liudijimą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="266"/>
         <source>Replace existing certificate with new certificate?</source>
-        <translation>Pakeisti esamą liudijimą nauju liudijimu?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="278"/>
         <source>&lt;p&gt;You already have a certificate stored in Mumble, and you are about to replace it.&lt;/p&gt;
 &lt;p&gt;If you are upgrading to a certificate issued to you by a trusted CA and the email addresses match your current certificate, this is completely safe, and servers you connect to will automatically recognize the strong certificate for your email address.
 &lt;/p&gt;
-&lt;p&gt;If this is not the case, you will no longer be recognized by any server you previously have authenticated with. If you haven't been registered on any server yet, this is nothing to worry about.
+&lt;p&gt;If this is not the case, you will no longer be recognized by any server you previously have authenticated with. If you haven&apos;t been registered on any server yet, this is nothing to worry about.
 &lt;/p&gt;
 &lt;p&gt;
 Are you sure you wish to replace your certificate?
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;Jūs jau turite programoje Mumble saugomą liudijimą ir jūs ketinate jį pakeisti.&lt;/p&gt;
-&lt;p&gt;Jeigu jūs naujinate į liudijimą, kurį jums išdavė patikima LĮ, ir el. pašto adresai sutampa su jūsų dabartiniu liudijimu, tuomet tai yra visiškai saugu, ir serveriai, prie kurių jungsitės automatiškai atpažins jūsų el. paštui skirtą stiprų liudijimą.
-&lt;/p&gt;
-&lt;p&gt;Jeigu tai nėra anksčiau paminėtas atvejis, tuomet jūs daugiau nebūsite atpažįstami jokio serverio, kuriame ankščiau buvote nustatę savo tapatybę. Jeigu jūs dar iki šiol nebuvote užsiregistravę jokiame serveryje, tuomet jums nėra dėl ko rūpintis.
-&lt;/p&gt;
-&lt;p&gt;
-Ar tikrai norite pakeisti savo liudijimą?
-&lt;/p&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="305"/>
         <source>This is the certificate Mumble currently uses. It will be replaced.</source>
-        <translation>Tai yra liudijimas, kurį Mumble šiuo metu naudoja. Jis bus pakeistas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="321"/>
         <source>New certificate</source>
-        <translation>Naujas liudijimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="324"/>
         <source>This is the new certificate that will replace the old one.</source>
-        <translation>Tai yra naujas liudijimas, kuris pakeis seną.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="327"/>
+        <location filename="Cert.ui" line="403"/>
         <source>New Certificate</source>
-        <translation>Naujas liudijimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Cert.ui" line="338"/>
         <source>Make a backup of your certificate</source>
-        <translation>Padarykite atsarginę savo liudijimo kopiją</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Export to</source>
-        <translation>Eksportuoti į</translation>
-    </message>
-    <message>
-        <source>Filename to export to</source>
-        <translation>Failo, į kurį eksportuoti, pavadinimas</translation>
-    </message>
-    <message>
-        <source>This is the filename you wish to export a certificate to.</source>
-        <translation>Tai yra failo, į kurį norite eksportuoti liudijimą, pavadinimas.</translation>
-    </message>
-    <message>
-        <source>Save As...</source>
-        <translation>Įrašyti kaip...</translation>
-    </message>
-    <message>
-        <source>This is the certificate Mumble currently uses. It will be exported.</source>
-        <translation>Tai yra liudijimas, kurį šiuo metu naudoja Mumble. Jis bus eksportuotas.</translation>
-    </message>
-    <message>
-        <source>Generate a new certificate for strong authentication</source>
-        <translation>Sukurkite naują liudijimą, skirtą tvirtam tapatybės nustatymui</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;Mumble will now generate a strong certificate for authentication to servers.&lt;/p&gt;&lt;p&gt;If you wish, you may provide some additional information to be stored in the certificate, which will be presented to servers when you connect. If you provide a valid email address, you can upgrade to a CA issued email certificate later on, which provides strong identification.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Dabar Mumble sukurs tvirtą liudijimą, skirtą tapatybės nustatymui serveriuose.&lt;/p&gt;&lt;p&gt;Jei norite, galite pateikti papildomą informaciją, kuria bus papildytas jūsų liudijimas, kuris bus pateikiamas serveriams, kuomet prisijungsite. Jeigu pateiksite teisingą el. pašto adresą, vėliau galėsite atsinaujinti į LĮ išduotą el. pašto liudijimą, kuris pateikia tvirtą identifikavimą.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Vardas</translation>
-    </message>
-    <message>
-        <source>Email</source>
-        <translation>El. paštas</translation>
-    </message>
-    <message>
-        <source>Your email address (e.g. johndoe@mumble.info)</source>
-        <translation>Jūsų el. pašto adresas (pvz., johndoe@mumble.info)</translation>
-    </message>
-    <message>
-        <source>This is your email address. It is strongly recommended to provide a valid email address, as this will allow you to upgrade to a strong certificate without authentication problems.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Your name (e.g. John Doe)</source>
-        <translation>Jūsų vardas (pvz., Jonas Do)</translation>
-    </message>
-    <message>
-        <source>This is your name, and will be filled out in the certificate. This field is entirely optional.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Finish</source>
-        <translation>Pabaiga</translation>
-    </message>
-    <message>
-        <source>Certificate-based authentication is ready for use</source>
-        <translation>Liudijimu grįstas atpažinimas yra paruoštas naudoti</translation>
-    </message>
-    <message>
-        <source>Enjoy using Mumble with strong authentication.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Automatic certificate creation</source>
-        <translation>Automatinis liudijimo kūrimas</translation>
-    </message>
-    <message>
+        <location filename="Cert.ui" line="347"/>
         <source>&lt;p&gt;If you ever lose your current certificate, which will happen if your computer suffers a hardware failure or you reinstall your machine, you will no longer be able to authenticate to any server you are registered on. It is therefore &lt;b&gt;mandatory&lt;/b&gt; that you make a backup of your certificate. We strongly recommend you store this backup on removable storage, such as a USB flash drive.&lt;/p&gt;
 &lt;p&gt;Note that this file will not be encrypted, and if anyone gains access to it, they will be able to impersonate you, so take good care of it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Jeigu kada nors prarasite savo esamą liudijimą (kas gali nutikti tuo atveju, jeigu jūsų kompiuteris patirs aparatinės įrangos gedimą arba jūs savo kompiuteryje iš naujo įdiegsite programinę įrangą), tuomet jūs daugiau nebegalėsite jokiame serveryje, kuriame esate užsiregistravę, patvirtinti savo tapatybę. Štai kodėl yra &lt;b&gt;privaloma&lt;/b&gt;, kad jūs sukurtumėte atsarginę savo liudijimo kopiją. Mes primygtinai rekomenduojame, kad šią atsarginę kopiją laikytumėte keičiamajame įrenginyje, tokiame kaip USB atmintukas.&lt;/p&gt;
-&lt;p&gt;Turėkite omenyje, kad šis failas nebus užšifruotas, taigi, jeigu koks nors asmuo gaus prie jo prieigą, jis galės apsimesti jumis, todėl kaip reikiant pasirūpinkite šiuo failu.&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;p&gt;Mumble can use certificates to authenticate with servers. Using certificates avoids passwords, meaning you don&apos;t need to disclose any password to the remote site. It also enables very easy user registration and a client side friends list independent of servers.&lt;/p&gt;&lt;p&gt;While Mumble can work without certificates, the majority of servers will expect you to have one.&lt;/p&gt;&lt;p&gt;Creating a new certificate automatically is sufficient for most use cases. But Mumble also supports certificates representing trust in the users ownership of an email address. These certificates are issued by third parties. For more information see our &lt;a href=&quot;http://mumble.info/certificate.php&quot;&gt;user certificate documentation&lt;/a&gt;. &lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>ChanACL</name>
-    <message>
-        <source>None</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="358"/>
+        <source>Export to</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Traverse</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="368"/>
+        <source>Filename to export to</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enter</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="371"/>
+        <source>This is the filename you wish to export a certificate to.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Speak</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="378"/>
+        <source>Save As...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Mute/Deafen</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="392"/>
+        <source>This is the certificate Mumble currently uses. It will be exported.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Make channel</source>
-        <translation>Kurti kanalą</translation>
+        <location filename="Cert.ui" line="406"/>
+        <source>Generate a new certificate for strong authentication</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Make temporary</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="415"/>
+        <source>&lt;p&gt;Mumble will now generate a strong certificate for authentication to servers.&lt;/p&gt;&lt;p&gt;If you wish, you may provide some additional information to be stored in the certificate, which will be presented to servers when you connect. If you provide a valid email address, you can upgrade to a CA issued email certificate later on, which provides strong identification.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Link channel</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="425"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents no privileges.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="435"/>
+        <source>Email</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents total access to the channel, including the ability to change group and ACL information. This privilege implies all other privileges.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="445"/>
+        <source>Your email address (e.g. johndoe@mumble.info)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents the permission to traverse the channel. If a user is denied this privilege, he will be unable to access this channel and any sub-channels in any way, regardless of other permissions in the sub-channels.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="448"/>
+        <source>This is your email address. It is strongly recommended to provide a valid email address, as this will allow you to upgrade to a strong certificate without authentication problems.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents the permission to join the channel. If you have a hierarchical channel structure, you might want to give everyone Traverse, but restrict Enter in the root of your hierarchy.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="462"/>
+        <source>Your name (e.g. John Doe)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents the permission to speak in a channel. Users without this privilege will be suppressed by the server (seen as muted), and will be unable to speak until they are unmuted by someone with the appropriate privileges.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="465"/>
+        <source>This is your name, and will be filled out in the certificate. This field is entirely optional.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents the permission to whisper to this channel from the outside. This works exactly like the &lt;i&gt;speak&lt;/i&gt; privilege, but applies to packets spoken with the Whisper key held down. This may be used to broadcast to a hierarchy of channels without linking.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="473"/>
+        <source>Finish</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents the permission to mute and deafen other users. Once muted, a user will stay muted until he is unmuted by another privileged user or reconnects to the server.</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="476"/>
+        <source>Certificate-based authentication is ready for use</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This represents the permission to move a user to another channel or kick him from the server. To actually move the user, either the moving user must have Move privileges in the destination channel, or the user must normally be allowed to enter the channel. Users with this privilege can move users into channels the target user normally wouldn&apos;t have permission to enter.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to make sub-channels. The user making the sub-channel will be added to the admin group of the sub-channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to make a temporary subchannel. The user making the sub-channel will be added to the admin group of the sub-channel. Temporary channels are not stored and disappear when the last user leaves.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to link channels. Users in linked channels hear each other, as long as the speaking user has the &lt;i&gt;speak&lt;/i&gt; privilege in the channel of the listener. You need the link privilege in both channels to create a link, but just in either channel to remove it.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to write text messages to other users in this channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to forcibly remove users from the server.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to permanently remove users from the server.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to register and unregister users on the server.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to register oneself on the server.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Whisper</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Move</source>
-        <translation>Perkelti</translation>
-    </message>
-    <message>
-        <source>Text message</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Kick</source>
-        <translation>Išmesti</translation>
-    </message>
-    <message>
-        <source>Ban</source>
-        <translation>Uždrausti</translation>
-    </message>
-    <message>
-        <source>Register User</source>
-        <translation>Registruoti naudotoją</translation>
-    </message>
-    <message>
-        <source>Register Self</source>
-        <translation>Registruoti save</translation>
-    </message>
-    <message>
-        <source>Write ACL</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to use the listen-feature allowing to listen to a channel without being in it.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Listen</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This represents the permission to reset the comment or avatar of a user.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Reset User Content</source>
-        <translation type="unfinished"/>
+        <location filename="Cert.ui" line="485"/>
+        <source>Enjoy using Mumble with strong authentication.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ChatbarTextEdit</name>
     <message>
+        <location filename="CustomElements.cpp" line="92"/>
         <source>Paste and &amp;Send</source>
-        <oldsource>Paste and send</oldsource>
-        <translation>Įdėti ir &amp;siųsti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CustomElements.cpp" line="131"/>
         <source>&lt;center&gt;Type chat message here&lt;/center&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CustomElements.cpp" line="193"/>
         <source>Unable to send image: too large.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CustomElements.cpp" line="214"/>
         <source>Unable to send image %1: too large.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ClientUser</name>
     <message>
+        <location filename="ClientUser.cpp" line="119"/>
         <source>Friend</source>
-        <translation>Draugas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ClientUser.cpp" line="121"/>
         <source>Authenticated</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ClientUser.cpp" line="123"/>
         <source>Priority speaker</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ClientUser.cpp" line="125"/>
         <source>Recording</source>
-        <translation>Įrašymas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ClientUser.cpp" line="127"/>
         <source>Muted (server)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ClientUser.cpp" line="129"/>
         <source>Deafened (server)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ClientUser.cpp" line="131"/>
         <source>Local Ignore (Text messages)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Local Mute</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Muted (self)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Deafened (self)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="ClientUser.cpp" line="133"/>
         <source>Local Ignore (Text-To-Speech)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ClientUser.cpp" line="135"/>
+        <source>Local Mute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ClientUser.cpp" line="137"/>
+        <source>Muted (self)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ClientUser.cpp" line="139"/>
+        <source>Deafened (self)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ConfigDialog</name>
     <message>
-        <source>Accept changes</source>
-        <translation>Priimti pakeitimus</translation>
-    </message>
-    <message>
-        <source>This button will accept current settings and return to the application.&lt;br /&gt;The settings will be stored to disk when you leave the application.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Reject changes</source>
-        <translation>Atmesti pakeitimus</translation>
-    </message>
-    <message>
-        <source>This button will reject all changes and return to the application.&lt;br /&gt;The settings will be reset to the previous positions.</source>
-        <translation>Šis mygtukas atmes visus pakeitimus ir sugrąžins į programą.&lt;br /&gt;Nustatymai bus atstatyti į ankstesnes reikšmes.</translation>
-    </message>
-    <message>
-        <source>Apply changes</source>
-        <translation>Pritaikyti pakeitimus</translation>
-    </message>
-    <message>
-        <source>This button will immediately apply all changes.</source>
-        <translation>Šis mygtukas nedelsiant pritaikys visus pakeitimus.</translation>
-    </message>
-    <message>
-        <source>Undo changes for current page</source>
-        <translation>Atšaukti pakeitimus esamame puslapyje</translation>
-    </message>
-    <message>
-        <source>This button will revert any changes done on the current page to the most recent applied settings.</source>
-        <translation>Šis mygtukas sugrąžins visus esamame puslapyje atliktus pakeitimus į paskiausiai pritaikytus nustatymus.</translation>
-    </message>
-    <message>
-        <source>Restore defaults for current page</source>
-        <translation>Atkurti esamo puslapio numatytąsias reikšmes</translation>
-    </message>
-    <message>
-        <source>This button will restore the defaults for the settings on the current page. Other pages will not be changed.&lt;br /&gt;To restore all settings to their defaults, you will have to use this button on every page.</source>
-        <oldsource>This button will restore the settings for the current page only to their defaults. Other pages will not be changed.&lt;br /&gt;To restore all settings to their defaults, you will have to use this button on every page.</oldsource>
-        <translation>Šis mygtukas atkurs visus esamo puslapio numatytuosius nustatymus. Kiti puslapiai nebus pakeisti.&lt;br /&gt;Norėdami atkurti visus nustatymus į numatytąsias reikšmes, turėsite nuspausti šį mygtuką kiekviename puslapyje.</translation>
-    </message>
-    <message>
+        <location filename="ConfigDialog.ui" line="14"/>
         <source>Mumble Configuration</source>
-        <translation>Mumble konfigūracija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConfigDialog.cpp" line="26"/>
         <source>Configuration categories</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="51"/>
+        <source>Accept changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="52"/>
+        <source>This button will accept current settings and return to the application.&lt;br /&gt;The settings will be stored to disk when you leave the application.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="56"/>
+        <source>Reject changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="57"/>
+        <source>This button will reject all changes and return to the application.&lt;br /&gt;The settings will be reset to the previous positions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="61"/>
+        <source>Apply changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="62"/>
+        <source>This button will immediately apply all changes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="65"/>
+        <source>Undo changes for current page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="67"/>
+        <source>This button will revert any changes done on the current page to the most recent applied settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="70"/>
+        <source>Restore defaults for current page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConfigDialog.cpp" line="72"/>
+        <source>This button will restore the defaults for the settings on the current page. Other pages will not be changed.&lt;br /&gt;To restore all settings to their defaults, you will have to use this button on every page.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Jungiamasi prie %1</translation>
-    </message>
-    <message>
-        <source>Enter username</source>
-        <translation>Įrašykite naudotojo vardą</translation>
-    </message>
-    <message>
-        <source>Adding host %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Servername</source>
-        <translation>Serverio pavadinimas</translation>
-    </message>
-    <message>
-        <source>Hostname</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Bonjour name</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Port</source>
-        <translation>Prievadas</translation>
-    </message>
-    <message>
-        <source>Addresses</source>
-        <translation>Adresai</translation>
-    </message>
-    <message>
-        <source>Website</source>
-        <translation>Tinklalapis</translation>
-    </message>
-    <message>
-        <source>Packet loss</source>
-        <translation>Paketų praradimas</translation>
-    </message>
-    <message>
-        <source>Ping (80%)</source>
-        <translation>Ping (80%)</translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation>%1 ms</translation>
-    </message>
-    <message>
-        <source>Ping (95%)</source>
-        <translation>Ping (95%)</translation>
-    </message>
-    <message>
-        <source>Bandwidth</source>
-        <translation>Siuntimo sparta</translation>
-    </message>
-    <message>
-        <source>%1 kbit/s</source>
-        <translation>%1 kbit/s</translation>
-    </message>
-    <message>
-        <source>&amp;Connect</source>
-        <translation>Prisi&amp;jungti</translation>
-    </message>
-    <message>
-        <source>Unknown</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Users</source>
-        <translation>Naudotojų</translation>
-    </message>
-    <message>
-        <source>Version</source>
-        <translation>Versija</translation>
-    </message>
-    <message>
-        <source>Failed to fetch server list</source>
-        <translation>Nepavyko gauti serverių sąrašo</translation>
-    </message>
-    <message>
+        <location filename="ConnectDialog.ui" line="14"/>
         <source>Mumble Server Connect</source>
-        <translation>Mumble prisijungimas prie serverio</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="55"/>
+        <location filename="ConnectDialog.ui" line="82"/>
+        <location filename="ConnectDialog.ui" line="89"/>
+        <location filename="ConnectDialog.cpp" line="488"/>
+        <source>Servername</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="60"/>
         <source>Ping</source>
-        <translation>Ping</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove from Favorites</source>
-        <translation>Šalinti iš mėgstamų</translation>
+        <location filename="ConnectDialog.ui" line="65"/>
+        <location filename="ConnectDialog.cpp" line="523"/>
+        <source>Users</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add custom server</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Copy</source>
-        <translation>&amp;Kopijuoti</translation>
-    </message>
-    <message>
-        <source>Copy favorite link to clipboard</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Paste</source>
-        <translation>Į&amp;dėti</translation>
-    </message>
-    <message>
-        <source>Paste favorite from clipboard</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Edit...</source>
-        <translation>&amp;Taisyti...</translation>
-    </message>
-    <message>
-        <source>&amp;Add New...</source>
-        <translation>&amp;Pridėti naują...</translation>
-    </message>
-    <message>
-        <source>Add to &amp;Favorites</source>
-        <translation>Pridėti į &amp;mėgstamus</translation>
-    </message>
-    <message>
-        <source>Open &amp;Webpage</source>
-        <translation>Atverti &amp;tinklalapį</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="ConnectDialog.ui" line="76"/>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="96"/>
         <source>Location</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="106"/>
         <source>Filter</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="117"/>
+        <location filename="ConnectDialog.cpp" line="1013"/>
+        <location filename="ConnectDialog.cpp" line="1841"/>
         <source>Show All</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="122"/>
+        <location filename="ConnectDialog.cpp" line="1010"/>
+        <location filename="ConnectDialog.cpp" line="1845"/>
         <source>Show Populated</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="127"/>
+        <location filename="ConnectDialog.cpp" line="1016"/>
+        <location filename="ConnectDialog.cpp" line="1843"/>
         <source>Show Reachable</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.ui" line="138"/>
+        <source>Remove from Favorites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="143"/>
+        <location filename="ConnectDialog.cpp" line="962"/>
+        <source>&amp;Edit...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="148"/>
+        <location filename="ConnectDialog.cpp" line="955"/>
+        <source>&amp;Add New...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="151"/>
+        <source>Add custom server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="156"/>
+        <source>Add to &amp;Favorites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="161"/>
+        <source>Open &amp;Webpage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="166"/>
+        <source>&amp;Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="169"/>
+        <source>Copy favorite link to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="174"/>
+        <source>&amp;Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.ui" line="177"/>
+        <source>Paste favorite from clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="413"/>
+        <source>Adding host %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="414"/>
+        <location filename="ConnectDialog.cpp" line="1116"/>
+        <source>Enter username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="490"/>
+        <source>Hostname</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="494"/>
+        <source>Bonjour name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="497"/>
+        <source>Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="500"/>
+        <source>Addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="504"/>
+        <source>Website</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="508"/>
+        <source>Packet loss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="512"/>
+        <source>Ping (80%)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="513"/>
+        <location filename="ConnectDialog.cpp" line="517"/>
+        <source>%1 ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="516"/>
+        <source>Ping (95%)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="520"/>
+        <source>Bandwidth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="521"/>
+        <source>%1 kbit/s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="526"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="935"/>
+        <source>Server list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="953"/>
+        <source>&amp;Connect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="977"/>
         <source>All</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="978"/>
         <source>Africa</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="979"/>
         <source>Asia</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="980"/>
         <source>Europe</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="981"/>
         <source>North America</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="982"/>
         <source>Oceania</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="983"/>
         <source>South America</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="984"/>
+        <location filename="ConnectDialog.cpp" line="1581"/>
+        <location filename="ConnectDialog.cpp" line="1813"/>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="1116"/>
+        <source>Connecting to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="1310"/>
         <source>Consent to the transmission of private data</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="1311"/>
         <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="1790"/>
+        <source>Failed to fetch server list</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="26"/>
         <source>Edit Server</source>
-        <translation>Taisyti serverį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Name of the server</source>
-        <translation>Serverio pavadinimas</translation>
+        <location filename="ConnectDialogEdit.ui" line="84"/>
+        <source>&amp;Fill</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="97"/>
+        <source>&amp;Ignore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="110"/>
         <source>A&amp;ddress</source>
-        <translation>A&amp;dresas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="120"/>
         <source>Internet address of the server.</source>
-        <oldsource>Internet address of the server. </oldsource>
-        <translation>Internetinis serverio adresas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="123"/>
         <source>&lt;b&gt;Address&lt;/b&gt;&lt;br/&gt;
 Internet address of the server. This can be a normal hostname, an IPv4/IPv6 address or a Bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</source>
-        <oldsource>&lt;b&gt;Address&lt;/b&gt;&lt;/br&gt;
-Internet address of the server. This can be a normal hostname, an ipv4/6 address or a bonjour service identifier. Bonjour service identifiers have to be prefixed with a '@' to be recognized by Mumble.</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="127"/>
+        <source>127.0.0.1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="134"/>
         <source>&amp;Port</source>
-        <translation>&amp;Prievadas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="144"/>
         <source>Port on which the server is listening</source>
-        <translation>Prievadas, ties kuriuo serveris klausosi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="147"/>
         <source>&lt;b&gt;Port&lt;/b&gt;&lt;br/&gt;
 Port on which the server is listening. If the server is identified by a Bonjour service identifier this field will be ignored.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="151"/>
+        <source>64738</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="158"/>
         <source>&amp;Username</source>
-        <translation>Na&amp;udotojo vardas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="168"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="178"/>
         <source>Username to send to the server</source>
-        <translation>Naudotojo vardas, kurį siųsti į serverį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="181"/>
         <source>&lt;b&gt;Username&lt;/b&gt;&lt;br/&gt;
 Username to send to the server. Be aware that the server can impose restrictions on how a username might look like. Also your username could already be taken by another user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="185"/>
+        <source>Your username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="199"/>
+        <source>Password to send to the server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="202"/>
+        <source>&lt;b&gt;Password&lt;/b&gt;&lt;br/&gt;
+Password to be sent to the server on connect. This password is needed when connecting as &lt;i&gt;SuperUser&lt;/i&gt; or to a server using password authentication. If not entered here the password will be queried on connect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="206"/>
+        <source>Your password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="216"/>
+        <source>Show password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="223"/>
         <source>Label</source>
-        <translation>Etiketė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialogEdit.ui" line="233"/>
+        <source>Name of the server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="236"/>
+        <source>&lt;b&gt;Label&lt;/b&gt;&lt;br/&gt;
+Label of the server. This is what the server will be named like in your server list and can be chosen freely.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialogEdit.ui" line="240"/>
+        <source>Local server label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ConnectDialog.cpp" line="757"/>
         <source>Add Server</source>
-        <translation>Pridėti serverį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="772"/>
         <source>You are currently connected to a server.
 Do you want to fill the dialog with the connection data of this server?
 Host: %1 Port: %2</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="820"/>
         <source>You have an URL in your clipboard.
 Do you want to fill the dialog with this data?
 Host: %1 Port: %2</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation>Slaptažodis</translation>
-    </message>
-    <message>
-        <source>Password to send to the server</source>
-        <translation>Slaptažodis, kurį siųsti į serverį</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Password&lt;/b&gt;&lt;br/&gt;
-Password to be sent to the server on connect. This password is needed when connecting as &lt;i&gt;SuperUser&lt;/i&gt; or to a server using password authentication. If not entered here the password will be queried on connect.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Show password</source>
-        <translation>Rodyti slaptažodį</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Label&lt;/b&gt;&lt;br/&gt;
-Label of the server. This is what the server will be named like in your server list and can be chosen freely.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Local server label</source>
-        <translation>Vietinio serverio etiketė</translation>
-    </message>
-    <message>
-        <source>127.0.0.1</source>
-        <translation>127.0.0.1</translation>
-    </message>
-    <message>
-        <source>64738</source>
-        <translation>64738</translation>
-    </message>
-    <message>
-        <source>Your username</source>
-        <translation>Jūsų naudotojo vardas</translation>
-    </message>
-    <message>
-        <source>Your password</source>
-        <translation>Jūsų slaptažodis</translation>
-    </message>
-    <message>
-        <source>&amp;Fill</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Ignore</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CoreAudioSystem</name>
     <message>
+        <location filename="CoreAudio.cpp" line="39"/>
         <source>Default Device</source>
-        <translation>Numatytasis įrenginys</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CrashReporter</name>
     <message>
+        <location filename="CrashReporter.cpp" line="20"/>
         <source>Mumble Crash Report</source>
-        <translation>Mumble strigties ataskaita</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="26"/>
         <source>&lt;p&gt;&lt;b&gt;We&apos;re terribly sorry, but it seems Mumble has crashed. Do you want to send a crash report to the Mumble developers?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The crash report contains a partial copy of Mumble&apos;s memory at the time it crashed, and will help the developers fix the problem.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Labai apgailestaujame, tačiau atrodo, kad Mumble užstrigo. Ar norite Mumble kūrėjams išsiųsti strigties ataskaitą?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Strigties ataskaitoje yra dalinė Mumble atminties kopija strigties metu ir ji padės kūrėjams pataisyti problemą.&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="36"/>
         <source>Email address (optional)</source>
-        <translation>El. pašto adresas (nebūtina)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="45"/>
         <source>Please describe briefly, in English, what you were doing at the time of the crash</source>
-        <oldsource>Please briefly describe what you were doing at the time of the crash</oldsource>
-        <translation>Prašome trumpai, anglų kalba aprašyti ką darėte, kai programa užstrigo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="50"/>
         <source>Send Report</source>
-        <translation>Siųsti ataskaitą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="53"/>
         <source>Don&apos;t send report</source>
-        <translation>Nesiųsti ataskaitos</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="77"/>
         <source>Crash upload successful</source>
-        <translation>Strigties įkėlimas sėkmingas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="78"/>
         <source>Thank you for helping make Mumble better!</source>
-        <translation>Dėkojame, kad padedate padaryti Mumble geresnę!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="80"/>
+        <location filename="CrashReporter.cpp" line="86"/>
         <source>Crash upload failed</source>
-        <translation>Strigties įkėlimas nepavyko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="81"/>
         <source>We&apos;re really sorry, but it appears the crash upload has failed with error %1 %2. Please inform a developer.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="87"/>
         <source>This really isn&apos;t funny, but apparently there&apos;s a bug in the crash reporting code, and we&apos;ve failed to upload the report. You may inform a developer about error %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="190"/>
         <source>Uploading crash report</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="CrashReporter.cpp" line="190"/>
         <source>Abort upload</source>
-        <translation>Nutraukti įkėlimą</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Database</name>
     <message>
-        <source>Mumble failed to initialize a database in any
-of the possible locations.</source>
-        <translation type="unfinished"/>
+        <location filename="Database.cpp" line="100"/>
+        <source>The database file &apos;%1&apos; set in the configuration file does not exist. Do you want to create a new database file at this location?</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Database.cpp" line="117"/>
+        <source>Mumble failed to initialize a database in any of the possible locations.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Database.cpp" line="127"/>
         <source>The database &apos;%1&apos; is read-only. Mumble cannot store server settings (i.e. SSL certificates) until you fix this problem.</source>
-        <oldsource>The database '%1' is read-only. Mumble can not store server settings (ie. SSL certificates) until you fix this problem.</oldsource>
-        <translation>Duomenų bazė &quot;%1&quot; yra tik skaitymui. Mumble negali saugoti serverio nustatymų (pvz., SSL liudijimų) tol, kol nepataisysite šios problemos.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>DeveloperConsole</name>
     <message>
+        <location filename="DeveloperConsole.cpp" line="32"/>
         <source>Developer Console</source>
-        <translation>Kūrėjo pultas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>DockTitleBar</name>
     <message>
+        <location filename="CustomElements.cpp" line="371"/>
         <source>Drag here</source>
-        <translation>Vilkite čia</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcut</name>
     <message>
-        <source>Shortcuts</source>
-        <translation>Trumpiniai</translation>
-    </message>
-    <message>
-        <source>List of configured shortcuts</source>
-        <translation>Konfigūruotų trumpinių sąrašas</translation>
-    </message>
-    <message>
-        <source>Function</source>
-        <translation>Funkcija</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Duomenys</translation>
-    </message>
-    <message>
-        <source>Shortcut</source>
-        <translation>Trumpinys</translation>
-    </message>
-    <message>
-        <source>Suppress</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Add new shortcut</source>
-        <translation>Pridėti naują trumpinį</translation>
-    </message>
-    <message>
-        <source>This will add a new global shortcut</source>
-        <translation>Tai pridės naują visuotinį trumpinį</translation>
-    </message>
-    <message>
-        <source>&amp;Add</source>
-        <translation>&amp;Pridėti</translation>
-    </message>
-    <message>
-        <source>Remove selected shortcut</source>
-        <translation>Šalinti pasirinktą trumpinį</translation>
-    </message>
-    <message>
-        <source>This will permanently remove a selected shortcut.</source>
-        <translation>Tai negrįžtamai pašalins pasirinktą trumpinį.</translation>
-    </message>
-    <message>
-        <source>&amp;Remove</source>
-        <translation>Ša&amp;linti</translation>
-    </message>
-    <message>
+        <location filename="GlobalShortcut.ui" line="35"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can enable &lt;span style=&quot; font-style:italic;&quot;&gt;Access for assistive devices&lt;/span&gt; in the system&apos;s Accessibility preferences. However, please note that this change also potentially allows malicious programs to read what is typed on your keyboard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.ui" line="63"/>
         <source>Open Accessibility Preferences</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.ui" line="70"/>
         <source>Skip</source>
-        <translation>Praleisti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.ui" line="101"/>
+        <source>Shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="109"/>
         <source>Enable Global Shortcuts</source>
-        <translation>Įjungti visuotinius trumpinius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.ui" line="116"/>
+        <source>List of configured shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="141"/>
+        <source>Function</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="146"/>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="151"/>
+        <source>Shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="156"/>
+        <source>Suppress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="168"/>
+        <source>Add new shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="171"/>
+        <source>This will add a new global shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="174"/>
+        <source>&amp;Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="184"/>
+        <source>Remove selected shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="187"/>
+        <source>This will permanently remove a selected shortcut.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="190"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="212"/>
         <source>&lt;b&gt;Additional Shortcut Engines&lt;/b&gt;&lt;br /&gt;This section allows you to configure the use of additional GlobalShortcut engines.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.ui" line="215"/>
         <source>Additional Shortcut Engines</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;Enable Windows hooks&lt;/b&gt;.&lt;br /&gt;This enables the Windows hooks shortcut engine. Using this engine allows Mumble to suppress keypresses and mouse clicks.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enable Windows hooks</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Enable GKey&lt;/b&gt;.&lt;br /&gt;This setting enables support for the GKey shortcut engine, for &quot;G&quot;-keys found on Logitech keyboards.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enable GKey</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Enable XInput&lt;/b&gt;&lt;br /&gt;This setting enables support for the XInput shortcut engine, for Xbox compatible controllers.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enable XInput</source>
-        <translation>Įjungti XInput</translation>
-    </message>
-    <message>
+        <location filename="GlobalShortcut.ui" line="221"/>
         <source>&lt;b&gt;Enable shortcuts in privileged applications&lt;/b&gt;.&lt;br /&gt;Also known as &quot;UIAccess&quot;. This allows Mumble to receive global shortcut events from programs running at high privilege levels, such as an Admin Command Prompt or older games that run with admin privileges.
 &lt;br /&gt;&lt;br /&gt;
 Without this option enabled, using Mumble&apos;s global shortcuts in privileged applications will not work. This can seem inconsistent: for example, if the Push-to-Talk button is pressed in a non-privileged program, but released in a privileged application, Mumble will not observe that it has been released and you will continue to talk until you press the Push-to-Talk button again.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.ui" line="226"/>
         <source>Enable shortcuts in privileged applications</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="233"/>
+        <source>&lt;b&gt;Enable Windows hooks&lt;/b&gt;.&lt;br /&gt;This enables the Windows hooks shortcut engine. Using this engine allows Mumble to suppress keypresses and mouse clicks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="236"/>
+        <source>Enable Windows hooks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="243"/>
+        <source>&lt;b&gt;Enable GKey&lt;/b&gt;.&lt;br /&gt;This setting enables support for the GKey shortcut engine, for &quot;G&quot;-keys found on Logitech keyboards.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="246"/>
+        <source>Enable GKey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="253"/>
+        <source>&lt;b&gt;Enable XInput&lt;/b&gt;&lt;br /&gt;This setting enables support for the XInput shortcut engine, for Xbox compatible controllers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.ui" line="256"/>
+        <source>Enable XInput</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcutConfig</name>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can add Mumble as a trusted accessibility program in the Security &amp; Privacy section of your Mac&apos;s System Preferences.&lt;/p&gt;&lt;p&gt;In the Security &amp; Privacy preference pane, change to the Privacy tab. Then choose Accessibility (near the bottom) in the list to the left. Finally, add Mumble to the list of trusted accessibility programs.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Shortcuts</source>
-        <translation>Trumpiniai</translation>
-    </message>
-    <message>
-        <source>Shortcut button combination.</source>
-        <translation>Trumpinio mygtukų kombinacija.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This is the global shortcut key combination.&lt;/b&gt;&lt;br /&gt;Click this field and then press the desired key/button combo to rebind. Double-click to clear.</source>
-        <oldsource>&lt;b&gt;This is the global shortcut key combination.&lt;/b&gt;&lt;br /&gt;Double-click this field and then the desired key/button combo to rebind.</oldsource>
-        <translation>&lt;b&gt;Tai yra visuotinė trumpinio kombinacija.&lt;/b&gt;&lt;br /&gt;Spustelėkite šį lauką, o tuomet nuspauskite norimą klavišų/mygtukų kombinaciją, kad susietumėte. Spustelėkite du kartus, kad išvalytumėte.</translation>
-    </message>
-    <message>
-        <source>Suppress keys from other applications</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This hides the button presses from other applications.&lt;/b&gt;&lt;br /&gt;Enabling this will hide the button (or the last button of a multi-button combo) from other applications. Note that not all buttons can be suppressed.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="GlobalShortcut.cpp" line="553"/>
         <source>Configured shortcuts</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="587"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can add Mumble as a trusted accessibility program in the Security &amp; Privacy section of your Mac&apos;s System Preferences.&lt;/p&gt;&lt;p&gt;In the Security &amp; Privacy preference pane, change to the Privacy tab. Then choose Accessibility (near the bottom) in the list to the left. Finally, add Mumble to the list of trusted accessibility programs.&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="714"/>
+        <source>Shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="791"/>
+        <source>Shortcut button combination.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="793"/>
+        <source>&lt;b&gt;This is the global shortcut key combination.&lt;/b&gt;&lt;br /&gt;Click this field and then press the desired key/button combo to rebind. Double-click to clear.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="797"/>
+        <source>Suppress keys from other applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="799"/>
+        <source>&lt;b&gt;This hides the button presses from other applications.&lt;/b&gt;&lt;br /&gt;Enabling this will hide the button (or the last button of a multi-button combo) from other applications. Note that not all buttons can be suppressed.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcutTarget</name>
     <message>
+        <location filename="GlobalShortcutTarget.ui" line="14"/>
         <source>Whisper Target</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel Target</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Restrict to Group</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>If specified, only members of this group will receive the whisper.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>List of users</source>
-        <translation>Naudotojų sąrašas</translation>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Pridėti</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Šalinti</translation>
-    </message>
-    <message>
-        <source>Modifiers</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Do not send positional audio information when using this whisper shortcut.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Ignore positional audio</source>
-        <translation>Nepaisyti pozicinio garso</translation>
-    </message>
-    <message>
-        <source>Shout to Linked channels</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Shout to subchannels</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The whisper will also be transmitted to linked channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The whisper will also be sent to the subchannels of the channel target.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="GlobalShortcutTarget.ui" line="20"/>
         <source>Shout/Whisper to:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcutTarget.ui" line="34"/>
+        <location filename="GlobalShortcutTarget.ui" line="250"/>
         <source>Current selection</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcutTarget.ui" line="40"/>
         <source>When shouting to channel:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcutTarget.ui" line="56"/>
+        <location filename="GlobalShortcutTarget.ui" line="192"/>
+        <source>The whisper will also be transmitted to linked channels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="59"/>
         <source>Shout to linked channels</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcutTarget.ui" line="66"/>
+        <location filename="GlobalShortcutTarget.ui" line="202"/>
+        <source>The whisper will also be sent to the subchannels of the channel target.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="69"/>
+        <location filename="GlobalShortcutTarget.ui" line="205"/>
+        <source>Shout to subchannels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="99"/>
+        <location filename="GlobalShortcutTarget.ui" line="255"/>
+        <source>List of users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="111"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="118"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="145"/>
+        <source>Channel Target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="174"/>
+        <source>Restrict to Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="181"/>
+        <source>If specified, only members of this group will receive the whisper.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="195"/>
+        <source>Shout to Linked channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="221"/>
+        <source>Modifiers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="227"/>
+        <source>Do not send positional audio information when using this whisper shortcut.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="230"/>
+        <source>Ignore positional audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcutTarget.ui" line="260"/>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcutX</name>
     <message>
+        <location filename="GlobalShortcut_unix.cpp" line="378"/>
         <source>Mouse %1</source>
-        <translation>Pelė %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>JackAudioSystem</name>
     <message>
+        <location filename="JackAudio.cpp" line="248"/>
         <source>Hardware Ports</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="JackAudio.cpp" line="249"/>
         <source>Mono</source>
-        <translation>Mono</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="JackAudio.cpp" line="250"/>
         <source>Stereo</source>
-        <translation>Stereo</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LCD</name>
     <message>
+        <location filename="LCD.cpp" line="276"/>
         <source>Not connected</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LCDConfig</name>
     <message>
-        <source>Enable this device</source>
-        <translation>Įjungti šį įrenginį</translation>
-    </message>
-    <message>
+        <location filename="LCD.ui" line="14"/>
+        <location filename="LCD.cpp" line="107"/>
         <source>LCD</source>
-        <translation>LCD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Devices</source>
-        <translation>Įrenginiai</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="LCD.ui" line="26"/>
         <source>&lt;p&gt;This is the list of available LCD devices on your system.  It lists devices by name, but also includes the size of the display. Mumble supports outputting to several LCD devices at a time.&lt;/p&gt;
 &lt;h3&gt;Size:&lt;/h3&gt;
 &lt;p&gt;
 This field describes the size of an LCD device. The size is given either in pixels (for Graphic LCDs) or in characters (for Character LCDs).&lt;/p&gt;
 &lt;h3&gt;Enabled:&lt;/h3&gt;
 &lt;p&gt;This decides whether Mumble should draw to a particular LCD device.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.ui" line="34"/>
+        <location filename="LCD.cpp" line="83"/>
+        <source>Devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LCD.ui" line="50"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LCD.ui" line="55"/>
         <source>Size</source>
-        <translation>Dydis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.ui" line="60"/>
         <source>Enabled</source>
-        <translation>Įjungta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.ui" line="77"/>
         <source>Views</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.ui" line="83"/>
         <source>Minimum Column Width</source>
-        <translation>Mažiausias stulpelio plotis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.ui" line="90"/>
         <source>&lt;p&gt;This option decides the minimum width a column in the User View.&lt;/p&gt;
 &lt;p&gt;If too many people are speaking at once, the User View will split itself into columns. You can use this option to pick a compromise between number of users shown on the LCD, and width of user names.&lt;/p&gt;
 </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This setting decides the width of column splitter.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="LCD.ui" line="121"/>
         <source>Splitter Width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.ui" line="128"/>
+        <source>This setting decides the width of column splitter.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LCD.cpp" line="84"/>
         <source>Minimum column width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LCD.cpp" line="85"/>
         <source>Splitter width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LCD.cpp" line="102"/>
+        <source>Enable this device</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ListenerLocalVolumeDialog</name>
     <message>
+        <location filename="ListenerLocalVolumeDialog.cpp" line="30"/>
         <source>Adjusting local volume for listening to %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Log</name>
     <message>
+        <location filename="Log.cpp" line="382"/>
         <source>Debug</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="383"/>
         <source>Critical</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="384"/>
         <source>Warning</source>
-        <translation>Įspėjimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="385"/>
         <source>Information</source>
-        <translation>Informacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Other self-muted/deafened</source>
-        <translation type="unfinished"/>
+        <location filename="Log.cpp" line="386"/>
+        <source>Server connected</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="387"/>
+        <source>Server disconnected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="388"/>
+        <source>User joined server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="389"/>
+        <source>User left server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="390"/>
         <source>User recording state changed</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="391"/>
         <source>User kicked (you or by you)</source>
-        <translation>Naudotojas išmestas (jūs išmestas arba jus išmetė)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="392"/>
         <source>User kicked</source>
-        <translation>Naudotojas išmestas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="393"/>
         <source>You self-muted</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="394"/>
+        <source>Other self-muted/deafened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="395"/>
         <source>User muted (you)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="396"/>
         <source>User muted (by you)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="397"/>
         <source>User muted (other)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="398"/>
+        <source>User joined channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="399"/>
+        <source>User left channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="400"/>
+        <source>Permission denied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="401"/>
+        <source>Text message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="402"/>
         <source>You self-unmuted</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="403"/>
         <source>You self-deafened</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="404"/>
         <source>You self-undeafened</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="405"/>
         <source>User renamed</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="406"/>
+        <source>You joined channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="407"/>
+        <source>You joined channel (moved)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="408"/>
         <source>User connected and entered channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="409"/>
         <source>User left channel and disconnected</source>
-        <translation>Naudotojas išėjo iš kanalo ir atsijungė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="410"/>
         <source>Private text message</source>
-        <translation>Privati tekstinė žinutė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="411"/>
+        <source>User started listening to channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="412"/>
+        <source>User stopped listening to channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="489"/>
         <source>the server</source>
-        <translation>Serveris</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="599"/>
         <source>[[ Invalid size ]]</source>
-        <translation>[[ Neteisingas dydis ]]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="612"/>
         <source>[[ Text object too large to display ]]</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="670"/>
         <source>[Date changed to %1]
 </source>
-        <translation>[Data pasikeitė į %1]
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="765"/>
         <source>link to %1</source>
-        <translation>nuoroda į %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="767"/>
         <source>FTP link to %1</source>
-        <translation>FTP nuoroda į %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="769"/>
         <source>player link</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="771"/>
         <source>channel link</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="773"/>
         <source>%1 link</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Server connected</source>
-        <translation>Prisijungta prie serverio</translation>
-    </message>
-    <message>
-        <source>Server disconnected</source>
-        <translation>Atsijungta nuo serverio</translation>
-    </message>
-    <message>
-        <source>User joined server</source>
-        <translation>Naudotojas atėjo į serverį</translation>
-    </message>
-    <message>
-        <source>User left server</source>
-        <translation>Naudotojas išėjo iš serverio</translation>
-    </message>
-    <message>
-        <source>User joined channel</source>
-        <translation>Naudotojas atėjo į kanalą</translation>
-    </message>
-    <message>
-        <source>User left channel</source>
-        <translation>Naudotojas išėjo iš kanalo</translation>
-    </message>
-    <message>
-        <source>Permission denied</source>
-        <translation>Leidimas atmestas</translation>
-    </message>
-    <message>
-        <source>Text message</source>
-        <translation>Tekstinė žinutė</translation>
-    </message>
-    <message>
-        <source>You joined channel</source>
-        <translation>Jūs atėjote į kanalą</translation>
-    </message>
-    <message>
-        <source>You joined channel (moved)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User started listening to channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User stopped listening to channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LogConfig</name>
     <message>
-        <source>Toggle console for %1 events</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Toggle pop-up notifications for %1 events</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Toggle Text-To-Speech for %1 events</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click here to toggle sound notification for %1 events</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Toggle window highlight (if not active) for %1 events</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Path to sound file used for sound notifications in the case of %1 events&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click here to toggle console output for %1 events.&lt;br /&gt;If checked, this option makes Mumble output all %1 events in its message log.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click here to toggle pop-up notifications for %1 events.&lt;br /&gt;If checked, a notification pop-up will be created by Mumble for every %1 event.</source>
-        <oldsource>Click here to toggle pop-up notifications for %1 events.&lt;br /&gt;If checked, a notification pop-up will be created by mumble for every %1 event.</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click here to toggle window highlight for %1 events.&lt;br /&gt;If checked, Mumble&apos;s window will be highlighted for every %1 event, if not active.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Path to sound file used for sound notifications in the case of %1 events.&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change&lt;br /&gt;Ensure that sound notifications for these events are enabled or this field will not have any effect.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click here to toggle Text-To-Speech for %1 events.&lt;br /&gt;If checked, Mumble uses Text-To-Speech to read %1 events out loud to you. Text-To-Speech is also able to read the contents of the event which is not true for sound files. Text-To-Speech and sound files cannot be used at the same time.</source>
-        <oldsource>Click here to toggle sound notification for %1 events.&lt;br /&gt;If checked, Mumble uses a soundfile predefined by you to indicate %1 events. Soundfiles and Text-To-Speech cannot be used at the same time.</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click here to toggle sound notification for %1 events.&lt;br /&gt;If checked, Mumble uses a sound file predefined by you to indicate %1 events. Sound files and Text-To-Speech cannot be used at the same time.</source>
-        <oldsource>Path to soundfile used for sound notifications in the case of %1 events.&lt;br /&gt;Single click to play&lt;br /&gt;Doubleclick to change&lt;br /&gt;Be sure that sound notifications for these events are enabled or this field will not have any effect.</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="Log.ui" line="14"/>
         <source>Messages</source>
-        <translation>Žinutės</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="36"/>
         <source>Message</source>
-        <translation>Žinutė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="41"/>
         <source>Console</source>
-        <translation>Pultas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="46"/>
         <source>Notification</source>
-        <translation>Pranešimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Text-To-Speech</source>
-        <translation>Garsinis teksto atkūrimas</translation>
-    </message>
-    <message>
-        <source>Soundfile</source>
-        <translation>Garso failas</translation>
-    </message>
-    <message>
-        <source>Path</source>
-        <translation>Kelias</translation>
-    </message>
-    <message>
-        <source>Text To Speech</source>
-        <translation>Garsinis teksto atkūrimas</translation>
-    </message>
-    <message>
-        <source>Volume</source>
-        <translation>Garsis</translation>
-    </message>
-    <message>
-        <source>Volume of Text-To-Speech Engine</source>
-        <translation>Garsinio teksto atkūrimo modulio garsis</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This is the volume used for the speech synthesis.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Length threshold</source>
-        <translation>Ilgio slenkstis</translation>
-    </message>
-    <message>
-        <source>Message length threshold for Text-To-Speech Engine</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;This is the length threshold used for the Text-To-Speech Engine.&lt;/b&gt;&lt;br /&gt;Messages longer than this limit will not be read aloud in their full length.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source> Characters</source>
-        <translation> simbolių</translation>
-    </message>
-    <message>
-        <source>Whisper</source>
-        <translation>Šnabždesys</translation>
-    </message>
-    <message>
-        <source>If checked you will only hear whispers from users you added to your friend list.</source>
-        <translation>Jei pažymėta, jūs girdėsite šnabždesius tik iš naudotojų, kurie yra pridėti į jūsų draugų sąrašą.</translation>
-    </message>
-    <message>
-        <source>Only accept whispers from friends</source>
-        <translation>Priimti šnabždesius tik iš draugų</translation>
-    </message>
-    <message>
-        <source>If enabled text messages you send will be read back to you with TTS</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Read back own messages</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Chat Log</source>
-        <translation>Pokalbių žurnalas</translation>
-    </message>
-    <message>
-        <source>Maximum chat length</source>
-        <translation>Didžiausias pokalbio ilgis</translation>
-    </message>
-    <message>
-        <source>Unlimited</source>
-        <translation>Neribota</translation>
-    </message>
-    <message>
-        <source> Lines</source>
-        <translation> eilučių</translation>
-    </message>
-    <message>
+        <location filename="Log.ui" line="51"/>
         <source>Highlight</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="56"/>
+        <source>Text-To-Speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="61"/>
+        <source>Soundfile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="66"/>
+        <source>Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="74"/>
+        <source>Text To Speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="80"/>
+        <source>Volume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="90"/>
+        <source>Volume of Text-To-Speech Engine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="93"/>
+        <source>&lt;b&gt;This is the volume used for the speech synthesis.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="118"/>
+        <location filename="Log.cpp" line="46"/>
+        <source>Length threshold</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="128"/>
+        <source>Message length threshold for Text-To-Speech Engine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="131"/>
+        <source>&lt;b&gt;This is the length threshold used for the Text-To-Speech Engine.&lt;/b&gt;&lt;br /&gt;Messages longer than this limit will not be read aloud in their full length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="137"/>
+        <source> Characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="150"/>
+        <source>If enabled text messages you send will be read back to you with TTS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="153"/>
+        <source>Read back own messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="160"/>
         <source>If enabled, TTS will not dictate the message scope.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="163"/>
         <source>Omit Message Scope</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="170"/>
         <source>If enabled, TTS will not dictate the message author.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="173"/>
         <source>Omit Message Author</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="183"/>
+        <source>Whisper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="189"/>
+        <source>If checked you will only hear whispers from users you added to your friend list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="192"/>
+        <source>Only accept whispers from friends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="202"/>
+        <source>Chat Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="208"/>
         <source>If checked the time at the beginning of a message will be displayed in the 24-hour format.
 
 The setting only applies for new messages, the already shown ones will retain the previous time format.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="213"/>
         <source>Use 24-hour clock</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="223"/>
+        <source>Unlimited</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="226"/>
+        <source> Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="239"/>
+        <location filename="Log.cpp" line="47"/>
+        <source>Maximum chat length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.ui" line="259"/>
+        <location filename="Log.ui" line="269"/>
         <source>How far individual messages are spaced out from one another.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.ui" line="262"/>
         <source>Message margins</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="44"/>
         <source>Log messages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="45"/>
         <source>TTS engine volume</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="48"/>
         <source>Chat message margins</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="90"/>
+        <source>Toggle console for %1 events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="91"/>
+        <source>Toggle pop-up notifications for %1 events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="92"/>
+        <source>Toggle window highlight (if not active) for %1 events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="93"/>
+        <source>Click here to toggle sound notification for %1 events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="94"/>
+        <source>Path to sound file used for sound notifications in the case of %1 events&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="98"/>
+        <source>Click here to toggle console output for %1 events.&lt;br /&gt;If checked, this option makes Mumble output all %1 events in its message log.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="102"/>
+        <source>Click here to toggle pop-up notifications for %1 events.&lt;br /&gt;If checked, a notification pop-up will be created by Mumble for every %1 event.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="105"/>
+        <source>Click here to toggle window highlight for %1 events.&lt;br /&gt;If checked, Mumble&apos;s window will be highlighted for every %1 event, if not active.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="108"/>
+        <source>Click here to toggle sound notification for %1 events.&lt;br /&gt;If checked, Mumble uses a sound file predefined by you to indicate %1 events. Sound files and Text-To-Speech cannot be used at the same time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="113"/>
+        <source>Path to sound file used for sound notifications in the case of %1 events.&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change&lt;br /&gt;Ensure that sound notifications for these events are enabled or this field will not have any effect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="119"/>
+        <source>Toggle Text-To-Speech for %1 events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="122"/>
+        <source>Click here to toggle Text-To-Speech for %1 events.&lt;br /&gt;If checked, Mumble uses Text-To-Speech to read %1 events out loud to you. Text-To-Speech is also able to read the contents of the event which is not true for sound files. Text-To-Speech and sound files cannot be used at the same time.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LookConfig</name>
     <message>
+        <location filename="LookConfig.ui" line="26"/>
+        <source>Talking UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="41"/>
+        <location filename="LookConfig.ui" line="51"/>
+        <source>The names of how many parent channels should be included in the channel&apos;s name when displaying it in the TalkingUI?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="44"/>
+        <location filename="LookConfig.cpp" line="33"/>
+        <source>Channel hierarchy depth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="64"/>
+        <location filename="LookConfig.ui" line="197"/>
+        <source>String that gets used instead of the cut-out part of an abbreviated name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="71"/>
+        <location filename="LookConfig.ui" line="220"/>
+        <source>String to separate a channel name from its parent&apos;s.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="74"/>
+        <location filename="LookConfig.cpp" line="34"/>
+        <source>Channel separator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="81"/>
+        <location filename="LookConfig.ui" line="227"/>
+        <source>Relative font size to use in the Talking UI in percent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="94"/>
+        <source>If this is checked, the local user (yourself) will always be visible in the TalkingUI (regardless of talking state).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="97"/>
+        <source>Always keep local user visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="104"/>
+        <location filename="LookConfig.ui" line="141"/>
+        <source>The preferred maximum length of a channel (hierarchy) name in the Talking UI. Note that this is not a hard limit though.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="111"/>
+        <location filename="LookConfig.ui" line="207"/>
+        <source>How many characters from the original name to display at the beginning of an abbreviated name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="114"/>
+        <source>Abbreviated prefix characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="127"/>
+        <location filename="LookConfig.ui" line="167"/>
+        <source>A user that is silent for the given amount of seconds will be removed from the Talkin UI.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="134"/>
+        <location filename="LookConfig.ui" line="187"/>
+        <source>How many characters from the original name to display at the end of an abbreviated name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="144"/>
+        <source>Max. channel name length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="151"/>
+        <source>Whether to also allow abbreviating the current channel of a user (instead of only its parent channels).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="154"/>
+        <source>Abbreviate current channel name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="170"/>
+        <source>Remove silent user after</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="177"/>
+        <source>Whether the channel (hierarchy) name should be abbreviated, if it exceeds the specified maximum length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="180"/>
+        <source>Abbreviate channel names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="190"/>
+        <source>Abbreviated postfix characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="200"/>
+        <location filename="LookConfig.cpp" line="36"/>
+        <source>Abbreviation replacement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="230"/>
+        <source>Rel. font size (%)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="237"/>
+        <source>Whether to show all of the local user&apos;s listeners (ears) in the TalkingUI (and thereby also the channels they are in). </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="240"/>
+        <source>Show local user&apos;s listeners (ears)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="250"/>
+        <source>Layout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="281"/>
+        <source>Hybrid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="300"/>
+        <source>Custom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="323"/>
+        <source>Stacked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="342"/>
+        <source>Classic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="452"/>
+        <source>Look and Feel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="458"/>
+        <source>Language to use (requires restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="461"/>
+        <source>&lt;b&gt;This sets which language Mumble should use.&lt;/b&gt;&lt;br /&gt;You have to restart Mumble to use the new language.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="468"/>
+        <location filename="LookConfig.cpp" line="40"/>
+        <source>Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="481"/>
+        <source>Theme to use to style the user interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="484"/>
+        <source>&lt;b&gt;Configures which theme the Mumble user interface should be styled with&lt;/b&gt;&lt;br /&gt;Mumble will pick up themes from certain directories and display them in this list. The one you select will be used to customize the visual appearance of Mumble. This includes colors, icons and more.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="491"/>
+        <source>Show transmit mode dropdown in toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="498"/>
+        <source>Apply some high contrast optimizations for visually impaired users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="501"/>
+        <source>Optimize for high contrast</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="521"/>
+        <location filename="LookConfig.cpp" line="39"/>
+        <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="544"/>
+        <source>Tray Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="550"/>
+        <source>Hide the main Mumble window in the tray when it is minimized.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="553"/>
+        <source>&lt;b&gt;If set, minimizing the Mumble main window will cause it to be hidden and accessible only from the tray. Otherwise, it will be minimized as a window normally would.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="556"/>
+        <source>Hide in tray when minimized</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="563"/>
+        <source>Displays talking status in system tray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="569"/>
+        <source>Show talking status in tray icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="579"/>
+        <source>Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="585"/>
+        <source>Always On Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="592"/>
+        <source>This setting controls when the application will be always on top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="595"/>
+        <source>This setting controls in which situations the application will stay always on top. If you select &lt;i&gt;Never&lt;/i&gt; the application will not stay on top. &lt;i&gt;Always&lt;/i&gt; will always keep the application on top. &lt;i&gt;In minimal view&lt;/i&gt; / &lt;i&gt;In normal view&lt;/i&gt; will only keep the application always on top when minimal view is activated / deactivated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="599"/>
+        <source>Never</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="604"/>
+        <source>Always</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="609"/>
+        <source>In minimal view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="614"/>
+        <source>In normal view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="622"/>
+        <source>Adds user and channel context menus into the menu bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="625"/>
+        <source>Show context menu in menu bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="632"/>
+        <source>Ask whether to close or minimize when quitting Mumble.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="635"/>
+        <source>&lt;b&gt;If set, will verify you want to quit if connected.&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="638"/>
+        <source>Ask on quit while connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="645"/>
+        <source>&lt;b&gt;Enable Developer menu&lt;/b&gt;&lt;br /&gt;This enables the &quot;Developer&quot;-menu in Mumble. This menu is used for developer-specific features, such as the Developer Console.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="648"/>
+        <source>Enable Developer menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="655"/>
+        <source>When in custom layout mode, checking this disables rearranging.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="658"/>
+        <source>Lock layout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="681"/>
+        <source>Channel Tree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="687"/>
+        <source>Filter automatically hides empty channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="694"/>
+        <source>When to automatically expand channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="697"/>
+        <source>This sets which channels to automatically expand. &lt;i&gt;None&lt;/i&gt; and &lt;i&gt;All&lt;/i&gt; will expand no or all channels, while &lt;i&gt;Only with users&lt;/i&gt; will expand and collapse channels as users join and leave them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="704"/>
+        <source>This changes the behavior when moving users.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="707"/>
+        <source>This sets the behavior of user drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the user without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="714"/>
+        <source>User Dragging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="721"/>
+        <source>Channel Dragging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="728"/>
+        <source>Use selected item as the chat bar target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="735"/>
+        <source>Expand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="742"/>
+        <source>Show number of users in each channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="745"/>
+        <source>Show channel user count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="752"/>
+        <source>This changes the behavior when moving channels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="755"/>
+        <source>This sets the behavior of channel drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the channel without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="762"/>
+        <source>List users above subchannels (requires restart).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="765"/>
+        <source>&lt;b&gt;If set, users will be shown above subchannels in the channel view.&lt;/b&gt;&lt;br /&gt;A restart of Mumble is required to see the change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="768"/>
+        <source>Users above Channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="775"/>
+        <source>Show the local volume adjustment for each user (if any).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.ui" line="778"/>
+        <source>Show volume adjustments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="31"/>
+        <source>Silent user lifetime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="32"/>
+        <source>Prefix character count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="35"/>
+        <source>Postfix character count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="37"/>
+        <source>Maximum name length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="38"/>
+        <source>Relative font size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="41"/>
+        <source>Always on top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="42"/>
+        <source>Channel dragging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="43"/>
+        <source>Automatically expand channels when</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="44"/>
+        <source>User dragging behavior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="LookConfig.cpp" line="51"/>
         <source>System default</source>
-        <translation>Sistemos numatytoji</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="70"/>
+        <location filename="LookConfig.cpp" line="124"/>
         <source>None</source>
-        <translation>Nėra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="71"/>
         <source>Only with users</source>
-        <translation>Tik su naudotojais</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="72"/>
         <source>All</source>
-        <translation>Visus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="74"/>
+        <location filename="LookConfig.cpp" line="78"/>
         <source>Ask</source>
-        <translation>Klausti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="75"/>
+        <location filename="LookConfig.cpp" line="79"/>
         <source>Do Nothing</source>
-        <translation>Nieko nedaryti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="76"/>
+        <location filename="LookConfig.cpp" line="80"/>
         <source>Move</source>
-        <translation>Perkelti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="101"/>
         <source>&lt;a href=&quot;%1&quot;&gt;Browse&lt;/a&gt;</source>
         <extracomment>This link is located next to the theme heading in the ui config and opens the user theme directory</extracomment>
-        <translation>&lt;a href=&quot;%1&quot;&gt;Naršyti&lt;/a&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="LookConfig.cpp" line="107"/>
         <source>User Interface</source>
-        <translation>Naudotojo sąsaja</translation>
-    </message>
-    <message>
-        <source>This sets which channels to automatically expand. &lt;i&gt;None&lt;/i&gt; and &lt;i&gt;All&lt;/i&gt; will expand no or all channels, while &lt;i&gt;Only with users&lt;/i&gt; will expand and collapse channels as users join and leave them.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>List users above subchannels (requires restart).</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;If set, users will be shown above subchannels in the channel view.&lt;/b&gt;&lt;br /&gt;A restart of Mumble is required to see the change.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Users above Channels</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;If set, will verify you want to quit if connected.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Jei nustatyta, jums išeinant ir vis dar tebesant prisijungus, bus klausiama patvirtinimo.&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Show number of users in each channel</source>
-        <translation>Rodyti kiekviename kanale naudotojų skaičių</translation>
-    </message>
-    <message>
-        <source>Show channel user count</source>
-        <translation>Rodyti kanalo naudotojų skaičių</translation>
-    </message>
-    <message>
-        <source>Language</source>
-        <translation>Kalba</translation>
-    </message>
-    <message>
-        <source>Language to use (requires restart)</source>
-        <translation>Kalba, kurią naudoti (reikalauja paleidimo iš naujo)</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;This sets which language Mumble should use.&lt;/b&gt;&lt;br /&gt;You have to restart Mumble to use the new language.</source>
-        <translation>&lt;b&gt;Tai nustato, kurią kalbą turėtų naudoti Mumble.&lt;/b&gt;&lt;br /&gt;Tam, kad naudotumėte naują kalbą, turite iš naujo paleisti Mumble.</translation>
-    </message>
-    <message>
-        <source>Look and Feel</source>
-        <translation>Išvaizda ir turinys</translation>
-    </message>
-    <message>
-        <source>Layout</source>
-        <translation>Išdėstymas</translation>
-    </message>
-    <message>
-        <source>Classic</source>
-        <translation>Klasikinis</translation>
-    </message>
-    <message>
-        <source>Stacked</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Hybrid</source>
-        <translation>Hibridinis</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This changes the behavior when moving channels.</source>
-        <translation>Tai keičia elgseną, perkeliant kanalus.</translation>
-    </message>
-    <message>
-        <source>This sets the behavior of channel drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the channel without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the channel.</source>
-        <oldsource>This sets the behavior of channel drags; it can be used to prevent accidental dragging. &lt;i&gt;Move Channel&lt;/i&gt; moves the channel without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the channel.</oldsource>
-        <translation>Tai nustato kanalų tempimo elgseną; tai gali būti naudojama, kad būtų neleistas atsitiktinis tempimas. &lt;i&gt;Perkelti&lt;/i&gt; perkelia kanalą, neklausiant. &lt;i&gt;Nieko nedaryti&lt;/i&gt; nieko nedaro ir parodo klaidos žinutę. &lt;i&gt;Klausti&lt;/i&gt; naudoja žinutės langelį, kad patvirtintų, ar jūs tikrai norėjote perkelti kanalą.</translation>
-    </message>
-    <message>
-        <source>Expand</source>
-        <translation>Išskleisti</translation>
-    </message>
-    <message>
-        <source>When to automatically expand channels</source>
-        <translation>Kada automatiškai išskleisti kanalus</translation>
-    </message>
-    <message>
-        <source>Channel Dragging</source>
-        <translation>Kanalų tempimas</translation>
-    </message>
-    <message>
-        <source>Ask whether to close or minimize when quitting Mumble.</source>
-        <translation>Išeinant iš Mumble, klausti ar programą užverti ar suskleisti.</translation>
-    </message>
-    <message>
-        <source>Ask on quit while connected</source>
-        <translation>Klausti išeinant, kai tebeesama prisijungta</translation>
-    </message>
-    <message>
-        <source>Always On Top</source>
-        <translation>Visada viršuje</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;If set, minimizing the Mumble main window will cause it to be hidden and accessible only from the tray. Otherwise, it will be minimized as a window normally would.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Hide in tray when minimized</source>
-        <translation>Suskleidus, slėpti į dėklą</translation>
-    </message>
-    <message>
-        <source>Hide the main Mumble window in the tray when it is minimized.</source>
-        <translation>Suskleidus pagrindinį Mumble langą, slėpti jį į dėklą</translation>
-    </message>
-    <message>
-        <source>This setting controls when the application will be always on top.</source>
-        <translation>Šis nustatymas valdo, kada programa bus visada viršuje.</translation>
-    </message>
-    <message>
-        <source>Never</source>
-        <translation>Niekada</translation>
-    </message>
-    <message>
-        <source>Always</source>
-        <translation>Visada</translation>
-    </message>
-    <message>
-        <source>In minimal view</source>
-        <translation>Minimaliame rodinyje</translation>
-    </message>
-    <message>
-        <source>In normal view</source>
-        <translation>Normaliame rodinyje</translation>
-    </message>
-    <message>
-        <source>Displays talking status in system tray</source>
-        <translation>Rodo kalbėjimo būseną sistemos dėkle</translation>
-    </message>
-    <message>
-        <source>Show talking status in tray icon</source>
-        <translation>Rodyti dėklo piktogramoje kalbėjimo būseną</translation>
-    </message>
-    <message>
-        <source>This setting controls in which situations the application will stay always on top. If you select &lt;i&gt;Never&lt;/i&gt; the application will not stay on top. &lt;i&gt;Always&lt;/i&gt; will always keep the application on top. &lt;i&gt;In minimal view&lt;/i&gt; / &lt;i&gt;In normal view&lt;/i&gt; will only keep the application always on top when minimal view is activated / deactivated.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Show context menu in menu bar</source>
-        <translation>Rodyti meniu juostoje kontekstinį meniu</translation>
-    </message>
-    <message>
-        <source>Apply some high contrast optimizations for visually impaired users</source>
-        <translation>Taikyti kai kuriuos kontrasto optimizavimus, skirtus silpnaregiams naudotojams</translation>
-    </message>
-    <message>
-        <source>Optimize for high contrast</source>
-        <translation>Optimizuoti aukštam kontrastui</translation>
-    </message>
-    <message>
-        <source>Application</source>
-        <translation>Programa</translation>
-    </message>
-    <message>
-        <source>Adds user and channel context menus into the menu bar</source>
-        <translation>Prideda į meniu juostą naudotojo ir kanalo kontekstinius meniu</translation>
-    </message>
-    <message>
-        <source>Tray Icon</source>
-        <translation>Dėklo piktograma</translation>
-    </message>
-    <message>
-        <source>Channel Tree</source>
-        <translation>Kanalų medis</translation>
-    </message>
-    <message>
-        <source>Use selected item as the chat bar target</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Filter automatically hides empty channels</source>
-        <translation>Filtras automatiškai slepia tuščius kanalus</translation>
-    </message>
-    <message>
-        <source>Show transmit mode dropdown in toolbar</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Theme</source>
-        <translation>Tema</translation>
-    </message>
-    <message>
-        <source>Theme to use to style the user interface</source>
-        <translation>Tema, kurią naudoti, siekiant stilizuoti naudotojo sąsają</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Configures which theme the Mumble user interface should be styled with&lt;/b&gt;&lt;br /&gt;Mumble will pick up themes from certain directories and display them in this list. The one you select will be used to customize the visual appearance of Mumble. This includes colors, icons and more.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User Dragging</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This changes the behavior when moving users.</source>
-        <translation>Tai keičia elgseną, perkeliant naudotojus.</translation>
-    </message>
-    <message>
-        <source>This sets the behavior of user drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the user without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the user.</source>
-        <translation>Tai nustato naudotojų tempimo elgseną; tai gali būti naudojama, kad būtų neleistas atsitiktinis tempimas. &lt;i&gt;Perkelti&lt;/i&gt; perkelia naudotoją, neklausiant. &lt;i&gt;Nieko nedaryti&lt;/i&gt; nieko nedaro ir parodo klaidos žinutę. &lt;i&gt;Klausti&lt;/i&gt; naudoja žinutės langelį, kad patvirtintų, ar jūs tikrai norėjote perkelti naudotoją.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Enable Developer menu&lt;/b&gt;&lt;br /&gt;This enables the &quot;Developer&quot;-menu in Mumble. This menu is used for developer-specific features, such as the Developer Console.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enable Developer menu</source>
-        <translation>Įjungti kūrėjo meniu</translation>
-    </message>
-    <message>
-        <source>When in custom layout mode, checking this disables rearranging.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Lock layout</source>
-        <translation>Užrakinti išdėstymą</translation>
-    </message>
-    <message>
-        <source>Talking UI</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>A user that is silent for the given amount of seconds will be removed from the Talkin UI.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Remove silent user after</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>If this is checked, the local user (yourself) will always be visible in the TalkingUI (regardless of talking state).</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Always keep local user visible</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>How many characters from the original name to display at the beginning of an abbreviated name.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>String to separate a channel name from its parent&apos;s.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel separator</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Abbreviated prefix characters</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The names of how many parent channels should be included in the channel&apos;s name when displaying it in the TalkingUI?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>How many characters from the original name to display at the end of an abbreviated name.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Abbreviated postfix characters</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Whether to also allow abbreviating the current channel of a user (instead of only its parent channels).</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Abbreviate current channel name</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel hierarchy depth</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Abbreviation replacement</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Whether the channel (hierarchy) name should be abbreviated, if it exceeds the specified maximum length.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Abbreviate channel names</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The preferred maximum length of a channel (hierarchy) name in the Talking UI. Note that this is not a hard limit though.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Max. channel name length</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Relative font size to use in the Talking UI in percent.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Rel. font size (%)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>String that gets used instead of the cut-out part of an abbreviated name.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Prefix character count</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Postfix character count</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Maximum name length</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Relative font size</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Always on top</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel dragging</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Automatically expand channels when</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User dragging behavior</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Silent user lifetime</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <source>Root</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Push-to-Talk</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Push and hold this button to send voice.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This configures the push-to-talk button, and as long as you hold this button down, you will transmit voice.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Reset Audio Processor</source>
-        <comment>Global Shortcut</comment>
-        <translation>Atstatyti garso doroklę</translation>
-    </message>
-    <message>
-        <source>Unlink Plugin</source>
-        <comment>Global Shortcut</comment>
-        <translation>Atsieti įskiepį</translation>
-    </message>
-    <message>
-        <source>Push-to-Mute</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Join Channel</source>
-        <comment>Global Shortcut</comment>
-        <translation>Prisijungti prie kanalo</translation>
-    </message>
-    <message>
-        <source>Toggle Overlay</source>
-        <comment>Global Shortcut</comment>
-        <translation>Perjungti perdangą</translation>
-    </message>
-    <message>
-        <source>Toggle state of in-game overlay.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Toggle Minimal</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Volume Up (+10%)</source>
-        <comment>Global Shortcut</comment>
-        <translation>Pagarsinti (+10%)</translation>
-    </message>
-    <message>
-        <source>Volume Down (-10%)</source>
-        <comment>Global Shortcut</comment>
-        <translation>Patildyti (-10%)</translation>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="14"/>
         <source>Mumble</source>
-        <translation>Mumble</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Mumble -- %1</source>
-        <translation>Mumble -- %1</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>&amp;Langas</translation>
-    </message>
-    <message>
-        <source>Minimize</source>
-        <translation>Suskleisti</translation>
-    </message>
-    <message>
-        <source>Ctrl+M</source>
-        <translation>Ctrl+M</translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation>Užverti</translation>
-    </message>
-    <message>
-        <source>Mumble is currently connected to a server. Do you want to Close or Minimize it?</source>
-        <translation>Programa Mumble šiuo metu yra prisijungusi prie serverio. Norite programą užverti ar suskleisti?</translation>
-    </message>
-    <message>
-        <source>Mute Self</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Set self-mute status.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This will set or toggle your muted status. If you turn this off, you will also disable self-deafen.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Deafen Self</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Set self-deafen status.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This will set or toggle your deafened status. If you turn this on, you will also enable self-mute.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Whisper/Shout</source>
-        <oldsource>Whisper</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;center&gt;Not connected&lt;/center&gt;</source>
-        <oldsource>Not connected</oldsource>
-        <translation>&lt;center&gt;Neprisijungta&lt;/center&gt;</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Išvalyti</translation>
-    </message>
-    <message>
-        <source>Opening URL %1</source>
-        <translation>Atveriamas URL %1</translation>
-    </message>
-    <message>
-        <source>File does not exist</source>
-        <translation>Failo nėra</translation>
-    </message>
-    <message>
-        <source>File is not a configuration file.</source>
-        <translation>Failas nėra konfigūracijos failas.</translation>
-    </message>
-    <message>
-        <source>Settings merged from file.</source>
-        <translation>Nustatymai sulieti iš failo.</translation>
-    </message>
-    <message>
-        <source>URL scheme is not &apos;mumble&apos;</source>
-        <translation>URL schema nėra &apos;mumble&apos;</translation>
-    </message>
-    <message>
-        <source>This version of Mumble can&apos;t handle URLs for Mumble version %1.%2.%3</source>
-        <translation>Ši Mumble versija negali apdoroti URL, skirtus Mumble versijai %1.%2.%3</translation>
-    </message>
-    <message>
-        <source>Connecting to %1</source>
-        <translation>Jungiamasi prie %1</translation>
-    </message>
-    <message>
-        <source>Enter username</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Connecting to server %1.</source>
-        <translation>Jungiamasi prie serverio %1.</translation>
-    </message>
-    <message>
-        <source>Reconnecting.</source>
-        <translation>Jungiamasi iš naujo.</translation>
-    </message>
-    <message>
-        <source>Transmit Mode set to Continuous</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</source>
-        <translation>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Voice channel&lt;/h2&gt;&lt;p&gt;Encrypted with 128 bit OCB-AES128&lt;br /&gt;%1 ms average latency (%4 deviation)&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Balso kanalas&lt;/h2&gt;&lt;p&gt;Užšifruota su 128 bitų OCB-AES128&lt;br /&gt;%1 ms vidutinė delsa (%4 nuokrypis)&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>Register yourself as %1</source>
-        <translation>Užsiregistruoti kaip %1</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as &apos;%1&apos; on this server.&lt;/p&gt;&lt;p&gt;Are you sure you want to register yourself?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Jūs ruošiatės užsiregistruoti šiame serveryje. Šis veiksmas negalės būti atšauktas ir, kai tai atliksite, negalėsite keisti savo naudotojo vardą. Jūs visiems laikams šiame serveryje būsite žinomi kaip &quot;%1&quot;.&lt;/p&gt;&lt;p&gt;Ar tikrai norite užsiregistruoti?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Version&lt;/h2&gt;&lt;p&gt;Protocol %1&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Versija&lt;/h2&gt;&lt;p&gt;Protokolas %1&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;No build information or OS version available&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nėra prieinamos darinio informacijos ar OS versijos&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>The connection is encrypted and authenticated using %1 and uses %2 as the key exchange mechanism (%3)</source>
-        <translation>Ryšys yra užšifruotas bei tapatybė nustatyta, naudojant %1 ir ryšys naudoja %2 kaip rakto mainų mechanizmą (%3)</translation>
-    </message>
-    <message>
-        <source>The connection is encrypted using %1, with %2 for message authentication and %3 as the key exchange mechanism (%4)</source>
-        <translation>Ryšys yra užšifruotas, naudojant %1, su %2, skirtu žinučių tapatybės nustatymui ir %3 kaip rakto mainų mechanizmu (%4)</translation>
-    </message>
-    <message>
-        <source>The connection is secured by the cipher suite that OpenSSL identifies as %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection provides perfect forward secrecy&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection does not provide perfect forward secrecy&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Control channel&lt;/h2&gt;&lt;p&gt;The connection uses %1&lt;/p&gt;%2%3&lt;p&gt;%4 ms average latency (%5 deviation)&lt;/p&gt;&lt;p&gt;Remote host %6 (port %7)&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Valdymo kanalas&lt;/h2&gt;&lt;p&gt;Ryšys naudoja %1&lt;/p&gt;%2%3&lt;p&gt;%4 ms vidutinė delsa (%5 nuokrypis)&lt;/p&gt;&lt;p&gt;Nuotolinis serveris %6 (prievadas %7)&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>Voice channel is sent over control channel</source>
-        <translation>Balso kanalas yra siunčiamas per valdymo kanalą</translation>
-    </message>
-    <message>
-        <source>Register user %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;You are about to register %1 on the server. This action cannot be undone, the username cannot be changed, and as a registered user, %1 will have access to the server even if you change the server password.&lt;/p&gt;&lt;p&gt;From this point on, %1 will be authenticated with the certificate currently in use.&lt;/p&gt;&lt;p&gt;Are you sure you want to register %1?&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Kicking user %1</source>
-        <translation>Išmetamas naudotojas %1</translation>
-    </message>
-    <message>
-        <source>Banning user %1</source>
-        <translation>Uždraudžiamas naudotojas %1</translation>
-    </message>
-    <message>
-        <source>View comment on user %1</source>
-        <translation>Rodomas naudotojo %1 komentaras</translation>
-    </message>
-    <message>
-        <source>Message to channel %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Connected.</source>
-        <translation>Prisijungta.</translation>
-    </message>
-    <message>
-        <source>&lt;li&gt;Expected certificate digest (SHA-1):	%1&lt;/li&gt;</source>
-        <translation>&lt;li&gt;Tikėtina liudijimo maišos reikšmė (SHA-1):	%1&lt;/li&gt;</translation>
-    </message>
-    <message>
-        <source>Server presented a certificate which failed verification.</source>
-        <translation>Serveris pateikė liudijimą, kuris nepraėjo patikrinimo.</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;%1&lt;/p&gt;&lt;ul&gt;%2&lt;/ul&gt;&lt;p&gt;The specific errors with this certificate are:&lt;/p&gt;&lt;ol&gt;%3&lt;/ol&gt;&lt;p&gt;Do you wish to accept this certificate anyway?&lt;br /&gt;(It will also be stored so you won&apos;t be asked this again.)&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>SSL Version mismatch</source>
-        <translation>SSL versijos neatitikimas</translation>
-    </message>
-    <message>
-        <source>Server connection failed.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;center&gt;Type message to channel &apos;%1&apos; here&lt;/center&gt;</source>
-        <oldsource>Type message to channel '%1' here</oldsource>
-        <translation>&lt;center&gt;Rašykite žinutę į kanalą &quot;%1&quot; čia&lt;/center&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;center&gt;Type message to user &apos;%1&apos; here&lt;/center&gt;</source>
-        <oldsource>Type message to user '%1' here</oldsource>
-        <translation>&lt;center&gt;Čia įrašykite žinutę, skirta naudotojui &quot;%1&quot;&lt;/center&gt;</translation>
-    </message>
-    <message>
-        <source>Choose image file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Failed to load image</source>
-        <translation>Nepavyko įkelti paveikslo</translation>
-    </message>
-    <message>
-        <source>Could not open file for reading.</source>
-        <translation>Nepavyko atverti failo skaitymui.</translation>
-    </message>
-    <message>
-        <source>Image format not recognized.</source>
-        <translation>Neatpažintas atvaizdo formatas.</translation>
-    </message>
-    <message>
-        <source>&amp;User</source>
-        <translation>Na&amp;udotojas</translation>
-    </message>
-    <message>
-        <source>&amp;Channel</source>
-        <translation>&amp;Kanalas</translation>
-    </message>
-    <message>
-        <source>Use in conjunction with Whisper to.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This will switch the states of the in-game overlay.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Link Channel</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cycle Transmit Mode</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Set Transmit Mode to Push-To-Talk</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Set Transmit Mode to Continuous</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Set Transmit Mode to VAD</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Send Text Message</source>
-        <comment>Global Shortcut</comment>
-        <translation>Siųsti tekstinę žinutę</translation>
-    </message>
-    <message>
-        <source>Send Clipboard Text Message</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This will send your Clipboard content to the channel you are currently in.</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation>Nepertraukiamai</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Push-to-Talk</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Mumble - Minimal View -- %1</source>
-        <translation>Mumble - Minimalus rodinys -- %1</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>Atsisakyti</translation>
-    </message>
-    <message>
-        <source>Save Image As...</source>
-        <translation>Įrašyti paveikslą kaip...</translation>
-    </message>
-    <message>
-        <source>Save Image File</source>
-        <translation>Įrašyti paveikslo failą</translation>
-    </message>
-    <message>
-        <source>Could not save image: %1</source>
-        <translation>Nepavyko įrašyti paveikslo: %1</translation>
-    </message>
-    <message>
-        <source>Change your comment</source>
-        <translation>Keiskite savo komentarą</translation>
-    </message>
-    <message>
-        <source>Transmit Mode set to Voice Activity</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Transmit Mode set to Push-to-Talk</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;Connected users: %1/%2&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Prisijungusių naudotojų: %1/%2&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>UDP Statistics</source>
-        <translation>UDP statistika</translation>
-    </message>
-    <message>
-        <source>To Server</source>
-        <translation>Į serverį</translation>
-    </message>
-    <message>
-        <source>From Server</source>
-        <translation>Iš serverio</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation>Gerai</translation>
-    </message>
-    <message>
-        <source>Late</source>
-        <translation>Pavėluota</translation>
-    </message>
-    <message>
-        <source>Lost</source>
-        <translation>Prarasta</translation>
-    </message>
-    <message>
-        <source>Resync</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Audio bandwidth&lt;/h2&gt;&lt;p&gt;Maximum %1 kbit/s&lt;br /&gt;Current %2 kbit/s&lt;br /&gt;Codec: %3&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Garso siuntimo sparta&lt;/h2&gt;&lt;p&gt;Didžiausia %1 kbit/s&lt;br /&gt;Esama %2 kbit/s&lt;br /&gt;Kodekas: %3&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>Mumble Server Information</source>
-        <translation>Mumble serverio informacija</translation>
-    </message>
-    <message>
-        <source>&amp;View Certificate</source>
-        <translation>Ž&amp;iūrėti liudijimą</translation>
-    </message>
-    <message>
-        <source>Enter reason</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Sending message to %1</source>
-        <translation>Siunčiama žinutė naudotojui %1</translation>
-    </message>
-    <message>
-        <source>To %1: %2</source>
-        <translation>Skirta %1: %2</translation>
-    </message>
-    <message>
-        <source>Message to %1</source>
-        <translation>Žinutė, skirta %1</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to reset the comment of user %1?</source>
-        <translation>Ar tikrai norite atstatyti naudotojo %1 komentarą?</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to reset the avatar of user %1?</source>
-        <translation>Ar tikrai norite atstatyti naudotojo %1 avatarą?</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to delete %1 and all its sub-channels?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Sending message to channel %1</source>
-        <translation>Siunčiama žinutė į kanalą %1</translation>
-    </message>
-    <message>
-        <source>Message to tree %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>To %1 (Tree): %2</source>
-        <oldsource>(Tree) %1: %2</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Unmuted and undeafened.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Unmuted.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Muted.</source>
-        <translation>Nutildyta.</translation>
-    </message>
-    <message>
-        <source>Muted and deafened.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Deafened.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Undeafened.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Restart Mumble?</source>
-        <translation>Paleisti Mumble iš naujo?</translation>
-    </message>
-    <message>
-        <source>Some settings will only apply after a restart of Mumble. Restart Mumble now?</source>
-        <translation>Kai kurie nustatymai bus pritaikyti tik iš naujo paleidus Mumble. Paleisti Mumble iš naujo dabar?</translation>
-    </message>
-    <message>
-        <source>About Qt</source>
-        <translation>Apie Qt</translation>
-    </message>
-    <message>
-        <source>SSL Verification failed: %1</source>
-        <translation>SSL patikrinimas nepavyko: %1</translation>
-    </message>
-    <message>
-        <source>&lt;li&gt;Server certificate digest (SHA-1):	%1&lt;/li&gt;</source>
-        <translation>&lt;li&gt;Serverio liudijimo maišos reikšmė (SHA-1):	%1&lt;/li&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;WARNING:&lt;/b&gt; The server presented a certificate that was different from the stored one.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This server is using an older encryption standard, and is no longer supported by modern versions of Mumble.</source>
-        <translation>Šis serveris naudoja senesnį šifravimo standartą ir daugiau yra nebepalaikomas šiuolaikinių Mumble versijų.</translation>
-    </message>
-    <message>
-        <source>Server connection failed: %1.</source>
-        <translation>Prisijungimas prie serverio nepavyko: %1.</translation>
-    </message>
-    <message>
-        <source>Disconnected from server.</source>
-        <translation>Atsijungta nuo serverio.</translation>
-    </message>
-    <message>
-        <source>Invalid username</source>
-        <translation>Neteisingas naudotojo vardas</translation>
-    </message>
-    <message>
-        <source>You connected with an invalid username, please try another one.</source>
-        <translation>Jūs prisijungėte su neteisingu naudotojo vardu, prašome pabandyti kitą.</translation>
-    </message>
-    <message>
-        <source>Username in use</source>
-        <translation>Naudotojo vardas yra naudojamas</translation>
-    </message>
-    <message>
-        <source>That username is already in use, please try another username.</source>
-        <translation>Šis naudotojas vardas jau yra naudojamas, prašome pabandyti kitą naudotojo vardą.</translation>
-    </message>
-    <message>
-        <source>Wrong certificate or password</source>
-        <translation>Neteisingas liudijimas ar slaptažodis</translation>
-    </message>
-    <message>
-        <source>Wrong certificate or password for registered user. If you are
-certain this user is protected by a password please retry.
-Otherwise abort and check your certificate and username.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Wrong password</source>
-        <translation>Neteisingas slaptažodis</translation>
-    </message>
-    <message>
-        <source>Wrong server password for unregistered user account, please try again.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Images (*.png *.jpg *.jpeg)</source>
-        <translation>Paveikslai (*.png *.jpg *.jpeg)</translation>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="56"/>
         <source>C&amp;onfigure</source>
-        <translation>K&amp;onfigūruoti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="62"/>
         <source>&amp;Help</source>
-        <translation>&amp;Pagalba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="73"/>
+        <source>S&amp;erver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="78"/>
+        <source>&amp;Self</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="109"/>
         <source>Log</source>
-        <translation>Žurnalas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="119"/>
         <source>This shows all recent activity. Connecting to servers, errors and information messages all show up here.&lt;br /&gt;To configure exactly which messages show up here, use the &lt;b&gt;Settings&lt;/b&gt; command from the menu.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Quit Mumble</source>
-        <translation>&amp;Išeiti iš Mumble</translation>
-    </message>
-    <message>
-        <source>Closes the program</source>
-        <translation>Užveria programą</translation>
-    </message>
-    <message>
-        <source>Exits the application.</source>
-        <translation>Išeina iš programos.</translation>
-    </message>
-    <message>
-        <source>Ctrl+Q</source>
-        <translation>Ctrl+Q</translation>
-    </message>
-    <message>
-        <source>Open the server connection dialog</source>
-        <translation>Atverti serverio prisijungimo dialogą</translation>
-    </message>
-    <message>
-        <source>&amp;Disconnect</source>
-        <translation>&amp;Atsijungti</translation>
-    </message>
-    <message>
-        <source>Disconnect from server</source>
-        <translation>Atsijungti nuo serverio</translation>
-    </message>
-    <message>
-        <source>Disconnects you from the server.</source>
-        <translation>Atjungia jus nuo serverio.</translation>
-    </message>
-    <message>
-        <source>Show information about the server connection</source>
-        <translation>Rodyti informaciją apie serverio ryšį</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Tai parodys išplėstinę informaciją apie ryšį su serveriu.</translation>
-    </message>
-    <message>
-        <source>&amp;Mute</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Deafen</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Local Mute</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Send a Text Message</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Sends a text message to another user.</source>
-        <translation>Siunčia tekstinę žinutę kitam naudotojui.</translation>
-    </message>
-    <message>
-        <source>Add new channel</source>
-        <translation>Pridėti naują kanalą</translation>
-    </message>
-    <message>
-        <source>This adds a new sub-channel to the currently selected channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Remove channel</source>
-        <translation>Šalinti kanalą</translation>
-    </message>
-    <message>
-        <source>This removes a channel and all sub-channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Edit Groups and ACL for channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This opens the Group and ACL dialog for the channel, to control permissions.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Link</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Link your channel to another channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="137"/>
         <source>This is the chatbar&lt;br /&gt;If you enter text here and then press enter the text is sent to the user or channel that was selected. If nothing is selected the message is sent to your current channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="143"/>
         <source>Chatbar</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="168"/>
+        <source>Icon Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="191"/>
+        <source>&amp;Quit Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="194"/>
+        <source>Closes the program</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="197"/>
+        <source>Exits the application.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="200"/>
+        <source>Ctrl+Q</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="205"/>
+        <source>&amp;Hide Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="208"/>
+        <source>Hides the main Mumble window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="211"/>
+        <source>Hides the main Mumble window. Restore by clicking on the tray icon or starting Mumble again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="220"/>
+        <source>&amp;Connect...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="223"/>
+        <source>Open the server connection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="226"/>
         <source>Shows a dialog of registered servers, and also allows quick-connect.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="237"/>
+        <source>&amp;Disconnect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="240"/>
+        <source>Disconnect from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="243"/>
+        <source>Disconnects you from the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="251"/>
+        <source>&amp;Ban list...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="254"/>
+        <source>Edit ban list on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="257"/>
+        <source>This lets you edit the server-side IP ban list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="269"/>
+        <location filename="MainWindow.ui" line="855"/>
+        <source>&amp;Information...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="272"/>
+        <source>Show information about the server connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="275"/>
+        <source>This will show extended information about the connection to the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="283"/>
+        <source>&amp;Kick...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="286"/>
         <source>Kick user (with reason)</source>
-        <translation>Išmesti naudotoją (su priežastimi)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="289"/>
         <source>Kick selected user off server. You&apos;ll be asked to specify a reason.</source>
-        <translation>Išmesti pasirinktą naudotoją iš serverio. Jūsų bus paprašyta nurodyti priežastį.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="297"/>
+        <source>&amp;Mute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="300"/>
         <source>Mute user</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="303"/>
         <source>Mute or unmute user on server. Unmuting a deafened user will also undeafen them.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="308"/>
+        <source>&amp;Ban...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="311"/>
         <source>Kick and ban user (with reason)</source>
-        <translation>Išmesti ir uždrausti naudotoją (su priežastimi)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="314"/>
         <source>Kick and ban selected user from server. You&apos;ll be asked to specify a reason.</source>
-        <translation>Išmesti pasirinktą naudotoją iš serverio ir jį uždrausti. Jūsų bus paprašyta nurodyti priežastį.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="322"/>
+        <source>&amp;Deafen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="325"/>
         <source>Deafen user</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="328"/>
         <source>Deafen or undeafen user on server. Deafening a user will also mute them.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="336"/>
+        <source>Ignore Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="339"/>
+        <source>Locally ignore user&apos;s text chat messages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="342"/>
+        <source>Silently drops all text messages from the user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="347"/>
+        <location filename="MainWindow.ui" line="933"/>
+        <source>Local Volume Adjustment...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="350"/>
+        <source>Locally adjust the user&apos;s speech volume.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="353"/>
+        <source>Opens a dialog with a volume slider. Use this on other users in the same room.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="361"/>
+        <source>&amp;Local Mute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="364"/>
         <source>Mute user locally</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="367"/>
         <source>Mute or unmute user locally. Use this on other users in the same room.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="372"/>
+        <location filename="MainWindow.ui" line="678"/>
+        <source>Send &amp;Message...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="375"/>
+        <location filename="MainWindow.ui" line="681"/>
+        <source>Send a Text Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="378"/>
+        <source>Sends a text message to another user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="383"/>
+        <source>&amp;Add...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="386"/>
+        <source>Add new channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="389"/>
+        <source>This adds a new sub-channel to the currently selected channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="394"/>
+        <source>&amp;Remove...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="397"/>
+        <source>Remove channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="400"/>
+        <source>This removes a channel and all sub-channels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="405"/>
+        <source>&amp;Edit...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="408"/>
+        <source>Edit Groups and ACL for channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="411"/>
+        <source>This opens the Group and ACL dialog for the channel, to control permissions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="416"/>
+        <source>&amp;Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="419"/>
+        <source>Link your channel to another channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="422"/>
         <source>This links your current channel to the selected channel. If users in a channel have permission to speak in the other channel, users can now hear each other. This is a permanent link, and will last until manually unlinked or the server is restarted. Please see the shortcuts for push-to-link.</source>
-        <oldsource>This links your current channel to the selected channel. If they have permission to speak in the other channel, users can now hear each other. This is a permanent link, and will last until manually unlinked or the server is restarted. Please see the shortcuts for push-to-link.</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="427"/>
         <source>&amp;Unlink</source>
         <comment>Channel</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="430"/>
         <source>Unlink your channel from another channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="433"/>
         <source>This unlinks your current channel from the selected channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unlinks your channel from all linked channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This unlinks your current channel (not the selected one) from all linked channels.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Reset</source>
-        <translation>&amp;Atstatyti</translation>
-    </message>
-    <message>
-        <source>Reset audio preprocessor</source>
-        <translation>Atstatyti parengiamąją doroklę</translation>
-    </message>
-    <message>
-        <source>This will reset the audio preprocessor, including noise cancellation, automatic gain and voice activity detection. If something suddenly worsens the audio environment (like dropping the microphone) and it was temporary, use this to avoid having to wait for the preprocessor to readjust.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Mute Self</source>
-        <translation>&amp;Nutildyti save</translation>
-    </message>
-    <message>
-        <source>Mute yourself</source>
-        <translation>Nutildyti save</translation>
-    </message>
-    <message>
-        <source>Mute or unmute yourself. When muted, you will not send any data to the server. Unmuting while deafened will also undeafen.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Deafen Self</source>
-        <translation>&amp;Apkurtinti save</translation>
-    </message>
-    <message>
-        <source>Deafen yourself</source>
-        <translation>Apkurtinti save</translation>
-    </message>
-    <message>
-        <source>Deafen or undeafen yourself. When deafened, you will not hear anything. Deafening yourself will also mute.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Text-To-Speech</source>
-        <translation>Garsinis &amp;teksto atkūrimas</translation>
-    </message>
-    <message>
-        <source>Toggle Text-To-Speech</source>
-        <translation>Perjungti garsinį teksto atkūrimą</translation>
-    </message>
-    <message>
-        <source>Enable or disable the text-to-speech engine. Only messages enabled for TTS in the Configuration dialog will actually be spoken.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Display audio statistics</source>
-        <translation>Rodyti garso statistiką</translation>
-    </message>
-    <message>
-        <source>Pops up a small dialog with information about your current audio input.</source>
-        <translation>Parodo nedidelį dialogą su informacija apie jūsų esamą garso įvestį.</translation>
-    </message>
-    <message>
-        <source>Forcibly unlink plugin</source>
-        <translation>Priverstinai atsieti įskiepį</translation>
-    </message>
-    <message>
-        <source>This forces the current plugin to unlink, which is handy if it is reading completely wrong data.</source>
-        <translation>Tai priverstinai atsieja esamą įskiepį, kas praverčia tuo atveju, jei įskiepis skaito visiškai neteisingus duomenis.</translation>
-    </message>
-    <message>
-        <source>Configure Mumble</source>
-        <translation>Konfigūruoti Mumble</translation>
-    </message>
-    <message>
-        <source>Allows you to change most settings for Mumble.</source>
-        <translation>Leidžia jums keisti didžiąją Mumble nustatymų dalį.</translation>
-    </message>
-    <message>
-        <source>Start the audio configuration wizard</source>
-        <translation>Paleisti garso konfigūravimo vediklį</translation>
-    </message>
-    <message>
-        <source>This will guide you through the process of configuring your audio hardware.</source>
-        <translation>Tai vadovaus jums per jūsų garso aparatinės įrangos konfigūravimo procesą.</translation>
-    </message>
-    <message>
-        <source>&amp;What&apos;s This?</source>
-        <translation>&amp;Kas tai?</translation>
-    </message>
-    <message>
-        <source>Enter What&apos;s This? mode</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Click this to enter &quot;What&apos;s This?&quot; mode. Your cursor will turn into a question mark. Click on any button, menu choice or area to show a description of what it is.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Information about Mumble</source>
-        <translation>Informacija apie Mumble</translation>
-    </message>
-    <message>
-        <source>Shows a small dialog with information and license for Mumble.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Information about Speex</source>
-        <translation>Informacija apie Speex</translation>
-    </message>
-    <message>
-        <source>Shows a small dialog with information about Speex.</source>
-        <translation>Rodo mažą dialogą su informacija apie Speex.</translation>
-    </message>
-    <message>
-        <source>Information about Qt</source>
-        <translation>Informacija apie Qt</translation>
-    </message>
-    <message>
-        <source>Shows a small dialog with information about Qt.</source>
-        <translation>Rodo mažą dialogą su informacija apie Qt.</translation>
-    </message>
-    <message>
-        <source>Check for &amp;Updates</source>
-        <translation>Tikrinti ar yra atna&amp;ujinimų</translation>
-    </message>
-    <message>
-        <source>Check for new version of Mumble</source>
-        <translation>Tikrinti ar yra nauja Mumble versija</translation>
-    </message>
-    <message>
-        <source>Connects to the Mumble webpage to check if a new version is available, and notifies you with an appropriate download URL if this is the case.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Sends a text message to all users in a channel.</source>
-        <translation>Siunčia tekstinę žinutę visiems naudotojams kanale.</translation>
-    </message>
-    <message>
-        <source>Configure certificates for strong authentication</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>This starts the wizard for creating, importing and exporting certificates for authentication against servers.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Register user on server</source>
-        <translation>Registruoti naudotoją serveryje</translation>
-    </message>
-    <message>
-        <source>This will permanently register the user on the server.</source>
-        <translation>Tai ilgam užregistruos naudotoją serveryje.</translation>
-    </message>
-    <message>
-        <source>Add &amp;Friend</source>
-        <translation>Pridėti &amp;draugą</translation>
-    </message>
-    <message>
-        <source>Adds a user as your friend.</source>
-        <translation>Prideda naudotoją kaip jūsų draugą.</translation>
-    </message>
-    <message>
-        <source>This will add the user as a friend, so you can recognize him on this and other servers.</source>
-        <translation>Tai pridės naudotoją kaip draugą, taigi, galėsite jį atpažinti šiame bei kituose serveriuose.</translation>
-    </message>
-    <message>
-        <source>&amp;Remove Friend</source>
-        <translation>Ša&amp;linti draugą</translation>
-    </message>
-    <message>
-        <source>Removes a user from your friends.</source>
-        <translation>Pašalina naudotoją iš jūsų draugų.</translation>
-    </message>
-    <message>
-        <source>This will remove a user from your friends list.</source>
-        <translation>Tai pašalins naudotoją iš jūsų draugų sąrašo.</translation>
-    </message>
-    <message>
-        <source>&amp;Update Friend</source>
-        <translation>Atna&amp;ujinti draugą</translation>
-    </message>
-    <message>
-        <source>Update name of your friend.</source>
-        <translation>Atnaujinti jūsų draugo vardą.</translation>
-    </message>
-    <message>
-        <source>Your friend uses a different name than what is in your database. This will update the name.</source>
-        <translation>Jūsų draugas naudoją kitą vardą, nei tas kuris yra jūsų duomenų bazėje. Tai atnaujins jo vardą.</translation>
-    </message>
-    <message>
-        <source>Edit registered users list</source>
-        <translation>Redaguoti registruotų naudotojų sąrašą</translation>
-    </message>
-    <message>
-        <source>This opens the editor for registered users, which allow you to change their name or unregister them.</source>
-        <translation>Tai atveria registruotų naudotojų redaktorių, leidžiantį jums keisti naudotojų vardus ar juos išregistruoti.</translation>
-    </message>
-    <message>
-        <source>Add or remove text-based access tokens</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Minimal View</source>
-        <translation>&amp;Minimalus rodinys</translation>
-    </message>
-    <message>
-        <source>Toggle minimal window modes</source>
-        <translation>Perjungti minimalią lango veikseną</translation>
-    </message>
-    <message>
-        <source>This will toggle minimal mode, where the log window and menu is hidden.</source>
-        <translation>Tai perjungs minimalią veikseną, tokią, kurioje žurnalo langas ir meniu yra paslėpti.</translation>
-    </message>
-    <message>
-        <source>You muted and deafened %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You unmuted and undeafened %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You undeafened %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You suppressed %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 muted and deafened by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 unmuted and undeafened by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 undeafened by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 suppressed by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 moved to %2.</source>
-        <translation>Naudotojas %1 perkeltas į %2.</translation>
-    </message>
-    <message>
-        <source>%1 moved to %2 by %3.</source>
-        <translation>%3 perkėlė naudotoją %1 į %2.</translation>
-    </message>
-    <message>
-        <source>%1 moved in from %2 by %3.</source>
-        <translation>%3 perkėlė %1 iš %2.</translation>
-    </message>
-    <message>
-        <source>%1 is now muted and deafened.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Your account information can not be verified currently. Please try again later</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Welcome message: %1</source>
-        <translation>Pasisveikinimo žinutė: %1</translation>
-    </message>
-    <message>
-        <source>Mumble: %1</source>
-        <translation>Mumble: %1</translation>
-    </message>
-    <message>
-        <source>You were denied %1 privileges in %2.</source>
-        <translation>Jums buvo uždraustas leidimas %1, kanale %2.</translation>
-    </message>
-    <message>
-        <source>%3 was denied %1 privileges in %2.</source>
-        <translation>%3 buvo uždraustas leidimas %1, kanale %2.</translation>
-    </message>
-    <message>
-        <source>Denied: Cannot modify SuperUser.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Denied: Invalid channel name.</source>
-        <translation>Atmesta: Neteisingas kanalo pavadinimas.</translation>
-    </message>
-    <message>
-        <source>Denied: Text message too long.</source>
-        <translation>Atmesta: Teksto žinutė yra per ilga.</translation>
-    </message>
-    <message>
-        <source>Denied: Operation not permitted in temporary channel.</source>
-        <translation>Atmesta: Laikiname kanale operacija nėra leidžiama.</translation>
-    </message>
-    <message>
-        <source>You need a certificate to perform this operation.</source>
-        <translation>Jums reikalingas liudijimas, norint atlikti šią operaciją.</translation>
-    </message>
-    <message>
-        <source>%1 does not have a certificate.</source>
-        <translation>%1 neturi liudijimo.</translation>
-    </message>
-    <message>
-        <source>Invalid username: %1.</source>
-        <translation>Neteisingas naudotojo vardas: %1.</translation>
-    </message>
-    <message>
-        <source>Invalid username.</source>
-        <translation>Neteisingas naudotojo vardas.</translation>
-    </message>
-    <message>
-        <source>Channel is full.</source>
-        <translation>Kanalas pilnas.</translation>
-    </message>
-    <message>
-        <source>Channel nesting limit reached.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel count limit reached. Need to delete channels before creating new ones.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Permission denied.</source>
-        <translation>Leidimas atmestas.</translation>
-    </message>
-    <message>
-        <source>%1 connected and entered channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 connected.</source>
-        <translation>%1 prisijungė.</translation>
-    </message>
-    <message>
-        <source>%1 is now muted.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 is now unmuted.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Recording started</source>
-        <translation>Įrašymas pradėtas</translation>
-    </message>
-    <message>
-        <source>Recording stopped</source>
-        <translation>Įrašymas sustabdytas</translation>
-    </message>
-    <message>
-        <source>%1 started recording.</source>
-        <translation>%1 pradėjo įrašymą.</translation>
-    </message>
-    <message>
-        <source>%1 stopped recording.</source>
-        <translation>%1 sustabdė įrašymą.</translation>
-    </message>
-    <message>
-        <source>You revoked your priority speaker status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You assumed priority speaker status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 revoked your priority speaker status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 gave you priority speaker status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You revoked priority speaker status for %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You gave priority speaker status to %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 revoked own priority speaker status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 assumed priority speaker status.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 revoked priority speaker status for %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 gave priority speaker status to %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were unmuted and undeafened by %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were muted by %1.</source>
-        <translation>%1 jus nutildė.</translation>
-    </message>
-    <message>
-        <source>You were undeafened by %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were suppressed.</source>
-        <oldsource>You were suppressed by %1.</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were unsuppressed.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were unsuppressed by %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You joined %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You moved %1 to %2.</source>
-        <translation>Jūs perkėlėte %1 į %2.</translation>
-    </message>
-    <message>
-        <source>%1 is recording</source>
-        <translation>%1 įrašinėja</translation>
-    </message>
-    <message>
-        <source>%1 renamed to %2 by %3.</source>
-        <translation>%3 pervadino %1 į %2.</translation>
-    </message>
-    <message>
-        <source>%1 disconnected.</source>
-        <translation>%1 atsijungė.</translation>
-    </message>
-    <message>
-        <source>Server</source>
-        <comment>message from</comment>
-        <translation>Serveris</translation>
-    </message>
-    <message>
-        <source>Failed to load Opus, it will not be available for audio encoding/decoding.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The server requests minimum client version %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The server requests positional audio be enabled.</source>
-        <translation>Serveris prašo, kad pozicinis garsas būtų įjungtas.</translation>
-    </message>
-    <message>
-        <source>The server requests positional audio be disabled.</source>
-        <translation>Serveris prašo, kad pozicinis garsas būtų išjungtas.</translation>
-    </message>
-    <message>
-        <source>The server requests Push-to-Talk be enabled.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The server requests Push-to-Talk be disabled.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were unmuted by %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You muted %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You unsuppressed %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You unmuted %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 muted by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 unsuppressed by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 unmuted by %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Unable to find matching CELT codecs with other clients. You will not be able to talk to all users.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You were muted and deafened by %1.</source>
-        <oldsource>You were deafened by %1.</oldsource>
-        <translation>%1 jus nutildė ir apkurtino.</translation>
-    </message>
-    <message>
-        <source>You were kicked from the server by %1: %2.</source>
-        <translation>%1 išmetė jus iš serverio: %2.</translation>
-    </message>
-    <message>
-        <source>%3 was kicked from the server by %1: %2.</source>
-        <translation>%1 išmetė naudotoją %3 iš serverio: %2.</translation>
-    </message>
-    <message>
-        <source>You were kicked and banned from the server by %1: %2.</source>
-        <translation>%1 išmetė jus iš serverio ir uždraudė jus: %2.</translation>
-    </message>
-    <message>
-        <source>%3 was kicked and banned from the server by %1: %2.</source>
-        <translation>%1 išmetė naudotoją %3 iš serverio ir jį uždraudė: %2.</translation>
-    </message>
-    <message>
-        <source>You were moved to %1 by %2.</source>
-        <translation>%2 jus perkėlė į %1.</translation>
-    </message>
-    <message>
-        <source>%1 entered channel.</source>
-        <translation>%1 užėjo į kanalą.</translation>
-    </message>
-    <message>
-        <source>Server connection rejected: %1.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Denied: %1.</source>
-        <translation>Atmesta: %1.</translation>
-    </message>
-    <message>
-        <source>%1 renamed to %2.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 left channel and disconnected.</source>
-        <translation>%1 išėjo iš kanalo ir atsijungė.</translation>
-    </message>
-    <message>
-        <source>Message from %1</source>
-        <translation>Žinutė nuo %1</translation>
-    </message>
-    <message>
-        <source>You have User Dragging set to &quot;Do Nothing&quot; so the user wasn&apos;t moved.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You have Channel Dragging set to &quot;Do Nothing&quot; so the channel wasn&apos;t moved.</source>
-        <translation>Jūs esate nusistatę kanalų tempimą į &quot;Nieko nedaryti&quot;, taigi, kanalas nebuvo perkeltas.</translation>
-    </message>
-    <message>
-        <source>Unknown Channel Drag mode in UserModel::dropMimeData.</source>
-        <translation>Nežinoma kanalų tempimo veiksena ties UserModel::dropMimeData.</translation>
-    </message>
-    <message>
-        <source>Remote controlling Mumble:
-
-</source>
-        <translation>Nuotolinis Mumble valdymas:
-
-</translation>
-    </message>
-    <message>
-        <source>Usage: mumble rpc &lt;action&gt; [options]
-
-It is possible to remote control a running instance of Mumble by using
-the 'mumble rpc' command.
-
-Valid actions are:
-  mute
-                Mute self
-  unmute
-                Unmute self
-  togglemute
-                Toggle self-mute status
-  deaf
-                Deafen self
-  undeaf
-                Undeafen self
-  toggledeaf
-                Toggle self-deafen status
-
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Invocation</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Error: No RPC command specified</source>
-        <translation>Klaida: Nenurodyta RPC komanda</translation>
-    </message>
-    <message>
-        <source>RPC</source>
-        <translation>RPC</translation>
-    </message>
-    <message>
-        <source>Welcome to Mumble.</source>
-        <translation>Sveiki atvykę į Mumble.</translation>
-    </message>
-    <message>
-        <source>Skipping version check in debug mode.</source>
-        <translation>Derinimo veiksenoje, praleidžiamas versijos tikrinimas.</translation>
-    </message>
-    <message>
-        <source>Hide Frame</source>
-        <translation>Slėpti rėmelį</translation>
-    </message>
-    <message>
-        <source>Toggle showing frame on minimal window</source>
-        <translation>Perjungia rėmelio rodymą minimaliame lange</translation>
-    </message>
-    <message>
-        <source>This will toggle whether the minimal window should have a frame for moving and resizing.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="438"/>
         <source>&amp;Unlink All</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Reset the comment of the selected user.</source>
-        <translation>Atstatyti pasirinkto naudotojo komentarą.</translation>
+        <location filename="MainWindow.ui" line="441"/>
+        <source>Unlinks your channel from all linked channels.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Join Channel</source>
-        <translation>&amp;Prisijungti prie kanalo</translation>
+        <location filename="MainWindow.ui" line="444"/>
+        <source>This unlinks your current channel (not the selected one) from all linked channels.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>View comment in editor</source>
-        <translation>Rodyti komentarą redaktoriuje</translation>
+        <location filename="MainWindow.ui" line="449"/>
+        <source>&amp;Reset</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Query server for connection information for user</source>
-        <translation type="unfinished"/>
+        <location filename="MainWindow.ui" line="452"/>
+        <source>Reset audio preprocessor</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>S&amp;erver</source>
-        <translation>S&amp;erveris</translation>
+        <location filename="MainWindow.ui" line="455"/>
+        <source>This will reset the audio preprocessor, including noise cancellation, automatic gain and voice activity detection. If something suddenly worsens the audio environment (like dropping the microphone) and it was temporary, use this to avoid having to wait for the preprocessor to readjust.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Self</source>
-        <translation>&amp;Save</translation>
+        <location filename="MainWindow.ui" line="469"/>
+        <source>&amp;Mute Self</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="472"/>
+        <source>Mute yourself</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="475"/>
+        <source>Mute or unmute yourself. When muted, you will not send any data to the server. Unmuting while deafened will also undeafen.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="492"/>
+        <source>&amp;Deafen Self</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="495"/>
+        <source>Deafen yourself</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="498"/>
+        <source>Deafen or undeafen yourself. When deafened, you will not hear anything. Deafening yourself will also mute.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="509"/>
+        <source>&amp;Text-To-Speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="512"/>
+        <source>Toggle Text-To-Speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="515"/>
+        <source>Enable or disable the text-to-speech engine. Only messages enabled for TTS in the Configuration dialog will actually be spoken.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="520"/>
+        <source>Audio S&amp;tatistics...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="523"/>
+        <source>Display audio statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="526"/>
+        <source>Pops up a small dialog with information about your current audio input.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="531"/>
         <source>&amp;Unlink Plugins</source>
-        <translation>A&amp;tsieti įskiepius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Register yourself on the server</source>
-        <translation>Užregistruoti save serveryje</translation>
+        <location filename="MainWindow.ui" line="534"/>
+        <source>Forcibly unlink plugin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Change your avatar image on this server</source>
-        <translation>Keisti savo avataro paveikslą šiame serveryje</translation>
+        <location filename="MainWindow.ui" line="537"/>
+        <source>This forces the current plugin to unlink, which is handy if it is reading completely wrong data.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Remove Avatar</source>
-        <translation>Ša&amp;linti avatarą</translation>
+        <location filename="MainWindow.ui" line="546"/>
+        <source>&amp;Settings...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove currently defined avatar image.</source>
-        <translation>Šalinti šiuo metu nustatytą avataro paveikslą.</translation>
+        <location filename="MainWindow.ui" line="549"/>
+        <source>Configure Mumble</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Icon Toolbar</source>
-        <translation>Piktogramų įrankių juosta</translation>
+        <location filename="MainWindow.ui" line="552"/>
+        <source>Allows you to change most settings for Mumble.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Keisti savo komentarą</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Įrašymas</translation>
-    </message>
-    <message>
-        <source>Priority Speaker</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Copy URL</source>
-        <translation>&amp;Kopijuoti URL</translation>
-    </message>
-    <message>
-        <source>Copies a link to this channel to the clipboard.</source>
-        <translation>Kopijuoja nuorodą į šį kanalą į iškarpinę.</translation>
-    </message>
-    <message>
-        <source>Ignore Messages</source>
-        <translation>Nepaisyti žinučių</translation>
-    </message>
-    <message>
-        <source>Locally ignore user&apos;s text chat messages.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Silently drops all text messages from the user.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Edit ban list on server</source>
-        <translation>Taisyti uždraudimų serveryje sąrašą</translation>
-    </message>
-    <message>
-        <source>This lets you edit the server-side IP ban list.</source>
-        <translation>Tai leidžia jums serveryje taisyti IP uždraudimų sąrašą.</translation>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="572"/>
         <source>&amp;Filter on/off</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="575"/>
         <source>Toggle the channel filter (Ctrl+F)</source>
-        <translation>Perjungti kanalo filtrą (Ctrl+F)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="578"/>
         <source>Enable or disable the filtering of select channels.
 By default all empty channels will be filtered.
 You can mark additional channels for filtering from
 the channel&apos;s context menu.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="584"/>
         <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Hide Channel when Filtering</source>
-        <translation>&amp;Filtruojant, slėpti kanalą</translation>
-    </message>
-    <message>
-        <source>Reset the avatar of the selected user.</source>
-        <translation>Atstatyti pasirinkto naudotojo avatarą.</translation>
-    </message>
-    <message>
-        <source>Locally adjust the user&apos;s speech volume.</source>
-        <translation>Vietos mastu reguliuoti naudotojo kalbos garsį.</translation>
-    </message>
-    <message>
-        <source>Opens a dialog with a volume slider. Use this on other users in the same room.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Developer</source>
-        <translation>&amp;Kūrėjas</translation>
-    </message>
-    <message>
-        <source>&amp;Hide Mumble</source>
-        <translation>&amp;Slėpti Mumble</translation>
-    </message>
-    <message>
-        <source>Hides the main Mumble window.</source>
-        <translation>Slepia pagrindinį Mumble langą.</translation>
-    </message>
-    <message>
-        <source>Hides the main Mumble window. Restore by clicking on the tray icon or starting Mumble again.</source>
-        <translation>Slepia pagrindinį Mumble langą. Atkurkite, spusteldami dėklo piktogramą arba vėl paleisdami Mumble.</translation>
-    </message>
-    <message>
-        <source>Show the Developer Console</source>
-        <translation>Rodyti kūrėjo pultą</translation>
-    </message>
-    <message>
-        <source>Shows the Mumble Developer Console, where Mumble&apos;s log output can be inspected.</source>
-        <translation>Rodo Mumble kūrėjo pultą, kuriame gali būti išnagrinėta Mumble žurnalo išvestis.</translation>
-    </message>
-    <message>
-        <source>&amp;Connect...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Ban list...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Information...</source>
-        <translation>&amp;Informacija...</translation>
-    </message>
-    <message>
-        <source>&amp;Kick...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&amp;Ban...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Local Volume Adjustment...</source>
-        <translation>Vietinio garsio reguliavimas...</translation>
-    </message>
-    <message>
-        <source>Send &amp;Message...</source>
-        <translation>Siųsti &amp;žinutę...</translation>
-    </message>
-    <message>
-        <source>&amp;Add...</source>
-        <translation>&amp;Pridėti...</translation>
-    </message>
-    <message>
-        <source>&amp;Remove...</source>
-        <translation>Š&amp;alinti...</translation>
-    </message>
-    <message>
-        <source>&amp;Edit...</source>
-        <translation>&amp;Taisyti...</translation>
-    </message>
-    <message>
-        <source>Audio S&amp;tatistics...</source>
-        <translation>Garso s&amp;tatistika...</translation>
-    </message>
-    <message>
-        <source>&amp;Settings...</source>
-        <translation>Nu&amp;statymai...</translation>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="592"/>
         <source>&amp;Audio Wizard...</source>
-        <translation>G&amp;arso vediklis...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="595"/>
+        <source>Start the audio configuration wizard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="598"/>
+        <source>This will guide you through the process of configuring your audio hardware.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="603"/>
         <source>Developer &amp;Console...</source>
-        <translation>Kūrėjo &amp;pultas...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="606"/>
+        <source>Show the Developer Console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="609"/>
+        <source>Shows the Mumble Developer Console, where Mumble&apos;s log output can be inspected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="614"/>
+        <source>&amp;What&apos;s This?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="617"/>
+        <source>Enter What&apos;s This? mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="620"/>
+        <source>Click this to enter &quot;What&apos;s This?&quot; mode. Your cursor will turn into a question mark. Click on any button, menu choice or area to show a description of what it is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="625"/>
         <source>&amp;About...</source>
-        <translation>&amp;Apie...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="628"/>
+        <source>Information about Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="631"/>
+        <source>Shows a small dialog with information and license for Mumble.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="639"/>
         <source>About &amp;Speex...</source>
-        <translation>Apie &amp;Speex...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="642"/>
+        <source>Information about Speex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="645"/>
+        <source>Shows a small dialog with information about Speex.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="653"/>
         <source>About &amp;Qt...</source>
-        <translation>Apie &amp;Qt...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="656"/>
+        <source>Information about Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="659"/>
+        <source>Shows a small dialog with information about Qt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="667"/>
+        <source>Check for &amp;Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="670"/>
+        <source>Check for new version of Mumble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="673"/>
+        <source>Connects to the Mumble webpage to check if a new version is available, and notifies you with an appropriate download URL if this is the case.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="684"/>
+        <source>Sends a text message to all users in a channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="689"/>
+        <source>&amp;Copy URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="692"/>
+        <location filename="MainWindow.ui" line="695"/>
+        <source>Copies a link to this channel to the clipboard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="703"/>
+        <source>&amp;Minimal View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="706"/>
+        <source>Toggle minimal window modes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="709"/>
+        <source>This will toggle minimal mode, where the log window and menu is hidden.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="717"/>
+        <source>Hide Frame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="720"/>
+        <source>Toggle showing frame on minimal window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="723"/>
+        <source>This will toggle whether the minimal window should have a frame for moving and resizing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="728"/>
         <source>&amp;Certificate Wizard...</source>
-        <translation>&amp;Liudijimų vediklis...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="731"/>
+        <source>Configure certificates for strong authentication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="734"/>
+        <source>This starts the wizard for creating, importing and exporting certificates for authentication against servers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="739"/>
         <source>&amp;Register...</source>
-        <translation>&amp;Registruoti...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="742"/>
+        <source>Register user on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="745"/>
+        <source>This will permanently register the user on the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="750"/>
+        <source>Add &amp;Friend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="753"/>
+        <source>Adds a user as your friend.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="756"/>
+        <source>This will add the user as a friend, so you can recognize him on this and other servers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="761"/>
+        <source>&amp;Remove Friend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="764"/>
+        <source>Removes a user from your friends.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="767"/>
+        <source>This will remove a user from your friends list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="772"/>
+        <source>&amp;Update Friend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="775"/>
+        <source>Update name of your friend.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="778"/>
+        <source>Your friend uses a different name than what is in your database. This will update the name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="783"/>
         <source>Registered &amp;Users...</source>
-        <translation>Registruoti na&amp;udotojai...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="786"/>
+        <source>Edit registered users list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="789"/>
+        <source>This opens the editor for registered users, which allow you to change their name or unregister them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="794"/>
         <source>Change &amp;Avatar...</source>
-        <translation>Keisti &amp;avatarą...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="797"/>
+        <source>Change your avatar image on this server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="802"/>
         <source>&amp;Access Tokens...</source>
-        <translation>P&amp;rieigos raktai...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="805"/>
+        <source>Add or remove text-based access tokens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="810"/>
+        <source>&amp;Remove Avatar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="813"/>
+        <source>Remove currently defined avatar image.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="818"/>
         <source>Reset &amp;Comment...</source>
-        <translation>Atstatyti &amp;komentarą...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="821"/>
+        <source>Reset the comment of the selected user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="826"/>
         <source>Reset &amp;Avatar...</source>
-        <translation>Atstatyti &amp;avatarą...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="829"/>
+        <source>Reset the avatar of the selected user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="834"/>
+        <source>&amp;Join Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="842"/>
+        <source>&amp;Hide Channel when Filtering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="847"/>
         <source>View Comment...</source>
-        <translation>Žiūrėti komentarą...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="850"/>
+        <source>View comment in editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="858"/>
+        <source>Query server for connection information for user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="867"/>
         <source>&amp;Change Comment...</source>
-        <translation>K&amp;eisti komentarą...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="870"/>
+        <source>Change your own comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="878"/>
         <source>R&amp;egister...</source>
-        <translation>R&amp;egistruoti...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="881"/>
+        <source>Register yourself on the server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="889"/>
+        <location filename="MainWindow.ui" line="897"/>
+        <source>Priority Speaker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="906"/>
+        <source>Recording</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="914"/>
         <source>Show</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="917"/>
         <source>Shows the main Mumble window.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Server sync protocol violation. No user profile received.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Protocol violation. Server sent remove for occupied channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="925"/>
         <source>Listen to channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="928"/>
         <source>Listen to this channel without joining it</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="936"/>
         <source>Locally adjust the volume for this virtual ear.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Listener</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>No action available...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Unable to %1 into %2 - Adding the respective access (password) token might grant you access.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>No more listeners allowed in this channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You are not allowed to listen to more channels than you currently are.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You started listening to %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 started listening to your channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>You stopped listening to %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 stopped listening to your channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="MainWindow.ui" line="944"/>
         <source>Talking UI</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="947"/>
         <source>Toggles the visibility of the TalkingUI.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="952"/>
         <source>Join user&apos;s channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="955"/>
         <source>Joins the channel of this user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.ui" line="963"/>
+        <source>Disable Text-To-Speech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="966"/>
+        <source>Locally disable Text-To-Speech for this user&apos;s text chat messages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.ui" line="969"/>
+        <source>Silently disables Text-To-Speech for all text messages from the user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="142"/>
+        <source>Configuration file %1 does not exist or is not writable.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="179"/>
         <source>Usage: mumble [options] [&lt;url&gt;]
 
 &lt;url&gt; specifies a URL to connect to after startup instead of showing
@@ -6049,6 +6138,10 @@ Valid options are:
   -h, --help    Show this help text and exit.
   -m, --multiple
                 Allow multiple instances of the client to be started.
+  -c, --config
+                Specify an alternative configuration file.
+                If you use this to run multiple instances of Mumble at once,
+                make sure to set an alternative &apos;database&apos; value in the config.
   -n, --noidentity
                 Suppress loading of identity files (i.e., certificates.)
   -jn, --jackname &lt;arg&gt;
@@ -6072,1975 +6165,3814 @@ Valid options are:
                 (useful for debugging purposes)
 
 </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="main.cpp" line="219"/>
+        <source>Remote controlling Mumble:
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="222"/>
+        <source>Usage: mumble rpc &lt;action&gt; [options]
+
+It is possible to remote control a running instance of Mumble by using
+the &apos;mumble rpc&apos; command.
+
+Valid actions are:
+  mute
+                Mute self
+  unmute
+                Unmute self
+  togglemute
+                Toggle self-mute status
+  deaf
+                Deafen self
+  undeaf
+                Undeafen self
+  toggledeaf
+                Toggle self-deafen status
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="248"/>
+        <source>Invocation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="290"/>
+        <source>Error: No RPC command specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="292"/>
+        <source>RPC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="565"/>
+        <source>Welcome to Mumble.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="main.cpp" line="644"/>
+        <source>Skipping version check in debug mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="134"/>
+        <location filename="MainWindow.cpp" line="3148"/>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="150"/>
+        <source>&amp;User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="151"/>
+        <source>&amp;Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="152"/>
+        <source>&amp;Listener</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="154"/>
+        <source>&amp;Developer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="156"/>
+        <source>No action available...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="162"/>
         <source>Channels and users</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.cpp" line="163"/>
         <source>Activity log</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.cpp" line="164"/>
         <source>Chat message</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Disable Text-To-Speech</source>
-        <translation type="unfinished"/>
+        <location filename="MainWindow.cpp" line="193"/>
+        <source>Push-to-Talk</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Locally disable Text-To-Speech for this user&apos;s text chat messages.</source>
-        <translation type="unfinished"/>
+        <location filename="MainWindow.cpp" line="195"/>
+        <source>Push and hold this button to send voice.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Silently disables Text-To-Speech for all text messages from the user.</source>
-        <translation type="unfinished"/>
+        <location filename="MainWindow.cpp" line="196"/>
+        <source>This configures the push-to-talk button, and as long as you hold this button down, you will transmit voice.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.cpp" line="201"/>
+        <source>Reset Audio Processor</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="204"/>
+        <source>Mute Self</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="206"/>
+        <source>Set self-mute status.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="208"/>
+        <source>This will set or toggle your muted status. If you turn this off, you will also disable self-deafen.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="211"/>
+        <source>Deafen Self</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="213"/>
+        <source>Set self-deafen status.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="215"/>
+        <source>This will set or toggle your deafened status. If you turn this on, you will also enable self-mute.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="218"/>
+        <source>Unlink Plugin</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="221"/>
+        <source>Push-to-Mute</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="224"/>
+        <source>Join Channel</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="226"/>
+        <location filename="MainWindow.cpp" line="255"/>
+        <source>Use in conjunction with Whisper to.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="229"/>
+        <source>Toggle Overlay</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="231"/>
+        <source>Toggle state of in-game overlay.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="232"/>
+        <source>This will switch the states of the in-game overlay.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="237"/>
+        <source>Toggle Minimal</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="240"/>
+        <source>Volume Up (+10%)</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="243"/>
+        <source>Volume Down (-10%)</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="247"/>
+        <location filename="MainWindow.cpp" line="416"/>
+        <location filename="MainWindow.cpp" line="3383"/>
+        <source>Mumble -- %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="250"/>
+        <source>Whisper/Shout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="253"/>
+        <source>Link Channel</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="257"/>
+        <source>Cycle Transmit Mode</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="261"/>
+        <source>Set Transmit Mode to Push-To-Talk</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="265"/>
+        <source>Set Transmit Mode to Continuous</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="268"/>
+        <source>Set Transmit Mode to VAD</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="272"/>
+        <source>Send Text Message</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="275"/>
+        <source>Send Clipboard Text Message</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="278"/>
+        <source>This will send your Clipboard content to the channel you are currently in.</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="291"/>
+        <source>&amp;Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="293"/>
+        <location filename="MainWindow.cpp" line="478"/>
+        <source>Minimize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="293"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="349"/>
+        <location filename="MainWindow.cpp" line="3483"/>
+        <source>&lt;center&gt;Not connected&lt;/center&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="372"/>
+        <source>Continuous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="373"/>
+        <source>Voice Activity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="374"/>
+        <source>Push-to-Talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="414"/>
+        <source>Mumble - Minimal View -- %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="475"/>
+        <source>Mumble is currently connected to a server. Do you want to Close or Minimize it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="477"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="479"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="810"/>
+        <source>Save Image As...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="816"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="826"/>
+        <source>Save Image File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="827"/>
+        <location filename="MainWindow.cpp" line="3593"/>
+        <source>Images (*.png *.jpg *.jpeg)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="845"/>
+        <source>Could not save image: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="894"/>
+        <source>Opening URL %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="898"/>
+        <source>File does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="906"/>
+        <source>File is not a configuration file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="912"/>
+        <source>Settings merged from file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="918"/>
+        <source>URL scheme is not &apos;mumble&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="938"/>
+        <source>This version of Mumble can&apos;t handle URLs for Mumble version %1.%2.%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="972"/>
+        <source>Connecting to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="972"/>
+        <source>Enter username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="988"/>
+        <location filename="MainWindow.cpp" line="1211"/>
+        <source>Connecting to server %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1221"/>
+        <source>Reconnecting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1262"/>
+        <source>Change your comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1289"/>
+        <location filename="MainWindow.cpp" line="1841"/>
+        <source>Register yourself as %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1290"/>
+        <location filename="MainWindow.cpp" line="1842"/>
+        <source>&lt;p&gt;You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as &apos;%1&apos; on this server.&lt;/p&gt;&lt;p&gt;Are you sure you want to register yourself?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1304"/>
+        <location filename="MainWindow.cpp" line="3022"/>
+        <location filename="MainWindow.cpp" line="3042"/>
+        <source>Transmit Mode set to Continuous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1309"/>
+        <location filename="MainWindow.cpp" line="3014"/>
+        <location filename="MainWindow.cpp" line="3051"/>
+        <source>Transmit Mode set to Voice Activity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1314"/>
+        <location filename="MainWindow.cpp" line="3018"/>
+        <location filename="MainWindow.cpp" line="3033"/>
+        <source>Transmit Mode set to Push-to-Talk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1399"/>
+        <source>&lt;h2&gt;Version&lt;/h2&gt;&lt;p&gt;Protocol %1&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1402"/>
+        <source>&lt;p&gt;No build information or OS version available&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1405"/>
+        <source>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1422"/>
+        <source>The connection is encrypted and authenticated using %1 and uses %2 as the key exchange mechanism (%3)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1428"/>
+        <source>The connection is encrypted using %1, with %2 for message authentication and %3 as the key exchange mechanism (%4)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1437"/>
+        <source>The connection is secured by the cipher suite that OpenSSL identifies as %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1443"/>
+        <source>&lt;p&gt;The connection provides perfect forward secrecy&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1445"/>
+        <source>&lt;p&gt;The connection does not provide perfect forward secrecy&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1450"/>
+        <source>&lt;h2&gt;Control channel&lt;/h2&gt;&lt;p&gt;The connection uses %1&lt;/p&gt;%2%3&lt;p&gt;%4 ms average latency (%5 deviation)&lt;/p&gt;&lt;p&gt;Remote host %6 (port %7)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1461"/>
+        <source>&lt;p&gt;Connected users: %1/%2&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1467"/>
+        <source>Voice channel is sent over control channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1469"/>
+        <source>&lt;h2&gt;Voice channel&lt;/h2&gt;&lt;p&gt;Encrypted with 128 bit OCB-AES128&lt;br /&gt;%1 ms average latency (%4 deviation)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1479"/>
+        <source>UDP Statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1480"/>
+        <source>To Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1481"/>
+        <source>From Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1482"/>
+        <source>Good</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1483"/>
+        <source>Late</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1484"/>
+        <source>Lost</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1485"/>
+        <source>Resync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1495"/>
+        <source>&lt;h2&gt;Audio bandwidth&lt;/h2&gt;&lt;p&gt;Maximum %1 kbit/s&lt;br /&gt;Current %2 kbit/s&lt;br /&gt;Codec: %3&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1500"/>
+        <source>Mumble Server Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1505"/>
+        <location filename="MainWindow.cpp" line="3301"/>
+        <source>&amp;View Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1849"/>
+        <source>Register user %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1850"/>
+        <source>&lt;p&gt;You are about to register %1 on the server. This action cannot be undone, the username cannot be changed, and as a registered user, %1 will have access to the server even if you change the server password.&lt;/p&gt;&lt;p&gt;From this point on, %1 will be authenticated with the certificate currently in use.&lt;/p&gt;&lt;p&gt;Are you sure you want to register %1?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1895"/>
+        <source>Kicking user %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1895"/>
+        <location filename="MainWindow.cpp" line="1915"/>
+        <source>Enter reason</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1915"/>
+        <source>Banning user %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1938"/>
+        <source>Sending message to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1950"/>
+        <location filename="MainWindow.cpp" line="2058"/>
+        <location filename="MainWindow.cpp" line="2063"/>
+        <location filename="MainWindow.cpp" line="2371"/>
+        <location filename="MainWindow.cpp" line="3069"/>
+        <source>To %1: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1951"/>
+        <location filename="MainWindow.cpp" line="2064"/>
+        <source>Message to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1978"/>
+        <source>View comment on user %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1995"/>
+        <source>Are you sure you want to reset the comment of user %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2012"/>
+        <source>Are you sure you want to reset the avatar of user %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2059"/>
+        <location filename="MainWindow.cpp" line="2372"/>
+        <location filename="MainWindow.cpp" line="3070"/>
+        <source>Message to channel %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2287"/>
+        <source>Are you sure you want to delete %1 and all its sub-channels?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2359"/>
+        <source>Sending message to channel %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2368"/>
+        <source>To %1 (Tree): %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2369"/>
+        <source>Message to tree %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2560"/>
+        <source>Unmuted and undeafened.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2562"/>
+        <source>Unmuted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2564"/>
+        <source>Muted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2596"/>
+        <source>Muted and deafened.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2598"/>
+        <source>Deafened.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2601"/>
+        <source>Undeafened.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2651"/>
+        <source>Restart Mumble?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2652"/>
+        <source>Some settings will only apply after a restart of Mumble. Restart Mumble now?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="2703"/>
+        <source>About Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3142"/>
+        <source>Connected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3269"/>
+        <source>SSL Verification failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3275"/>
+        <source>&lt;li&gt;Server certificate digest (SHA-1):	%1&lt;/li&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3279"/>
+        <source>&lt;b&gt;WARNING:&lt;/b&gt; The server presented a certificate that was different from the stored one.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3280"/>
+        <source>&lt;li&gt;Expected certificate digest (SHA-1):	%1&lt;/li&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3283"/>
+        <source>Server presented a certificate which failed verification.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3290"/>
+        <source>&lt;p&gt;%1&lt;/p&gt;&lt;ul&gt;%2&lt;/ul&gt;&lt;p&gt;The specific errors with this certificate are:&lt;/p&gt;&lt;ol&gt;%3&lt;/ol&gt;&lt;p&gt;Do you wish to accept this certificate anyway?&lt;br /&gt;(It will also be stored so you won&apos;t be asked this again.)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3318"/>
+        <source>SSL Version mismatch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3319"/>
+        <source>This server is using an older encryption standard, and is no longer supported by modern versions of Mumble.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3327"/>
+        <location filename="MainWindow.cpp" line="3389"/>
+        <source>Server connection failed: %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3329"/>
+        <source>Disconnected from server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3345"/>
+        <location filename="Messages.cpp" line="95"/>
+        <source>Invalid username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3346"/>
+        <source>You connected with an invalid username, please try another one.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3350"/>
+        <location filename="Messages.cpp" line="98"/>
+        <source>Username in use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3351"/>
+        <source>That username is already in use, please try another username.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3355"/>
+        <location filename="Messages.cpp" line="101"/>
+        <source>Wrong certificate or password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3356"/>
+        <source>Wrong certificate or password for registered user. If you are
+certain this user is protected by a password please retry.
+Otherwise abort and check your certificate and username.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3362"/>
+        <location filename="Messages.cpp" line="104"/>
+        <source>Wrong password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3363"/>
+        <source>Wrong server password for unregistered user account, please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3391"/>
+        <source>Server connection failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3490"/>
+        <source>&lt;center&gt;Type message to channel &apos;%1&apos; here&lt;/center&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3493"/>
+        <source>&lt;center&gt;Type message to user &apos;%1&apos; here&lt;/center&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3593"/>
+        <source>Choose image file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3600"/>
+        <location filename="MainWindow.cpp" line="3617"/>
+        <location filename="MainWindow.cpp" line="3626"/>
+        <source>Failed to load image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3600"/>
+        <source>Could not open file for reading.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="3617"/>
+        <location filename="MainWindow.cpp" line="3626"/>
+        <source>Image format not recognized.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="107"/>
+        <source>Your account information can not be verified currently. Please try again later</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="114"/>
+        <source>Server connection rejected: %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="127"/>
+        <source>Server sync protocol violation. No user profile received.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="140"/>
+        <location filename="Messages.cpp" line="226"/>
+        <source>Welcome message: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="181"/>
+        <source>Mumble: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="259"/>
+        <source>Unable to %1 into %2 - Adding the respective access (password) token might grant you access.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="264"/>
+        <source>You were denied %1 privileges in %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="268"/>
+        <source>%3 was denied %1 privileges in %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="275"/>
+        <source>Denied: Cannot modify SuperUser.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="278"/>
+        <source>Denied: Invalid channel name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="281"/>
+        <source>Denied: Text message too long.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="302"/>
+        <source>Denied: Operation not permitted in temporary channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="308"/>
+        <source>You need a certificate to perform this operation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="311"/>
+        <source>%1 does not have a certificate.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="315"/>
+        <source>Invalid username: %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="317"/>
+        <source>Invalid username.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="320"/>
+        <source>Channel is full.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="323"/>
+        <source>Channel nesting limit reached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="327"/>
+        <source>Channel count limit reached. Need to delete channels before creating new ones.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="330"/>
+        <source>No more listeners allowed in this channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="334"/>
+        <source>You are not allowed to listen to more channels than you currently are.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="338"/>
+        <source>Denied: %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="340"/>
+        <source>Permission denied.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="391"/>
+        <source>%1 connected and entered channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="393"/>
+        <source>%1 connected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="421"/>
+        <source>You joined %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="423"/>
+        <source>You were moved to %1 by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="429"/>
+        <location filename="Messages.cpp" line="433"/>
+        <source>You moved %1 to %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="441"/>
+        <source>%1 entered channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="443"/>
+        <source>%1 moved to %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="449"/>
+        <source>%1 moved in from %2 by %3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="454"/>
+        <source>%1 moved to %2 by %3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="463"/>
+        <source>%1 is recording</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="483"/>
+        <source>You started listening to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="492"/>
+        <source>%1 started listening to your channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="512"/>
+        <source>You stopped listening to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="514"/>
+        <source>%1 stopped listening to your channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="528"/>
+        <source>%1 renamed to %2 by %3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="533"/>
+        <source>%1 renamed to %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="563"/>
+        <source>%1 is now muted and deafened.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="565"/>
+        <source>%1 is now muted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="567"/>
+        <source>%1 is now unmuted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="578"/>
+        <source>Recording started</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="580"/>
+        <source>Recording stopped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="584"/>
+        <source>%1 started recording.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="586"/>
+        <source>%1 stopped recording.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="598"/>
+        <source>You revoked your priority speaker status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="600"/>
+        <source>You assumed priority speaker status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="606"/>
+        <source>%1 revoked your priority speaker status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="609"/>
+        <source>%1 gave you priority speaker status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="613"/>
+        <source>You revoked priority speaker status for %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="618"/>
+        <source>You gave priority speaker status to %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="624"/>
+        <source>%1 revoked own priority speaker status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="627"/>
+        <source>%1 assumed priority speaker status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="631"/>
+        <source>%1 revoked priority speaker status for %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="635"/>
+        <source>%1 gave priority speaker status to %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="659"/>
+        <source>You were muted and deafened by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="663"/>
+        <source>You were unmuted and undeafened by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="668"/>
+        <source>You were muted by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="671"/>
+        <source>You were unmuted by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="677"/>
+        <source>You were undeafened by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="683"/>
+        <source>You were suppressed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="686"/>
+        <source>You were unsuppressed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="689"/>
+        <source>You were unsuppressed by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="697"/>
+        <source>You muted and deafened %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="700"/>
+        <source>You unmuted and undeafened %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="705"/>
+        <source>You muted %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="708"/>
+        <source>You unmuted %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="714"/>
+        <source>You undeafened %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="722"/>
+        <source>You suppressed %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="725"/>
+        <source>You unsuppressed %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="730"/>
+        <source>%1 muted and deafened by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="734"/>
+        <source>%1 unmuted and undeafened by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="740"/>
+        <source>%1 muted by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="744"/>
+        <source>%1 unmuted by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="751"/>
+        <source>%1 undeafened by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="760"/>
+        <source>%1 suppressed by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="764"/>
+        <source>%1 unsuppressed by %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="814"/>
+        <source>You were kicked and banned from the server by %1: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="818"/>
+        <source>You were kicked from the server by %1: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="824"/>
+        <source>%3 was kicked and banned from the server by %1: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="830"/>
+        <source>%3 was kicked from the server by %1: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="837"/>
+        <source>%1 left channel and disconnected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="839"/>
+        <source>%1 disconnected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="968"/>
+        <source>Protocol violation. Server sent remove for occupied channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="987"/>
+        <location filename="Messages.cpp" line="988"/>
+        <source>Server</source>
+        <comment>message from</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="992"/>
         <source>Tree</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Messages.cpp" line="994"/>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Messages.cpp" line="996"/>
         <source>Private</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Messages.cpp" line="1010"/>
+        <location filename="Messages.cpp" line="1016"/>
         <source>%1: %2</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Messages.cpp" line="1013"/>
         <source>(%1) %2</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1016"/>
+        <source>Message from %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1212"/>
+        <source>Failed to load Opus, it will not be available for audio encoding/decoding.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1243"/>
+        <source>Unable to find matching CELT codecs with other clients. You will not be able to talk to all users.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1286"/>
+        <source>The server requests minimum client version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1290"/>
+        <source>The server requests positional audio be enabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1292"/>
+        <source>The server requests positional audio be disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1296"/>
+        <source>The server requests Push-to-Talk be enabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Messages.cpp" line="1298"/>
+        <source>The server requests Push-to-Talk be disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserModel.cpp" line="1772"/>
+        <source>You have User Dragging set to &quot;Do Nothing&quot; so the user wasn&apos;t moved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserModel.cpp" line="1797"/>
+        <source>You have Channel Dragging set to &quot;Do Nothing&quot; so the channel wasn&apos;t moved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserModel.cpp" line="1803"/>
+        <source>Unknown Channel Drag mode in UserModel::dropMimeData.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Manual</name>
     <message>
+        <location filename="ManualPlugin.ui" line="14"/>
         <source>Manual Mumble Positional Audio</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ManualPlugin.ui" line="28"/>
         <source>Position</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>X</source>
-        <translation>X</translation>
-    </message>
-    <message>
+        <location filename="ManualPlugin.ui" line="78"/>
         <source>Y</source>
-        <translation>Y</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Z</source>
-        <translation>Z</translation>
-    </message>
-    <message>
+        <location filename="ManualPlugin.ui" line="88"/>
+        <location filename="ManualPlugin.ui" line="98"/>
+        <location filename="ManualPlugin.ui" line="125"/>
         <source>m</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Heading</source>
-        <translation type="unfinished"/>
+        <location filename="ManualPlugin.ui" line="105"/>
+        <source>Z</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Azimuth</source>
-        <translation type="unfinished"/>
+        <location filename="ManualPlugin.ui" line="115"/>
+        <source>X</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Elevation</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>°</source>
-        <translation>°</translation>
-    </message>
-    <message>
-        <source>Meta data</source>
-        <translation>Metaduomenys</translation>
-    </message>
-    <message>
-        <source>Context</source>
-        <translation>Kontekstas</translation>
-    </message>
-    <message>
-        <source>Identity</source>
-        <translation>Tapatybė</translation>
-    </message>
-    <message>
-        <source>Set</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>State</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Unhinge</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Link</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Activate</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="ManualPlugin.ui" line="139"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ManualPlugin.ui" line="145"/>
+        <location filename="ManualPlugin.ui" line="161"/>
         <source>How long silent user&apos;s positions should stay marked after they have stopped talking (in seconds).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ManualPlugin.ui" line="148"/>
         <source>Silent user displaytime:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="177"/>
+        <source>Heading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="183"/>
+        <location filename="ManualPlugin.ui" line="237"/>
+        <source>°</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="199"/>
+        <source>Azimuth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="256"/>
+        <source>Elevation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="304"/>
+        <source>Meta data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="313"/>
+        <source>Context</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="320"/>
+        <source>Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="327"/>
+        <location filename="ManualPlugin.ui" line="334"/>
+        <source>Set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="353"/>
+        <source>State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="362"/>
+        <source>Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="375"/>
+        <source>Activate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ManualPlugin.ui" line="391"/>
+        <source>Unhinge</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>NetworkConfig</name>
     <message>
-        <source>Network</source>
-        <translation>Tinklas</translation>
-    </message>
-    <message>
+        <location filename="NetworkConfig.ui" line="26"/>
         <source>Connection</source>
-        <translation>Ryšys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="32"/>
         <source>Use TCP compatibility mode</source>
-        <oldsource>Use TCP compatability mode</oldsource>
-        <translation>Naudoti TCP suderinamumo veikseną</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="35"/>
         <source>&lt;b&gt;Enable TCP compatibility mode&lt;/b&gt;.&lt;br /&gt;This will make Mumble use only TCP when communicating with the server. This will increase overhead and cause lost packets to produce noticeable pauses in communication, so this should only be used if you are unable to use the default (which uses UDP for voice and TCP for control).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Reconnect when disconnected</source>
-        <translation>Atsijungus, prisijungti iš naujo</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Reconnect when disconnected&lt;/b&gt;.&lt;br /&gt;This will make Mumble try to automatically reconnect after 10 seconds if your server connection fails.</source>
-        <translation>&lt;b&gt;Atsijungus, prisijungti iš naujo&lt;/b&gt;.&lt;br /&gt;Tai padarys, kad Mumble, nutrūkus ryšiui su serveriu, automatiškai po 10 sekundžių bandytų prisijungti iš naujo.</translation>
-    </message>
-    <message>
-        <source>Reconnect automatically</source>
-        <translation>Automatiškai prisijungti iš naujo</translation>
-    </message>
-    <message>
-        <source>Proxy</source>
-        <translation>Įgaliotasis serveris</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Tipas</translation>
-    </message>
-    <message>
-        <source>Type of proxy to connect through</source>
-        <translation>Įgaliotojo serverio, per kurį jungtis, tipas</translation>
-    </message>
-    <message>
-        <source>Direct connection</source>
-        <translation>Tiesioginis ryšys</translation>
-    </message>
-    <message>
-        <source>HTTP(S) proxy</source>
-        <translation>HTTP(S) įgaliotasis serveris</translation>
-    </message>
-    <message>
-        <source>SOCKS5 proxy</source>
-        <translation>SOCKS5 įgaliotasis serveris</translation>
-    </message>
-    <message>
-        <source>Hostname</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Hostname of the proxy</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="NetworkConfig.ui" line="38"/>
         <source>Force TCP mode</source>
-        <translation>Priverstinė TCP veiksena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="45"/>
         <source>Enable QoS to prioritize packets</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="48"/>
         <source>This will enable QoS, which will attempt to prioritize voice packets over other traffic.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="51"/>
         <source>Use Quality of Service</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Don&apos;t send certificate to server and don&apos;t save passwords. (Not saved).</source>
-        <translation type="unfinished"/>
+        <location filename="NetworkConfig.ui" line="58"/>
+        <source>Reconnect when disconnected</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;This will suppress identity information from the client.&lt;/b&gt;&lt;p&gt;The client will not identify itself with a certificate, even if defined, and will not cache passwords for connections. This is primarily a test-option and is not saved.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <location filename="NetworkConfig.ui" line="61"/>
+        <source>&lt;b&gt;Reconnect when disconnected&lt;/b&gt;.&lt;br /&gt;This will make Mumble try to automatically reconnect after 10 seconds if your server connection fails.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Suppress certificate and password storage</source>
-        <translation type="unfinished"/>
+        <location filename="NetworkConfig.ui" line="64"/>
+        <source>Reconnect automatically</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;Type of proxy to connect through.&lt;/b&gt;&lt;br /&gt;This makes Mumble connect through a proxy for all outgoing connections. Note: Proxy tunneling forces Mumble into TCP compatibility mode, causing all voice data to be sent via the control channel.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Hostname of the proxy.&lt;/b&gt;&lt;br /&gt;This field specifies the hostname of the proxy you wish to tunnel network traffic through.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Port</source>
-        <translation>Prievadas</translation>
-    </message>
-    <message>
-        <source>Port number of the proxy</source>
-        <translation>Įgaliotojo serverio prievado numeris</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Port number of the proxy.&lt;/b&gt;&lt;br /&gt;This field specifies the port number that the proxy expects connections on.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Username</source>
-        <translation>Naudotojo vardas</translation>
-    </message>
-    <message>
-        <source>Username for proxy authentication</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Username for proxy authentication.&lt;/b&gt;&lt;br /&gt;This specifies the username you use for authenticating yourself with the proxy. In case the proxy does not use authentication, or you want to connect anonymously, simply leave this field blank.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation>Slaptažodis</translation>
-    </message>
-    <message>
-        <source>Password for proxy authentication</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Password for proxy authentication.&lt;/b&gt;&lt;br /&gt;This specifies the password you use for authenticating yourself with the proxy. In case the proxy does not use authentication, or you want to connect anonymously, simply leave this field blank.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Mumble services</source>
-        <translation>Mumble tarnybos</translation>
-    </message>
-    <message>
-        <source>Check for new releases of Mumble automatically.</source>
-        <translation>Automatiškai tikrinti naujas Mumble laidas.</translation>
-    </message>
-    <message>
-        <source>This will check for new releases of Mumble every time you start the program, and notify you if one is available.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Check for application updates on startup</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Check for new releases of plugins automatically.</source>
-        <translation>Automatiškai tikrinti ar yra naujų įskiepių laidų.</translation>
-    </message>
-    <message>
-        <source>This will check for new releases of plugins every time you start the program, and download them automatically.</source>
-        <translation>Tai, kas kartą jums paleidus programą, tikrins ar yra naujų įskiepių laidų ir automatiškai jas atsisiųs.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Submit anonymous statistics.&lt;/b&gt;&lt;br /&gt;Mumble has a small development team, and as such needs to focus its development where it is needed most. By submitting a bit of statistics you help the project determine where to focus development.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Submit anonymous statistics to the Mumble project</source>
-        <translation>Pateikti Mumble projektui anoniminę statistiką</translation>
-    </message>
-    <message>
-        <source>Submit anonymous statistics</source>
-        <translation>Siųsti anoniminę statistiką</translation>
-    </message>
-    <message>
+        <location filename="NetworkConfig.ui" line="71"/>
         <source>Reconnect to last used server when starting Mumble</source>
-        <translation>Paleidžiant Mumble, iš naujo prisijungti prie paskutinio naudoto serverio</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="74"/>
         <source>Reconnect to last server on startup</source>
-        <translation>Paleidus programą, iš naujo prisijungti prie paskutinio serverio</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Download plugin and overlay updates on startup</source>
-        <translation type="unfinished"/>
+        <location filename="NetworkConfig.ui" line="81"/>
+        <source>Don&apos;t send certificate to server and don&apos;t save passwords. (Not saved).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="84"/>
+        <source>&lt;b&gt;This will suppress identity information from the client.&lt;/b&gt;&lt;p&gt;The client will not identify itself with a certificate, even if defined, and will not cache passwords for connections. This is primarily a test-option and is not saved.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="87"/>
+        <source>Suppress certificate and password storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="103"/>
+        <source>Proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="109"/>
+        <location filename="NetworkConfig.cpp" line="34"/>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="122"/>
+        <source>Type of proxy to connect through</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="125"/>
+        <source>&lt;b&gt;Type of proxy to connect through.&lt;/b&gt;&lt;br /&gt;This makes Mumble connect through a proxy for all outgoing connections. Note: Proxy tunneling forces Mumble into TCP compatibility mode, causing all voice data to be sent via the control channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="129"/>
+        <source>Direct connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="134"/>
+        <source>HTTP(S) proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="139"/>
+        <source>SOCKS5 proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="147"/>
+        <location filename="NetworkConfig.cpp" line="35"/>
+        <source>Hostname</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="163"/>
+        <source>Hostname of the proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="166"/>
+        <source>&lt;b&gt;Hostname of the proxy.&lt;/b&gt;&lt;br /&gt;This field specifies the hostname of the proxy you wish to tunnel network traffic through.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="188"/>
+        <location filename="NetworkConfig.cpp" line="36"/>
+        <source>Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="213"/>
+        <source>Port number of the proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="216"/>
+        <source>&lt;b&gt;Port number of the proxy.&lt;/b&gt;&lt;br /&gt;This field specifies the port number that the proxy expects connections on.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="232"/>
+        <location filename="NetworkConfig.cpp" line="37"/>
+        <source>Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="239"/>
+        <source>Username for proxy authentication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="242"/>
+        <source>&lt;b&gt;Username for proxy authentication.&lt;/b&gt;&lt;br /&gt;This specifies the username you use for authenticating yourself with the proxy. In case the proxy does not use authentication, or you want to connect anonymously, simply leave this field blank.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="249"/>
+        <location filename="NetworkConfig.cpp" line="38"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="256"/>
+        <source>Password for proxy authentication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="259"/>
+        <source>&lt;b&gt;Password for proxy authentication.&lt;/b&gt;&lt;br /&gt;This specifies the password you use for authenticating yourself with the proxy. In case the proxy does not use authentication, or you want to connect anonymously, simply leave this field blank.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="278"/>
         <source>Privacy</source>
-        <translation>Privatumas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="284"/>
         <source>Prevent OS information being sent to Mumble servers and web servers</source>
-        <translation>Neleisti siųsti OS informaciją į Mumble serverius ir saityno serverius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;Don't send OS information to servers&lt;/b&gt;&lt;br/&gt;
+        <location filename="NetworkConfig.ui" line="287"/>
+        <source>&lt;b&gt;Don&apos;t send OS information to servers&lt;/b&gt;&lt;br/&gt;
 Prevents the client from sending potentially identifying information about the operating system to the Mumble server and web servers.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="291"/>
         <source>Do not send OS information to Mumble servers and web servers</source>
-        <translation>Nesiųsti OS informaciją į Mumble serverius ir saityno serverius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="301"/>
+        <source>Mumble services</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="307"/>
+        <source>Check for new releases of Mumble automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="310"/>
+        <source>This will check for new releases of Mumble every time you start the program, and notify you if one is available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="313"/>
+        <source>Check for application updates on startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="320"/>
+        <source>Check for new releases of plugins automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="323"/>
+        <source>This will check for new releases of plugins every time you start the program, and download them automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="326"/>
+        <source>Download plugin and overlay updates on startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="333"/>
+        <source>Submit anonymous statistics to the Mumble project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="336"/>
+        <source>&lt;b&gt;Submit anonymous statistics.&lt;/b&gt;&lt;br /&gt;Mumble has a small development team, and as such needs to focus its development where it is needed most. By submitting a bit of statistics you help the project determine where to focus development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="339"/>
+        <source>Submit anonymous statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.ui" line="349"/>
         <source>When toggled this hides the public server list from the connect dialog</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.ui" line="352"/>
         <source>Hide public server list</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="NetworkConfig.cpp" line="42"/>
+        <source>Network</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Overlay</name>
     <message>
-        <source>Silent</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Talking</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Whisper</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Shout</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel</source>
-        <translation>Kanalas</translation>
-    </message>
-    <message>
+        <location filename="Overlay.cpp" line="274"/>
         <source>Failed to create communication with overlay at %2: %1. No overlay will be available.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditorScene.cpp" line="107"/>
+        <location filename="OverlayUser.cpp" line="143"/>
+        <source>Silent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditorScene.cpp" line="110"/>
+        <location filename="OverlayUser.cpp" line="146"/>
+        <source>Talking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditorScene.cpp" line="116"/>
+        <location filename="OverlayUser.cpp" line="152"/>
+        <source>Whisper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditorScene.cpp" line="119"/>
+        <location filename="OverlayUser.cpp" line="155"/>
+        <source>Shout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditorScene.cpp" line="139"/>
+        <location filename="OverlayUser.cpp" line="34"/>
+        <source>Channel</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OverlayClient</name>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="80"/>
         <source>Filter</source>
-        <translation>Filtras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="82"/>
         <source>Only talking</source>
-        <translation>Tik kalbantys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="87"/>
         <source>Talking and recently active</source>
-        <translation>Kalbantys ir paskiausiai aktyvūs</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="92"/>
         <source>All in current channel</source>
-        <translation>Visi esamame kanale</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="97"/>
         <source>All in linked channels</source>
-        <translation>Visi susietuose kanaluose</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="104"/>
         <source>Always show yourself</source>
-        <translation>Visada rodyti mane</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="113"/>
         <source>Configure recently active time (%1 seconds)...</source>
-        <translation>Konfigūruoti paskiausiai aktyvių laiką (%1 sekundės)...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="116"/>
         <source>Columns</source>
-        <translation>Stulpeliai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="124"/>
         <source>Sort</source>
-        <translation>Rikiuoti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="126"/>
         <source>Alphabetically</source>
-        <translation>Pagal abėcėlę</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="131"/>
         <source>Last state change</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="136"/>
         <source>Edit...</source>
-        <translation>Keisti...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="137"/>
         <source>Reset Zoom</source>
-        <translation>Atstatyti mastelį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="176"/>
         <source>Configure recently active time</source>
-        <translation>Konfigūruoti paskiausiai aktyvių laiką</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayUserGroup.cpp" line="177"/>
         <source>Amount of seconds users remain active after talking:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OverlayConfig</name>
     <message>
-        <source>To move the users, drag the little red dot.</source>
-        <translation>Norėdami perkelti naudotojus, tempkite raudoną taškelį.</translation>
-    </message>
-    <message>
-        <source>To resize the users, mouse wheel over a user.</source>
-        <oldsource>To resize the users, mousewheel over a user.</oldsource>
-        <translation>Norėdami keisti naudotojų dydį, slinkite virš jų pelės ratuką.</translation>
-    </message>
-    <message>
-        <source>For more options, right click a user.</source>
-        <oldsource>For more options, rightclick a user.</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Launcher Filter</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Overlay</source>
-        <translation>Perdanga</translation>
-    </message>
-    <message>
-        <source>Choose executable</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Choose application</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Choose path</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Load Overlay Presets</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Mumble overlay presets (*.mumblelay)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Save Overlay Presets</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="Overlay.ui" line="54"/>
         <source>Options</source>
-        <translation>Parinktys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="63"/>
         <source>Enable overlay.</source>
-        <translation>Įjungti perdangą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enable Overlay</source>
-        <translation>Įjungti perdangą</translation>
-    </message>
-    <message>
+        <location filename="Overlay.ui" line="66"/>
         <source>This sets whether the overlay is enabled or not. This setting is only checked when applications are started, so make sure Mumble is running and this option is on before you start the application.&lt;br /&gt;Please note that if you start Mumble after starting the application, or if you disable the overlay while the application is running, there is no safe way to restart the overlay without also restarting the application.</source>
-        <oldsource>This sets whether the overlay is enabled or not. This setting is only checked when applications are started, so make sure Mumble is running and this option is on before you start the application.&lt;br /&gt;Please note that if you start the application after starting Mumble, or if you disable the overlay while running, there is no safe way to restart the overlay without also restarting the application.</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Layout</source>
-        <translation>Išdėstymas</translation>
+        <location filename="Overlay.ui" line="69"/>
+        <source>Enable Overlay</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Blacklist</source>
-        <translation type="unfinished"/>
+        <location filename="Overlay.ui" line="94"/>
+        <source>Load an overlay preset from file</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Whitelist</source>
-        <translation type="unfinished"/>
+        <location filename="Overlay.ui" line="97"/>
+        <source>Load…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="104"/>
+        <source>Save your overlay settings to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="107"/>
+        <source>Save…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="114"/>
         <source>Uninstall Overlay</source>
-        <translation>Pašalinti perdangą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="135"/>
+        <source>FPS and Clock Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="146"/>
+        <source>Display a frame counter in the overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="149"/>
+        <source>Show FPS counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="156"/>
+        <source>Display a clock in the overlay showing the current local time (system time).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="159"/>
+        <source>Show Clock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="166"/>
+        <source>Set the overlay font.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="172"/>
+        <source>Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="179"/>
+        <source>Set the overlay text color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="185"/>
+        <source>Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="275"/>
+        <source>Layout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="310"/>
+        <source>Overlay Exceptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="318"/>
+        <source>Overlay Exception Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="355"/>
+        <source>Allowed launchers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="367"/>
+        <location filename="Overlay.ui" line="404"/>
+        <location filename="Overlay.ui" line="441"/>
+        <location filename="Overlay.ui" line="478"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="377"/>
+        <location filename="Overlay.ui" line="414"/>
+        <location filename="Overlay.ui" line="451"/>
+        <location filename="Overlay.ui" line="488"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="392"/>
+        <source>Allowed programs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="429"/>
+        <source>Allowed paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="466"/>
+        <source>Blacklisted programs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Overlay.ui" line="510"/>
         <source>Overlay Installation</source>
-        <translation>Perdangos įdiegimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="540"/>
         <source>Mumble has detected that you do not have the Mumble Overlay installed.
 
 Click the button below to install the overlay.</source>
-        <translation>Mumble aptiko, kad neturite įdiegę Mumble perdangos.
-
-Spustelėkite mygtuką žemiau, norėdami įdiegti perdangą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="572"/>
         <source>Install Mumble Overlay</source>
-        <translation>Įdiegti Mumble perdangą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="614"/>
         <source>Overlay Upgrade</source>
-        <translation>Perdangos naujinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="635"/>
         <source>Mumble has detected an old version of the overlay support files installed on your computer.
 
 To upgrade these files to their latest versions, click the button below.</source>
-        <translation>Mumble jūsų kompiuteryje aptiko įdiegtą senąją perdangos palaikymo failų versiją.
-
-Norėdami naujinti šiuos failus į naujausią versiją, spustelėkite mygtuką žemiau.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Overlay.ui" line="664"/>
         <source>Upgrade Mumble Overlay</source>
-        <translation>Naujinti Mumble perdangą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Display a frame counter in the overlay</source>
-        <translation>Rodyti perdangoje kadrų skaitiklį</translation>
+        <location filename="OverlayConfig.cpp" line="91"/>
+        <source>To move the users, drag the little red dot.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show FPS counter</source>
-        <translation>Rodyti kadr./s skaitiklį</translation>
+        <location filename="OverlayConfig.cpp" line="92"/>
+        <source>To resize the users, mouse wheel over a user.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Load an overlay preset from file</source>
-        <translation>Įkelti išankstines perdangos parinktis iš failo</translation>
+        <location filename="OverlayConfig.cpp" line="93"/>
+        <source>For more options, right click a user.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Load…</source>
-        <translation>Įkelti...</translation>
+        <location filename="OverlayConfig.cpp" line="160"/>
+        <source>Launcher Filter</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save your overlay settings to file</source>
-        <translation>Įrašyti jūsų perdangos nustatymus į failą</translation>
+        <location filename="OverlayConfig.cpp" line="161"/>
+        <source>Whitelist</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save…</source>
-        <translation>Įrašyti...</translation>
+        <location filename="OverlayConfig.cpp" line="162"/>
+        <source>Blacklist</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set the overlay font.</source>
-        <translation>Nustatyti perdangos šriftą.</translation>
+        <location filename="OverlayConfig.cpp" line="415"/>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set the overlay text color.</source>
-        <translation>Nustatyti perdangos teksto spalvą.</translation>
+        <location filename="OverlayConfig.cpp" line="610"/>
+        <location filename="OverlayConfig.cpp" line="670"/>
+        <location filename="OverlayConfig.cpp" line="746"/>
+        <source>Choose executable</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Color</source>
-        <translation>Spalva</translation>
+        <location filename="OverlayConfig.cpp" line="612"/>
+        <location filename="OverlayConfig.cpp" line="672"/>
+        <location filename="OverlayConfig.cpp" line="748"/>
+        <source>Choose application</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove</source>
-        <translation>Šalinti</translation>
+        <location filename="OverlayConfig.cpp" line="707"/>
+        <source>Choose path</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Font</source>
-        <translation>Šriftas</translation>
+        <location filename="OverlayConfig.cpp" line="837"/>
+        <source>Load Overlay Presets</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FPS and Clock Display</source>
-        <translation>Kadr./s ir laikrodžio rodymas</translation>
+        <location filename="OverlayConfig.cpp" line="838"/>
+        <location filename="OverlayConfig.cpp" line="872"/>
+        <source>Mumble overlay presets (*.mumblelay)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Display a clock in the overlay showing the current local time (system time).</source>
-        <translation>Rodyti perdangoje laikrodį, rodantį dabartinį vietinį laiką (sistemos laiką).</translation>
-    </message>
-    <message>
-        <source>Show Clock</source>
-        <translation>Rodyti laikrodį</translation>
-    </message>
-    <message>
-        <source>Overlay Exceptions</source>
-        <translation>Perdangos išimtys</translation>
-    </message>
-    <message>
-        <source>Overlay Exception Mode</source>
-        <translation>Perdangos išimčių veiksena</translation>
-    </message>
-    <message>
-        <source>Allowed launchers</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Pridėti</translation>
-    </message>
-    <message>
-        <source>Allowed programs</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Allowed paths</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Blacklisted programs</source>
-        <translation type="unfinished"/>
+        <location filename="OverlayConfig.cpp" line="871"/>
+        <source>Save Overlay Presets</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OverlayEditor</name>
     <message>
-        <source>State</source>
-        <translation>Būsena</translation>
-    </message>
-    <message>
-        <source>User is not talking</source>
-        <translation>Naudotojas nekalba</translation>
-    </message>
-    <message>
-        <source>Passive</source>
-        <translation>Pasyvi</translation>
-    </message>
-    <message>
-        <source>User is talking in your channel or a linked channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Talking</source>
-        <translation>Kalbėjimo</translation>
-    </message>
-    <message>
-        <source>User is whispering to you privately</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Private Whisper</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User is shouting to your channel</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Channel Whisper</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Zoom</source>
-        <translation>Mastelis</translation>
-    </message>
-    <message>
-        <source>Zoom Factor</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enabled Elements</source>
-        <translation>Įjungti elementai</translation>
-    </message>
-    <message>
-        <source>User avatar, chosen by each user</source>
-        <translation>Naudotojo avataras, pasirenkamas kiekvieno naudotojo</translation>
-    </message>
-    <message>
-        <source>Avatar</source>
-        <translation>Avataras</translation>
-    </message>
-    <message>
-        <source>User&apos;s name</source>
-        <translation>Naudotojo vardas</translation>
-    </message>
-    <message>
-        <source>Username</source>
-        <translation>Naudotojo vardas</translation>
-    </message>
-    <message>
-        <source>Name of user&apos;s channel, if outside your current channel</source>
-        <translation>Naudotojo kanalo pavadinimas, jeigu naudotojas yra už jūsų dabartinio kanalo ribų</translation>
-    </message>
-    <message>
-        <source>Channel</source>
-        <translation>Kanalas</translation>
-    </message>
-    <message>
-        <source>Muted or deafened</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Mute state</source>
-        <translation>Nutildymo būsena</translation>
-    </message>
-    <message>
-        <source>Bounding box, automatically shrunk to minimum size to contain all visible elements</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Bounding box</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="OverlayEditor.ui" line="14"/>
         <source>Overlay Editor</source>
-        <translation>Perdangos redaktorius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditor.ui" line="20"/>
+        <source>State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="26"/>
+        <source>User is not talking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="29"/>
+        <source>Passive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="36"/>
+        <source>User is talking in your channel or a linked channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="39"/>
+        <source>Talking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="49"/>
+        <source>User is whispering to you privately</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="52"/>
+        <source>Private Whisper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="59"/>
+        <source>User is shouting to your channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="62"/>
+        <source>Channel Whisper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="82"/>
+        <source>Zoom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="88"/>
+        <source>Zoom Factor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="119"/>
+        <source>Enabled Elements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="125"/>
+        <source>User avatar, chosen by each user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="128"/>
+        <source>Avatar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="135"/>
+        <source>User&apos;s name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="138"/>
+        <source>Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="145"/>
+        <source>Name of user&apos;s channel, if outside your current channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="148"/>
+        <source>Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="155"/>
+        <source>Muted or deafened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="158"/>
+        <source>Mute state</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="165"/>
+        <source>Bounding box, automatically shrunk to minimum size to contain all visible elements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.ui" line="168"/>
+        <source>Bounding box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditor.cpp" line="29"/>
         <source>Zoom level</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OverlayEditorScene</name>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="542"/>
         <source>Layout preset</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="543"/>
         <source>Large square avatar</source>
-        <translation>Didelis kvadratinis avataras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="544"/>
         <source>Avatar and Name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="546"/>
         <source>User Opacity</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="552"/>
+        <location filename="OverlayEditorScene.cpp" line="583"/>
         <source>%1%</source>
-        <translation>%1%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="578"/>
         <source>Object Opacity</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="591"/>
         <source>Alignment</source>
-        <translation>Lygiavimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="602"/>
         <source>Left</source>
-        <translation>Kairė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="607"/>
+        <location filename="OverlayEditorScene.cpp" line="625"/>
         <source>Center</source>
-        <translation>Centras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="612"/>
         <source>Right</source>
-        <translation>Dešinė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="620"/>
         <source>Top</source>
-        <translation>Viršus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="630"/>
         <source>Bottom</source>
-        <translation>Apačia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="637"/>
         <source>Color...</source>
-        <translation>Spalva...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="638"/>
         <source>Font...</source>
-        <translation>Šriftas...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="644"/>
         <source>Bounding box</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="645"/>
         <source>Pen width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="646"/>
         <source>Padding</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="647"/>
         <source>Pen color</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="648"/>
         <source>Fill color</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="735"/>
         <source>Pick pen color</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="742"/>
         <source>Pick fill color</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="757"/>
         <source>Pick color</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="OverlayEditorScene.cpp" line="778"/>
         <source>Pick font</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PluginConfig</name>
     <message>
+        <location filename="Plugins.ui" line="14"/>
+        <location filename="Plugins.ui" line="42"/>
+        <location filename="Plugins.cpp" line="80"/>
+        <location filename="Plugins.cpp" line="88"/>
         <source>Plugins</source>
-        <translation>Įskiepiai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plugin has no configure function.</source>
-        <translation>Įskiepis neturi konfigūravimo funkcijos.</translation>
-    </message>
-    <message>
-        <source>Plugin has no about function.</source>
-        <translation>Įskiepis neturi &quot;apie&quot; funkcijos.</translation>
-    </message>
-    <message>
+        <location filename="Plugins.ui" line="20"/>
         <source>Options</source>
-        <translation>Parinktys</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Plugins.ui" line="26"/>
         <source>Enable plugins and transmit positional information</source>
-        <translation>Įjungti įskiepius ir perduoti pozicinę informaciją</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Plugins.ui" line="29"/>
         <source>This allows plugins for supported games to fetch your in-game position and transmit it with each voice packet. This enables other users to hear your voice in-game from the direction your character is in relation to their own.</source>
-        <translation>Tai leidžia įskiepiams palaikomuose žaidimuose gauti jūsų poziciją žaidime ir perduoti ją su kiekvienu balso paketu. Tai leidžia kitiems naudotojams girdėti žaidime jūsų balsą iš tos vietos, kurioje yra jūsų veikėjas jų veikėjo atžvilgiu.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Plugins.ui" line="32"/>
         <source>Link to Game and Transmit Position</source>
-        <translation>Susieti su žaidimu ir perduoti poziciją</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Reloads all plugins</source>
-        <translation>Iš naujo įkelti visus įskiepius</translation>
-    </message>
-    <message>
-        <source>This rescans and reloads plugins. Use this if you just added or changed a plugin to the plugins directory.</source>
-        <translation>Tai peržiūri ir iš naujo įkelia įskiepius. Naudokite tai, jeigu jūs ką tik į įskiepių katalogą pridėjote ar pakeitėte įskiepį.</translation>
-    </message>
-    <message>
-        <source>&amp;Reload plugins</source>
-        <translation>&amp;Iš naujo įkelti įskiepius</translation>
-    </message>
-    <message>
-        <source>Information about plugin</source>
-        <translation>Informacija apie įskiepį</translation>
-    </message>
-    <message>
-        <source>This shows a small information message about the plugin.</source>
-        <translation>Tai rodo mažą informacinį pranešimą apie įskiepį.</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Apie</translation>
-    </message>
-    <message>
-        <source>Show configuration page of plugin</source>
-        <translation>Rodyti įskiepio konfigūravimo puslapį</translation>
-    </message>
-    <message>
-        <source>This shows the configuration page of the plugin, if any.</source>
-        <translation>Tai rodo įskiepio konfigūracijos puslapį, jei toks yra.</translation>
-    </message>
-    <message>
-        <source>&amp;Configure</source>
-        <translation>&amp;Konfigūruoti</translation>
-    </message>
-    <message>
+        <location filename="Plugins.ui" line="61"/>
         <source>Name</source>
-        <translation>Pavadinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Plugins.ui" line="66"/>
         <source>Enabled</source>
-        <translation>Įjungta</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="76"/>
+        <source>Reloads all plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="79"/>
+        <source>This rescans and reloads plugins. Use this if you just added or changed a plugin to the plugins directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="82"/>
+        <source>&amp;Reload plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="102"/>
+        <source>Information about plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="105"/>
+        <source>This shows a small information message about the plugin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="108"/>
+        <source>&amp;About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="115"/>
+        <source>Show configuration page of plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="118"/>
+        <source>This shows the configuration page of the plugin, if any.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.ui" line="121"/>
+        <source>&amp;Configure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.cpp" line="146"/>
+        <source>Plugin has no configure function.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.cpp" line="166"/>
+        <source>Plugin has no about function.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Plugins</name>
     <message>
-        <source>Skipping plugin update in debug mode.</source>
-        <translation>Derinimo veiksenoje, praleidžiamas įskiepio atnaujinimas.</translation>
-    </message>
-    <message>
-        <source>Downloaded new or updated plugin to %1.</source>
-        <translation>Atsisiųstas naujas ar atnaujintas įskiepis į %1.</translation>
-    </message>
-    <message>
-        <source>Failed to install new plugin to %1.</source>
-        <translation>Nepavyko įdiegti naujo įskiepio į %1.</translation>
-    </message>
-    <message>
+        <location filename="Plugins.cpp" line="443"/>
         <source>%1 lost link.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Plugins.cpp" line="567"/>
         <source>%1 linked.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.cpp" line="607"/>
+        <source>Skipping plugin update in debug mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.cpp" line="776"/>
+        <location filename="Plugins.cpp" line="782"/>
+        <source>Downloaded new or updated plugin to %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins.cpp" line="784"/>
+        <source>Failed to install new plugin to %1.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PortAudioSystem</name>
     <message>
+        <location filename="PAAudio.cpp" line="184"/>
         <source>Default device</source>
-        <translation>Numatytasis įrenginys</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PulseAudioSystem</name>
     <message>
+        <location filename="PulseAudio.cpp" line="857"/>
         <source>Default Input</source>
-        <translation>Numatytoji įvestis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="PulseAudio.cpp" line="858"/>
         <source>Default Output</source>
-        <translation>Numatytoji išvestis</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QApplication</name>
     <message>
+        <location filename="main.cpp" line="785"/>
         <source>Failed to restart mumble</source>
-        <translation>Nepavyko iš naujo paleisti Mumble</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="main.cpp" line="786"/>
         <source>Mumble failed to restart itself. Please restart it manually.</source>
-        <translation>Programai Mumble nepavyko paleisti savęs iš naujo. Prašome paleisti ją iš naujo rankiniu būdu.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
+        <location filename="Audio.cpp" line="43"/>
         <source>CodecInit: Failed to load Opus, it will not be available for encoding/decoding audio.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Talking UI</source>
-        <translation type="unfinished"/>
+        <location filename="AudioConfigDialog.cpp" line="183"/>
+        <source>RNNoise is not available due to a sample rate mismatch.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Echo cancellation is not supported for the interface combination &quot;%1&quot; (in) and &quot;%2&quot; (out).</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="AudioConfigDialog.cpp" line="487"/>
         <source>If enabled this tries to cancel out echo from the audio stream.
 Mixed echo cancellation mixes all speaker outputs in one mono stream and passes that stream to the echo canceller, while multichannel echo cancellation passes all audio channels to the echo canceller directly.
 Multichannel echo cancellation requires more CPU, so you should try mixed first</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;p&gt;If you're using Linux this is most likely because you are using a version from your distribution's package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
-See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;the Mumble wiki&lt;/a&gt; for what alternatives there are.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <location filename="AudioConfigDialog.cpp" line="496"/>
+        <source>Echo cancellation is not supported for the interface combination &quot;%1&quot; (in) and &quot;%2&quot; (out).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Log.cpp" line="63"/>
+        <source>All messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="65"/>
+        <source>Toggle console for all events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="67"/>
+        <source>Toggle pop-up notifications for all events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="69"/>
+        <source>Toggle window highlight (if not active) for all events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="71"/>
+        <source>Click here to toggle sound notifications for all events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Log.cpp" line="74"/>
+        <source>Toggle Text-to-Speech for all events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MainWindow.cpp" line="1748"/>
         <source>Local Mute</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.cpp" line="1764"/>
         <source>Ignore Messages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.cpp" line="1780"/>
         <source>Disable Text-To-Speech</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="MainWindow.cpp" line="3638"/>
         <source>&quot;%1&quot; could not be saved permanently and is lost on restart because %2 does not have a certificate.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Local Volume Adjustment...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="NetworkConfig.cpp" line="165"/>
         <source>&lt;p&gt;You&apos;re using a Mumble version that &lt;b&gt;explicitly disabled&lt;/b&gt; update-checks.&lt;/p&gt;&lt;p&gt;This means that the update notification you might receive by using this option will &lt;b&gt;most likely be meaningless&lt;/b&gt; for you.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="NetworkConfig.cpp" line="169"/>
+        <source>&lt;p&gt;If you&apos;re using Linux this is most likely because you are using a version from your distribution&apos;s package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
+See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;the Mumble wiki&lt;/a&gt; for what alternatives there are.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="OverlayEditorScene.cpp" line="113"/>
+        <location filename="OverlayUser.cpp" line="149"/>
         <source>Talking (muted)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="TalkingUI.cpp" line="225"/>
+        <source>Talking UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserLocalVolumeDialog.cpp" line="112"/>
+        <source>Local Volume Adjustment...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>RichTextEditor</name>
     <message>
-        <source>Failed to load image</source>
-        <translation>Nepavyko įkelti paveikslo</translation>
-    </message>
-    <message>
-        <source>Image file too large to embed in document. Please use images smaller than %1 kB.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Message is too long.</source>
-        <translation>Žinutė per ilga.</translation>
-    </message>
-    <message>
+        <location filename="RichTextEditor.ui" line="24"/>
         <source>Display</source>
-        <translation>Rodyti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="41"/>
         <source>Source Text</source>
-        <translation>Šaltinio tekstas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="58"/>
         <source>&amp;Bold</source>
-        <translation>&amp;Pusjuodis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="61"/>
         <source>Ctrl+B</source>
-        <translation>Ctrl+B</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="73"/>
         <source>&amp;Italic</source>
-        <translation>&amp;Kursyvas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="76"/>
         <source>Italic</source>
-        <translation>Kursyvas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="79"/>
         <source>Ctrl+I</source>
-        <translation>Ctrl+I</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="91"/>
         <source>Underline</source>
-        <translation>Pabraukimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="94"/>
         <source>Ctrl+U</source>
-        <translation>Ctrl+U</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="99"/>
         <source>Color</source>
-        <translation>Spalva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="108"/>
         <source>Insert Link</source>
-        <translation>Įterpti nuorodą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="111"/>
         <source>Ctrl+L</source>
-        <translation>Ctrl+L</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditor.ui" line="120"/>
         <source>Insert Image</source>
-        <translation>Įterpti paveikslą</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="RichTextEditor.cpp" line="242"/>
+        <source>Failed to load image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="RichTextEditor.cpp" line="243"/>
+        <source>Image file too large to embed in document. Please use images smaller than %1 kB.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="RichTextEditor.cpp" line="324"/>
+        <source>Message is too long.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>RichTextEditorLink</name>
     <message>
+        <location filename="RichTextEditorLink.ui" line="14"/>
         <source>Add Link</source>
-        <translation>Pridėti nuorodą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditorLink.ui" line="20"/>
         <source>URL</source>
-        <translation>URL</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="RichTextEditorLink.ui" line="33"/>
         <source>Text</source>
-        <translation>Tekstas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ServerHandler</name>
     <message>
+        <location filename="ServerHandler.cpp" line="529"/>
         <source>Unable to resolve hostname</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ServerHandler.cpp" line="717"/>
         <source>Server is not responding to TCP pings</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ServerHandler.cpp" line="801"/>
         <source>UDP packets cannot be sent to or received from the server. Switching to TCP mode.</source>
-        <translation>UDP paketai negali būti išsiųsti ar gauti iš serverio. Perjungiama į TCP veikseną.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ServerHandler.cpp" line="803"/>
         <source>UDP packets cannot be sent to the server. Switching to TCP mode.</source>
-        <translation>UDP paketai negali būti išsiųsti į serverį. Perjungiama į TCP veikseną.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ServerHandler.cpp" line="805"/>
         <source>UDP packets cannot be received from the server. Switching to TCP mode.</source>
-        <translation>UDP paketai negali būti gauti iš serverio. Perjungiama į TCP veikseną.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ServerHandler.cpp" line="813"/>
         <source>UDP packets can be sent to and received from the server. Switching back to UDP mode.</source>
-        <translation>UDP paketai gali būti išsiųsti ir gauti iš serverio. Perjungiama atgal į UDP veikseną.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ServerHandler.cpp" line="874"/>
         <source>Connection timed out</source>
-        <translation>Pasibaigė ryšiui skirtas laikas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ServerView</name>
     <message>
+        <location filename="ConnectDialog.cpp" line="98"/>
         <source>Favorite</source>
-        <translation>Mėgstami</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="104"/>
         <source>LAN</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ConnectDialog.cpp" line="113"/>
         <source>Public Internet</source>
-        <translation>Viešas internetas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShortcutActionWidget</name>
     <message>
+        <location filename="GlobalShortcut.cpp" line="124"/>
         <source>Unassigned</source>
-        <translation>Nepriskirta</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShortcutDelegate</name>
     <message>
+        <location filename="GlobalShortcut.cpp" line="531"/>
         <source>On</source>
-        <translation>Įjungta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="533"/>
         <source>Off</source>
-        <translation>Išjungta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="535"/>
         <source>Toggle</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="541"/>
         <source>Unassigned</source>
-        <translation>Nepriskirta</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShortcutKeyWidget</name>
     <message>
+        <location filename="GlobalShortcut.cpp" line="60"/>
         <source>Press Shortcut</source>
-        <translation>Nuspauskite trumpinį</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShortcutTargetDialog</name>
     <message>
+        <location filename="GlobalShortcut.cpp" line="268"/>
         <source>Root</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="273"/>
         <source>Parent</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="278"/>
         <source>Current</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="283"/>
+        <location filename="GlobalShortcut.cpp" line="290"/>
         <source>Subchannel #%1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShortcutTargetWidget</name>
     <message>
+        <location filename="GlobalShortcut.cpp" line="399"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>, </source>
-        <translation>, </translation>
-    </message>
-    <message>
-        <source>Root</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Parent</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Current</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Subchannel #%1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Invalid</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Empty</source>
-        <oldsource>&lt;Empty&gt;</oldsource>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="GlobalShortcut.cpp" line="416"/>
         <source>Current selection</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="442"/>
+        <source>, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="448"/>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="450"/>
+        <source>Parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="452"/>
+        <source>Current</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="456"/>
+        <location filename="GlobalShortcut.cpp" line="458"/>
+        <source>Subchannel #%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="465"/>
+        <source>Invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GlobalShortcut.cpp" line="468"/>
+        <source>Empty</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ShortcutToggleWidget</name>
     <message>
+        <location filename="GlobalShortcut.cpp" line="163"/>
         <source>Off</source>
-        <translation>Išjungta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="167"/>
         <source>Toggle</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="GlobalShortcut.cpp" line="171"/>
         <source>On</source>
-        <translation>Įjungta</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TextMessage</name>
     <message>
-        <source>Enter text</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
+        <location filename="TextMessage.ui" line="24"/>
         <source>If checked the message is recursively sent to all subchannels</source>
-        <translation>Jei pažymėta, žinutė bus rekursyviai išsiųsta į visus pokanalius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="TextMessage.ui" line="27"/>
         <source>Send recursively to subchannels</source>
-        <translation>Siųsti rekursyviai į pokanalius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="TextMessage.cpp" line="10"/>
         <source>Message</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="TextMessage.h" line="21"/>
+        <source>Enter text</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Tokens</name>
     <message>
-        <source>Empty Token</source>
-        <translation>Tuščias prieigos raktas</translation>
-    </message>
-    <message>
+        <location filename="Tokens.ui" line="14"/>
         <source>Mumble - Access Tokens</source>
-        <translation>Mumble - Prieigos raktai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.ui" line="20"/>
         <source>List of access tokens on current server</source>
-        <translation>Esamame serveryje esančių prieigos raktų sąrašas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.ui" line="23"/>
         <source>&lt;b&gt;This is an editable list of access tokens on the connected server.&lt;/b&gt;
 &lt;br /&gt;
-An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you've used and resend them to the server next time you reconnect, so you don't have to enter these every time.
+An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you&apos;ve used and resend them to the server next time you reconnect, so you don&apos;t have to enter these every time.
 </source>
-        <translation>&lt;b&gt;Tai yra redaguojamas prisijungtame serveryje esančių prieigos raktų sąrašas.&lt;/b&gt;
-&lt;br /&gt;
-Prieigos raktas yra tekstinė eilutė, kuri gali būti naudojama kaip slaptažodis ir kuri yra skirta lengvam prieigos tvarkymui kanaluose. Mumble prisimins jūsų naudotus prieigos raktus ir kitą kartą jums vėl prisijungus prie serverio, išsiųs juos iš naujo, taigi, tokiu būdu jums nereikės kas kartą juos įvedinėti.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.ui" line="47"/>
         <source>Add a token</source>
-        <translation>Pridėti prieigos raktą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.ui" line="50"/>
         <source>&amp;Add</source>
-        <translation>&amp;Pridėti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.ui" line="57"/>
         <source>Remove a token</source>
-        <translation>Šalinti prieigos raktą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.ui" line="60"/>
         <source>&amp;Remove</source>
-        <translation>Ša&amp;linti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Tokens.cpp" line="17"/>
         <source>Tokens</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tokens.cpp" line="44"/>
+        <source>Empty Token</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>UserEdit</name>
     <message>
+        <location filename="UserEdit.ui" line="42"/>
         <source>Registered Users</source>
-        <translation>Registruoti naudotojai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove</source>
-        <translation>Šalinti</translation>
-    </message>
-    <message>
+        <location filename="UserEdit.ui" line="57"/>
+        <location filename="UserEdit.cpp" line="89"/>
         <source>Rename</source>
-        <translation>Pervadinti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserEdit.ui" line="67"/>
+        <location filename="UserEdit.cpp" line="95"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserEdit.ui" line="88"/>
         <source>Who are you looking for?</source>
-        <translation>Ko ieškote?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserEdit.ui" line="102"/>
         <source>Days</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserEdit.ui" line="107"/>
         <source>Weeks</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserEdit.ui" line="112"/>
         <source>Months</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserEdit.ui" line="117"/>
         <source>Years</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserEdit.ui" line="166"/>
+        <location filename="UserEdit.cpp" line="24"/>
+        <location filename="UserEdit.cpp" line="25"/>
         <source>Inactive for</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserEdit.cpp" line="23"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserEdit.cpp" line="26"/>
+        <source>User list</source>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
+        <location filename="UserEdit.cpp" line="29"/>
         <source>Registered users: %n account(s)</source>
-        <translation><numerusform>Registruoti naudotojai: %n paskyra</numerusform><numerusform>Registruoti naudotojai: %n paskyros</numerusform><numerusform>Registruoti naudotojai: %n paskyrų</numerusform><numerusform>Registruoti naudotojai: %n paskyrų</numerusform></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>User list</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
     <name>UserInformation</name>
     <message>
+        <location filename="UserInformation.ui" line="14"/>
         <source>User Information</source>
-        <translation>Naudotojo informacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="20"/>
         <source>Connection Information</source>
-        <translation>Ryšio informacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="26"/>
         <source>Version</source>
-        <translation>Versija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="52"/>
         <source>OS</source>
-        <translation>OS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="78"/>
         <source>Certificate</source>
-        <translation>Liudijimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="104"/>
         <source>IP Address</source>
-        <translation>IP adresas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="127"/>
         <source>CELT Versions</source>
-        <translation>CELT versijos</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="165"/>
         <source>Details...</source>
-        <translation>Išsamiau...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="189"/>
         <source>Ping Statistics</source>
-        <translation>Ping statistika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="195"/>
         <source>Pings received</source>
-        <translation>Gauta ping</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="205"/>
         <source>Average ping</source>
-        <translation>Vidutinis ping</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="215"/>
+        <source>Ping deviation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.ui" line="225"/>
         <source>TCP (Control)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="271"/>
         <source>UDP (Voice)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="320"/>
         <source>UDP Network statistics</source>
-        <translation>UDP tinklo statistika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="326"/>
         <source>Good</source>
-        <translation>Gerai</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="336"/>
         <source>Late</source>
-        <translation>Pavėluota</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="346"/>
         <source>Lost</source>
-        <translation>Prarasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="356"/>
         <source>Resync</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="366"/>
         <source>From Client</source>
-        <translation>Nuo kliento</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="425"/>
         <source>To Client</source>
-        <translation>Klientui</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connection time</source>
-        <translation>Ryšio laikas</translation>
-    </message>
-    <message>
-        <source>%1w</source>
-        <translation>%1sav.</translation>
-    </message>
-    <message>
-        <source>%1d</source>
-        <translation>%1d.</translation>
-    </message>
-    <message>
-        <source>%1h</source>
-        <translation>%1val.</translation>
-    </message>
-    <message>
-        <source>%1m</source>
-        <translation>%1min.</translation>
-    </message>
-    <message>
-        <source>%1s</source>
-        <translation>%1s</translation>
-    </message>
-    <message>
-        <source>, </source>
-        <translation>, </translation>
-    </message>
-    <message>
-        <source>%1 (%2)</source>
-        <oldsource>%1.%2.%3 (%4)</oldsource>
-        <translation>%1 (%2)</translation>
-    </message>
-    <message>
-        <source>Supported</source>
-        <translation>Palaikoma</translation>
-    </message>
-    <message>
-        <source>Not Supported</source>
-        <translation>Nepalaikoma</translation>
-    </message>
-    <message>
-        <source>Not Reported</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 online (%2 idle)</source>
-        <translation>%1 prisijungęs (%2 neveiklus)</translation>
-    </message>
-    <message>
-        <source>%1 online</source>
-        <translation>%1 prisijungęs</translation>
-    </message>
-    <message>
-        <source>%1 kbit/s</source>
-        <translation>%1 kbit/s</translation>
-    </message>
-    <message>
+        <location filename="UserInformation.ui" line="547"/>
         <source>Bandwidth</source>
         <comment>GroupBox</comment>
-        <translation>Siuntimo sparta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserInformation.ui" line="553"/>
+        <source>Connection time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.ui" line="576"/>
         <source>Bandwidth</source>
         <comment>Label</comment>
-        <translation>Siuntimo sparta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ping deviation</source>
-        <translation>Ping nuokrypis</translation>
+        <location filename="UserInformation.cpp" line="43"/>
+        <source>Not Reported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="84"/>
+        <source>%1w</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="86"/>
+        <source>%1d</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="88"/>
+        <source>%1h</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="90"/>
+        <source>%1m</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="91"/>
+        <source>%1s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="120"/>
+        <location filename="UserInformation.cpp" line="159"/>
+        <source>, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="146"/>
+        <location filename="UserInformation.cpp" line="147"/>
+        <source>%1 (%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="162"/>
+        <source>Supported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="162"/>
+        <source>Not Supported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="206"/>
+        <source>%1 online (%2 idle)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="208"/>
+        <source>%1 online</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserInformation.cpp" line="213"/>
+        <source>%1 kbit/s</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>UserListModel</name>
     <message>
+        <location filename="UserListModel.cpp" line="62"/>
         <source>Nick</source>
-        <translation>Slapyvardis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserListModel.cpp" line="64"/>
         <source>Inactive days</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserListModel.cpp" line="66"/>
         <source>Last channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserListModel.cpp" line="101"/>
         <source>Last seen: %1</source>
-        <translation>Paskutinį kartą matytas: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserListModel.cpp" line="102"/>
         <source>Never</source>
-        <translation>Niekada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserListModel.cpp" line="104"/>
         <source>Channel ID: %1</source>
-        <translation>Kanalo ID: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>UserLocalVolumeDialog</name>
     <message>
+        <location filename="UserLocalVolumeDialog.ui" line="29"/>
+        <location filename="UserLocalVolumeDialog.ui" line="73"/>
         <source>Local volume for other users</source>
-        <translation>Kitų naudotojų vietinis garsis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserLocalVolumeDialog.ui" line="32"/>
+        <location filename="UserLocalVolumeDialog.ui" line="76"/>
         <source>&lt;b&gt;Adjust the volume of other users locally&lt;/b&gt;&lt;br /&gt;Mumble supports adjusting the volume of other users locally.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Adjusting local volume for %1</source>
-        <translation>Vietinio garsio reguliavimas naudotojui %1</translation>
-    </message>
-    <message>
+        <location filename="UserLocalVolumeDialog.ui" line="79"/>
         <source> dB</source>
-        <translation> dB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserLocalVolumeDialog.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the slider or the text box to change the volume of the user.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Attention!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Increasing the volume of a user too much can permanently damage your hearing. It may also increase the background noise of the user.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Naudokite slinktuką arba tekstinį langelį, kad pakeistumėte naudotojo garsį.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Dėmesio!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Per didelis naudotojo garsio padidinimas gali visiems laikams pažeisti jūsų klausą. Be to, jis taip pat gali padidinti naudotojo foninį triukšmą.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserLocalVolumeDialog.cpp" line="55"/>
+        <location filename="UserLocalVolumeDialog.cpp" line="56"/>
         <source>User volume</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UserLocalVolumeDialog.cpp" line="60"/>
+        <source>Adjusting local volume for %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>UserModel</name>
     <message>
+        <location filename="UserModel.cpp" line="708"/>
         <source>This is a user connected to the server. The icon to the left of the user indicates whether or not they are talking:</source>
-        <translation>Tai yra prie serverio prisijungęs naudotojas. Iš kairės nuo naudotojo esanti piktograma nurodo ar naudotojas kalba ar ne:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="710"/>
         <source>Talking to your channel.</source>
-        <translation>Kalba jūsų kanalui.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="710"/>
         <source>Shouting directly to your channel.</source>
-        <oldsource>Whispering directly to your channel.</oldsource>
-        <translation>Šaukia tiesiogiai jūsų kanalui.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="711"/>
         <source>Whispering directly to you.</source>
-        <translation>Šnabžda tiesiogiai jums.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="711"/>
         <source>Not talking.</source>
-        <translation>Nekalba.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="722"/>
         <source>This is a channel on the server. The icon indicates the state of the channel:</source>
-        <translation>Tai yra kanalas serveryje. Piktograma nurodo kanalo būseną:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="723"/>
         <source>Your current channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="724"/>
         <source>A channel that is linked with your channel. Linked channels can talk to each other.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="726"/>
         <source>A channel on the server that you are not linked to.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="756"/>
         <source>This shows the flags the user has on the server, if any:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="757"/>
         <source>On your friend list</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="757"/>
         <source>Authenticated user</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="758"/>
         <source>Muted (manually muted by self)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="758"/>
         <source>Muted (manually muted by admin)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="759"/>
         <source>Muted (not allowed to speak in current channel)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="760"/>
         <source>Muted (muted by you, only on your machine)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="760"/>
         <source>Muted (push-to-mute)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="761"/>
         <source>Deafened (by self)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="761"/>
         <source>Deafened (by admin)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="762"/>
         <source>User has a new comment set (click to show)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="763"/>
         <source>User has a comment set, which you&apos;ve already seen. (click to show)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="764"/>
         <source>Ignoring Text Messages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="775"/>
         <source>This shows the flags the channel has, if any:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="776"/>
         <source>Channel has a new comment set (click to show)</source>
-        <translation>Kanale yra nustatytas naujas komentaras (spustelėkite, norėdami rodyti)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="777"/>
         <source>Channel has a comment set, which you&apos;ve already seen. (click to show)</source>
-        <translation>Kanale yra nustatytas komentaras, kurį jau matėte. (spustelėkite, norėdami rodyti)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="778"/>
         <source>Channel will be hidden when filtering is enabled</source>
-        <translation>Įjungus filtravimą, kanalas bus paslėptas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="793"/>
         <source>Name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="795"/>
         <source>Flags</source>
-        <translation>Vėliavėlės</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="1764"/>
         <source>Are you sure you want to drag this user?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="1788"/>
         <source>Are you sure you want to drag this channel?</source>
-        <translation>Ar tikrai norite tempti šį kanalą?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="UserModel.cpp" line="1893"/>
+        <location filename="UserModel.cpp" line="1914"/>
         <source>Cannot perform this movement automatically, please reset the numeric sorting indicators or adjust it manually.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>VersionCheck</name>
     <message>
+        <location filename="VersionCheck.cpp" line="139"/>
         <source>Upgrade Mumble</source>
-        <translation>Naujinti Mumble</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VersionCheck.cpp" line="140"/>
         <source>A new version of Mumble has been detected and automatically downloaded. It is recommended that you either upgrade to this version, or downgrade to the latest stable release. Do you want to launch the installer now?</source>
-        <translation>Buvo aptikta ir automatiškai atsiųsta nauja Mumble versija. Yra rekomenduojama, kad jūs arba naujintumėte iki šios versijos, arba sendintumėte iki naujausios stabilios laidos. Ar norėtumėte paleisti diegimo programą dabar?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VersionCheck.cpp" line="158"/>
         <source>Failed to launch snapshot installer.</source>
-        <translation>Nepavyko paleisti momentinės kopijos diegimo programos.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VersionCheck.cpp" line="163"/>
         <source>Corrupt download of new version detected. Automatically removed.</source>
-        <translation>Aptiktas pažeistas naujos versijos atsiuntimas. Automatiškai pašalintas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VersionCheck.cpp" line="185"/>
         <source>Downloading new snapshot from %1 to %2</source>
-        <translation>Atsiunčiama nauja momentinė kopija iš %1 į %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VersionCheck.cpp" line="201"/>
         <source>Failed to write new version to disk.</source>
-        <oldsource>Failed to write new version to disc.</oldsource>
-        <translation>Nepavyko įrašyti naujos versijos į diską.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VersionCheck.cpp" line="211"/>
         <source>Mumble failed to retrieve version information from the central server.</source>
-        <translation>Programai Mumble nepavyko iš centrinio serverio gauti versijos informacijos.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ViewCert</name>
     <message>
+        <location filename="ViewCert.cpp" line="51"/>
         <source>Certificate Chain Details</source>
-        <translation>Išsamesnė liudijimų grandinės informacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="57"/>
         <source>Certificate chain</source>
-        <translation>Liudijimų grandinė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="76"/>
         <source>Certificate details</source>
-        <translation>Išsamesnė liudijimo informacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="112"/>
+        <location filename="ViewCert.cpp" line="150"/>
         <source>Common Name</source>
-        <translation>Bendrinis pavadinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="114"/>
+        <location filename="ViewCert.cpp" line="151"/>
         <source>Organization</source>
-        <translation>Organizacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="116"/>
         <source>Subunit</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="118"/>
+        <location filename="ViewCert.cpp" line="155"/>
         <source>Country</source>
-        <translation>Šalis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="119"/>
+        <location filename="ViewCert.cpp" line="156"/>
         <source>Locality</source>
-        <translation>Vietovė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="120"/>
+        <location filename="ViewCert.cpp" line="157"/>
         <source>State</source>
-        <translation>Valstija/Regionas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="122"/>
         <source>Valid from: %1</source>
-        <translation>Galioja nuo: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="123"/>
         <source>Valid to: %1</source>
-        <translation>Galioja iki: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="124"/>
         <source>Serial: %1</source>
-        <translation>Numeris: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="125"/>
         <source>Public Key: %1 bits %2</source>
-        <translation>Viešasis raktas: %1 bitų %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="127"/>
         <source>RSA</source>
-        <translation>RSA</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="127"/>
         <source>DSA</source>
-        <translation>DSA</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="128"/>
         <source>Digest (SHA-1): %1</source>
-        <translation>Maišos reikšmė (SHA-1): %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="129"/>
         <source>Digest (SHA-256): %1</source>
-        <translation>Maišos reikšmė (SHA-256): %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="138"/>
         <source>Email: %1</source>
-        <translation>El. paštas: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="141"/>
         <source>DNS: %1</source>
-        <translation>DNS: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="149"/>
         <source>Issued by:</source>
-        <translation>Išdavė:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ViewCert.cpp" line="153"/>
         <source>Unit Name</source>
-        <translation>Padalinio pavadinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>VoiceRecorder</name>
     <message>
+        <location filename="VoiceRecorder.cpp" line="252"/>
         <source>Recorder failed to create directory &apos;%1&apos;</source>
-        <translation>Rašytuvui nepavyko sukurti katalogo &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorder.cpp" line="266"/>
         <source>Recorder failed to open file &apos;%1&apos;</source>
-        <translation>Rašytuvui nepavyko atverti failo &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorder.cpp" line="426"/>
         <source>.wav - Uncompressed</source>
-        <translation>.wav - Nesuglaudintas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorder.cpp" line="429"/>
         <source>.ogg (Vorbis) - Compressed</source>
-        <translation>.ogg (Vorbis) - Suglaudintas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorder.cpp" line="432"/>
         <source>.au - Uncompressed</source>
-        <translation>.au - Nesuglaudintas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorder.cpp" line="434"/>
         <source>.flac - Lossless compressed</source>
-        <translation>.flac - Nenuostolingasis suglaudintas</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>VoiceRecorderDialog</name>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="14"/>
+        <location filename="VoiceRecorderDialog.cpp" line="113"/>
+        <location filename="VoiceRecorderDialog.cpp" line="119"/>
+        <location filename="VoiceRecorderDialog.cpp" line="128"/>
+        <location filename="VoiceRecorderDialog.cpp" line="135"/>
+        <location filename="VoiceRecorderDialog.cpp" line="272"/>
         <source>Recorder</source>
-        <translation>Rašytuvas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="24"/>
         <source>Control</source>
-        <translation>Valdymas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="38"/>
         <source>00:00:00</source>
-        <translation>00:00:00</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="70"/>
         <source>&amp;Start</source>
-        <translation>&amp;Pradėti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="86"/>
+        <location filename="VoiceRecorderDialog.cpp" line="252"/>
         <source>S&amp;top</source>
-        <translation>S&amp;tabdyti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="96"/>
         <source>Mode</source>
-        <translation>Veiksena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="105"/>
+        <source>Downmix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="VoiceRecorderDialog.ui" line="118"/>
         <source>Multichannel</source>
-        <translation>Daugiakanalė</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="141"/>
         <source>Output</source>
-        <translation>Išvestis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="147"/>
+        <location filename="VoiceRecorderDialog.cpp" line="24"/>
         <source>Output format</source>
-        <translation>Išvesties formatas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="157"/>
+        <location filename="VoiceRecorderDialog.cpp" line="25"/>
         <source>Target directory</source>
-        <translation>Paskirties katalogas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="164"/>
+        <location filename="VoiceRecorderDialog.cpp" line="26"/>
         <source>Filename</source>
-        <translation>Failo pavadinimas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.ui" line="176"/>
         <source>&amp;Browse...</source>
-        <translation>&amp;Naršyti...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="52"/>
         <source>Valid variables are:</source>
-        <translation>Teisingi kintamieji yra:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="53"/>
         <source>Inserts the user&apos;s name</source>
-        <translation>Įterpia naudotojo vardą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="54"/>
         <source>Inserts the current date</source>
-        <translation>Įterpia esamą datą</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="55"/>
         <source>Inserts the current time</source>
-        <translation>Įterpia esamą laiką</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="56"/>
         <source>Inserts the hostname</source>
-        <translation>Įterpia serverį</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="81"/>
         <source>Recorder still running</source>
-        <translation>Rašytuvas yra vis dar vykdomas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="82"/>
         <source>Closing the recorder without stopping it will discard unwritten audio. Do you really want to close the recorder?</source>
-        <translation>Rašytuvo užvėrimas, jo nesustabdžius, atmes neįrašytą garsą. Ar tikrai norite užverti rašytuvą?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="113"/>
         <source>Unable to start recording. Not connected to a server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="120"/>
         <source>The server you are currently connected to is version 1.2.2 or older. For privacy reasons, recording on servers of versions older than 1.2.3 is not possible.
 Please contact your server administrator for further information.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="128"/>
         <source>There is already a recorder active for this server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="135"/>
         <source>Please select a recording format.</source>
-        <translation>Prašome pasirinkti įrašymo formatą.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="208"/>
         <source>Stopping</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="VoiceRecorderDialog.cpp" line="233"/>
         <source>Select target directory</source>
-        <translation>Pasirinkite paskirties katalogą</translation>
-    </message>
-    <message>
-        <source>Downmix</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>WASAPIInput</name>
     <message>
+        <location filename="WASAPI.cpp" line="472"/>
         <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>WASAPISystem</name>
     <message>
+        <location filename="WASAPI.cpp" line="253"/>
         <source>Default Device</source>
-        <translation>Numatytasis įrenginys</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>qwPTTButtonWidget</name>
     <message>
+        <location filename="PTTButtonWidget.ui" line="14"/>
         <source>Mumble PTT</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="PTTButtonWidget.ui" line="29"/>
         <source>Push to talk</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
